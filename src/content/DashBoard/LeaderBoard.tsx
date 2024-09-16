@@ -27,15 +27,29 @@ function LeaderBoard() {
       <Table hoverable onClick={handleTableClick}>
         <Table.Head>
           <Table.HeadCell>#</Table.HeadCell>
-          <Table.HeadCell data-type="username">Benutzer</Table.HeadCell>
-          <Table.HeadCell data-type="visits">Besuche</Table.HeadCell>
-          <Table.HeadCell data-type="tested_passwords">
+          <Table.HeadCell data-type="username">Benutzer </Table.HeadCell>
+          <Table.HeadCell
+            data-type="visits"
+            className="cursor-pointer hover:text-green-400 hover:underline underline-offset-4"
+          >
+            Besuche
+          </Table.HeadCell>
+          <Table.HeadCell
+            data-type="tested_passwords"
+            className="cursor-pointer hover:text-green-400 hover:underline underline-offset-4"
+          >
             Getestete Passwörter
           </Table.HeadCell>
-          <Table.HeadCell data-type="generated_passwords">
+          <Table.HeadCell
+            data-type="generated_passwords"
+            className="cursor-pointer hover:text-green-400 hover:underline underline-offset-4"
+          >
             Generierte Passwörter
           </Table.HeadCell>
-          <Table.HeadCell data-type="generated_usernames">
+          <Table.HeadCell
+            data-type="generated_usernames"
+            className="cursor-pointer hover:text-green-400 hover:underline underline-offset-4"
+          >
             Generierte Benuzternamen
           </Table.HeadCell>
         </Table.Head>
@@ -47,7 +61,6 @@ function LeaderBoard() {
             let rank = index + 1;
             let avatar = user.avatar;
             if ("rank" in user) {
-              console.log("user", user);
               rank = user.rank as number;
               user = user.user as LeaderBoardData;
               avatar = user.avatar as string;

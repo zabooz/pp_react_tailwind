@@ -1,9 +1,10 @@
 
-let pictureMagicArray =
-JSON.parse(sessionStorage.getItem("pictureMagicArray") || "[]");
+
 
 import { pictureToString } from "./passwordToString";
-
+import { dataKrakenTakes } from "../../../backend/dataKraken";
+import { storeAndSwitch } from "../../../utillities/storeAndSwitch";
+import "./pictureMagic.css";
 export const fileUpload = async (
   file: File,
   picturePath: (arg0:any) => void,
@@ -38,8 +39,9 @@ export const fileUpload = async (
 
 
 
-export const pictureMagic = async (file: File,base64: string) => {
-    
+export const pictureMagic = async (file: File,base64: string,target:HTMLElement | null) => {
+  const pictureMagicArray =
+  JSON.parse(sessionStorage.getItem("pictureMagicArray") || "[]");
             const pwId = `picturePassword_${Math.floor(Math.random() * 1000)}`;
             const picId = `pictureMagic_${Math.floor(Math.random() * 1000)}`;
 
@@ -47,7 +49,7 @@ export const pictureMagic = async (file: File,base64: string) => {
                   pwId: pwId,
                   catchId: picId,
                   catch: base64,
-                  password: null,
+                  password: null as null | unknown,
                   app: "pictureMagic",
                 };
                 try {
@@ -57,10 +59,9 @@ export const pictureMagic = async (file: File,base64: string) => {
                   pictureMagicArray.push(data);
 
                   storeAndSwitch(
-                    pictureRowsArr,
                     pictureMagicArray,
                     "pictureMagicArray",
-                    "statsBodyPicGen"
+                    target
                   );
                   dataKrakenTakes({ col: "generated_passwords" });
                 } catch (error) {

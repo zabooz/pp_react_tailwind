@@ -5,7 +5,7 @@ export const storeAndSwitch = ( storageArr:any, storageName:string, target:HTMLE
   sessionStorage.setItem(storageName, JSON.stringify(storageArr));
 
   const DOMElementArr: HTMLElement[] = [];
-  // generate rows from data array
+
 
   for (let i = 0; i < storageArr.length; i++) {
     const item = storageArr[i];
@@ -25,8 +25,8 @@ export const storeAndSwitch = ( storageArr:any, storageName:string, target:HTMLE
     tdPw.append( spanPwd);
     // copyButton(pwId),  CLIPPY
     spanPwd.classList.add("w-100", "pwdSpan");
-    tdLeft.innerHTML = `<img src="src/assets/icons/arrow.svg" id="arrowLeft" data-side="left" class="${item.app} d-none" style="transform: rotate(180deg); margin-top: -0.15rem; width: 2rem" alt="Arrow Left">`;
-    tdRight.innerHTML = `<img src="src/assets/icons/arrow.svg" id="arrowRight" class="${item.app} d-none" data-side="right" style="margin-top: -0.15rem; width: 2rem" alt="Arrow Right">`;
+    tdLeft.innerHTML = `<img src="src/assets/icons/arrow.svg" id="arrowLeft" data-side="left" class="${item.app} hidden" style="transform: rotate(180deg); margin-top: -0.15rem; width: 2rem" alt="Arrow Left">`;
+    tdRight.innerHTML = `<img src="src/assets/icons/arrow.svg" id="arrowRight" class="${item.app} hidden" data-side="right" style="margin-top: -0.15rem; width: 2rem" alt="Arrow Right">`;
 
     tdCatch.id = catchId;
     tdCatch.classList.add("tablePics");
@@ -56,7 +56,7 @@ export const storeAndSwitch = ( storageArr:any, storageName:string, target:HTMLE
     DOMElementArr.forEach((element) => {
       const arrows = element.querySelectorAll(`.${storageArr[0].app}`);
       arrows.forEach((arrow) => {
-        arrow.classList.remove("d-none");
+        arrow.classList.remove("hidden");
         arrow.addEventListener("click", () => {
           target!.innerHTML = "";
           if ((arrow as HTMLElement).dataset.side === "left") {

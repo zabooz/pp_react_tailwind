@@ -39,7 +39,7 @@ export async function pictureToString(file:File) {
           betterPassword += password[i];
         }
       }
-      resolve(betterPassword);
+      resolve(betterPassword as string);
     };
 
     reader.onerror = function () {

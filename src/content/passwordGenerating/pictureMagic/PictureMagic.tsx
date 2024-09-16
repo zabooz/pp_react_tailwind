@@ -2,7 +2,7 @@ import { Card, Table, Button } from "flowbite-react";
 import { Label, FileInput } from "flowbite-react";
 import { useState,useRef } from "react";
 import { fileUpload } from "./pictureMagicScript";
-
+import { pictureMagic } from "./pictureMagicScript";
 
 function PictureMagic() {
 
@@ -10,8 +10,8 @@ function PictureMagic() {
     const [pictureFile, setPictureFile] = useState<File>(new File([""], ""));
     const [pictureBase64, setPicturebase64] = useState<string>("");
 
-      const previewImgRef = useRef<HTMLImageElement>(null);
-
+    const previewImgRef = useRef<HTMLImageElement>(null);
+    const tableRef = useRef(null);
 
 
   return (
@@ -63,17 +63,11 @@ function PictureMagic() {
               <span className="sr-only">Edit</span>
             </Table.HeadCell>
           </Table.Head>
-          <Table.Body className="divide-y">
-            <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-              <Table.Cell></Table.Cell>
-              <Table.Cell>Black</Table.Cell>
-              <Table.Cell>Accessories</Table.Cell>
-              <Table.Cell></Table.Cell>
-            </Table.Row>
+          <Table.Body className="divide-y" ref={tableRef}>
           </Table.Body>
         </Table>
       </div>
-      <Button>Los geht's</Button>
+      <Button onClick={() => pictureMagic(pictureFile, pictureBase64, tableRef.current)}>Los geht's</Button>
     </Card>
   );
 }

@@ -2,8 +2,6 @@ import { apiToken } from "../utillities/api";
 import { dataKrakenGives } from "../backend/dataKraken";
 export async function  autoLogin () {
 
-    if(!localStorage.getItem("pp-token")) return false
-
     try{
 
     const response = await  apiToken.get(`/user`)
@@ -17,9 +15,9 @@ export async function  autoLogin () {
         }else{
             return false
         }
-    } 
+    }
     }catch(error){
-
+        localStorage.removeItem("pp-token")
         console.log(error)
     }
 

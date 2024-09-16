@@ -1,6 +1,7 @@
 export const storeAndSwitch = ( storageArr:any, storageName:string, target:HTMLElement | null) => {
-    
-  target!.innerHTML = "";
+  
+  if(target === null){ return; }
+  target.innerHTML = "";
 
   sessionStorage.setItem(storageName, JSON.stringify(storageArr));
 

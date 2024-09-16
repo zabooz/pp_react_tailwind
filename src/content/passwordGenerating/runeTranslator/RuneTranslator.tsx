@@ -2,10 +2,12 @@
 
 import { Button, Card, Table } from "flowbite-react";
 import { leetspeakTextShortened } from "../../../data/drawer/drawerData";
-import { useState, useRef } from "react";
+import { useState, useRef,useEffect } from "react";
 import { DrawerData } from "../../../interfaces/interfaces";
 import { TextInput } from "flowbite-react";
 import runeTranslator from "./runeTranslatorScript";
+import { storeAndSwitch } from "../../../utillities/storeAndSwitch";
+import { StorageData } from "../../../interfaces/interfaces";
 interface Props {
   handleDrawerClick: (content: DrawerData) => void;
 }
@@ -16,7 +18,14 @@ function RuneTranslator({ handleDrawerClick }: Props) {
   const handleClick = async (e: HTMLElement | null) => {
     await runeTranslator(input, e);
   };
-
+  useEffect(() => {
+    const storage: StorageData[] =
+    JSON.parse(sessionStorage.getItem("storedGlyphArray") || "[]");
+    if(storage.length > 0){
+      console.log(123)
+      storeAndSwitch(storage, "storedGlyphArray", tableRef.current);
+    }
+  },[])
   return (
     <Card
       className="max-w-sm"

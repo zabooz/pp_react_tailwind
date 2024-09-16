@@ -1,6 +1,8 @@
 import { Card, Button, Table, Label, RangeSlider, Radio } from "flowbite-react";
-import { useState,useRef } from "react";
+import { useState,useRef,useEffect } from "react";
 import { glyphSorcery } from "./glyphSorceryScript";
+import { storeAndSwitch } from "../../../utillities/storeAndSwitch";
+import { StorageData } from "../../../interfaces/interfaces";
 function GylphSorcery() {
 
   const [passwordLength, setPasswordLength] = useState(0);
@@ -12,7 +14,13 @@ function GylphSorcery() {
         setLanguage(target.value);
       }
     };
-
+    useEffect(() => {
+      const storage: StorageData[] =
+      JSON.parse(sessionStorage.getItem("storedGlyphArray") || "[]");
+      if(storage.length > 0){
+        storeAndSwitch(storage, "storedGlyphArray", tableRef.current);
+      }
+    },[])
   return (
     <Card
       className="max-w-sm"

@@ -39,9 +39,9 @@ export const fileUpload = async (
 
 
 
-export const pictureMagic = async (file: File,base64: string,target:HTMLElement | null) => {
-  const pictureMagicArray =
-  JSON.parse(sessionStorage.getItem("pictureMagicArray") || "[]");
+export const pictureMagic = async (file: File,base64: string,target:HTMLElement | null,storage:any) => {
+
+
             const pwId = `picturePassword_${Math.floor(Math.random() * 1000)}`;
             const picId = `pictureMagic_${Math.floor(Math.random() * 1000)}`;
 
@@ -56,10 +56,10 @@ export const pictureMagic = async (file: File,base64: string,target:HTMLElement 
                   const result = await pictureToString(file);
 
                   data.password = result;
-                  pictureMagicArray.push(data);
+                  storage.push(data);
 
                   storeAndSwitch(
-                    pictureMagicArray,
+                    storage,
                     "pictureMagicArray",
                     target
                   );

@@ -33,7 +33,15 @@ export interface dataKrakenGivesResponse {
   data: string[];  
 }
 
+export interface StorageData {
 
+    pwid: string;
+    catchId: string;
+    catch: number;
+    password: string;
+    app: string;
+
+}
 
 export interface dataKrakenTradesData {
   key: string;

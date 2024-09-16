@@ -1,5 +1,5 @@
-import Mojo from "./Mojo";
-import Excalibur from "./Excalibur";
+import Mojo from "./Mojo/Mojo";
+import Excalibur from "./excalibur/Excalibur";
 
 function passwordTesting() {
   return (

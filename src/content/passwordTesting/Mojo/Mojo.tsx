@@ -2,11 +2,11 @@ import { Button, Card, Radio, Table, TextInput, Label } from "flowbite-react";
 import {
   bruteForceAttackList,
   bruteForceAttackSimple,
-} from "../../data/drawer/drawerData";
+} from "../../../data/drawer/drawerData";
 
 import { useState } from "react";
-import { DrawerData } from "../../interfaces/interfaces";
-import OffCanvas from "../../components/OffCanvas";
+import { DrawerData } from "../../../interfaces/interfaces";
+import OffCanvas from "../../../components/OffCanvas";
 function Mojo() {
   const [drawer, setDrawerShow] = useState<boolean>(false);
   const [drawerContent, setDrawerContent] = useState<DrawerData>({

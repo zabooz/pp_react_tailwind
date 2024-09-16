@@ -3,7 +3,7 @@ import { dataKrakenTakes } from "../../../backend/dataKraken";
 import { storeAndSwitch } from "../../../utillities/storeAndSwitch";
 
 export const glyphSorcery = async (language:string,length:number,target:HTMLElement) => {
-        let storedGlyphArray = JSON.parse(sessionStorage.getItem("storedGlyphArray") || "[]");
+        const storedGlyphArray = JSON.parse(sessionStorage.getItem("storedGlyphArray") || "[]");
 
         const password = generateEzPw(length, language);
         const pwid = `${password}`;

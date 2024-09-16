@@ -1,17 +1,28 @@
 import { Card, Table, Button } from "flowbite-react";
 import { Label, FileInput } from "flowbite-react";
-import { useState,useRef } from "react";
+import { useState,useRef, useEffect } from "react";
 import { fileUpload } from "./pictureMagicScript";
 import { pictureMagic } from "./pictureMagicScript";
-
+import { storeAndSwitch } from "../../../utillities/storeAndSwitch";
+import { StorageData } from "../../../interfaces/interfaces";
 function PictureMagic() {
-
 
     const [pictureFile, setPictureFile] = useState<File>(new File([""], ""));
     const [pictureBase64, setPicturebase64] = useState<string>("");
 
     const previewImgRef = useRef<HTMLImageElement>(null);
-    const tableRef = useRef(null);
+    const tableRef = useRef(null );
+    let storage:StorageData[] = [];
+
+    useEffect(() => {
+      storage  =
+      JSON.parse(sessionStorage.getItem("pictureMagicArray") || "[]");
+      console.log(storage)
+      if(storage.length > 0){
+        console.log(123)
+        storeAndSwitch(storage, "pictureMagicArray", tableRef.current);
+      }
+    },[pictureBase64])
 
 
   return (
@@ -67,7 +78,7 @@ function PictureMagic() {
           </Table.Body>
         </Table>
       </div>
-      <Button onClick={() => pictureMagic(pictureFile, pictureBase64, tableRef.current)}>Los geht's</Button>
+      <Button onClick={() => pictureMagic(pictureFile, pictureBase64, tableRef.current,storage)}>Los geht's</Button>
     </Card>
   );
 }

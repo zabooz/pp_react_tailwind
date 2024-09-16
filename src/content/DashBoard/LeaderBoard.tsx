@@ -1,67 +1,82 @@
 import { Table } from "flowbite-react";
-
+import { useEffect, useState } from "react";
+import { dataKrakenGives } from "../../backend/dataKraken";
+import { LeaderBoardData } from "../../interfaces/interfaces";
 function LeaderBoard() {
+  const [stat, setStat] = useState("visits");
+  const [data, setData] = useState<LeaderBoardData[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      const response = await dataKrakenGives({ col: stat });
+      if (response && Array.isArray(response.data)) {
+        setData(response.data);
+      }
+    })();
+  }, [stat]);
+
+  const handleTableClick = (event: React.MouseEvent<HTMLTableElement>) => {
+    const target = event.target as HTMLElement;
+    if (target.tagName === "TH") {
+      setStat(target.dataset.type!);
+    }
+  };
+  const username = JSON.parse(sessionStorage.getItem("userStats")!);
   return (
     <div className="overflow-x-auto">
-      <Table hoverable>
+      <Table hoverable onClick={handleTableClick}>
         <Table.Head>
-          <Table.HeadCell>Product name</Table.HeadCell>
-          <Table.HeadCell>Color</Table.HeadCell>
-          <Table.HeadCell>Category</Table.HeadCell>
-          <Table.HeadCell>Price</Table.HeadCell>
-          <Table.HeadCell>
-            <span className="sr-only">Edit</span>
+          <Table.HeadCell>#</Table.HeadCell>
+          <Table.HeadCell data-type="username">Benutzer</Table.HeadCell>
+          <Table.HeadCell data-type="visits">Besuche</Table.HeadCell>
+          <Table.HeadCell data-type="tested_passwords">
+            Getestete Passwörter
+          </Table.HeadCell>
+          <Table.HeadCell data-type="generated_passwords">
+            Generierte Passwörter
+          </Table.HeadCell>
+          <Table.HeadCell data-type="generated_usernames">
+            Generierte Benuzternamen
           </Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              {'Apple MacBook Pro 17"'}
-            </Table.Cell>
-            <Table.Cell>Sliver</Table.Cell>
-            <Table.Cell>Laptop</Table.Cell>
-            <Table.Cell>$2999</Table.Cell>
-            <Table.Cell>
-              <a
-                href="#"
-                className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+          {data.map((user, index) => {
+            let color;
+            let bgColor;
+            let fontWeight;
+            let rank = index + 1;
+            if ("rank" in user) {
+              rank = user.rank as number;
+              user = user.user as LeaderBoardData;
+              color = "text-red-400";
+              bgColor = "bg-gray-200";
+              fontWeight = "font-bold";
+            } else {
+              const match =
+                username[0].username === user.username ? true : false;
+                if(match){
+                    color = "text-emerald-400";
+                    bgColor = "bg-gray-200";
+                    fontWeight = "font-bold";
+                }
+            }
+
+            return (
+              <Table.Row
+                className={`bg-white dark:border-gray-700 dark:bg-gray-800 ${color} ${bgColor} ${fontWeight}`}
+                key={index}
               >
-                Edit
-              </a>
-            </Table.Cell>
-          </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              Microsoft Surface Pro
-            </Table.Cell>
-            <Table.Cell>White</Table.Cell>
-            <Table.Cell>Laptop PC</Table.Cell>
-            <Table.Cell>$1999</Table.Cell>
-            <Table.Cell>
-              <a
-                href="#"
-                className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-              >
-                Edit
-              </a>
-            </Table.Cell>
-          </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              Magic Mouse 2
-            </Table.Cell>
-            <Table.Cell>Black</Table.Cell>
-            <Table.Cell>Accessories</Table.Cell>
-            <Table.Cell>$99</Table.Cell>
-            <Table.Cell>
-              <a
-                href="#"
-                className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-              >
-                Edit
-              </a>
-            </Table.Cell>
-          </Table.Row>
+                <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                  {rank}
+                </Table.Cell>
+                <Table.Cell>{user.username}</Table.Cell>
+                <Table.Cell>{user.visits}</Table.Cell>
+                <Table.Cell>{user.tested_passwords}</Table.Cell>
+                <Table.Cell>{user.generated_passwords}</Table.Cell>
+                <Table.Cell>{user.generated_usernames}</Table.Cell>
+              </Table.Row>
+            );
+          })}
         </Table.Body>
       </Table>
     </div>

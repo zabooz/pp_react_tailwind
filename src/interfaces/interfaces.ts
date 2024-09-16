@@ -27,6 +27,13 @@ export interface dataKrakenTakesData {
 export interface dataKrakenGivesData {
   col?: string;
 }
+export interface dataKrakenGivesResponse {
+  success: boolean;
+  message: string;
+  data: string[];  
+}
+
+
 
 export interface dataKrakenTradesData {
   key: string;
@@ -36,7 +43,7 @@ export interface dataKrakenTradesData {
 export interface userDataResponse {
   success: boolean;
   message: string;
-  data: userData;
+  data: userData | LeaderBoardData
 }
 
 export interface userData {
@@ -47,4 +54,14 @@ export interface userData {
   tested_passwords: number;
   generated_usernames: number;
   avatar: string;
+}
+export interface LeaderBoardData {
+  username: string;
+  visits: number;
+  generated_passwords: number;
+  tested_passwords: number;
+  generated_usernames: number;
+  avatar: string;
+  rank?: number
+  user?: userData
 }

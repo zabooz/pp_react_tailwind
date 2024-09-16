@@ -1,7 +1,7 @@
 import OffCanvas from "../../components/OffCanvas";
-import GylphSorcery from "./GylphSorcery";
+import GylphSorcery from "./glyphSorcery/GylphSorcery";
 import PictureMagic from "./PictureMagic";
-import RuneTranslator from "./RuneTranslator";
+import RuneTranslator from "./runeTranslator/RuneTranslator.tsx";
 import { leetspeakTextShortened } from "../../data/drawer/drawerData";
 
 import { DrawerData } from "../../interfaces/interfaces";

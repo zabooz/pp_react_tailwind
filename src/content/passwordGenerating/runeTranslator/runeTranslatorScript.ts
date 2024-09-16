@@ -30,8 +30,6 @@ export default async function  runeTranslator  (input:string,target:HTMLElement 
       JSON.stringify(newPasswordArray)
     );
 
-
-
     storeAndSwitch(runeTranslatorArray,  "runeTranslatorArray", target);
 }
 

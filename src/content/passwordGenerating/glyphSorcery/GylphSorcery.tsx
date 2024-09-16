@@ -1,6 +1,18 @@
 import { Card, Button, Table, Label, RangeSlider, Radio } from "flowbite-react";
-
+import { useState,useRef } from "react";
+import { glyphSorcery } from "./glyphSorceryScript";
 function GylphSorcery() {
+
+  const [passwordLength, setPasswordLength] = useState(0);
+  const [language, setLanguage] = useState("english");
+  const tableRef = useRef<any>(null);
+    const handleLanguageClick = (event: React.MouseEvent<HTMLDivElement>) => {
+      const target = event.target as HTMLInputElement;
+      if (target.tagName === "INPUT" && target.type === "radio") {
+        setLanguage(target.value);
+      }
+    };
+
   return (
     <Card
       className="max-w-sm"
@@ -17,11 +29,13 @@ function GylphSorcery() {
         entsprechen.
       </p>
       <div>
-        <Label htmlFor="glyphrange">Passwortlänge:</Label>
-        <RangeSlider id="glyphrange" name="glyphrange" />
-        <div>
+        <Label htmlFor="glyphrange">Passwortlänge: {passwordLength}</Label>
+        <RangeSlider id="glyphrange" name="glyphrange" min={0} max={20} 
+        onInput={(e) => setPasswordLength(Number((e.target as HTMLInputElement).value))}
+        />
+        <div onClick={(e) => handleLanguageClick(e)}>
           <Label htmlFor="english">English</Label>
-          <Radio id="english" name="language" value={"english"} />
+          <Radio id="english" name="language" value={"english"} defaultChecked/>
           <Label htmlFor="german">German</Label>
           <Radio id="german" name="language" value={"german"} />
         </div>
@@ -31,23 +45,18 @@ function GylphSorcery() {
           <Table.Head>
             <Table.HeadCell></Table.HeadCell>
             <Table.HeadCell>Password</Table.HeadCell>
-            <Table.HeadCell>Dein Bild</Table.HeadCell>
+            <Table.HeadCell>Länge</Table.HeadCell>
             <Table.HeadCell></Table.HeadCell>
             <Table.HeadCell>
               <span className="sr-only">Edit</span>
             </Table.HeadCell>
           </Table.Head>
-          <Table.Body className="divide-y">
-            <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-              <Table.Cell></Table.Cell>
-              <Table.Cell>Black</Table.Cell>
-              <Table.Cell>Accessories</Table.Cell>
-              <Table.Cell></Table.Cell>
-            </Table.Row>
+          <Table.Body className="divide-y" ref={tableRef}>
+
           </Table.Body>
         </Table>
       </div>
-      <Button>Los geht's</Button>
+      <Button onClick={() => glyphSorcery(language, passwordLength, tableRef.current)}>Los geht's</Button>
     </Card>
   );
 }

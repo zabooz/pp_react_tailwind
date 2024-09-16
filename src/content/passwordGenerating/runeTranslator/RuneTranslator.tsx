@@ -1,21 +1,20 @@
 "use client";
 
 import { Button, Card, Table } from "flowbite-react";
-import { leetspeakTextShortened } from "../../data/drawer/drawerData";
-import { useState,useRef } from "react";
-import { DrawerData } from "../../interfaces/interfaces";
+import { leetspeakTextShortened } from "../../../data/drawer/drawerData";
+import { useState, useRef } from "react";
+import { DrawerData } from "../../../interfaces/interfaces";
 import { TextInput } from "flowbite-react";
-import  runeTranslator  from "./logic/runeTranslator";
+import runeTranslator from "./runeTranslatorScript";
 interface Props {
   handleDrawerClick: (content: DrawerData) => void;
 }
 
 function RuneTranslator({ handleDrawerClick }: Props) {
-
   const [input, setInput] = useState("");
-  const tableRef = useRef(null)
-  const handleClick = async (e:HTMLElement | null) => {
-    await runeTranslator(input,e);
+  const tableRef = useRef(null);
+  const handleClick = async (e: HTMLElement | null) => {
+    await runeTranslator(input, e);
   };
 
   return (
@@ -40,8 +39,7 @@ function RuneTranslator({ handleDrawerClick }: Props) {
       </p>
 
       <div className="flex flex-col">
-        <TextInput type="text" 
-        onChange={(e) => setInput(e.target.value)}/>
+        <TextInput type="text" onChange={(e) => setInput(e.target.value)} />
         <span>*Maximal 12 Zeichen</span>
       </div>
       <div className="overflow-x-auto">
@@ -55,7 +53,7 @@ function RuneTranslator({ handleDrawerClick }: Props) {
               <span className="sr-only">Edit</span>
             </Table.HeadCell>
           </Table.Head>
-          <Table.Body  ref={tableRef} className="divide-y"></Table.Body>
+          <Table.Body ref={tableRef} className="divide-y"></Table.Body>
         </Table>
       </div>
 

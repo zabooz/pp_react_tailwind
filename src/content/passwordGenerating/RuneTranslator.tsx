@@ -2,14 +2,22 @@
 
 import { Button, Card, Table } from "flowbite-react";
 import { leetspeakTextShortened } from "../../data/drawer/drawerData";
-
+import { useState,useRef } from "react";
 import { DrawerData } from "../../interfaces/interfaces";
 import { TextInput } from "flowbite-react";
+import  runeTranslator  from "./logic/runeTranslator";
 interface Props {
   handleDrawerClick: (content: DrawerData) => void;
 }
 
 function RuneTranslator({ handleDrawerClick }: Props) {
+
+  const [input, setInput] = useState("");
+  const tableRef = useRef(null)
+  const handleClick = async (e:HTMLElement | null) => {
+    await runeTranslator(input,e);
+  };
+
   return (
     <Card
       className="max-w-sm"
@@ -32,7 +40,8 @@ function RuneTranslator({ handleDrawerClick }: Props) {
       </p>
 
       <div className="flex flex-col">
-        <TextInput type="text" />
+        <TextInput type="text" 
+        onChange={(e) => setInput(e.target.value)}/>
         <span>*Maximal 12 Zeichen</span>
       </div>
       <div className="overflow-x-auto">
@@ -46,18 +55,11 @@ function RuneTranslator({ handleDrawerClick }: Props) {
               <span className="sr-only">Edit</span>
             </Table.HeadCell>
           </Table.Head>
-          <Table.Body className="divide-y">
-            <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-              <Table.Cell></Table.Cell>
-              <Table.Cell>Black</Table.Cell>
-              <Table.Cell>Accessories</Table.Cell>
-              <Table.Cell></Table.Cell>
-            </Table.Row>
-          </Table.Body>
+          <Table.Body  ref={tableRef} className="divide-y"></Table.Body>
         </Table>
       </div>
 
-      <Button>Los geht's</Button>
+      <Button onClick={() => handleClick(tableRef.current)}>Los geht's</Button>
     </Card>
   );
 }

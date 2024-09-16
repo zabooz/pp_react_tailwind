@@ -1,4 +1,4 @@
-import { createContext} from 'react';
+import { createContext } from "react";
 
 // Definiere das Interface für den ModalContext
 interface ModalContextProps {
@@ -6,7 +6,9 @@ interface ModalContextProps {
   setOpenModal: (value: boolean) => void;
 }
 
-export const ModalContext = createContext<ModalContextProps>({} as ModalContextProps);
+export const ModalContext = createContext<ModalContextProps>(
+  {} as ModalContextProps
+);
 
 interface LoginContextProps {
   loggedIn: boolean;
@@ -14,7 +16,6 @@ interface LoginContextProps {
   change: boolean;
   setChange: (value: boolean) => void;
 }
-export const LoginContext = createContext<LoginContextProps>({} as LoginContextProps);
-
-
-
+export const LoginContext = createContext<LoginContextProps>(
+  {} as LoginContextProps
+);

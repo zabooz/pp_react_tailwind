@@ -1,14 +1,12 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const apiToken = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: "http://localhost:3000",
 });
-
 
 apiToken.interceptors.request.use(
   (config) => {
-  
-    const token = localStorage.getItem('pp-token');
+    const token = localStorage.getItem("pp-token");
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -16,11 +14,10 @@ apiToken.interceptors.request.use(
     return config;
   },
   (error) => {
-
     return Promise.reject(error);
   }
 );
 
 export const api = axios.create({
-  baseURL: 'http://localhost:3000',
-})
+  baseURL: "http://localhost:3000",
+});

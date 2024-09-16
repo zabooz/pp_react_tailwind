@@ -12,7 +12,6 @@ export const login = async ({username, password}:loginData) => {
 
         try{
             const response = await api.post<loginResponse>(`/login`,data)
-            console.log(response)
             if(response.data.token){
                 localStorage.setItem("pp-token", response.data.token);
                 await dataKrakenTakes({col:"visits"})

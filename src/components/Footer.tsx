@@ -9,7 +9,6 @@ function FooterCom() {
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
             <Footer.Brand
-              
               src="src/assets/navbar/logo.svg"
               alt="Password Playground Logo"
             />
@@ -26,8 +25,8 @@ function FooterCom() {
             <div>
               <Footer.Title title="Follow us" />
               <Footer.LinkGroup col>
-              <Footer.Link href="#">Github</Footer.Link>
-              <Footer.Link href="#">Discord</Footer.Link>
+                <Footer.Link href="#">Github</Footer.Link>
+                <Footer.Link href="#">Discord</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
@@ -45,7 +44,7 @@ function FooterCom() {
         </div>
       </div>
     </Footer>
-  )
+  );
 }
 
-export default FooterCom
+export default FooterCom;

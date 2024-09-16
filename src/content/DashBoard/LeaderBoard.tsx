@@ -45,20 +45,23 @@ function LeaderBoard() {
             let bgColor;
             let fontWeight;
             let rank = index + 1;
+            let avatar = user.avatar;
             if ("rank" in user) {
+              console.log("user", user);
               rank = user.rank as number;
               user = user.user as LeaderBoardData;
+              avatar = user.avatar as string;
               color = "text-red-400";
               bgColor = "bg-gray-200";
               fontWeight = "font-bold";
             } else {
               const match =
                 username[0].username === user.username ? true : false;
-                if(match){
-                    color = "text-emerald-400";
-                    bgColor = "bg-gray-200";
-                    fontWeight = "font-bold";
-                }
+              if (match) {
+                color = "text-emerald-400";
+                bgColor = "bg-gray-200";
+                fontWeight = "font-bold";
+              }
             }
 
             return (
@@ -69,7 +72,10 @@ function LeaderBoard() {
                 <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                   {rank}
                 </Table.Cell>
-                <Table.Cell>{user.username}</Table.Cell>
+                <Table.Cell className="flex gap-2 items-center ">
+                  <img src={avatar} className="w-8 rounded-full" />
+                  {user.username}
+                </Table.Cell>
                 <Table.Cell>{user.visits}</Table.Cell>
                 <Table.Cell>{user.tested_passwords}</Table.Cell>
                 <Table.Cell>{user.generated_passwords}</Table.Cell>

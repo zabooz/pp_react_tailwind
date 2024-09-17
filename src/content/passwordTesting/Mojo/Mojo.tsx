@@ -1,18 +1,39 @@
-import { Button, Card, Radio, Table, TextInput, Label } from "flowbite-react";
+import {
+  Button,
+  Card,
+  Radio,
+  Table,
+  TextInput,
+  Label,
+  Spinner,
+} from "flowbite-react";
 import {
   bruteForceAttackList,
   bruteForceAttackSimple,
 } from "../../../data/drawer/drawerData";
-
-import { useState } from "react";
+import { startBruteForce, stopBruteForce } from "./mojoScripts";
+import { thinker } from "../../../utillities/thinker";
+import { useState, useEffect, useRef } from "react";
 import { DrawerData } from "../../../interfaces/interfaces";
 import OffCanvas from "../../../components/OffCanvas";
+import ResultsModal from "./ResultsModal";
+
 function Mojo() {
   const [drawer, setDrawerShow] = useState<boolean>(false);
   const [drawerContent, setDrawerContent] = useState<DrawerData>({
     title: "",
     paragraphs: [],
   });
+  const [isBruteActive, setIsBruteActive] = useState<boolean>(false);
+  const [bruteForceThinkerInterval, setBruteThinkerInterval] =
+    useState<number>(0);
+  const [bruteType, setBruteType] = useState<string>("library");
+  const [password, setPassword] = useState<string>("");
+  const [showResults, setShowResults] = useState<boolean>(false);
+  const [openResultModal, setOpenResultModal] = useState<boolean>(false);
+  const [bruteForceResults, setBruteForceResults] = useState<string[][]>([]);
+  const displayResult = useRef<HTMLTableSectionElement | null>(null);
+  
 
   const handleClickDrawer = (content: DrawerData) => {
     setDrawerShow(!drawer);
@@ -21,6 +42,45 @@ function Mojo() {
   const handleCloseDrawer = () => {
     setDrawerShow(!drawer);
   };
+ 
+  useEffect(() => {
+    if (isBruteActive) {
+      const spinner = document.getElementById("spinner")!;
+      spinner.textContent = "...";
+      const intervalId = setInterval(() => {
+        spinner!.textContent = thinker();
+      }, 1500);
+      setBruteThinkerInterval(intervalId);
+    } else {
+      clearInterval(bruteForceThinkerInterval);
+    }
+  }, [isBruteActive]);
+
+  const handleBruteForceStart = async () => {
+    setIsBruteActive(true);
+    await startBruteForce(
+      bruteType,
+      password,
+      setIsBruteActive,
+      bruteForceThinkerInterval,
+      displayResult.current!,
+      setShowResults,
+      setBruteForceResults,
+      bruteForceResults
+    );
+  };
+  const handleBruteForceStop = async () => {
+    await stopBruteForce(setIsBruteActive, bruteForceThinkerInterval);
+  };
+
+  const handleBruteTypeClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const target = event.target as HTMLInputElement;
+    if (target.tagName === "INPUT" && target.type === "radio") {
+      setBruteType(target.dataset.type!);
+    }
+  };
+
+
 
   return (
     <>
@@ -51,16 +111,43 @@ function Mojo() {
           prüft bekannte Passwörter
         </p>
         <div>
-          <TextInput type="text" />
-          <div>
+          <TextInput
+            type="text"
+            onInput={(e) => setPassword((e.target as HTMLInputElement).value)}
+          />
+          <div onClick={(e) => handleBruteTypeClick(e)}>
             <Label htmlFor="simple">Einfach</Label>
-            <Radio id="simple" name="bruteForce" value={"simple"} />
+            <Radio
+              id="simple"
+              name="bruteForce"
+              value={"Einfach"}
+              data-type="simple"
+            />
             <label htmlFor="list">Liste</label>
-            <Radio id="list" name="bruteForce" value={"list"} />
+            <Radio
+              id="list"
+              name="bruteForce"
+              value={"Liste"}
+              data-type="library"
+              defaultChecked
+            />
           </div>
           <div className="flex">
-            <Button>Los geht's</Button>
-            <Button>Stop</Button>
+            <div className="flex flex-row gap-3">
+              <Button onClick={handleBruteForceStart} disabled={isBruteActive}>
+                {isBruteActive ? (
+                  <>
+                    <Spinner aria-label="Spinner button example" size="sm" />
+                    <span className="pl-3" id="spinner"></span>
+                  </>
+                ) : (
+                  <span className="pl-3">Start</span>
+                )}
+              </Button>
+              <Button disabled={false} onClick={handleBruteForceStop}>
+                Stop
+              </Button>
+            </div>
           </div>
         </div>
         <div className="overflow-x-auto">
@@ -74,21 +161,25 @@ function Mojo() {
                 <span className="sr-only">Edit</span>
               </Table.HeadCell>
             </Table.Head>
-            <Table.Body className="divide-y">
-              <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                <Table.Cell></Table.Cell>
-                <Table.Cell>Black</Table.Cell>
-                <Table.Cell>Accessories</Table.Cell>
-                <Table.Cell></Table.Cell>
-              </Table.Row>
-            </Table.Body>
+            <Table.Body className="divide-y" ref={displayResult}></Table.Body>
           </Table>
         </div>
+        {showResults ? (
+          <span onClick={() => setOpenResultModal(true)}>
+            Hier Könnte ihre werbung stehen
+          </span>
+        ) : null}
       </Card>
       <OffCanvas
         handleClose={handleCloseDrawer}
         show={drawer}
         data={drawerContent}
+      />
+      <ResultsModal
+        openModal={openResultModal}
+        setOpenModal={setOpenResultModal}
+        bruteForceResults={bruteForceResults}
+
       />
     </>
   );

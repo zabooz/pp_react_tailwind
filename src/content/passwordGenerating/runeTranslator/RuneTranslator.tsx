@@ -22,7 +22,7 @@ function RuneTranslator({ handleDrawerClick }: Props) {
     const storage: StorageData[] =
     JSON.parse(sessionStorage.getItem("storedGlyphArray") || "[]");
     if(storage.length > 0){
-      console.log(123)
+
       storeAndSwitch(storage, "storedGlyphArray", tableRef.current);
     }
   },[])

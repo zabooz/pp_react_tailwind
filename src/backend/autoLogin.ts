@@ -4,6 +4,7 @@ export async function  autoLogin () {
 
     try{
 
+    if(!localStorage.getItem("pp-token")) return false
     const response = await  apiToken.get(`/user`)
 
     if(response.status >= 200 && response.status < 300){

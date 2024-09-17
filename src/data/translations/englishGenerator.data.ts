@@ -3071,10 +3071,30 @@ export const desserts = [
   "Napoleon",
 ];
 export const englishArraysObjNouns = {
-  instruments: instruments,
-  fruits: fruits,
+  animals: "Tiere",
+  fantasyCreatures: "Fantasiewesen",
+  instruments: "Instrumente",
+  fruits: "Früchte",
+  vegetables: "Gemüse",
+  rpgClasses: "RPG-Klassen",
+  fantasyRaces: "Fantasierassen",
+  occupations: "Berufe",
+  vehicles: "Fahrzeuge",
+  food: "Lebensmittel",
+  tools: "Werkzeuge",
+  beverages: "Getränke",
+  clothingItems: "Kleidungsstücke",
+  bodyParts: "Körperteile",
+  flowers: "Blumen",
+  desserts: "Desserts",
+};
+
+
+export const englishArraysObj = {
   animals: animals,
   fantasyCreatures: fantasyCreatures,
+  instruments: instruments,
+  fruits: fruits,
   vegetables: vegetables,
   rpgClasses: rpgClasses,
   fantasyRaces: fantasyRaces,
@@ -3087,6 +3107,19 @@ export const englishArraysObjNouns = {
   bodyParts: bodyParts,
   flowers: flowers,
   desserts: desserts,
+  colors: colors,
+  shapes: shapes,
+  textures: textures,
+  sizes: sizes,
+  emotions: emotions,
+  tastes: tastes,
+  sounds: sounds,
+  ages: ages,
+  intensities: intensities,
+  temperatures: temperatures,
+  speeds: speeds,
+  qualities: qualities,
+  weatherTypes: weatherTypes,
 };
 
 
@@ -3107,7 +3140,37 @@ export const englishArraysObjAdjectives = {
 };
 
 
-
+export const translateKeysToGerman = {
+  colors: "Farben",
+  shapes: "Formen",
+  textures: "Texturen",
+  sizes: "Größen",
+  emotions: "Emotionen",
+  tastes: "Geschmäcker",
+  sounds: "Geräusche",
+  ages: "Alter",
+  intensities: "Intensitäten",
+  temperatures: "Temperaturen",
+  speeds: "Geschwindigkeiten",
+  qualities: "Qualitäten",
+  weatherTypes: "Wettertypen",
+  animals: "Tiere",
+  fantasyCreatures: "Fantasiewesen",
+  instruments: "Instrumente",
+  fruits: "Früchte",
+  vegetables: "Gemüse",
+  rpgClasses: "RPG-Klassen",
+  fantasyRaces: "Fantasierassen",
+  occupations: "Berufe",
+  vehicles: "Fahrzeuge",
+  food: "Lebensmittel",
+  tools: "Werkzeuge",
+  beverages: "Getränke",
+  clothingItems: "Kleidungsstücke",
+  bodyParts: "Körperteile",
+  flowers: "Blumen",
+  desserts: "Desserts",
+};
 
 
 

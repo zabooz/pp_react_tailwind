@@ -5,10 +5,7 @@ import Selectors from "./Selectors";
 import {useState} from "react"
 import IdentityTable from "./IdentityTable";
 const  IdentityWizard =() =>{
-
     const [userValues, setValues] = useState<string[]>([])
-
- 
   return (
     <Card
       className="max-w-xl"

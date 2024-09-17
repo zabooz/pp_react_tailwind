@@ -1,5 +1,5 @@
 
-import { userGenerator } from "../userGenScripts/userGenerator";
+import { userGenerator } from "../usernameGeneratingScript";
 import { translator } from "./translator";
 interface Props{
     userValues : string[]

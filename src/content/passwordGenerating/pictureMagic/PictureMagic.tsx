@@ -18,7 +18,6 @@ function PictureMagic() {
       storage  =
       JSON.parse(sessionStorage.getItem("pictureMagicArray") || "[]");
       if(storage.length > 0){
-        console.log(123)
         storeAndSwitch(storage, "pictureMagicArray", tableRef.current);
       }
     },[pictureBase64])

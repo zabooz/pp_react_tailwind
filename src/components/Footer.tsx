@@ -20,12 +20,13 @@ function FooterCom() {
               <Footer.LinkGroup col>
                 <Link to={"/about-us"}>Über uns</Link>
                 <Link to={"/project"}>Projekt</Link>
+                <a href="legacyDesign\index.html">Legacy Design</a>
               </Footer.LinkGroup>
             </div>
             <div>
               <Footer.Title title="Follow us" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">Github</Footer.Link>
+                <Footer.Link href="https://github.com/zabooz">Github</Footer.Link>
                 <Footer.Link href="#">Discord</Footer.Link>
               </Footer.LinkGroup>
             </div>

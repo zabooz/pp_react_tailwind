@@ -33,7 +33,6 @@ function Mojo() {
   const [openResultModal, setOpenResultModal] = useState<boolean>(false);
   const [bruteForceResults, setBruteForceResults] = useState<string[][]>([]);
   const displayResult = useRef<HTMLTableSectionElement | null>(null);
-  
 
   const handleClickDrawer = (content: DrawerData) => {
     setDrawerShow(!drawer);
@@ -42,7 +41,7 @@ function Mojo() {
   const handleCloseDrawer = () => {
     setDrawerShow(!drawer);
   };
- 
+
   useEffect(() => {
     if (isBruteActive) {
       const spinner = document.getElementById("spinner")!;
@@ -79,8 +78,6 @@ function Mojo() {
       setBruteType(target.dataset.type!);
     }
   };
-
-
 
   return (
     <>
@@ -179,7 +176,6 @@ function Mojo() {
         openModal={openResultModal}
         setOpenModal={setOpenResultModal}
         bruteForceResults={bruteForceResults}
-
       />
     </>
   );

@@ -1,6 +1,18 @@
 import { Card, Button, Progress, TextInput } from "flowbite-react";
+import { excaliburTesting } from "./excaliburScript";
+import { useState } from "react";
+import ExcaliburModal from "./ExcaliburModal"
+import { ZxcvbnResult } from '@zxcvbn-ts/core'
 function Excalibur() {
+
+
+    const [showModal,setShowModal] = useState(false)
+    const [nerdStats,setNerdStats] = useState<ZxcvbnResult | null>(null)
+    const [password,setPassword] = useState<string>("")
+
+
   return (
+    <>
     <Card
       className="max-w-md"
       imgAlt="Excalibur Picture"
@@ -15,7 +27,9 @@ function Excalibur() {
         gibt dir eine umfassende Bewertung deiner Passwortsicherheit.
       </p>
       <div>
-        <TextInput type="text" />
+        <TextInput type="text" 
+        onChange={(e) => setPassword(e.target.value)}
+        />
         <Progress
           progress={45}
           progressLabelPosition="inside"
@@ -26,8 +40,16 @@ function Excalibur() {
           labelText
         />
       </div>
-      <Button>Los geht's</Button>
+      <Button
+      onClick={() => excaliburTesting({setNerdStats,password})}
+      >Los geht's</Button>
+      <span 
+      onClick={() => setShowModal(true)}
+      className="cursor-pointer font-bold"
+      >Auch hier könnte ihre werbung stehen</span>
     </Card>
+    <ExcaliburModal openModal={showModal} setOpenModal={setShowModal} nerdStats={nerdStats}/>
+    </>
   );
 }
 

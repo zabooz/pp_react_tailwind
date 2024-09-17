@@ -1,41 +1,37 @@
-import { Button, Modal,Table } from "flowbite-react"
-import { updateAttempts } from "../../../utillities/updateResult"
+import { Button, Modal, Table } from "flowbite-react";
+import { updateAttempts } from "../../../utillities/updateResult";
 
-import {useEffect, useRef} from "react"
+import { useEffect, useRef } from "react";
 interface ResultsModalProps {
-    openModal: boolean
-    setOpenModal: (openModal: boolean) => void
-    bruteForceResults: string[][]
+  openModal: boolean;
+  setOpenModal: (openModal: boolean) => void;
+  bruteForceResults: string[][];
 }
 
-
-function ResultsModal({ openModal, setOpenModal,bruteForceResults }: ResultsModalProps) {
-
-  const tBody = useRef<HTMLTableSectionElement | null>(null)
+function ResultsModal({
+  openModal,
+  setOpenModal,
+  bruteForceResults,
+}: ResultsModalProps) {
+  const tBody = useRef<HTMLTableSectionElement | null>(null);
 
   useEffect(() => {
     if (openModal) {
       const timer = setTimeout(() => {
         if (tBody.current) {
-          console.log("tbody available:", tBody.current)
-          updateAttempts(bruteForceResults, tBody.current)
+          updateAttempts(bruteForceResults, tBody.current);
         }
-      }, 0) 
-  
-      return () => clearTimeout(timer)
+      }, 0);
+
+      return () => clearTimeout(timer);
     }
-  }, [openModal])
-
-
-
-
-
+  }, [openModal]);
 
   return (
     <Modal show={openModal} onClose={() => setOpenModal(false)}>
-    <Modal.Header>Terms of Service</Modal.Header>
-    <Modal.Body>
-    <div className="overflow-x-auto">
+      <Modal.Header>Terms of Service</Modal.Header>
+      <Modal.Body>
+        <div className="overflow-x-auto">
           <Table>
             <Table.Head>
               <Table.HeadCell>Passwort</Table.HeadCell>
@@ -46,15 +42,15 @@ function ResultsModal({ openModal, setOpenModal,bruteForceResults }: ResultsModa
                 <span className="sr-only">Edit</span>
               </Table.HeadCell>
             </Table.Head>
-            <Table.Body className="divide-y" ref={tBody} ></Table.Body>
+            <Table.Body className="divide-y" ref={tBody}></Table.Body>
           </Table>
         </div>
-    </Modal.Body>
-    <Modal.Footer>
-      <Button onClick={() => setOpenModal(false)}>Schließen</Button>
-    </Modal.Footer>
-  </Modal>
-  )
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={() => setOpenModal(false)}>Schließen</Button>
+      </Modal.Footer>
+    </Modal>
+  );
 }
 
-export default ResultsModal
+export default ResultsModal;

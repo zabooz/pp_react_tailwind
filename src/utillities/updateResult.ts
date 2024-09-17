@@ -1,14 +1,11 @@
-export function updateAttempts(data: string[][], display: HTMLTableSectionElement | null) {
-  
+export function updateAttempts(
+  data: string[][],
+  display: HTMLTableSectionElement | null
+) {
   const stars = "******";
 
   display!.innerHTML = "";
 
-  
-  
-  
-
-  
   const mojoIcon = document.createElement("img");
   const rowCount = Math.floor(Math.random() * 1000000);
   mojoIcon.src = "src/assets/icons/eye-slash.svg";
@@ -24,10 +21,9 @@ export function updateAttempts(data: string[][], display: HTMLTableSectionElemen
       target.append(mojoIcon);
     }
   });
-  
-  
-  if(data.length === 1){
-    const hideArr = [stars, data[data.length-1][0]];
+
+  if (data.length === 1) {
+    const hideArr = [stars, data[data.length - 1][0]];
     const mojoIconDisplay = document.createElement("img");
     mojoIconDisplay.src = "src/assets/icons/eye.svg";
     const rowCount = Math.floor(Math.random() * 1000000);
@@ -43,28 +39,26 @@ export function updateAttempts(data: string[][], display: HTMLTableSectionElemen
         target.append(mojoIconDisplay);
       }
     });
-  
-  const displayTr = document.createElement("tr");
-  data.forEach(item => {
-    item.forEach((item,index) => {
-    const td = document.createElement("td");
 
-    if (index === 0) {
-      td.textContent = hideArr[0];
-      td.id = `td${rowCount}`;
-      td.append(mojoIconDisplay);
-    } else {
-      td.textContent = item;
-    }
-    displayTr.appendChild(td);
-  })
-  });
+    const displayTr = document.createElement("tr");
+    data.forEach((item) => {
+      item.forEach((item, index) => {
+        const td = document.createElement("td");
+
+        if (index === 0) {
+          td.textContent = hideArr[0];
+          td.id = `td${rowCount}`;
+          td.append(mojoIconDisplay);
+        } else {
+          td.textContent = item;
+        }
+        displayTr.appendChild(td);
+      });
+    });
 
     display!.innerHTML = "";
     display!.append(displayTr);
   }
-
-  console.log(data)
 
   if (data.length > 1 && display) {
     data.forEach((item, rowIndex) => {
@@ -75,7 +69,7 @@ export function updateAttempts(data: string[][], display: HTMLTableSectionElemen
         const mojoIcon = document.createElement("img");
         const rowCount = Math.floor(Math.random() * 1000000); // Zufällige ID für jede Zeile
         mojoIcon.src = "src/assets/icons/eye-slash.svg";
-  
+
         mojoIcon.addEventListener("click", () => {
           const target = document.getElementById(`td${rowCount}`)!;
           if (target.textContent === stars) {
@@ -88,7 +82,7 @@ export function updateAttempts(data: string[][], display: HTMLTableSectionElemen
             target.append(mojoIcon);
           }
         });
-  
+
         if (colIndex === 0) {
           td.textContent = hideArr[0]; // Zeige Sterne für das erste Feld
           td.id = `td${rowCount}`; // Setze ID für die spätere Erkennung
@@ -102,8 +96,4 @@ export function updateAttempts(data: string[][], display: HTMLTableSectionElemen
       display.append(tr, ...rows);
     });
   }
-  
-  
-
-
 }

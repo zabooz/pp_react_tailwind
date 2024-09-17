@@ -1,3 +1,5 @@
+
+
 export interface DrawerData {
   title: string;
   paragraphs: string[];

@@ -1,5 +1,6 @@
-import IdentityWizard from "./IdentityWizard";
-import MindMaestro from "./MindMaestro";
+
+import IdentityWizard from "./identityWizard/IdentityWizard";
+import MindMaestro from "./mindMaestro/MindMaestro";
 
 function UsernameGenerating() {
   return (

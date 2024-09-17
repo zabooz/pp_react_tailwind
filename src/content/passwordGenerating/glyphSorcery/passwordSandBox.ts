@@ -1,9 +1,12 @@
-import { rndNumInLen } from "../../../utillities/rdmNumInLen.ts";
+
 import { passwordConverter } from "../../../utillities/converter/passwordConverter.ts";
-import { shuffleArray } from "../../../utillities/shuffleArray.ts";
 import { allNounsGerman } from "../../../data/translations/germanGenerator.data.ts";
 import { allNounsEnglish } from "../../../data/translations/englishGenerator.data.ts";
-import { capitalizeFirstLetter } from "../../../utillities/capitalizeFirstLetter.ts";
+import {
+  capitalizeFirstLetter,
+  shuffleArray,
+  rndNumInLen,
+} from "../../../utillities/helperFunctions.ts";
 
 function filterWordsByLength(words: string[], length:number) {
   // Use the filter method to filter words based on the specified length

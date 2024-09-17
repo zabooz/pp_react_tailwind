@@ -4372,69 +4372,38 @@ export const allNounsGerman: string[] = [
   "Karin",
 ];
 
-export const contentArray1 = [
-  "colors",
-  "shapes",
-  "textures",
-  "sizes",
-  "emotions",
-  "tastes",
-  "sounds",
-  "temperatures",
-  "speeds",
-  "qualities",
-  "weatherTypes",
-  "allAdjectives",
+export const germanNounKeys = [
+  "instrumente", // instruments
+  "früchte", // fruits
+  "tiere", // animals
+  "fantasiewesen", // fantasyCreatures
+  "gemüse", // vegetables
+  "rpgClasses", // rpgClasses
+  "fantasie-völker", // fantasyRaces
+  "berufe", // occupations
+  "fahrzeuge", // vehicles
+  "essen", // food
+  "werkzeuge", // tools
+  "getränke", // beverages
+  "kleidungstücke", // clothingItems
+  "körperteile", // bodyParts
+  "blumen", // flowers
+  "desserts", // desserts
 ];
 
-export const contentArray2 = [
-  "instruments",
-  "fruits",
-  "animals",
-  "fantasyCreatures",
-  "vegetables",
-  "rpgClasses",
-  "fantasyRaces",
-  "occupations",
-  "vehicles",
-  "food",
-  "tools",
-  "beverages",
-  "clothingItems",
-  "bodyParts",
-  "flowers",
-  "desserts",
-  "allNouns",
+export const germanAdjectivesKeys = [
+  "farben", // colors
+  "formen", // shapes
+  "texturen", // textures
+  "größen", // sizes
+  "alter", // ages
+  "intensitäten", // intensities
+  "geschmäcker", // tastes
+  "emotionen", // emotions
+  "klänge", // sounds
+  "temperaturen", // temperatures
+  "geschwindigkeiten", // speeds
+  "qualitäten", // qualities
+  "wetter", // weatherTypes
 ];
 
-export const myArraysObj = {
-  colors: "Farben",
-  shapes: "Formen",
-  textures: "Texturen",
-  sizes: "Größen",
-  ages: "Alter",
-  intensities: "Intensitäten",
-  tastes: "Geschmäcker",
-  emotions: "Emotionen",
-  sounds: "Klänge",
-  temperatures: "Temperaturen",
-  speeds: "Geschwindigkeiten",
-  qualities: "Qualitäten",
-  weatherTypes: "Wetter",
-  instruments: "Instrumente",
-  fruits: "Früchte",
-  vegetables: "Gemüse",
-  animals: "Tiere",
-  fantasyCreatures: "Fantasiewesen",
-  rpgClasses: "RPG-Klassen",
-  fantasyRaces: "Fantasie-Völker",
-  occupations: "Berufe",
-  vehicles: "Fahrzeuge",
-  food: "Essen",
-  tools: "Werkzeuge",
-  beverages: "Getränk",
-  clothingItems: "Kleidungstücke",
-  bodyParts: "Körperteile",
-  flowers: "Blumen",
-  desserts: "Desserts",
-};

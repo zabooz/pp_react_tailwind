@@ -3070,6 +3070,46 @@ export const desserts = [
   "Chocotorta",
   "Napoleon",
 ];
+export const englishArraysObjNouns = {
+  instruments: instruments,
+  fruits: fruits,
+  animals: animals,
+  fantasyCreatures: fantasyCreatures,
+  vegetables: vegetables,
+  rpgClasses: rpgClasses,
+  fantasyRaces: fantasyRaces,
+  occupations: occupations,
+  vehicles: vehicles,
+  food: food,
+  tools: tools,
+  beverages: beverages,
+  clothingItems: clothingItems,
+  bodyParts: bodyParts,
+  flowers: flowers,
+  desserts: desserts,
+};
+
+
+export const englishArraysObjAdjectives = {
+  colors: colors,
+  shapes: shapes,
+  textures: textures,
+  sizes: sizes,
+  emotions: emotions,
+  tastes: tastes,
+  sounds: sounds,
+  ages: ages,
+  intensities: intensities,
+  temperatures: temperatures,
+  speeds: speeds,
+  qualities: qualities,
+  weatherTypes: weatherTypes,
+};
+
+
+
+
+
 
 export const allNounsEnglish: string[] = [
   "time",

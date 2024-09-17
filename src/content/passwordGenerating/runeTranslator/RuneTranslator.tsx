@@ -1,5 +1,3 @@
-"use client";
-
 import { Button, Card, Table } from "flowbite-react";
 import { leetspeakTextShortened } from "../../../data/drawer/drawerData";
 import { useState, useRef,useEffect } from "react";

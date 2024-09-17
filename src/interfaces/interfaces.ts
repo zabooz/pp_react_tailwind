@@ -75,3 +75,35 @@ export interface LeaderBoardData {
   rank?: number
   user?: userData
 }
+export interface EnglishArrays {
+  colors: string[];
+  shapes: string[];
+  textures: string[];
+  sizes: string[];
+  emotions: string[];
+  tastes: string[];
+  sounds: string[];
+  ages: string[];
+  intensities: string[];
+  temperatures: string[];
+  speeds: string[];
+  qualities: string[];
+  weatherTypes: string[];
+  instruments: string[];
+  fruits: string[];
+  animals: string[];
+  fantasyCreatures: string[];
+  vegetables: string[];
+  rpgClasses: string[];
+  fantasyRaces: string[];
+  occupations: string[];
+  vehicles: string[];
+  food: string[];
+  tools: string[];
+  beverages: string[];
+  clothingItems: string[];
+  bodyParts: string[];
+  flowers: string[];
+  desserts: string[];
+}
+

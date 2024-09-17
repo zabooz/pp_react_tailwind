@@ -1,6 +1,11 @@
-import { Button, Card, Select, Table } from "flowbite-react";
 
-function IdentityWizard() {
+
+import { Button, Card, Select, Table,Label } from "flowbite-react";
+
+const  IdentityWizard =() =>{
+
+
+ 
   return (
     <Card
       className="max-w-xl"
@@ -18,7 +23,7 @@ function IdentityWizard() {
 
       <div className="flex">
         <div className="flex flex-col">
-          <label htmlFor="adjectives">Wähle bis zu zwei Eigenschafften:</label>
+          <Label htmlFor="adjectives">Wähle bis zu zwei Eigenschafften:</Label>
 
           <Select id="adjective1">
             <option value="random">Zufällig</option>
@@ -54,7 +59,7 @@ function IdentityWizard() {
             <option value="weatherTypes">Wetter</option>
             <option value="">-Keine-</option>
           </Select>
-          <label>...und einen Begriff:</label>
+          <Label>...und einen Begriff:</Label>
           <Select name="pwdGen" id="noun">
             <option value="random">Zufällig</option>
             <option value="instruments">Instrument</option>

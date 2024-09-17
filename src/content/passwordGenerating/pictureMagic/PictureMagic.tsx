@@ -17,7 +17,6 @@ function PictureMagic() {
     useEffect(() => {
       storage  =
       JSON.parse(sessionStorage.getItem("pictureMagicArray") || "[]");
-      console.log(storage)
       if(storage.length > 0){
         console.log(123)
         storeAndSwitch(storage, "pictureMagicArray", tableRef.current);

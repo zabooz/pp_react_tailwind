@@ -1,55 +1,27 @@
 import { dataKrakenTakes } from "../../../backend/dataKraken";
-import  {tripleConverter}  from "../../../utillities/converter/tripleConverter";
-import { storeAndSwitch } from "../../../utillities/storeAndSwitch";
+import { tripleConverter } from "../../../utillities/converter/tripleConverter";
 
-
-
-
-export default async function  runeTranslator  (input:string,target:HTMLElement | null) {
+export default async function runeTranslator(input: string) {
   const runeTranslatorArray = [];
   const newPasswordArray = tripleConverter(input);
   await dataKrakenTakes({ col: "generated_passwords" });
 
-    for (let i = 0; i < newPasswordArray.length; i++) {
-      const pwId = `runeTranslator${i}`;
-      const catchId = `runeCatch${i}`;
-      const versionArray : string[] = ["Einfach", "Mittel", "Stark"];
-      const data = {
-        pwId: pwId,
-        catchId: catchId,
-        catch: versionArray[i],
-        password: newPasswordArray[i],
-        app: "runeTranslator",
-      };
+  for (let i = 0; i < newPasswordArray.length; i++) {
+    const key = `runeTranslator${i}`;
+    const versionArray: string[] = ["Einfach", "Mittel", "Stark"];
+    const data = {
+      key: key,
+      catch: versionArray[i],
+      password: newPasswordArray[i],
+    };
 
-      runeTranslatorArray.push(data);
-    }
+    runeTranslatorArray.push(data);
+  }
 
-    sessionStorage.setItem(
-      "runeTranslatorArray",
-      JSON.stringify(newPasswordArray)
-    );
+  sessionStorage.setItem(
+    "runeTranslatorArray",
+    JSON.stringify(runeTranslatorArray)
+  );
 
-    storeAndSwitch(runeTranslatorArray,  "runeTranslatorArray", target);
+  return runeTranslatorArray;
 }
-
-
-
-
-
-
-
-
-
-
-// leetBtn.addEventListener("click", function () {
-
-
- 
-//   storeAndSwitch(
-//     runeRowsArr,
-//     runeTranslatorArray,
-//     "runeTranslatorArray",
-//     "statsBody2"
-//   );
-// });

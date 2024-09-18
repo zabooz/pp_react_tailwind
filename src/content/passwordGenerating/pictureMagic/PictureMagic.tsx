@@ -3,7 +3,7 @@ import { Label, FileInput } from "flowbite-react";
 import { useState,useRef, useEffect } from "react";
 import { fileUpload } from "./pictureMagicScript";
 import { pictureMagic } from "./pictureMagicScript";
-import { storeAndSwitch } from "../../../utillities/storeAndSwitch";
+
 import { StorageData } from "../../../interfaces/interfaces";
 function PictureMagic() {
 
@@ -14,13 +14,7 @@ function PictureMagic() {
     const tableRef = useRef(null );
     let storage:StorageData[] = [];
 
-    useEffect(() => {
-      storage  =
-      JSON.parse(sessionStorage.getItem("pictureMagicArray") || "[]");
-      if(storage.length > 0){
-        storeAndSwitch(storage, "pictureMagicArray", tableRef.current);
-      }
-    },[pictureBase64])
+
 
 
   return (
@@ -76,7 +70,7 @@ function PictureMagic() {
           </Table.Body>
         </Table>
       </div>
-      <Button onClick={() => pictureMagic(pictureFile, pictureBase64, tableRef.current,storage)}>Los geht's</Button>
+      <Button onClick={() => pictureMagic(pictureFile, pictureBase64,storage)}>Los geht's</Button>
     </Card>
   );
 }

@@ -37,11 +37,10 @@ export interface dataKrakenGivesResponse {
 
 export interface StorageData {
 
-    pwid: string;
-    catchId: string;
-    catch: number;
+    key: string;
+    catch: string;
     password: string;
-    app: string;
+
 
 }
 

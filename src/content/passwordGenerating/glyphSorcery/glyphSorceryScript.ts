@@ -1,25 +1,24 @@
 import { generateEzPw } from "./passwordSandBox"
 import { dataKrakenTakes } from "../../../backend/dataKraken";
-import { storeAndSwitch } from "../../../utillities/storeAndSwitch";
 
-export const glyphSorcery = async (language:string,length:number,target:HTMLElement) => {
+
+export const glyphSorcery = async (language:string,length:number) => {
         const storedGlyphArray = JSON.parse(sessionStorage.getItem("storedGlyphArray") || "[]");
 
         const password = generateEzPw(length, language);
-        const pwid = `${password}`;
-        const lengthid = `${length + password}`;
-        const app = "glyphSorcery";
+        const key = `${password}`;
+
         
 
         const data = {
-          pwid: pwid,
-          catchId: lengthid,
+          key: key,
           catch: length,
           password: password,
-          app: app,
         };
         dataKrakenTakes({ col: "generated_passwords" });
         storedGlyphArray.push(data);
-        storeAndSwitch(storedGlyphArray, "storedGlyphArray", target);
+        sessionStorage.setItem("storedGlyphArray", JSON.stringify(storedGlyphArray));
+        return storedGlyphArray
+
 }
 

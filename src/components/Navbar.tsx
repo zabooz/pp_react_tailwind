@@ -39,7 +39,7 @@ export const NavbarCom = () => {
         <Navbar fluid rounded className="	fixed w-full z-20 dark:bg-slate-700 !justify-center">
           <NavbarBrand onClick={() => navigate("/")} className="cursor-pointer">
             <img
-              src="src/assets/navbar/logo.svg"
+              src="src/assets/landingPage/logo_transparent.png"
               className="mr-3 h-9"
               alt="Flowbite React Logo"
             />

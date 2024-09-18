@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext} from "react";
 
 // Definiere das Interface für den ModalContext
 interface ModalContextProps {
@@ -19,3 +19,16 @@ interface LoginContextProps {
 export const LoginContext = createContext<LoginContextProps>(
   {} as LoginContextProps
 );
+
+interface ClippyContextProps {
+  passwords: string[];
+  setPasswords: (value: string[]) => void;
+  usernames: string[];
+  setUsernames: (value: string[]) => void;
+}
+
+// Erstelle den Context mit einem Default-Wert
+export const ClippyContext = createContext<ClippyContextProps>(
+{} as ClippyContextProps  
+);
+

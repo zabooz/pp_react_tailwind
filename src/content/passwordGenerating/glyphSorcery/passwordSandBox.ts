@@ -42,7 +42,7 @@ function generatePassword(length: number) {
 }
 function languageSelect(language: string) {
   let chosenArray;
-  if (language === "deutsch") {
+  if (language === "german") {
     chosenArray = allNounsGerman;
   } else {
     chosenArray = allNounsEnglish;
@@ -52,7 +52,9 @@ function languageSelect(language: string) {
 export function generateEzPw(length: number, language: string) {
   let allNouns = languageSelect(language);
   let filteredArray = filterWordsByLength(allNouns, length);
+
   let chosenWord = filteredArray[rndNumInLen(filteredArray)];
+
   const firstChar = chosenWord.slice(0, 1);
   const password = chosenWord.slice(1);
 

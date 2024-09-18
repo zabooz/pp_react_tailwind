@@ -1,28 +1,23 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "flowbite-react";
 
 import Sanchez from "./Sanchez";
 import Clippy from "./Clippy";
 function QuickNav() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState<string>("");
-  const handleClose = () => setIsOpen(false);
+  const handleClose = () => {
+    setIsOpen(false)
+  };
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const button = e.currentTarget
     const data = button.dataset.drawer;
     setData(data || "");
     setIsOpen(true);
-    console.log(data);
+
   };
   
-
-
-
-  useEffect(() => {
-    console.log("Current data:", data);
-}, [data]);
-
 
   return (
     <>

@@ -36,9 +36,6 @@ function PasswordGenerating() {
         show={drawer}
         data={drawerContent}
       ></TextCanvas>
-
-      <div className="quickNav"></div>
-      <div className="canvas"></div>
     </>
   );
 }

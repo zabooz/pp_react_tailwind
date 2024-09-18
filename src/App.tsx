@@ -2,7 +2,7 @@ import Head from "./components/Head";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import { LoginContext } from "./contexts/Contexts";
+import { LoginContext,ClippyContext } from "./contexts/Contexts";
 import { HeadProvider } from "react-head";
 import { autoLogin } from "./backend/autoLogin";
 
@@ -20,12 +20,13 @@ import Impressum from "./content/legalStuff/Impressum";
 import PrivacyPolicy from "./content/legalStuff/PrivacyPolicy";
 import DashBoard from "./content/DashBoard/DashBoard";
 import { Flowbite } from "flowbite-react";
-import Sanchez from "./components/quickNav/QuickNav";
+import QuickNav from "./components/quickNav/QuickNav";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [change, setChange] = useState(false);
-
+  const [passwords, setPasswords] = useState<string[]>([]);
+  const [usernames, setUsernames] = useState<string[]>([]);
   useEffect(() => {
     (async () => {
       const result = await autoLogin();
@@ -42,7 +43,8 @@ function App() {
           value={{ loggedIn, setLoggedIn, change, setChange }}
         > 
           <NavbarCom />
-          <Sanchez />
+          <ClippyContext.Provider value={{passwords,setPasswords,usernames,setUsernames}}>
+          <QuickNav />
 
           <Routes>
             <Route path="/" element={<ContentBox />}>
@@ -63,6 +65,7 @@ function App() {
               <Route path="dashBoard" element={<DashBoard />} />
             </Route>
           </Routes>
+          </ClippyContext.Provider>
         </LoginContext.Provider>
         <Footer />
       </Router>

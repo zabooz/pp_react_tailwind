@@ -1,26 +1,31 @@
-import { Card, Button, Table, Label, RangeSlider, Radio } from "flowbite-react";
-import { useState,useRef,useEffect } from "react";
+import { Card, Button,  Label, RangeSlider, Radio } from "flowbite-react";
+import { useState} from "react";
 import { glyphSorcery } from "./glyphSorceryScript";
-import { storeAndSwitch } from "../../../utillities/storeAndSwitch";
+
 import { StorageData } from "../../../interfaces/interfaces";
+import GlyphSorcerySwitch from "./GlyphSorcerySwitch";
+
 function GylphSorcery() {
+
+  const storedData = JSON.parse(sessionStorage.getItem("storedGlyphArray") || "[]");
+
 
   const [passwordLength, setPasswordLength] = useState(0);
   const [language, setLanguage] = useState("english");
-  const tableRef = useRef<any>(null);
+  const [data, setData] = useState<StorageData[]>(storedData);
     const handleLanguageClick = (event: React.MouseEvent<HTMLDivElement>) => {
       const target = event.target as HTMLInputElement;
       if (target.tagName === "INPUT" && target.type === "radio") {
         setLanguage(target.value);
       }
     };
-    useEffect(() => {
-      const storage: StorageData[] =
-      JSON.parse(sessionStorage.getItem("storedGlyphArray") || "[]");
-      if(storage.length > 0){
-        storeAndSwitch(storage, "storedGlyphArray", tableRef.current);
-      }
-    },[])
+
+    const handeClick = async () => {
+      const data = await glyphSorcery(language, passwordLength);
+      setData(data);
+    };
+    
+
   return (
     <Card
       className="max-w-sm"
@@ -38,7 +43,7 @@ function GylphSorcery() {
       </p>
       <div>
         <Label htmlFor="glyphrange">Passwortlänge: {passwordLength}</Label>
-        <RangeSlider id="glyphrange" name="glyphrange" min={0} max={20} 
+        <RangeSlider id="glyphrange" name="glyphrange" min={2} max={14} 
         onInput={(e) => setPasswordLength(Number((e.target as HTMLInputElement).value))}
         />
         <div onClick={(e) => handleLanguageClick(e)}>
@@ -48,23 +53,8 @@ function GylphSorcery() {
           <Radio id="german" name="language" value={"german"} />
         </div>
       </div>
-      <div className="overflow-x-auto">
-        <Table>
-          <Table.Head>
-            <Table.HeadCell></Table.HeadCell>
-            <Table.HeadCell>Password</Table.HeadCell>
-            <Table.HeadCell>Länge</Table.HeadCell>
-            <Table.HeadCell></Table.HeadCell>
-            <Table.HeadCell>
-              <span className="sr-only">Edit</span>
-            </Table.HeadCell>
-          </Table.Head>
-          <Table.Body className="divide-y" ref={tableRef}>
-
-          </Table.Body>
-        </Table>
-      </div>
-      <Button onClick={() => glyphSorcery(language, passwordLength, tableRef.current)}>Los geht's</Button>
+      <GlyphSorcerySwitch data={data}/>
+      <Button onClick={handeClick}>Los geht's</Button>
     </Card>
   );
 }

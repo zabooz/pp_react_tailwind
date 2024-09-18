@@ -3,7 +3,7 @@
 
 import { pictureToString } from "./passwordToString";
 import { dataKrakenTakes } from "../../../backend/dataKraken";
-import { storeAndSwitch } from "../../../utillities/storeAndSwitch";
+
 import "./pictureMagic.css";
 export const fileUpload = async (
   file: File,
@@ -39,7 +39,7 @@ export const fileUpload = async (
 
 
 
-export const pictureMagic = async (file: File,base64: string,target:HTMLElement | null,storage:any) => {
+export const pictureMagic = async (file: File,base64: string,storage:any) => {
 
 
             const pwId = `picturePassword_${Math.floor(Math.random() * 1000)}`;
@@ -58,11 +58,6 @@ export const pictureMagic = async (file: File,base64: string,target:HTMLElement 
                   data.password = result;
                   storage.push(data);
 
-                  storeAndSwitch(
-                    storage,
-                    "pictureMagicArray",
-                    target
-                  );
                   dataKrakenTakes({ col: "generated_passwords" });
                 } catch (error) {
                   console.error(error);

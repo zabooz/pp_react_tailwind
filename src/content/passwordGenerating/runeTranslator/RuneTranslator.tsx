@@ -1,29 +1,31 @@
-import { Button, Card, Table } from "flowbite-react";
+import { Button, Card } from "flowbite-react";
 import { leetspeakTextShortened } from "../../../data/drawer/drawerData";
-import { useState, useRef,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { DrawerData } from "../../../interfaces/interfaces";
 import { TextInput } from "flowbite-react";
 import runeTranslator from "./runeTranslatorScript";
-import { storeAndSwitch } from "../../../utillities/storeAndSwitch";
 import { StorageData } from "../../../interfaces/interfaces";
+import RuneTransatorSwitch from "./RuneTransatorSwitch";
 interface Props {
   handleDrawerClick: (content: DrawerData) => void;
 }
 
 function RuneTranslator({ handleDrawerClick }: Props) {
   const [input, setInput] = useState("");
-  const tableRef = useRef(null);
-  const handleClick = async (e: HTMLElement | null) => {
-    await runeTranslator(input, e);
+  const [runes, setRunes] = useState<StorageData[]>([]);
+  const handleClick = async () => {
+    const result = await runeTranslator(input);
+    setRunes(result);
   };
-  useEffect(() => {
-    const storage: StorageData[] =
-    JSON.parse(sessionStorage.getItem("storedGlyphArray") || "[]");
-    if(storage.length > 0){
 
-      storeAndSwitch(storage, "storedGlyphArray", tableRef.current);
+  useEffect(() => {
+    if (sessionStorage.getItem("runeTranslatorArray")) {
+      setRunes(
+        JSON.parse(sessionStorage.getItem("runeTranslatorArray") || "[]")
+      );
     }
-  },[])
+  }, []);
+
   return (
     <Card
       className="max-w-sm"
@@ -47,24 +49,12 @@ function RuneTranslator({ handleDrawerClick }: Props) {
 
       <div className="flex flex-col">
         <TextInput type="text" onChange={(e) => setInput(e.target.value)} />
-        <span>*Maximal 12 Zeichen</span>
-      </div>
-      <div className="overflow-x-auto">
-        <Table>
-          <Table.Head>
-            <Table.HeadCell></Table.HeadCell>
-            <Table.HeadCell>Password</Table.HeadCell>
-            <Table.HeadCell>Stärke</Table.HeadCell>
-            <Table.HeadCell></Table.HeadCell>
-            <Table.HeadCell>
-              <span className="sr-only">Edit</span>
-            </Table.HeadCell>
-          </Table.Head>
-          <Table.Body ref={tableRef} className="divide-y"></Table.Body>
-        </Table>
+        <span className="text-gray-400 mt-2">*Maximal 12 Zeichen</span>
       </div>
 
-      <Button onClick={() => handleClick(tableRef.current)}>Los geht's</Button>
+      <RuneTransatorSwitch runes={runes} />
+
+      <Button onClick={() => handleClick()}>Los geht's</Button>
     </Card>
   );
 }

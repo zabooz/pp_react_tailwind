@@ -15,7 +15,7 @@ const BounceOnScroll: React.FC<BounceOnScrollProps> = ({ children }) => {
           setIsVisible(false);
         }
       },
-      { threshold: 1 } // 50% sichtbar
+      { threshold: .5 } // 50% sichtbar
     );
 
     if (elementRef.current) {

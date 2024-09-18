@@ -36,14 +36,14 @@ export const NavbarCom = () => {
   return (
     <>
       <ModalContext.Provider value={{ openModal, setOpenModal }}>
-        <Navbar fluid rounded className="	fixed w-full z-50 dark:bg-slate-700">
+        <Navbar fluid rounded className="	fixed w-full z-20 dark:bg-slate-700 !justify-center">
           <NavbarBrand onClick={() => navigate("/")} className="cursor-pointer">
             <img
               src="src/assets/navbar/logo.svg"
-              className="mr-3 h-6 sm:h-9"
+              className="mr-3 h-9"
               alt="Flowbite React Logo"
             />
-            <span className="self-center whitespace-nowrap text-3xl font-semibold  dark:text-gray-400">
+            <span className="self-center whitespace-nowrap text-3xl font-semibold hidden lg:block dark:text-gray-400">
               Password Playground
             </span>
             <DarkThemeToggle></DarkThemeToggle>
@@ -81,9 +81,9 @@ export const NavbarCom = () => {
               />
             )}
 
-            <NavbarToggle />
+            <NavbarToggle  />
           </div>
-          <NavbarCollapse className=" dark:text-gray-400 text-lg">
+          <NavbarCollapse className=" dark:text-gray-400 text-lg ">
             <Link
               to="/password-generating"
               className="block py-2 px-4 font-bold text-lg tracking-wider dark:text-gray-400 dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"

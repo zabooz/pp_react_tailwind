@@ -15,7 +15,7 @@ import { startBruteForce, stopBruteForce } from "./mojoScripts";
 import { thinker } from "../../../utillities/thinker";
 import { useState, useEffect, useRef } from "react";
 import { DrawerData } from "../../../interfaces/interfaces";
-import OffCanvas from "../../../components/OffCanvas";
+import TextCanvas from "../../../components/TextCanvas";
 import ResultsModal from "./ResultsModal";
 
 function Mojo() {
@@ -167,7 +167,7 @@ function Mojo() {
           </span>
         ) : null}
       </Card>
-      <OffCanvas
+      <TextCanvas
         handleClose={handleCloseDrawer}
         show={drawer}
         data={drawerContent}

@@ -6,7 +6,7 @@ interface Props {
   data: DrawerData;
 }
 
-function OffCanvas({ show, handleClose, data }: Props) {
+function TextCanvas({ show, handleClose, data }: Props) {
   return (
     <>
       <Drawer open={show} onClose={handleClose} className="pt-20">
@@ -29,4 +29,4 @@ function OffCanvas({ show, handleClose, data }: Props) {
   );
 }
 
-export default OffCanvas;
+export default TextCanvas;

@@ -20,6 +20,7 @@ import Impressum from "./content/legalStuff/Impressum";
 import PrivacyPolicy from "./content/legalStuff/PrivacyPolicy";
 import DashBoard from "./content/DashBoard/DashBoard";
 import { Flowbite } from "flowbite-react";
+import Sanchez from "./components/quickNav/QuickNav";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -41,7 +42,7 @@ function App() {
           value={{ loggedIn, setLoggedIn, change, setChange }}
         > 
           <NavbarCom />
-          
+          <Sanchez />
 
           <Routes>
             <Route path="/" element={<ContentBox />}>
@@ -65,7 +66,7 @@ function App() {
         </LoginContext.Provider>
         <Footer />
       </Router>
-                </Flowbite>
+    </Flowbite>
     </HeadProvider>
   );
 }

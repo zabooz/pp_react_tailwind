@@ -1,4 +1,4 @@
-import OffCanvas from "../../components/OffCanvas";
+import TextCanvas from "../../components/TextCanvas.tsx";
 import GylphSorcery from "./glyphSorcery/GylphSorcery";
 import PictureMagic from "./pictureMagic/PictureMagic.tsx";
 import RuneTranslator from "./runeTranslator/RuneTranslator.tsx";
@@ -31,11 +31,11 @@ function PasswordGenerating() {
         <PictureMagic />
         <GylphSorcery />
       </main>
-      <OffCanvas
+      <TextCanvas
         handleClose={handleCloseDrawer}
         show={drawer}
         data={drawerContent}
-      ></OffCanvas>
+      ></TextCanvas>
 
       <div className="quickNav"></div>
       <div className="canvas"></div>

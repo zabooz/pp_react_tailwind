@@ -10,12 +10,12 @@ function LandingPage() {
   return (
     <>
       <Header/>
-      <main className="grid gap-10 md:grid-cols-1 lg:grid-cols-3  min-h-[86vh] content-center">
+      <main className="grid gap-10 md:grid-cols-1 lg:grid-cols-3  min-h-[86vh] content-center ">
 
         {Object.entries(cardData).map(([key, data]) => (
           <BounceOnScroll key={key}>
             <CardCom key={key} data={data} />
-          </BounceOnScroll>
+           </BounceOnScroll> 
         ))}
 
       </main>

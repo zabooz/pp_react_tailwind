@@ -1,4 +1,5 @@
 import { Card, Button } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 interface CardData {
   title: string;
@@ -7,6 +8,7 @@ interface CardData {
   btnText: string;
   imgSrc: string;
   imgAlt: string;
+  btnLink: string;
 }
 
 interface Props {
@@ -29,7 +31,9 @@ function CardCom({ data }: Props) {
         {data.text}
       </p>
       <Button className="mt-12 text-lg text-gray-200 tracking-wide ">
+      <Link to={data.btnLink}>
         {data.btnText}
+        </Link>
         <svg
           className="-mr-1 ml-2 h-5 w-4 items-center justify-center flex "
           fill="currentColor"

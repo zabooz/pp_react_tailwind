@@ -32,9 +32,9 @@ const BounceOnScroll: React.FC<BounceOnScrollProps> = ({ children }) => {
   return (
     <div
       ref={elementRef}
-      className={`transition-all duration-500 ease-in-out  ${
+      className={` grid grid-cols-1 transition-all duration-500 ease-in-out  ${
         isVisible ? "lg:animate-bounce" : ""
-      }`}
+      } `}
     >
       {children}
     </div>

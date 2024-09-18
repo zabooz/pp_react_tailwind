@@ -6,6 +6,7 @@ export const cardData = {
     btnText: "Erstelle Passwort",
     imgSrc: "src/assets/landingPage/password.jpg",
     imgAlt: "Erstelle Passwort Picture",
+    btnLink: "/password-generating",
   },
   testing: {
     title: "Teste",
@@ -14,6 +15,7 @@ export const cardData = {
     btnText: "Teste Passwort",
     imgSrc: "src/assets/landingPage/testing.jpg",
     imgAlt: "Teste Passwort Picture",
+    btnLink: "/password-testing",
   },
   username: {
     title: "Erstelle",
@@ -22,5 +24,6 @@ export const cardData = {
     btnText: "Erstelle Username",
     imgSrc: "src/assets/landingPage/username.jpg",
     imgAlt: "Erstelle Username Picture",
+    btnLink: "/username-generating",
   },
 };

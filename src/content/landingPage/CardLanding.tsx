@@ -16,22 +16,22 @@ interface Props {
 function CardCom({ data }: Props) {
   return (
     <Card
-      className="max-w-[30rem] mx-auto dark:text-white p-2  dark:bg-slate-700 hover:shadow-2xl"
+      className="max-w-[30rem] mx-auto  p-2  dark:bg-slate-700 hover:shadow-2xl"
       imgSrc={data.imgSrc}
       imgAlt={data.imgAlt}
 
     >
-      <h5 className="text-2xl font-bold tracking-wider text-center text-gray-900 dark:text-white">
+      <h5 className="text-2xl font-bold tracking-wider text-center text-gray-900 dark:text-gray-200">
         {data.title}
       </h5>
       <h6 className="mb-2 text-lg font-normal text-gray-500 dark:text-gray-400 text-center">{data.subtitle}</h6>
       <p className="font-normal text-gray-700 dark:text-gray-400 ">
         {data.text}
       </p>
-      <Button className="mt-12">
+      <Button className="mt-12 text-lg text-gray-200 tracking-wide ">
         {data.btnText}
         <svg
-          className="-mr-1 ml-2 h-4 w-4"
+          className="-mr-1 ml-2 h-5 w-4 items-center justify-center flex "
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"

@@ -8,6 +8,9 @@ module.exports = {
       boxShadow: {
         "2xl": "0 0px 20px 0px rgba(8, 145, 178, 1)",
       },
+      animation:{
+        'bounce': 'bounce 1s ease-in 1.5 ',
+      }
     },
   },
   plugins: [flowbite.plugin()],

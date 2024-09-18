@@ -50,14 +50,14 @@ function ProfileChoosery({
             <img
               key={index}
               src={picture}
-              className=" rounded-full"
+              className=" rounded-full hover:shadow-2xl"
               onClick={(e) => {
                 document.querySelectorAll(".ring-2").forEach((el) => {
-                  el.classList.remove("ring-2", "ring-blue-500");
+                  el.classList.remove("ring-2", "ring-blue-500", "shadow-2xl");
                 });
 
                 const target = e.target as HTMLImageElement;
-                target.classList.add("ring-2", "ring-blue-500");
+                target.classList.add("ring-2", "ring-blue-500", "shadow-2xl");
                 setAvatar(picture);
               }}
             />

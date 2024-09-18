@@ -1,24 +1,27 @@
-import { Card, Table, Button } from "flowbite-react";
+import { Card, Button } from "flowbite-react";
 import { Label, FileInput } from "flowbite-react";
-import { useState,useRef} from "react";
+import { useState,useRef, useEffect} from "react";
 import { fileUpload } from "./pictureMagicScript";
 import { pictureMagic } from "./pictureMagicScript";
 
 import { StorageData } from "../../../interfaces/interfaces";
+import PictureMagicSwitch from "./PictureMagicSwitch";
 function PictureMagic() {
 
     const [pictureFile, setPictureFile] = useState<File>(new File([""], ""));
     const [pictureBase64, setPictureBase64] = useState<string>("");
-
+    const [data, setdata] = useState<StorageData>({} as StorageData);
     const previewImgRef = useRef<HTMLImageElement>(null);
-    const tableRef = useRef(null );
-    let storage:StorageData[] = [];
+    const [storageData,setStorageData] = useState<StorageData[]>(JSON.parse(sessionStorage.getItem("storagePictureData") || "[]"));
 
-  const handleClick = () => {
-    pictureMagic(pictureFile, pictureBase64, storage);
-    console.log(storage,"storage", pictureFile, pictureBase64);
+  const handleClick = async() => {
+    const result =    await  pictureMagic(pictureFile, pictureBase64);
+    setdata(result);
+    setStorageData([...storageData,result])
   }
-
+  useEffect(() => {
+    sessionStorage.setItem("storagePictureData", JSON.stringify(storageData))
+  }, [data]);
 
   return (
     <Card
@@ -58,21 +61,7 @@ function PictureMagic() {
           }} />
         </Label>
       </div>
-      <div className="overflow-x-auto">
-        <Table>
-          <Table.Head>
-            <Table.HeadCell></Table.HeadCell>
-            <Table.HeadCell>Password</Table.HeadCell>
-            <Table.HeadCell>Dein Bild</Table.HeadCell>
-            <Table.HeadCell></Table.HeadCell>
-            <Table.HeadCell>
-              <span className="sr-only">Edit</span>
-            </Table.HeadCell>
-          </Table.Head>
-          <Table.Body className="divide-y" ref={tableRef}>
-          </Table.Body>
-        </Table>
-      </div>
+      <PictureMagicSwitch storageData={storageData}/>
       <Button onClick={() => handleClick()}>Los geht's</Button>
     </Card>
   );

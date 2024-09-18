@@ -1,6 +1,5 @@
 import { pictureToString } from "./passwordToString";
 import { dataKrakenTakes } from "../../../backend/dataKraken";
-
 import "./pictureMagic.css";
 export const fileUpload = async (
   file: File,
@@ -20,7 +19,6 @@ export const fileUpload = async (
   reader.onload = function (e) {
     const base64 = e.target?.result;
     picturePath(base64);
-
     imgRef.current?.classList.add("scale");
     setTimeout(() => {
       imgRef.current!.src = base64 as string;
@@ -31,27 +29,30 @@ export const fileUpload = async (
   };
 
   reader.readAsDataURL(file);
+
 };
 
 export const pictureMagic = async (
   file: File,
   base64: string,
-  storage: any
 ) => {
   const id = `picturePassword_${Math.floor(Math.random() * 1000)}`;
-
+  const data = {
+    key: id,
+    catch: base64,
+    password: "",
+  };
+  
   try {
     const result = await pictureToString(file);
-
-    const data = {
-      id: id,
-      catch: base64,
-      password: result,
-    };
-    storage.push(data);
-
-    dataKrakenTakes({ col: "generated_passwords" });
+    data.password = result as string;
   } catch (error) {
     console.error(error);
+  }finally{
+    dataKrakenTakes({ col: "generated_passwords" });
   }
+
+
+  return data
+
 };

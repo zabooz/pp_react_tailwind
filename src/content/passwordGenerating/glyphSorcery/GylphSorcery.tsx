@@ -22,6 +22,7 @@ function GylphSorcery() {
 
     const handeClick = async () => {
       const data = await glyphSorcery(language, passwordLength);
+      
       setData(data);
     };
     

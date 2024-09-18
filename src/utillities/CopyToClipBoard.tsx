@@ -10,7 +10,7 @@ interface Props {
 export const CopyToClipBoard = ({ password, children, type }: Props) => {
   const { setPasswords, passwords, setUsernames, usernames } =
     useContext<any>(ClippyContext);
-console.log(passwords)
+
   const copyToClipboard = useCallback(() => {
     navigator.clipboard.writeText(password).catch((err) => {
       console.error("Failed to copy: ", err);

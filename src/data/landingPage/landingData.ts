@@ -1,5 +1,5 @@
 export const landingData = {
-  padlock: "src/assets/landingPage/padlock.svg",
+  padlock: "src/assets/landingPage/logo_transparent.png",
   padlockAlt: "padlock picture",
   brandNameTop: "Password",
   brandNameBottom: "Playground",

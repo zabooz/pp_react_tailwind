@@ -19,6 +19,7 @@ import Project from "./content/aboutUs/Project";
 import Impressum from "./content/legalStuff/Impressum";
 import PrivacyPolicy from "./content/legalStuff/PrivacyPolicy";
 import DashBoard from "./content/DashBoard/DashBoard";
+import { Flowbite } from "flowbite-react";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -33,12 +34,14 @@ function App() {
 
   return (
     <HeadProvider>
+        <Flowbite>
       <Router>
         <Head />
         <LoginContext.Provider
           value={{ loggedIn, setLoggedIn, change, setChange }}
-        >
+        > 
           <NavbarCom />
+          
 
           <Routes>
             <Route path="/" element={<ContentBox />}>
@@ -46,12 +49,12 @@ function App() {
               <Route
                 path="password-generating"
                 element={<PasswordGenerating />}
-              />
+                />
               <Route path="password-testing" element={<PasswordTesting />} />
               <Route
                 path="username-generating"
                 element={<UsernameGenerating />}
-              />
+                />
               <Route path="about-us" element={<AboutUs />} />
               <Route path="project" element={<Project />} />
               <Route path="impressum" element={<Impressum />} />
@@ -62,6 +65,7 @@ function App() {
         </LoginContext.Provider>
         <Footer />
       </Router>
+                </Flowbite>
     </HeadProvider>
   );
 }

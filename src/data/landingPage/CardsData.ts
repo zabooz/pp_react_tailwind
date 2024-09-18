@@ -17,7 +17,7 @@ export const cardData = {
   },
   username: {
     title: "Erstelle",
-    subtitle: "ein deinen Username",
+    subtitle: "deinen Usernamen",
     text: "Nutze unsere beiden Tools, um den perfekten Benutzernamen zu erstellen: Identity Wizardry generiert zufällige Benutzernamen basierend auf deinen Parametern, undMind Maestro erstellt kreative Namen durch ein unterhaltsames Quiz.",
     btnText: "Erstelle Username",
     imgSrc: "src/assets/landingPage/username.jpg",

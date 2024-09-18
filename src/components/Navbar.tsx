@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect} from "react";
 import { ModalContext, LoginContext } from "../contexts/Contexts";
 import { Link, useNavigate } from "react-router-dom";
 import LoginRegister from "./login.register/LoginRegister";
@@ -13,6 +13,7 @@ import {
   NavbarBrand,
   NavbarCollapse,
   NavbarToggle,
+  DarkThemeToggle
 } from "flowbite-react";
 
 export const NavbarCom = () => {
@@ -35,16 +36,17 @@ export const NavbarCom = () => {
   return (
     <>
       <ModalContext.Provider value={{ openModal, setOpenModal }}>
-        <Navbar fluid rounded className="	fixed w-full z-50">
+        <Navbar fluid rounded className="	fixed w-full z-50 dark:bg-slate-700">
           <NavbarBrand onClick={() => navigate("/")} className="cursor-pointer">
             <img
               src="src/assets/navbar/logo.svg"
               className="mr-3 h-6 sm:h-9"
               alt="Flowbite React Logo"
             />
-            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+            <span className="self-center whitespace-nowrap text-3xl font-semibold  dark:text-gray-400">
               Password Playground
             </span>
+            <DarkThemeToggle></DarkThemeToggle>
           </NavbarBrand>
 
           <div className="flex md:order-2">
@@ -73,7 +75,7 @@ export const NavbarCom = () => {
             ) : (
               <img
                 src="src/assets/navbar/login.svg"
-                className="w-12"
+                className="w-12 cursor-pointer"
                 alt="login"
                 onClick={() => setOpenModal(true)}
               />
@@ -81,22 +83,22 @@ export const NavbarCom = () => {
 
             <NavbarToggle />
           </div>
-          <NavbarCollapse>
+          <NavbarCollapse className=" dark:text-gray-400 text-lg">
             <Link
               to="/password-generating"
-              className="block py-2 px-4 text-custom"
+              className="block py-2 px-4 font-bold text-lg tracking-wider dark:text-gray-400 dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"
             >
               Erschaffe dein Passwort
             </Link>
             <Link
               to="/password-testing"
-              className="block py-2 px-4 text-custom"
+              className="block py-2 px-4 text-lg font-bold tracking-wider dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"
             >
               Teste dein Passwort
             </Link>
             <Link
               to="/username-generating"
-              className="block py-2 px-4 text-custom"
+              className="block py-2 px-4 text-lg tracking-wider font-bold dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"
             >
               Erfinde deinen Username
             </Link>

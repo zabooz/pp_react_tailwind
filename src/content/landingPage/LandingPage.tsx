@@ -6,7 +6,7 @@ function LandingPage() {
   return (
     <>
       <Header />
-      <main className="grid sm:gap-y-[4rem] lg:gap-10 md:grid-cols-1 lg:grid-cols-3">
+      <main className="grid  md:grid-cols-1 lg:grid-cols-3  min-h-[90vh] items-center">
         {Object.entries(cardData).map(([key, data]) => (
           <CardCom key={key} data={data} />
         ))}

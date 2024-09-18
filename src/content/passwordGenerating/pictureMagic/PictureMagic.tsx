@@ -1,6 +1,6 @@
 import { Card, Table, Button } from "flowbite-react";
 import { Label, FileInput } from "flowbite-react";
-import { useState,useRef, useEffect } from "react";
+import { useState,useRef} from "react";
 import { fileUpload } from "./pictureMagicScript";
 import { pictureMagic } from "./pictureMagicScript";
 
@@ -8,13 +8,16 @@ import { StorageData } from "../../../interfaces/interfaces";
 function PictureMagic() {
 
     const [pictureFile, setPictureFile] = useState<File>(new File([""], ""));
-    const [pictureBase64, setPicturebase64] = useState<string>("");
+    const [pictureBase64, setPictureBase64] = useState<string>("");
 
     const previewImgRef = useRef<HTMLImageElement>(null);
     const tableRef = useRef(null );
     let storage:StorageData[] = [];
 
-
+  const handleClick = () => {
+    pictureMagic(pictureFile, pictureBase64, storage);
+    console.log(storage,"storage", pictureFile, pictureBase64);
+  }
 
 
   return (
@@ -49,7 +52,7 @@ function PictureMagic() {
           </div>
           <FileInput id="dropzone-file" className="hidden" onChange={(e) => {
             if(e.target.files){
-              fileUpload(e.target.files[0], setPicturebase64, previewImgRef);
+              fileUpload(e.target.files[0], setPictureBase64, previewImgRef);
               setPictureFile(e.target.files[0]);
             }
           }} />
@@ -70,7 +73,7 @@ function PictureMagic() {
           </Table.Body>
         </Table>
       </div>
-      <Button onClick={() => pictureMagic(pictureFile, pictureBase64,storage)}>Los geht's</Button>
+      <Button onClick={() => handleClick()}>Los geht's</Button>
     </Card>
   );
 }

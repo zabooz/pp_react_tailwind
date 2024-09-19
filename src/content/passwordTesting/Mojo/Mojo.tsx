@@ -118,32 +118,33 @@ function Mojo() {
           />
           <div
             onClick={(e) => handleBruteTypeClick(e)}
-            className="w-full flex justify-evenly mt-3"
+            className="w-full flex justify-evenly my-5"
           >
-            <div>
-              <Label htmlFor="simple">Einfach</Label>
+            <div className="my-2">
+              <Label htmlFor="simple" className="!text-gray-400 me-2">Einfach</Label>
               <Radio
                 id="simple"
                 name="bruteForce"
                 value={"Einfach"}
                 data-type="simple"
-                className="mt-3"
-              />
+                />
             </div>
-              <div>
-                <label htmlFor="list">Liste</label>
-                            <Radio
+            <div className="my-2">
+              <label htmlFor="list" className="text-gray-400 me-2">Liste</label>
+              <Radio
                 id="list"
                 name="bruteForce"
                 value={"Liste"}
                 data-type="library"
                 defaultChecked
-                            />
-              </div>
+                />
+            </div>
           </div>
           <div className="flex">
-            <div className="flex flex-row gap-3">
-              <Button onClick={handleBruteForceStart} disabled={isBruteActive}>
+            <div className="flex flex-row gap-3 w-full justify-between my-3">
+              <Button onClick={handleBruteForceStart} disabled={isBruteActive}
+                className="w-full"
+                >
                 {isBruteActive ? (
                   <>
                     <Spinner aria-label="Spinner button example" size="sm" />
@@ -153,7 +154,10 @@ function Mojo() {
                   <span className="pl-3">Start</span>
                 )}
               </Button>
-              <Button disabled={false} onClick={handleBruteForceStop}>
+              <Button disabled={false} onClick={handleBruteForceStop}
+              
+              className="w-full"
+              >
                 Stop
               </Button>
             </div>
@@ -175,7 +179,7 @@ function Mojo() {
             onClick={() => setOpenResultModal(true)}
             className="cursor-pointer font-bold text-gray-400 hover:text-[#0891b2d9] hover:underline underline-offset-4"
           >
-            Hier Könnte ihre werbung stehen
+            Siehe alle Ergebnisse!
           </span>
         ) : null}
       </Card>

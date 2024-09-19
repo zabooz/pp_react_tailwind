@@ -29,7 +29,7 @@ function ResultsModal({
 
   return (
     <Modal show={openModal} onClose={() => setOpenModal(false)}>
-      <Modal.Header>Terms of Service</Modal.Header>
+      <Modal.Header>Bruteforce  Ergebnisse</Modal.Header>
       <Modal.Body>
         <div className="overflow-x-auto">
           <Table>

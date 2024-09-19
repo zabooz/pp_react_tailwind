@@ -82,26 +82,30 @@ function Mojo() {
   return (
     <>
       <Card
-        className="max-w-md"
+        className="max-w-md mx-auto"
         imgAlt="Mojo APP picture"
         imgSrc="src/assets/passwordTesting/mojo.png"
       >
-        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Mojo
-        </h5>
+        <div className="relative">
+          <div className="absolute  -top-[160px] flex items-center justify-center w-full">
+            <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   text-gray-900 !text-gray-200">
+              Mojo
+            </h5>
+          </div>
+        </div>
         <p className="font-normal text-gray-700 dark:text-gray-400">
           Wählen Sie einen Modus, um Ihr Passwort gegen Brute-Force-Angriffe zu
           testen. Im{" "}
           <span
             onClick={() => handleClickDrawer(bruteForceAttackSimple)}
-            className="cursor-pointer font-bold"
+            className="font-bold cursor-pointer text-[#0ea5e9] underline underline-offset-2"
           >
             einfachen Modus
           </span>{" "}
           werden alle möglichen Zeichenkombinationen durchprobiert. Der{" "}
           <span
             onClick={() => handleClickDrawer(bruteForceAttackList)}
-            className="cursor-pointer font-bold"
+            className="font-bold cursor-pointer text-[#0ea5e9] underline underline-offset-2"
           >
             Listen-Modus
           </span>{" "}
@@ -112,22 +116,30 @@ function Mojo() {
             type="text"
             onInput={(e) => setPassword((e.target as HTMLInputElement).value)}
           />
-          <div onClick={(e) => handleBruteTypeClick(e)}>
-            <Label htmlFor="simple">Einfach</Label>
-            <Radio
-              id="simple"
-              name="bruteForce"
-              value={"Einfach"}
-              data-type="simple"
-            />
-            <label htmlFor="list">Liste</label>
-            <Radio
-              id="list"
-              name="bruteForce"
-              value={"Liste"}
-              data-type="library"
-              defaultChecked
-            />
+          <div
+            onClick={(e) => handleBruteTypeClick(e)}
+            className="w-full flex justify-evenly mt-3"
+          >
+            <div>
+              <Label htmlFor="simple">Einfach</Label>
+              <Radio
+                id="simple"
+                name="bruteForce"
+                value={"Einfach"}
+                data-type="simple"
+                className="mt-3"
+              />
+            </div>
+              <div>
+                <label htmlFor="list">Liste</label>
+                            <Radio
+                id="list"
+                name="bruteForce"
+                value={"Liste"}
+                data-type="library"
+                defaultChecked
+                            />
+              </div>
           </div>
           <div className="flex">
             <div className="flex flex-row gap-3">
@@ -154,15 +166,15 @@ function Mojo() {
               <Table.HeadCell>Versuche</Table.HeadCell>
               <Table.HeadCell>Modus</Table.HeadCell>
               <Table.HeadCell>Zeit</Table.HeadCell>
-              <Table.HeadCell>
-                <span className="sr-only">Edit</span>
-              </Table.HeadCell>
             </Table.Head>
             <Table.Body className="divide-y" ref={displayResult}></Table.Body>
           </Table>
         </div>
         {showResults ? (
-          <span onClick={() => setOpenResultModal(true)}>
+          <span
+            onClick={() => setOpenResultModal(true)}
+            className="cursor-pointer font-bold text-gray-400 hover:text-[#0891b2d9] hover:underline underline-offset-4"
+          >
             Hier Könnte ihre werbung stehen
           </span>
         ) : null}

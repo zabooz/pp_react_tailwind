@@ -36,9 +36,10 @@ function Excalibur() {
   return (
     <>
       <Card
-        className="max-w-md"
+        className="max-w-md mx-auto"
         imgAlt="Excalibur Picture"
         imgSrc="src/assets/passwordTesting/excalibur.png"
+        
       >
         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           Excalibur

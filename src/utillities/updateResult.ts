@@ -35,7 +35,7 @@ export function updateAttempts(
         target.append(mojoIconDisplay);
       } else {
         target.textContent = stars;
-        mojoIconDisplay.className = "src/assets/icons/eye.svg";
+        mojoIconDisplay.className = "src/assets/icons/eye.svg" ;
         target.append(mojoIconDisplay);
       }
     });
@@ -49,15 +49,19 @@ export function updateAttempts(
           td.textContent = hideArr[0];
           td.id = `td${rowCount}`;
           td.append(mojoIconDisplay);
+          td.classList.add("flex","justify-evenly","gap-1","items-center","py-2")
         } else {
           td.textContent = item;
+          td.classList.add("text-center","py-2")
         }
         displayTr.appendChild(td);
+        displayTr.classList.add("border-b-2", "border-slate-700")
       });
     });
 
     display!.innerHTML = "";
     display!.append(displayTr);
+ 
   }
 
   if (data.length > 1 && display) {
@@ -84,11 +88,19 @@ export function updateAttempts(
         });
 
         if (colIndex === 0) {
-          td.textContent = hideArr[0]; // Zeige Sterne für das erste Feld
-          td.id = `td${rowCount}`; // Setze ID für die spätere Erkennung
+          td.textContent = hideArr[0];
+          td.id = `td${rowCount}`;
           td.append(mojoIcon);
+          td.classList.add(
+            "flex",
+            "justify-evenly",
+            "gap-1",
+            "items-center",
+            "py-2"
+          );
         } else {
-          td.textContent = cellContent; // Zeige die anderen Inhalte normal an
+          td.textContent = cellContent;
+          td.classList.add("text-center", "py-2");
         }
         tr.appendChild(td);
       });

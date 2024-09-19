@@ -7,7 +7,7 @@ function Profile() {
   return (
     <List
       unstyled
-      className="max-w-md divide-y divide-gray-200 dark:divide-gray-700"
+      className="max-w-md divide-y divide-gray-200 dark:divide-gray-700 "
     >
       <List.Item className="pb-3 sm:pb-4">
         <div className="flex items-center space-x-4 rtl:space-x-reverse">

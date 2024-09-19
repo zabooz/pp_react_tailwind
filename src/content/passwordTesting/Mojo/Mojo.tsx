@@ -82,13 +82,13 @@ function Mojo() {
   return (
     <>
       <Card
-        className="max-w-md mx-auto"
+        className={`max-w-lg mx-auto border-4 ${isBruteActive ? 'animate-glowing' :''}`}
         imgAlt="Mojo APP picture"
         imgSrc="src/assets/passwordTesting/mojo.png"
       >
         <div className="relative">
           <div className="absolute  -top-[160px] flex items-center justify-center w-full">
-            <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   text-gray-900 !text-gray-200">
+            <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80  text-gray-200">
               Mojo
             </h5>
           </div>

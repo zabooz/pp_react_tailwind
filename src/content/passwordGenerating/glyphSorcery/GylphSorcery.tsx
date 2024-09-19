@@ -4,6 +4,8 @@ import { glyphSorcery } from "./glyphSorceryScript";
 
 import { StorageData } from "../../../interfaces/interfaces";
 import GlyphSorcerySwitch from "./GlyphSorcerySwitch";
+import { customRange } from "../../../themes/themes";
+
 
 function GylphSorcery() {
 
@@ -31,13 +33,13 @@ function GylphSorcery() {
 
   return (
     <Card
-      className="max-w-sm mx-auto"
+      className="max-w-md mx-auto border-4"
       imgAlt="Glyph Sorcery picture"
       imgSrc="src\assets\passwordGenerating\glyphSorcery.jpeg"
     >
       <div className="relative">
         <div className="absolute  -top-[145px] flex items-center justify-center w-full">
-          <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   text-gray-900 !text-gray-200">
+          <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   text-gray-200">
             Glyph  Sorcery
           </h5>
         </div>
@@ -59,6 +61,7 @@ function GylphSorcery() {
           onInput={(e) =>
             setPasswordLength(Number((e.target as HTMLInputElement).value))
           }
+          theme={customRange}
         />
         <div onClick={(e) => handleLanguageClick(e)} className="w-full flex justify-evenly mt-3">
           <div >

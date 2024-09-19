@@ -18,7 +18,7 @@ interface Props {
 function CardCom({ data }: Props) {
   return (
     <Card
-      className="max-w-[30rem] mx-auto  p-2  dark:bg-slate-700 hover:animate-glow"
+      className="max-w-lg mx-auto  p-2  dark:bg-slate-700 hover:animate-glow"
       imgSrc={data.imgSrc}
       imgAlt={data.imgAlt}
 

@@ -26,7 +26,7 @@ function PictureMagic() {
 
   return (
     <Card
-      className="max-w-sm mx-auto"
+      className="max-w-md mx-auto border-4"
       imgAlt="PictureMAgic picture"
       imgSrc="src\assets\passwordGenerating\pictureMagic.jpeg"
     >

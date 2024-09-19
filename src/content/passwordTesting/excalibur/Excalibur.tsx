@@ -33,14 +33,14 @@ function Excalibur() {
   return (
     <>
       <Card
-        className="max-w-md mx-auto"
+        className={`max-w-lg mx-auto border-4 ${isThinking? 'animate-glowing' :''}`}
         imgAlt="Excalibur Picture"
         imgSrc="src/assets/passwordTesting/excalibur.png"
       >
         <div className="h-full mt-3">
           <div className="relative">
             <div className="absolute  -top-[170px] flex items-center justify-center w-full">
-              <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   text-gray-900 !text-gray-200">
+              <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   text-gray-200">
                 Excalibur
               </h5>
             </div>

@@ -2,8 +2,8 @@ import {  Modal} from "flowbite-react"
 
 import Login from "./Login"
 import Register from "./Register"
-import { useContext,useState } from "react";
-import { ModalContext } from "../../contexts/Contexts";
+import { useState } from "react";
+import { useModalContext } from "../../contexts/Contexts.tsx";
 
 
 
@@ -13,7 +13,7 @@ function LoginRegister() {
 
 
   const [wantToRegister, setWantToRegister] = useState<boolean>(false);
-  const {openModal, setOpenModal} = useContext(ModalContext);
+  const {openModal, setOpenModal} = useModalContext();
 
   return (
     <Modal show={openModal} size="md" popup onClose={() => {

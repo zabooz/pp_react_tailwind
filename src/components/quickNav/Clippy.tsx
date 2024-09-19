@@ -1,15 +1,15 @@
 import { Tabs, Drawer } from "flowbite-react";
-import { useContext, useEffect } from "react";
-import { ClippyContext } from "../../contexts/Contexts";
+
+import { useClippyContext } from "../../contexts/Contexts";
 
 interface Props {
   isOpen: boolean;
   handleClose: () => void;
 }
 function Clippy({ isOpen, handleClose }: Props) {
-  const { passwords, usernames,setPasswords, setUsernames } = useContext<any>(ClippyContext);
+  const { passwords, usernames,setPasswords, setUsernames } =useClippyContext()
 
-
+  console.log(passwords)
   return (
     <Drawer open={isOpen} onClose={handleClose} className="pt-20">
       <Drawer.Header titleIcon={() => <></>} />
@@ -40,7 +40,6 @@ function Clippy({ isOpen, handleClose }: Props) {
                   <li key={index + password}>{password}</li>
                 ))}
             </ul>
-            {passwords}
           </Tabs.Item>
           <Tabs.Item title="Benutzernamen" className="">
             <ul>

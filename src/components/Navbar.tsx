@@ -1,5 +1,5 @@
-import { useState, useContext, useEffect} from "react";
-import { ModalContext, LoginContext } from "../contexts/Contexts";
+import { useState,  useEffect} from "react";
+import { ModalContext, useLoginContext} from "../contexts/Contexts";
 import { Link, useNavigate } from "react-router-dom";
 import LoginRegister from "./login.register/LoginRegister";
 import { logOut } from "../backend/logout";
@@ -18,7 +18,7 @@ import {
 
 export const NavbarCom = () => {
   const [openModal, setOpenModal] = useState(false);
-  const { loggedIn, setLoggedIn, change } = useContext(LoginContext);
+  const { loggedIn, setLoggedIn, change } = useLoginContext();
 
   const navigate = useNavigate();
   const [data, setData] = useState<string[]>([

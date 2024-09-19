@@ -1,7 +1,7 @@
 
 import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react"
-import { useState,useContext } from "react";
-import { ModalContext,LoginContext } from "../../contexts/Contexts.ts";
+import { useState} from "react";
+import { useModalContext,useLoginContext} from "../../contexts/Contexts.tsx";
 import { loginData } from "../../interfaces/interfaces";
 import {login} from "../../backend/login.ts"
 interface Props {
@@ -13,8 +13,8 @@ interface Props {
 function Login({handleRegisterClick}:Props) {
 
     const [userData, setUserData] = useState<loginData>({username: "", password: ""});
-    const {setOpenModal} = useContext(ModalContext)
-    const {setLoggedIn} = useContext(LoginContext)
+    const {setOpenModal} = useModalContext()
+    const {setLoggedIn} = useLoginContext()
   const handleLoginClick = async () => {
     
 

@@ -13,7 +13,9 @@ function GylphSorcery() {
   const [passwordLength, setPasswordLength] = useState(0);
   const [language, setLanguage] = useState("english");
   const [data, setData] = useState<StorageData[]>(storedData);
-    const handleLanguageClick = (event: React.MouseEvent<HTMLDivElement>) => {
+
+
+  const handleLanguageClick = (event: React.MouseEvent<HTMLDivElement>) => {
       const target = event.target as HTMLInputElement;
       if (target.tagName === "INPUT" && target.type === "radio") {
         setLanguage(target.value);

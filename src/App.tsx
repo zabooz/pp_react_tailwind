@@ -1,8 +1,8 @@
 import Head from "./components/Head";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 
-import { LoginContext,ClippyContext } from "./contexts/Contexts";
+import { useLoginContext,ClippyProvider } from "./contexts/Contexts";
 import { HeadProvider } from "react-head";
 import { autoLogin } from "./backend/autoLogin";
 
@@ -23,10 +23,8 @@ import { Flowbite } from "flowbite-react";
 import QuickNav from "./components/quickNav/QuickNav";
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [change, setChange] = useState(false);
-  const [passwords, setPasswords] = useState<string[]>([]);
-  const [usernames, setUsernames] = useState<string[]>([]);
+  const {setLoggedIn} = useLoginContext()
+
   useEffect(() => {
     (async () => {
       const result = await autoLogin();
@@ -39,13 +37,11 @@ function App() {
         <Flowbite>
       <Router>
         <Head />
-        <LoginContext.Provider
-          value={{ loggedIn, setLoggedIn, change, setChange }}
-        > 
-          <NavbarCom />
-          <ClippyContext.Provider value={{passwords,setPasswords,usernames,setUsernames}}>
-          <QuickNav />
 
+          <NavbarCom />
+
+          <ClippyProvider>
+          <QuickNav />
           <Routes>
             <Route path="/" element={<ContentBox />}>
               <Route index element={<LandingPage />} /> {/* Die Startseite */}
@@ -65,8 +61,8 @@ function App() {
               <Route path="dashBoard" element={<DashBoard />} />
             </Route>
           </Routes>
-          </ClippyContext.Provider>
-        </LoginContext.Provider>
+          </ClippyProvider>
+
         <Footer />
       </Router>
     </Flowbite>

@@ -1,5 +1,5 @@
-import { useContext, useCallback } from "react";
-import { ClippyContext } from "../contexts/Contexts";
+
+import { useClippyContext } from "../contexts/Contexts";
 
 interface Props {
   password: string;
@@ -8,10 +8,9 @@ interface Props {
 }
 
 export const CopyToClipBoard = ({ password, children, type }: Props) => {
-  const { setPasswords, passwords, setUsernames, usernames } =
-    useContext<any>(ClippyContext);
-
-  const copyToClipboard = useCallback(() => {
+  const { setPasswords, passwords, setUsernames, usernames } = useClippyContext()
+  console.log("sf")
+  const copy = (type:string,password:string) => {
     navigator.clipboard.writeText(password).catch((err) => {
       console.error("Failed to copy: ", err);
     });
@@ -23,12 +22,12 @@ export const CopyToClipBoard = ({ password, children, type }: Props) => {
       if (usernames.includes(password)) return;
       setUsernames([...usernames, password]);
     }
-  }, [password]);
+  };
 
   return (
-    <span onClick={copyToClipboard} className="cursor-pointer">
+    <span onClick={()=>copy(type,password)} className="cursor-pointer">
       {children}
     </span>
   );
 };
-// ... existing code ...
+

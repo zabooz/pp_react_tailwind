@@ -40,18 +40,14 @@ function PictureMagic() {
       <div className="flex w-full items-center justify-center">
         <Label
           htmlFor="dropzone-file"
-          className="flex h-64 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-gray-300 bg-gray-50 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+          className="flex w-full p-2 cursor-pointer flex-col rounded-lg border-2 border-gray-300 bg-gray-50 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-600"
         >
-          <div className="flex flex-col items-center justify-center pb-6 pt-5">
+          <div className="flex flex-col items-center  justify-center  ">
             <img ref={previewImgRef}
               src="src/assets/passwordGenerating/upload.jpeg"
               alt="uploadPicture"
-              className="aspect-square w-4/5 mx-auto "
+              className="aspect-square w-[80%] mx-auto rounded"
             />
-            <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-              <span className="font-semibold">Click to upload</span> or drag and
-              drop
-            </p>
           </div>
           <FileInput id="dropzone-file" className="hidden" onChange={(e) => {
             if(e.target.files){

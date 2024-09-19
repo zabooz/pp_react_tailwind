@@ -1,8 +1,8 @@
 import { Checkbox, Label, TextInput, Button, Modal } from "flowbite-react"
 import {register} from "../../backend/register.ts"
-import { useState,useContext } from "react";
+import { useState } from "react";
 import { registryData } from "../../interfaces/interfaces";
-import { ModalContext,LoginContext } from "../../contexts/Contexts.ts";
+import { useModalContext, useLoginContext } from "../../contexts/Contexts.tsx";
 
 
 
@@ -10,8 +10,8 @@ function Register() {
 
     const [userData, setUserData] = useState<registryData>({username: "", password: "", email: "", visits: 1, generated_passwords: 0, tested_passwords: 0, generated_usernames: 0, avatar: "src/assets/profilePics/default.jpeg"});
 
-    const {setOpenModal } = useContext(ModalContext);
-    const {setLoggedIn } = useContext(LoginContext);
+    const {setOpenModal } = useModalContext();
+    const {setLoggedIn } = useLoginContext();
 
   const handleRegistry = async(e:any) => {
     e.preventDefault()

@@ -25,12 +25,12 @@ function RuneTransatorSwitch({ runes }: Props) {
       <img
         src="src/assets/icons/arrowRight.svg"
         alt="arrowLeft"
-        className="rotate-180"
+        className="rotate-180 cursor-pointer"
         data-type="left"
         onClick={(e) => handleSwitch(e)}
       />
 
-      <div className="flex justify-evenly w-full  h-14">
+      <div className="flex justify-evenly w-full  h-20">
         <div className="flex flex-col gap-2 w-1/2 text-center ">
           <span>Passwort</span>
           {runes.length > 0 && (
@@ -54,6 +54,7 @@ function RuneTransatorSwitch({ runes }: Props) {
         src="src/assets/icons/arrowRight.svg"
         alt="arrowRight"
         data-type="right"
+        className="cursor-pointer"
         onClick={(e) => handleSwitch(e)}
       />
     </div>

@@ -45,7 +45,7 @@ function GlyphSorcerySwitch({ data }: Props) {
         onClick={(e) => handleSwitch(e)}
       />
 
-      <div className="flex justify-evenly w-full  h-14">
+      <div className="flex justify-evenly w-full  h-20">
         <div className="flex flex-col gap-2 w-1/2 text-center ">
           <span>Passwort</span>
           {data.length > 0 && (
@@ -60,7 +60,7 @@ function GlyphSorcerySwitch({ data }: Props) {
           )}
         </div>
         <div className="flex flex-col gap-2 w-1/2 text-center ">
-          <div>Version</div>
+          <div>Länge</div>
           {data.length > 0 && <span>{data[switchCount].catch}</span>}
         </div>
       </div>

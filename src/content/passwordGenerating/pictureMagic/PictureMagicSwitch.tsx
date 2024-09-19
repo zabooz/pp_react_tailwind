@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 import { StorageData } from "../../../interfaces/interfaces";
 import { CopyToClipBoard } from "../../../utillities/CopyToClipBoard";
@@ -7,73 +5,81 @@ interface Props {
   storageData: StorageData[];
 }
 
-function PictureMagicSwitch({ storageData }:Props) {
-    const [switchCount, setSwitchCount] = useState<number>(0 );
+function PictureMagicSwitch({ storageData }: Props) {
+  const [switchCount, setSwitchCount] = useState<number>(0);
 
 
+  const handleSwitch = (e: any) => {
+    const icon = e.target;
+    const type = icon.getAttribute("data-type");
+    const length = storageData.length;
+    if (type === "left") {
+      const newCount = (switchCount - 1 + length) % length;
+      setSwitchCount(newCount);
+    } else if (type === "right") {
+      const newCount = (switchCount + 1) % length;
+      setSwitchCount(newCount);
+    }
+  };
 
-    const handleSwitch = (e: any) => {
-  
-      const icon = e.target;
-      const type = icon.getAttribute("data-type");
-      const length = storageData.length;
-      if (type === "left") {
-        const newCount = (switchCount - 1 + length) % length;
-        setSwitchCount(newCount);
-      } else if (type === "right") {
-        const newCount = (switchCount + 1) % length;
-        setSwitchCount(newCount);
-      }
-    };
-  
-    useEffect(() => {
-  
-      if(storageData.length > 0){
-          setSwitchCount(storageData.length-1)
-      }else{
-          setSwitchCount(storageData.length)
-      }
-    }, [])
-  
+  useEffect(() => {
+    if (storageData.length > 0) {
+      setSwitchCount(storageData.length - 1);
+    } else {
+      setSwitchCount(storageData.length);
+    }
+  }, [storageData]);
 
   return (
-    <div className="flex text-gray-200 justify-between w-full">
-      <img
-        src="src/assets/icons/arrowRight.svg"
-        alt="arrowLeft"
-        className="rotate-180"
-        data-type="left"
-        onClick={(e) => handleSwitch(e)}
-      />
+    <div className="flex text-gray-200  justify-between w-full ">
+      <div className=" mt-11 mb-auto rounded-full border-2 me-2 ">
+        <img
+          src="src/assets/icons/arrowRight.svg"
+          alt="arrowLeft"
+          className="rotate-180 cursor-pointer w-6 "
+          data-type="left"
+          onClick={(e) => handleSwitch(e)}
+        />
+      </div>
 
-      <div className="flex justify-evenly w-full  h-14">
-        <div className="flex flex-col gap-2 w-1/2 text-center ">
-          <span>Passwort</span>
+      <div className="flex justify-evenly w-full  h-20">
+        <div className="flex flex-col  w-3/5 text-center ">
+          <div className="border-b">Passwort</div>
           {storageData.length > 0 && (
             <CopyToClipBoard
               password={storageData[switchCount].password}
               type={"password"}
             >
-              <span className="cursor-pointer">
+              <div className="cursor-pointer mt-4">
                 {storageData[switchCount].password}
-              </span>
+              </div>
             </CopyToClipBoard>
           )}
         </div>
-        <div className="flex flex-col gap-2 w-1/2 text-center ">
-          <div>Version</div>
-          {storageData.length > 0 && <img src={storageData[switchCount].catch} alt="dein hochgeladenes Bild"/>}
+        <div className="flex flex-col gap-1 w-2/5 text-center items-center  ">
+          <div className="border-b w-full">Dein Bild</div>
+          <div className="mt-2 rounded border-2">
+            {storageData.length > 0 && (
+              <img
+                src={storageData[switchCount].catch}
+                className="aspect-square w-10 "
+                alt="dein hochgeladenes Bild"
+              />
+            )}
+          </div>
         </div>
       </div>
-
-      <img
-        src="src/assets/icons/arrowRight.svg"
-        alt="arrowRight"
-        data-type="right"
-        onClick={(e) => handleSwitch(e)}
-      />
+      <div className="mt-11 mb-auto rounded-full border-2 ms-2 ">
+        <img
+          src="src/assets/icons/arrowRight.svg"
+          alt="arrowRight"
+          data-type="right"
+          className="cursor-pointer w-6 "
+          onClick={(e) => handleSwitch(e)}
+        />
+      </div>
     </div>
-  )
+  );
 }
 
-export default PictureMagicSwitch
+export default PictureMagicSwitch;

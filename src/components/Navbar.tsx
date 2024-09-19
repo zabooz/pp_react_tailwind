@@ -36,7 +36,11 @@ export const NavbarCom = () => {
   return (
     <>
       <ModalContext.Provider value={{ openModal, setOpenModal }}>
-        <Navbar fluid rounded className="	fixed w-full z-20 dark:bg-slate-700 !justify-center">
+        <Navbar
+          fluid
+          rounded
+          className="	fixed w-full z-20 dark:bg-slate-700 !justify-center"
+        >
           <NavbarBrand onClick={() => navigate("/")} className="cursor-pointer">
             <img
               src="src/assets/landingPage/logo_transparent.png"
@@ -46,10 +50,9 @@ export const NavbarCom = () => {
             <span className="self-center whitespace-nowrap text-3xl font-semibold hidden lg:block dark:text-gray-400">
               Password Playground
             </span>
-            <DarkThemeToggle></DarkThemeToggle>
           </NavbarBrand>
 
-          <div className="flex md:order-2">
+          <div className="flex md:order-2 ">
             {loggedIn ? (
               <Dropdown
                 arrowIcon={false}
@@ -63,6 +66,9 @@ export const NavbarCom = () => {
                   Dashboard
                 </DropdownItem>
                 <DropdownDivider />
+                <DropdownItem>
+                  <span>Dark mode</span> <DarkThemeToggle />
+                </DropdownItem>
                 <DropdownItem
                   onClick={() => {
                     logOut(setLoggedIn);
@@ -81,26 +87,29 @@ export const NavbarCom = () => {
               />
             )}
 
-            <NavbarToggle  />
+            <NavbarToggle />
           </div>
           <NavbarCollapse className=" dark:text-gray-400 text-lg ">
             <Link
               to="/password-generating"
-              className="block py-2 px-4 font-bold text-lg tracking-wider dark:text-gray-400 dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"
+              className="py-2 px-4 font-bold text-lg tracking-wider dark:text-gray-400 dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"
             >
               Erschaffe dein Passwort
             </Link>
             <Link
               to="/password-testing"
-              className="block py-2 px-4 text-lg font-bold tracking-wider dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"
+              className=" py-2 px-4 text-lg font-bold tracking-wider dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"
             >
               Teste dein Passwort
             </Link>
             <Link
               to="/username-generating"
-              className="block py-2 px-4 text-lg tracking-wider font-bold dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"
+              className="py-2 px-4 text-lg tracking-wider font-bold dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"
             >
               Erfinde deinen Username
+            </Link>
+            <Link to="/" className="py-2 px-4 text-lg tracking-wider font-bold dark:hover:text-[#0891b2d9] hover:underline underline-offset-8 cursor-pointer">
+              Hallo {data[1]}!
             </Link>
           </NavbarCollapse>
         </Navbar>

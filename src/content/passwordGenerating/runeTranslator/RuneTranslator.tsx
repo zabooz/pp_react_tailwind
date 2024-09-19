@@ -28,33 +28,39 @@ function RuneTranslator({ handleDrawerClick }: Props) {
 
   return (
     <Card
-      className="max-w-sm"
+      className="max-w-sm mx-auto"
       imgAlt="Rune Translator Picture"
       imgSrc="src/assets/passwordGenerating/runeTranslator.jpeg"
+  
     >
-      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Rune Translator
-      </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        <span
-          className="font-bold cursor-pointer"
-          onClick={() => handleDrawerClick(leetspeakTextShortened)}
-        >
-          Leetspeak
-        </span>{" "}
-        ersetzt die Buchstaben und Zeichen deine Passwortes mit anderen Zeichen,
-        so dass du besser vor Angriffen geschützt bist. Probier aus, welche
-        Variante - von einfach bis stark verändert - du bevorzugst.
-      </p>
-
-      <div className="flex flex-col">
-        <TextInput type="text" onChange={(e) => setInput(e.target.value)} />
-        <span className="text-gray-400 mt-2">*Maximal 12 Zeichen</span>
+      <div className="relative">
+        <div className="absolute  -top-[145px] flex items-center justify-center w-full">
+          <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   text-gray-900 !text-gray-200">
+            Rune Translator
+          </h5>
+        </div>
       </div>
+      <div className="h-full">
+        <p className="font-normal text-gray-700 dark:text-gray-400 mb-8">
+          <span
+            className="font-bold cursor-pointer text-[#0ea5e9] underline underline-offset-2"
+            onClick={() => handleDrawerClick(leetspeakTextShortened)}
+          >
+            Leetspeak
+          </span>{" "}
+          ersetzt die Buchstaben und Zeichen deine Passwortes mit anderen
+          Zeichen, so dass du besser vor Angriffen geschützt bist. Probier aus,
+          welche Variante - von einfach bis stark verändert - du bevorzugst.
+        </p>
 
+        <div className="flex flex-col">
+          <TextInput type="text" onChange={(e) => setInput(e.target.value)} />
+          <span className="text-gray-400 mt-2">*Maximal 12 Zeichen</span>
+        </div>
+      </div>
       <RuneTransatorSwitch runes={runes} />
 
-      <Button onClick={() => handleClick()}>Los geht's</Button>
+      <Button onClick={() => handleClick()} className="mt-3">Los geht's</Button>
     </Card>
   );
 }

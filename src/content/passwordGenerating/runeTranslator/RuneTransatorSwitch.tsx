@@ -25,14 +25,14 @@ function RuneTransatorSwitch({ runes }: Props) {
       <img
         src="src/assets/icons/arrowRight.svg"
         alt="arrowLeft"
-        className="rotate-180 cursor-pointer"
+        className="rotate-180 cursor-pointer mt-6"
         data-type="left"
         onClick={(e) => handleSwitch(e)}
       />
 
       <div className="flex justify-evenly w-full  h-20">
         <div className="flex flex-col gap-2 w-1/2 text-center ">
-          <span>Passwort</span>
+          <div className="border-b w-full mb-[6.5px]">Passwort</div>
           {runes.length > 0 && (
             <CopyToClipBoard
               password={runes[switchCount].password}
@@ -45,7 +45,7 @@ function RuneTransatorSwitch({ runes }: Props) {
           )}
         </div>
         <div className="flex flex-col gap-2 w-1/2 text-center ">
-          <div>Version</div>
+          <div className="border-b w-full mb-[6.5px]">Version</div>
           {runes.length > 0 && <span>{runes[switchCount].catch}</span>}
         </div>
       </div>
@@ -54,7 +54,7 @@ function RuneTransatorSwitch({ runes }: Props) {
         src="src/assets/icons/arrowRight.svg"
         alt="arrowRight"
         data-type="right"
-        className="cursor-pointer"
+        className="cursor-pointer mt-7"
         onClick={(e) => handleSwitch(e)}
       />
     </div>

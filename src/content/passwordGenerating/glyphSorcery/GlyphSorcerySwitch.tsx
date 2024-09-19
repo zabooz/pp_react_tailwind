@@ -40,27 +40,28 @@ function GlyphSorcerySwitch({ data }: Props) {
       <img
         src="src/assets/icons/arrowRight.svg"
         alt="arrowLeft"
-        className="rotate-180"
+        className="rotate-180 cursor-pointer mt-6"
         data-type="left"
         onClick={(e) => handleSwitch(e)}
+
       />
 
       <div className="flex justify-evenly w-full  h-20">
-        <div className="flex flex-col gap-2 w-1/2 text-center ">
-          <span>Passwort</span>
+        <div className="flex flex-col gap-2 w-3/5 text-center ">
+          <div className="border-b w-full mb-[6.5px]">Passwort</div>
           {data.length > 0 && (
             <CopyToClipBoard
               password={data[switchCount].password}
               type={"password"}
             >
-              <span className="cursor-pointer">
+              <div className="cursor-pointer ">
                 {data[switchCount].password}
-              </span>
+              </div>
             </CopyToClipBoard>
           )}
         </div>
-        <div className="flex flex-col gap-2 w-1/2 text-center ">
-          <div>Länge</div>
+        <div className="flex flex-col gap-2 w-2/5 text-center ">
+          <div className="border-b w-full mb-[6.5px]">Länge</div>
           {data.length > 0 && <span>{data[switchCount].catch}</span>}
         </div>
       </div>
@@ -70,6 +71,7 @@ function GlyphSorcerySwitch({ data }: Props) {
         alt="arrowRight"
         data-type="right"
         onClick={(e) => handleSwitch(e)}
+        className="cursor-pointer mt-6"
       />
     </div>
   );

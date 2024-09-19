@@ -32,7 +32,7 @@ function PictureMagicSwitch({ storageData }: Props) {
 
   return (
     <div className="flex text-gray-200  justify-between w-full ">
-      <div className=" mt-11 mb-auto rounded-full border-2 me-2 ">
+      <div className=" mt-11 mb-auto rounded-full me-2 ">
         <img
           src="src/assets/icons/arrowRight.svg"
           alt="arrowLeft"
@@ -58,18 +58,18 @@ function PictureMagicSwitch({ storageData }: Props) {
         </div>
         <div className="flex flex-col gap-1 w-2/5 text-center items-center  ">
           <div className="border-b w-full">Dein Bild</div>
-          <div className="mt-2 rounded border-2">
+     
             {storageData.length > 0 && (
               <img
                 src={storageData[switchCount].catch}
-                className="aspect-square w-10 "
+                className="aspect-square w-10 mt-2 rounded "
                 alt="dein hochgeladenes Bild"
               />
             )}
-          </div>
+   
         </div>
       </div>
-      <div className="mt-11 mb-auto rounded-full border-2 ms-2 ">
+      <div className="mt-11 mb-auto rounded-full ms-2 ">
         <img
           src="src/assets/icons/arrowRight.svg"
           alt="arrowRight"

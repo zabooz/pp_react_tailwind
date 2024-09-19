@@ -31,33 +31,54 @@ function GylphSorcery() {
 
   return (
     <Card
-      className="max-w-sm"
+      className="max-w-sm mx-auto"
       imgAlt="Glyph Sorcery picture"
       imgSrc="src\assets\passwordGenerating\glyphSorcery.jpeg"
     >
-      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Glyph Sorcery
-      </h5>
+      <div className="relative">
+        <div className="absolute  -top-[145px] flex items-center justify-center w-full">
+          <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   text-gray-900 !text-gray-200">
+            Glyph  Sorcery
+          </h5>
+        </div>
+      </div>
       <p className="font-normal text-gray-700 dark:text-gray-400">
         Je länger dein Passwort ist, desto sicherer ist es. Mit Glyph Sourcery
         kannst du dir schnell und unkompliziert ein Passwort in deiner
         gewünschten Länge erstellen, die den Richtlinien für sichere Passwörter
         entsprechen.
       </p>
-      <div>
-        <Label htmlFor="glyphrange">Passwortlänge: {passwordLength}</Label>
-        <RangeSlider id="glyphrange" name="glyphrange" min={2} max={14} 
-        onInput={(e) => setPasswordLength(Number((e.target as HTMLInputElement).value))}
+      < div className="h-full">
+        <Label htmlFor="glyphrange">Passwortlänge: {passwordLength ? passwordLength : 6}</Label>
+        <RangeSlider
+          id="glyphrange"
+          name="glyphrange"
+          min={2}
+          max={14}
+          defaultValue={6}
+          onInput={(e) =>
+            setPasswordLength(Number((e.target as HTMLInputElement).value))
+          }
         />
-        <div onClick={(e) => handleLanguageClick(e)}>
-          <Label htmlFor="english">English</Label>
-          <Radio id="english" name="language" value={"english"} defaultChecked/>
-          <Label htmlFor="german">German</Label>
-          <Radio id="german" name="language" value={"german"} />
+        <div onClick={(e) => handleLanguageClick(e)} className="w-full flex justify-evenly mt-3">
+          <div >
+            <Label htmlFor="english">English</Label>
+            <Radio
+              id="english"
+              name="language"
+              value={"english"}
+              defaultChecked
+              className="ms-3"
+            />
+          </div>
+          <div >
+            <Label htmlFor="german">German</Label>
+            <Radio id="german" name="language" value={"german"} className="ms-3"/>
+          </div>
         </div>
       </div>
-      <GlyphSorcerySwitch data={data}/>
-      <Button onClick={handeClick}>Los geht's</Button>
+      <GlyphSorcerySwitch data={data} />
+      <Button onClick={handeClick} className="mt-3">Los geht's</Button>
     </Card>
   );
 }

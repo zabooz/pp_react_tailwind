@@ -1,16 +1,16 @@
 import Mojo from "./mojo/Mojo.tsx";
 import Excalibur from "./excalibur/Excalibur.tsx";
-import { useSlideContext } from "../../contexts/Contexts.tsx";
-function passwordTesting() {
 
 
+function PasswordTesting() {
 
-  const {direction} = useSlideContext()
 
-  console.log(direction)
   return (
     <>
-        <main className={`grid sm:grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-10 w-full ${direction ? `animate-${direction}` : ''}`} >
+      <main
+        className={` grid sm:grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-10 w-full overflow-hidden h-[90vh] content-center
+        }`}
+      >
         <Mojo />
         <Excalibur />
       </main>
@@ -18,4 +18,4 @@ function passwordTesting() {
   );
 }
 
-export default passwordTesting;
+export default PasswordTesting;

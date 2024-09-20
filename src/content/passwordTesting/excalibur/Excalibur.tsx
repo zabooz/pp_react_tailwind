@@ -5,6 +5,7 @@ import ExcaliburModal from "./modal/ExcaliburModal";
 import { ZxcvbnResult } from "@zxcvbn-ts/core";
 import { Points } from "./passwordStrengthTester";
 import { thinker } from "../../../utillities/thinker";
+import { useSlideContext } from "../../../contexts/Contexts";
 function Excalibur() {
   const [showModal, setShowModal] = useState(false);
   const [showModalLink, setShowModalLink] = useState(false);
@@ -29,11 +30,11 @@ function Excalibur() {
       clearInterval(intervalId);
     }
   }, [isThinking]);
-
+  const { startAnimation } = useSlideContext();
   return (
     <>
       <Card
-        className={`max-w-lg mx-auto border-4 ${isThinking? 'animate-glowing' :''} class`}
+        className={`max-w-lg mx-auto border-4 ${startAnimation ? 'animate-move-right' : 'animate-scale-up'} `}
         imgAlt="Excalibur Picture"
         imgSrc="src/assets/passwordTesting/excalibur.png"
       >

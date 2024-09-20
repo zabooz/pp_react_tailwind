@@ -102,8 +102,8 @@ interface SlideContextProps {
   setCurrentSlide: (value: number) => void;
   nextSlide:number;
   setNextSlide: (value: number) => void;
-  direction:string;
-  setDirection: (value: string) => void;
+  startAnimation:boolean;
+  setStartAnimation: (value: boolean) => void;
   directionFunc: (value:number) => void;
 }
 
@@ -118,25 +118,24 @@ interface SlideProviderProps {
 export const SlideProvider = ({ children }: SlideProviderProps) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [nextSlide, setNextSlide] = useState<number>(0);
-  const [direction, setDirection] = useState<string>("move-right");
+  const [startAnimation, setStartAnimation] = useState<boolean>(false);
 
   const directionFunc = (next:number) => {
-    if(currentSlide> next ){
-      setDirection("move-left")
-    }else if(currentSlide < next){
-      setDirection("move-right")
-    }
-
-    setCurrentSlide(next)
-
+    setCurrentSlide(next); 
+    setStartAnimation(true); // Start the animation
+  
+    // Reset the animation after the duration
+    setTimeout(() => {
+      setStartAnimation(false); // Reset the animation state
+    }, 800); // Assuming 1000ms is the animation duration
   };
 
   useEffect(() => {
-    console.log("currentSlide", currentSlide,"nextSlide",nextSlide,"direction",direction)
-  }, [currentSlide,nextSlide,direction]);
+    console.log("currentSlide", currentSlide,"nextSlide",nextSlide,"direction",startAnimation)
+  }, [currentSlide,nextSlide,startAnimation]);
   return (
     <SlideContext.Provider
-      value={{ currentSlide, setCurrentSlide, nextSlide, setNextSlide,direction, setDirection,directionFunc }}
+      value={{ currentSlide, setCurrentSlide, nextSlide, setNextSlide,startAnimation, setStartAnimation,directionFunc }}
     >
       {children}
     </SlideContext.Provider>

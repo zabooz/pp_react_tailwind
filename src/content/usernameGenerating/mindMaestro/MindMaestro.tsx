@@ -1,6 +1,7 @@
 import { Card, Carousel, Radio, Label } from "flowbite-react";
 import { useState,useEffect } from "react";
 import { mindMaestro } from "./mindeMastroScript";
+import { useSlideContext } from "../../../contexts/Contexts";
 function MindMaestro() {
  
     const [username, setUsername] = useState<string>("");
@@ -22,10 +23,10 @@ function MindMaestro() {
       setUsername("");
     }, [username]);
 
-
+    const {startAnimation} = useSlideContext();
     return (
     <Card
-      className="max-w-xl"
+      className={`max-w-lg mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-scale-up'} `}
       imgAlt="MindMaestro Picture"
       imgSrc="src/assets/usernameGenerating/mindMaestro.jpeg"
     >

@@ -9,7 +9,7 @@ interface Props {
 function TextCanvas({ show, handleClose, data }: Props) {
   return (
     <>
-      <Drawer open={show} onClose={handleClose} className="pt-20">
+      <Drawer open={show} onClose={handleClose} className={`pt-20 ${show ? 'block' : 'hidden'}`}>
         <Drawer.Header title={data.title} />
         <Drawer.Items>
           <p className="mb-6 text-sm text-gray-500 dark:text-gray-400"></p>

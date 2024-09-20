@@ -4,11 +4,16 @@ import {Card } from "flowbite-react";
 import Selectors from "./Selectors";
 import {useState} from "react"
 import IdentityTable from "./IdentityTable";
+import { useSlideContext } from "../../../contexts/Contexts";
 const  IdentityWizard =() =>{
     const [userValues, setValues] = useState<string[]>([])
+
+
+  const {startAnimation} = useSlideContext()
+
   return (
     <Card
-      className="max-w-xl"
+      className={`max-w-lg mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-scale-up'} `}
       imgAlt="Identity Wizard Picture"
       imgSrc="src/assets/usernameGenerating/identityWizard.jpg"
     >

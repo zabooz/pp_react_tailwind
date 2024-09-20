@@ -17,6 +17,7 @@ import { useState, useEffect, useRef } from "react";
 import { DrawerData } from "../../../interfaces/interfaces";
 import TextCanvas from "../../../components/TextCanvas";
 import ResultsModal from "./ResultsModal";
+import { useSlideContext } from "../../../contexts/Contexts";
 
 
 
@@ -45,6 +46,9 @@ function Mojo() {
   const handleCloseDrawer = () => {
     setDrawerShow(!drawer);
   };
+
+  const {startAnimation} = useSlideContext()
+
 
   useEffect(() => {
     if (isBruteActive) {
@@ -83,11 +87,12 @@ function Mojo() {
     }
   };
 
+
   return (
     <>   
 
       <Card
-        className={`max-w-lg mx-auto border-4 ${isBruteActive ? 'animate-glowing' :''} `}
+        className={`max-w-lg mx-auto border-4 ${startAnimation ? 'animate-move-left' : 'animate-scale-up'}  `}
         imgAlt="Mojo APP picture"
         imgSrc="src/assets/passwordTesting/mojo.png"
       >

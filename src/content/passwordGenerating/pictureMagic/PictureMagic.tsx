@@ -6,6 +6,7 @@ import { pictureMagic } from "./pictureMagicScript";
 
 import { StorageData } from "../../../interfaces/interfaces";
 import PictureMagicSwitch from "./PictureMagicSwitch";
+import { useSlideContext } from "../../../contexts/Contexts";
 function PictureMagic() {
   const [pictureFile, setPictureFile] = useState<File>(new File([""], ""));
   const [pictureBase64, setPictureBase64] = useState<string>("");
@@ -24,9 +25,11 @@ function PictureMagic() {
     sessionStorage.setItem("storagePictureData", JSON.stringify(storageData));
   }, [data]);
 
+  const {startAnimation} = useSlideContext()
+
   return (
     <Card
-      className="max-w-md mx-auto border-4"
+      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-move-up' : 'animate-scale-up'} `}
       imgAlt="PictureMAgic picture"
       imgSrc="src\assets\passwordGenerating\pictureMagic.jpeg"
     >
@@ -53,7 +56,7 @@ function PictureMagic() {
                 ref={previewImgRef}
                 src="src/assets/passwordGenerating/upload.jpeg"
                 alt="uploadPicture"
-                className="aspect-video  mx-auto rounded"
+                className="aspect-video mx-auto rounded"
               />
             </div>
             <FileInput

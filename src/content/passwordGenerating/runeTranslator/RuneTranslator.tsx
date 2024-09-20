@@ -6,6 +6,7 @@ import { TextInput } from "flowbite-react";
 import runeTranslator from "./runeTranslatorScript";
 import { StorageData } from "../../../interfaces/interfaces";
 import RuneTransatorSwitch from "./RuneTransatorSwitch";
+import { useSlideContext } from "../../../contexts/Contexts";
 interface Props {
   handleDrawerClick: (content: DrawerData) => void;
 }
@@ -25,10 +26,10 @@ function RuneTranslator({ handleDrawerClick }: Props) {
       );
     }
   }, []);
-
+  const {startAnimation} = useSlideContext()
   return (
     <Card
-      className="max-w-md mx-auto border-4"
+      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-move-down' : 'animate-scale-up'}`}
       imgAlt="Rune Translator Picture"
       imgSrc="src/assets/passwordGenerating/runeTranslator.jpeg"
   

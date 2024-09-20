@@ -15,6 +15,11 @@ module.exports = {
         glowing: "glowing 1.8s infinite",
         "move-right": "move-right .8s ease-out forwards", // Ensure this is correct
         "move-left": "move-left .8s  ease-out forwards",
+        "move-up": "move-up .8s ease-out forwards",
+        "move-down": "move-down .8s ease-out forwards",
+        "scale-up": "scale-up .8s ease-out forwards",
+        "fade-in": "fade-in .8s ease-out forwards",
+        "fade-out": "fade-out .8s ease-out forwards",
       },
       keyframes: {
         "move-out": {
@@ -31,12 +36,32 @@ module.exports = {
           "100%": { "box-shadow": "0 0 5px rgba(8, 145, 178, 1)" },
         },
         "move-right": {
-          "0%": { transform: "translateX(200%)" }, 
-          "100%": { transform: "translateX(0)" }, 
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(200%);display:none" },
         },
         "move-left": {
-          "0%": { transform: "translateX(-200%)" },
-          "100%": { transform: "translateX(0)" },
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-200%);display:none" },
+        },
+        "move-up": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-200%); display:none" },
+        },
+        "move-down": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(200%);display:none" },
+        },
+        "scale-up": {
+          "0%": { transform: "scale(0)" },
+          "100%": { transform: "scale(1)" },
+        },
+        "fade-in": {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        "fade-out": {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
         },
       },
     },

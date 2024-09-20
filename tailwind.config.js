@@ -13,8 +13,8 @@ module.exports = {
         "move-out": "move-out .3s ease-in forwards",
         glow: "glow 1s 1 forwards",
         glowing: "glowing 1.8s infinite",
-        "move-right": "move-right .5s ease-out forwards", // Ensure this is correct
-        "move-left": "move-left .5s  ease-out forwards",
+        "move-right": "move-right .8s ease-out forwards", // Ensure this is correct
+        "move-left": "move-left .8s  ease-out forwards",
       },
       keyframes: {
         "move-out": {
@@ -31,11 +31,11 @@ module.exports = {
           "100%": { "box-shadow": "0 0 5px rgba(8, 145, 178, 1)" },
         },
         "move-right": {
-          "0%": { transform: "translateX(100%)" }, 
+          "0%": { transform: "translateX(200%)" }, 
           "100%": { transform: "translateX(0)" }, 
         },
         "move-left": {
-          "0%": { transform: "translateX(-100%)" },
+          "0%": { transform: "translateX(-200%)" },
           "100%": { transform: "translateX(0)" },
         },
       },

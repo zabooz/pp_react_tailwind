@@ -48,6 +48,13 @@ export const NavbarCom = () => {
   },[nextSlide])
 
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Sanfte Scrollbewegung
+    });
+  };
+
   return (
     <>
       <ModalContext.Provider value={{ openModal, setOpenModal }}>
@@ -59,6 +66,7 @@ export const NavbarCom = () => {
           <NavbarBrand  onClick={() => {
             setNextSlide(0)
             navigate("/")
+            scrollToTop()
           }
             
             

@@ -1,3 +1,4 @@
+import { useSlideContext } from "../../contexts/Contexts";
 import { landingData } from "../../data/landingPage/landingData";
 import { useRef } from "react";
 function Header( ) {
@@ -12,10 +13,10 @@ const scrollToElement = () => {
 
    }
 }
-
+  const {startAnimation} = useSlideContext()
 
   return (
-    <header className="dark:bg-slate-800 dark:text-gray-400 min-h-screen flex flex-col items-center justify-evenly ">
+        <header className={`dark:bg-slate-800 dark:text-gray-400 min-h-screen flex flex-col items-center justify-evenly ${startAnimation ? 'animate-fade-out' : 'animate-fade-in' }`}>
       <div className=" flex flex-col-reverse lg:flex-row justify-center w-4/4 sm:w-3/4  items-center">
       <div className=" flex flex-col gap-10 items-center lg:items-start ">
         <div className="2xl:text-9xl  xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl text-center md:text-left dark:text-gray-200">

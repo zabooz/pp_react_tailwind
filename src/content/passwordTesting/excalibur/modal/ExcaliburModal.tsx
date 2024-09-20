@@ -21,7 +21,7 @@ function ExcaliburModal({
   return (
     <div>
       <Modal show={openModal} onClose={() => setOpenModal(false)}>
-        <Modal.Header>Terms of Service</Modal.Header>
+        <Modal.Header ><span className="!text-gray-300">Excalibur</span></Modal.Header>
         <Modal.Body>
           <Tabs aria-label="Default tabs" variant="default">
             <Tabs.Item active title="Tipps" icon={FaRegLightbulb}>

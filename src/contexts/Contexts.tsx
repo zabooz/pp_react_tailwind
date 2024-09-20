@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode, useContext, useEffect } from "react";
+import { createContext, useState, ReactNode, useContext} from "react";
 
 // Definiere das Interface für den ModalContext
 interface ModalContextProps {
@@ -98,13 +98,10 @@ export const useClippyContext = (): ClippyContextProps => {
 };
 
 interface SlideContextProps {
-  currentSlide: number;
-  setCurrentSlide: (value: number) => void;
-  nextSlide:number;
-  setNextSlide: (value: number) => void;
+
   startAnimation:boolean;
   setStartAnimation: (value: boolean) => void;
-  directionFunc: (value:number) => void;
+  directionFunc: (nextSite:number) => void;
 }
 
 const SlideContext = createContext<SlideContextProps | undefined>(
@@ -116,26 +113,24 @@ interface SlideProviderProps {
 }
 
 export const SlideProvider = ({ children }: SlideProviderProps) => {
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const [nextSlide, setNextSlide] = useState<number>(0);
-  const [startAnimation, setStartAnimation] = useState<boolean>(false);
 
-  const directionFunc = (next:number) => {
-    setCurrentSlide(next); 
-    setStartAnimation(true); // Start the animation
-  
-    // Reset the animation after the duration
-    setTimeout(() => {
-      setStartAnimation(false); // Reset the animation state
-    }, 800); // Assuming 1000ms is the animation duration
+  const [startAnimation, setStartAnimation] = useState<boolean>(false);
+  const [currentSite, setCurrentSite] = useState<number| null>(null);
+  const directionFunc = (nextSite: number) => {
+
+    if(nextSite !== currentSite){
+      setStartAnimation(true); 
+      setCurrentSite(nextSite);
+      setTimeout(() => {
+        setStartAnimation(false); 
+      }, 800); 
+    }
+
   };
 
-  useEffect(() => {
-    console.log("currentSlide", currentSlide,"nextSlide",nextSlide,"direction",startAnimation)
-  }, [currentSlide,nextSlide,startAnimation]);
   return (
     <SlideContext.Provider
-      value={{ currentSlide, setCurrentSlide, nextSlide, setNextSlide,startAnimation, setStartAnimation,directionFunc }}
+      value={{ startAnimation, setStartAnimation,directionFunc }}
     >
       {children}
     </SlideContext.Provider>

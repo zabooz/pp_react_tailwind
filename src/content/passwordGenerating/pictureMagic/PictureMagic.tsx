@@ -29,7 +29,7 @@ function PictureMagic() {
 
   return (
     <Card
-      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-move-up' : 'animate-scale-up'} `}
+      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl `}
       imgAlt="PictureMAgic picture"
       imgSrc="src\assets\passwordGenerating\pictureMagic.jpeg"
     >

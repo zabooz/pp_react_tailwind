@@ -34,7 +34,7 @@ function Excalibur() {
   return (
     <>
       <Card
-        className={`max-w-lg mx-auto border-4 ${startAnimation ? 'animate-move-right' : 'animate-scale-up'} `}
+        className={`max-w-lg mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl` }
         imgAlt="Excalibur Picture"
         imgSrc="src/assets/passwordTesting/excalibur.png"
       >

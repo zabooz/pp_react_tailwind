@@ -4,7 +4,7 @@ import {
   useLoginContext,
   useSlideContext,
 } from "../contexts/Contexts";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import LoginRegister from "./login.register/LoginRegister";
 import { logOut } from "../backend/logout";
 import {
@@ -22,8 +22,7 @@ import {
 export const NavbarCom = () => {
   const [openModal, setOpenModal] = useState(false);
   const { loggedIn, setLoggedIn, change } = useLoginContext();
-  const {  setNextSlide,  directionFunc } =
-    useSlideContext();
+  const { directionFunc } = useSlideContext();
   const navigate = useNavigate();
   const [data, setData] = useState<string[]>([
     "src/assets/profile/default.png",
@@ -36,7 +35,6 @@ export const NavbarCom = () => {
       setData([storedData[0].avatar, storedData[0].username]);
     }
   }, [change, loggedIn]);
-
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -55,16 +53,13 @@ export const NavbarCom = () => {
         >
           <NavbarBrand
             onClick={() => {
-              setNextSlide(0);
               directionFunc(0);
               setTimeout(() => {
                 navigate("/");
-                setNextSlide(10);
-                scrollToTop();
 
+                scrollToTop();
               }, 800);
             }}
-
             className="cursor-pointer"
           >
             <img
@@ -123,11 +118,9 @@ export const NavbarCom = () => {
             <a
               className="py-2 px-4 font-bold text-lg tracking-wider dark:text-gray-400 dark:hover:text-[#0891b2d9] hover:underline underline-offset-8 cursor-pointer"
               onClick={() => {
-                setNextSlide(1);
                 directionFunc(1);
                 setTimeout(() => {
                   navigate("/password-generating");
-                  setNextSlide(13);
                 }, 800);
               }}
             >
@@ -139,12 +132,10 @@ export const NavbarCom = () => {
             <a
               className=" py-2 px-4 text-lg font-bold tracking-wider dark:hover:text-[#0891b2d9] hover:underline underline-offset-8 cursor-pointer"
               onClick={() => {
-                setNextSlide(2);
                 directionFunc(2);
                 setTimeout(() => {
                   navigate("/password-testing");
-                  setNextSlide(12);
-                },800);
+                }, 800);
               }}
             >
               <p>
@@ -155,11 +146,9 @@ export const NavbarCom = () => {
             <a
               className="py-2 px-4 text-lg tracking-wider font-bold dark:hover:text-[#0891b2d9] hover:underline underline-offset-8 cursor-pointer"
               onClick={() => {
-                setNextSlide(3);
                 directionFunc(3);
                 setTimeout(() => {
                   navigate("/username-generating");
-                  setNextSlide(13);
                 }, 800);
               }}
             >
@@ -172,9 +161,12 @@ export const NavbarCom = () => {
               <div className="md:hidden">
                 <p
                   onClick={() => {
-                    setNextSlide(4);
-                    navigate("/dashBoard");
+                    directionFunc(4);
+                    setTimeout(() => {
+                      navigate("/dashBoard");
+                    }, 800);
                   }}
+ 
                   className="flex gap-2 cursor-pointer py-2 px-4 text-lg tracking-wider font-bold dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"
                 >
                   Dashboard

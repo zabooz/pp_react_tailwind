@@ -35,7 +35,6 @@ function App() {
       if (result) setLoggedIn(true);
     })();
   }, []);
-  console.log(235);
   return (
     <HeadProvider>
       <Flowbite>

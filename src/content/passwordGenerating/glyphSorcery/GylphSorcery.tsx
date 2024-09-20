@@ -4,7 +4,7 @@ import { glyphSorcery } from "./glyphSorceryScript";
 
 import { StorageData } from "../../../interfaces/interfaces";
 import GlyphSorcerySwitch from "./GlyphSorcerySwitch";
-import { customRange } from "../../../themes/themes";
+
 import { useSlideContext } from "../../../contexts/Contexts";
 
 
@@ -34,7 +34,7 @@ function GylphSorcery() {
     const {startAnimation} = useSlideContext(); 
   return (
     <Card
-      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-move-down' : 'animate-scale-up'}`}
+      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl`}
       imgAlt="Glyph Sorcery picture"
       imgSrc="src\assets\passwordGenerating\glyphSorcery.jpeg"
     >

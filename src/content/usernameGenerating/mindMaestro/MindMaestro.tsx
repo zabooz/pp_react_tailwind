@@ -1,32 +1,31 @@
 import { Card, Carousel, Radio, Label } from "flowbite-react";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { mindMaestro } from "./mindeMastroScript";
 import { useSlideContext } from "../../../contexts/Contexts";
 function MindMaestro() {
- 
-    const [username, setUsername] = useState<string>("");
-    const handleRadioChange = () => {
-      const choices: string[] = [];
-      document.querySelectorAll("input[type='radio']:checked")
-        .forEach((item) => {
-          if (item instanceof HTMLInputElement) {
-            choices.push(item.dataset.arr || '');
-          }
-        });
-      const name =    mindMaestro({values:choices});
+  const [username, setUsername] = useState<string>("");
+  const handleRadioChange = () => {
+    const choices: string[] = [];
+    document.querySelectorAll("input[type='radio']:checked").forEach((item) => {
+      if (item instanceof HTMLInputElement) {
+        choices.push(item.dataset.arr || "");
+      }
+    });
+    const name = mindMaestro({ values: choices });
 
-      setUsername(name);
-     
-    };
+    setUsername(name);
+  };
 
-    useEffect(() => {
-      setUsername("");
-    }, [username]);
+  useEffect(() => {
+    setUsername("");
+  }, [username]);
 
-    const {startAnimation} = useSlideContext();
-    return (
+  const { startAnimation } = useSlideContext();
+  return (
     <Card
-      className={`max-w-lg mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-scale-up'} `}
+      className={`max-w-lg mx-auto border-4 ${
+        startAnimation ? "animate-fade-out" : "animate-fade-in"
+      } dark:hover:shadow-2xl`}
       imgAlt="MindMaestro Picture"
       imgSrc="src/assets/usernameGenerating/mindMaestro.jpeg"
     >
@@ -46,23 +45,28 @@ function MindMaestro() {
               <h5>Frage 1: Was ist dir am wichtigsten?</h5>
               <div>
                 <div>
-                  <Radio name="question1" data-arr="temperatures" id="q1a1" defaultChecked />
-                  <Label htmlFor="q1a1" >Eine angenehme Temperatur</Label>
+                  <Radio
+                    name="question1"
+                    data-arr="temperatures"
+                    id="q1a1"
+                    defaultChecked
+                  />
+                  <Label htmlFor="q1a1">Eine angenehme Temperatur</Label>
                 </div>
 
                 <div>
                   <Radio name="question1" data-arr="qualities" id="q1a2" />
-                  <Label htmlFor="q1a2" >Bequemlichkeit</Label>
+                  <Label htmlFor="q1a2">Bequemlichkeit</Label>
                 </div>
 
                 <div>
                   <Radio name="question1" data-arr="colors" id="q1a3" />
-                  <Label htmlFor="q1a3" >Farbfernsehen</Label>
+                  <Label htmlFor="q1a3">Farbfernsehen</Label>
                 </div>
 
                 <div>
                   <Radio name="question1" id="q1a4" data-arr="sizes" />
-                  <Label htmlFor="q1a4" >Wahre Größe</Label>
+                  <Label htmlFor="q1a4">Wahre Größe</Label>
                 </div>
               </div>
             </div>
@@ -72,16 +76,27 @@ function MindMaestro() {
               <h5>Frage 2: Welche Aktivität magst du am meisten?</h5>
               <div>
                 <div>
-                  <Radio name="question2" id="q2a1" data-arr="vehicles"  defaultChecked/>
+                  <Radio
+                    name="question2"
+                    id="q2a1"
+                    data-arr="vehicles"
+                    defaultChecked
+                  />
                   <Label htmlFor="q2a1">Im Kreis fahren</Label>
                 </div>
                 <div>
-                  <Radio name="question2" id="q2a2" data-arr="tools"/>
+                  <Radio name="question2" id="q2a2" data-arr="tools" />
                   <Label htmlFor="q2a2">Arbeiten mit den Händen</Label>
                 </div>
                 <div>
-                  <Radio name="question2" id="q2a3" data-arr="fantasyCreatures"/>
-                  <Label htmlFor="q2a3">Löffel verbiegen(durch Gedanken )</Label>
+                  <Radio
+                    name="question2"
+                    id="q2a3"
+                    data-arr="fantasyCreatures"
+                  />
+                  <Label htmlFor="q2a3">
+                    Löffel verbiegen(durch Gedanken )
+                  </Label>
                 </div>
                 <div>
                   <Radio name="question2" id="q2a4" data-arr="instruments" />
@@ -97,7 +112,12 @@ function MindMaestro() {
               </h5>
               <div>
                 <div>
-                  <Radio name="question3" id="q3a1" data-arr="fruits" defaultChecked/>
+                  <Radio
+                    name="question3"
+                    id="q3a1"
+                    data-arr="fruits"
+                    defaultChecked
+                  />
                   <Label htmlFor="q3a1">Früchte & Gemüse</Label>
                 </div>
                 <div>
@@ -120,7 +140,12 @@ function MindMaestro() {
               <h5>Frage 4: Was bevorzugst du?</h5>
               <div>
                 <div>
-                  <Radio name="question4" id="q4a1" data-arr="ages" defaultChecked/>
+                  <Radio
+                    name="question4"
+                    id="q4a1"
+                    data-arr="ages"
+                    defaultChecked
+                  />
                   <Label htmlFor="q4a1">Das Leben</Label>
                 </div>
                 <div>
@@ -147,15 +172,24 @@ function MindMaestro() {
                   <Label htmlFor="q5a1">Hunde und Katzen</Label>
                 </div>
                 <div>
-                  <Radio name="question5" id="q5a2" data-arr="fantasyCreatures" />
+                  <Radio
+                    name="question5"
+                    id="q5a2"
+                    data-arr="fantasyCreatures"
+                  />
                   <Label htmlFor="q5a2">Drachen und Einhörner</Label>
                 </div>
                 <div>
-                  <Radio name="question5" id="q5a3"  />
+                  <Radio name="question5" id="q5a3" />
                   <Label htmlFor="q5a3">Elfen und Zwerge</Label>
                 </div>
                 <div>
-                  <Radio name="question5" id="q5a4" data-arr="fantasyRaces" defaultChecked/>
+                  <Radio
+                    name="question5"
+                    id="q5a4"
+                    data-arr="fantasyRaces"
+                    defaultChecked
+                  />
                   <Label htmlFor="q5a4">Nichts davon</Label>
                 </div>
               </div>
@@ -163,16 +197,20 @@ function MindMaestro() {
           </div>
           <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
             <div>
-            <div id="lastCaption">
-                 { username  ?(<h1>{username}</h1>)  :(   
-                  <>           
-                <h5 >Vielen Dank für deine Teilnahme!</h5>
-                <p >
-                  Bitte klick auf den Button, um deine Antworten zu senden.
-                </p>
-                <button id="submitButton" onClick={handleRadioChange}>Antworten absenden</button>
-                </>
-              )}
+              <div id="lastCaption">
+                {username ? (
+                  <h1>{username}</h1>
+                ) : (
+                  <>
+                    <h5>Vielen Dank für deine Teilnahme!</h5>
+                    <p>
+                      Bitte klick auf den Button, um deine Antworten zu senden.
+                    </p>
+                    <button id="submitButton" onClick={handleRadioChange}>
+                      Antworten absenden
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>

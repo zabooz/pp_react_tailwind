@@ -1,20 +1,33 @@
 import { CustomFlowbiteTheme } from "flowbite-react";
 
-// Dein benutzerdefiniertes Theme
-export const customRange: CustomFlowbiteTheme["rangeSlider"] = {
-  root: {
-    base: "flex",
+export const customAccordionTheme:CustomFlowbiteTheme["accordion"] ={
+  "accordion": {
+    "base": "divide-y divide-gray-200 border-gray-200 dark:divide-gray-700 dark:border-gray-700",
+    "flush": {
+      "off": "rounded-lg border",
+      "on": "border-b"
+    }
   },
-  field: {
-    base: "relative w-full",
-    input: {
-      base: "w-full cursor-pointer appearance-none rounded-lg bg-gray-700 dark:bg-gray-600",
-      sizes: {
-        sm: "h-1",
-        md: "h-2",
-        lg: "h-3",
-      },
-      thumb: "w-3 h-3 bg-gray-700 dark:bg-gray-700",
+  "content": {
+    "base": "p-5 first:rounded-t-lg last:rounded-b-lg dark:bg-gray-900"
+  },
+  "title": {
+    "arrow": {
+      "base": "h-6 w-6 shrink-0",
+      "open": {
+        "off": "",
+        "on": "rotate-180"
+      }
     },
-  },
-};
+    "base": "flex w-full items-center justify-between p-5 text-left font-medium text-gray-500 first:rounded-t-lg last:rounded-b-lg dark:text-gray-400",
+    "flush": {
+      "off": "hover:bg-gray-100 dark:hover:bg-gray-800 ",
+      "on": "bg-transparent dark:bg-transparent"
+    },
+    "heading": "",
+    "open": {
+      "off": "",
+      "on": "bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-green"
+    }
+  }
+}

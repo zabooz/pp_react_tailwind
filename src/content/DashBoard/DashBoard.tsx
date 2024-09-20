@@ -6,10 +6,14 @@ import "./styles/dashboard.css";
 import Profile from "./Profile";
 import LeaderBoard from "./LeaderBoard";
 import Settings from "./Settings";
+import { useSlideContext } from "../../contexts/Contexts";
 
 function DashBoard() {
+
+  const { startAnimation } = useSlideContext();
+
   return (
-    <div className="self-stretch min-h-[100vh] p-5 ">
+    <div className={`self-stretch min-h-[100vh] p-5 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'}  `}>
       <Tabs aria-label="Tabs with underline" variant="underline"  >
         <Tabs.Item active title="Profile" icon={HiUserCircle} >
           <Profile />

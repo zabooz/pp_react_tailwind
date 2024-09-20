@@ -1,5 +1,6 @@
 import { Card, Button } from "flowbite-react";
 import { Link } from "react-router-dom";
+import { useSlideContext } from "../../contexts/Contexts";
 
 
 
@@ -28,10 +29,10 @@ function CardCom({ data }: Props) {
     });
   };
 
-
+  const { startAnimation } = useSlideContext();
   return (
     <Card
-      className="max-w-lg mx-auto  p-2  dark:bg-slate-700 hover:animate-glow "
+      className={`max-w-lg mx-auto  p-2  dark:bg-slate-700 ${startAnimation ? 'animate-fade-out' : ' hover:animate-glow'}`}
       imgSrc={data.imgSrc}
       imgAlt={data.imgAlt}
 

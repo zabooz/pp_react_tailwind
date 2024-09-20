@@ -1,6 +1,7 @@
 import { Tabs, Drawer } from "flowbite-react";
 
 import { useClippyContext } from "../../contexts/Contexts";
+import { CopyToClipBoard } from "../../utillities/CopyToClipBoard";
 
 interface Props {
   isOpen: boolean;
@@ -37,11 +38,14 @@ function Clippy({ isOpen, handleClose }: Props) {
             <ul>
               {passwords.length > 0 &&
                 passwords.map((password: string, index: number) => (
-                  <li key={index + password}>{password}</li>
+                  <>
+                  <li key={index + password} className="font-semibold text-lg text-gray-400"><CopyToClipBoard clippy={true} type={"password"} password={password}>{password}</CopyToClipBoard></li>
+  
+                  </>
                 ))}
             </ul>
           </Tabs.Item>
-          <Tabs.Item title="Benutzernamen" className="">
+          <Tabs.Item title="Benutzernamen">
             <ul>
               {usernames.length > 0 &&
                 usernames.map((username: string, index: number) => (

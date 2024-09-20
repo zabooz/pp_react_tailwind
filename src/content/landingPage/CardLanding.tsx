@@ -1,5 +1,7 @@
 import { Card, Button } from "flowbite-react";
 import { Link } from "react-router-dom";
+import { useSlideContext } from "../../contexts/Contexts";
+
 
 interface CardData {
   title: string;
@@ -16,13 +18,29 @@ interface Props {
 }
 
 function CardCom({ data }: Props) {
+
+
+  const {setDirection} = useSlideContext()
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Sanfte Scrollbewegung
+    });
+  };
+
+
   return (
     <Card
-      className="max-w-lg mx-auto  p-2  dark:bg-slate-700 hover:animate-glow"
+      className="max-w-lg mx-auto  p-2  dark:bg-slate-700 hover:animate-glow "
       imgSrc={data.imgSrc}
       imgAlt={data.imgAlt}
 
     >
+
+      {/* WHAT THE FUCK IS THIS? custom animation wont work if not set mannually somewhere in the dom */}
+      <div className="animate-move-right"></div> 
+      <div className="animate-move-left"></div>
       <h5 className="text-2xl font-bold tracking-wider text-center text-gray-900 dark:text-gray-200">
         {data.title}
       </h5>
@@ -30,8 +48,9 @@ function CardCom({ data }: Props) {
       <p className="font-normal text-gray-700 dark:text-gray-400 ">
         {data.text}
       </p>
-      <Link to={data.btnLink} className="w-full">
-      <Button className="mt-12 text-lg text-gray-200 tracking-wide w-full ">
+      <Link to={data.btnLink} className="w-full" onClick={scrollToTop}>
+      <Button className="mt-12 text-lg text-gray-200 tracking-wide w-full "
+        onClick={() => setDirection('')}>
         {data.btnText}
         <svg
           className="-mr-1 ml-2 h-5 w-4 items-center justify-center flex "

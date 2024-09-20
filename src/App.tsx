@@ -2,7 +2,11 @@ import Head from "./components/Head";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 
-import { useLoginContext, ClippyProvider } from "./contexts/Contexts";
+import {
+  useLoginContext,
+  ClippyProvider,
+  SlideProvider,
+} from "./contexts/Contexts";
 import { HeadProvider } from "react-head";
 import { autoLogin } from "./backend/autoLogin";
 
@@ -38,30 +42,35 @@ function App() {
         <Router>
           <Head />
 
-          <NavbarCom />
+          <SlideProvider>
+            <NavbarCom />
 
-          <ClippyProvider>
-            <QuickNav />
-            <Routes>
-              <Route path="/" element={<ContentBox />}>
-                <Route index element={<LandingPage />} /> {/* Die Startseite */}
-                <Route
-                  path="password-generating"
-                  element={<PasswordGenerating />}
-                />
-                <Route path="password-testing" element={<PasswordTesting />} />
-                <Route
-                  path="username-generating"
-                  element={<UsernameGenerating />}
-                />
-                <Route path="about-us" element={<AboutUs />} />
-                <Route path="project" element={<Project />} />
-                <Route path="impressum" element={<Impressum />} />
-                <Route path="privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="dashBoard" element={<DashBoard />} />
-              </Route>
-            </Routes>
-          </ClippyProvider>
+            <ClippyProvider>
+              <QuickNav />
+              <Routes>
+                <Route path="/" element={<ContentBox />}>
+                  <Route index element={<LandingPage />} />
+                  <Route
+                    path="password-generating"
+                    element={<PasswordGenerating />}
+                  />
+                  <Route
+                    path="password-testing"
+                    element={<PasswordTesting />}
+                  />
+                  <Route
+                    path="username-generating"
+                    element={<UsernameGenerating />}
+                  />
+                  <Route path="dashBoard" element={<DashBoard />} />
+                  <Route path="about-us" element={<AboutUs />} />
+                  <Route path="project" element={<Project />} />
+                  <Route path="impressum" element={<Impressum />} />
+                  <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                </Route>
+              </Routes>
+            </ClippyProvider>
+          </SlideProvider>
 
           <Footer />
         </Router>

@@ -33,7 +33,7 @@ function Excalibur() {
   return (
     <>
       <Card
-        className={`max-w-lg mx-auto border-4 ${isThinking? 'animate-glowing' :''}`}
+        className={`max-w-lg mx-auto border-4 ${isThinking? 'animate-glowing' :''} class`}
         imgAlt="Excalibur Picture"
         imgSrc="src/assets/passwordTesting/excalibur.png"
       >

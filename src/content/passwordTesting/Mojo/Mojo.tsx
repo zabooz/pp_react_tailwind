@@ -18,6 +18,10 @@ import { DrawerData } from "../../../interfaces/interfaces";
 import TextCanvas from "../../../components/TextCanvas";
 import ResultsModal from "./ResultsModal";
 
+
+
+
+
 function Mojo() {
   const [drawer, setDrawerShow] = useState<boolean>(false);
   const [drawerContent, setDrawerContent] = useState<DrawerData>({
@@ -80,9 +84,10 @@ function Mojo() {
   };
 
   return (
-    <>
+    <>   
+
       <Card
-        className={`max-w-lg mx-auto border-4 ${isBruteActive ? 'animate-glowing' :''}`}
+        className={`max-w-lg mx-auto border-4 ${isBruteActive ? 'animate-glowing' :''} `}
         imgAlt="Mojo APP picture"
         imgSrc="src/assets/passwordTesting/mojo.png"
       >

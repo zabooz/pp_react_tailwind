@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode, useContext } from "react";
+import { createContext, useState, ReactNode, useContext, useEffect } from "react";
 
 // Definiere das Interface für den ModalContext
 interface ModalContextProps {
@@ -96,3 +96,60 @@ export const useClippyContext = (): ClippyContextProps => {
   }
   return context;
 };
+
+interface SlideContextProps {
+  currentSlide: number;
+  setCurrentSlide: (value: number) => void;
+  nextSlide:number;
+  setNextSlide: (value: number) => void;
+  direction:string;
+  setDirection: (value: string) => void;
+  directionFunc: (value:number) => void;
+}
+
+const SlideContext = createContext<SlideContextProps | undefined>(
+  undefined
+);
+
+interface SlideProviderProps {
+  children: ReactNode;
+}
+
+export const SlideProvider = ({ children }: SlideProviderProps) => {
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [nextSlide, setNextSlide] = useState<number>(0);
+  const [direction, setDirection] = useState<string>("move-right");
+
+  const directionFunc = (next:number) => {
+    if(currentSlide> next ){
+      setDirection("move-left")
+    }else if(currentSlide < next){
+      setDirection("move-right")
+    }
+
+    setCurrentSlide(next)
+
+  };
+
+  useEffect(() => {
+    console.log("currentSlide", currentSlide,"nextSlide",nextSlide,"direction",direction)
+  }, [currentSlide,nextSlide,direction]);
+  return (
+    <SlideContext.Provider
+      value={{ currentSlide, setCurrentSlide, nextSlide, setNextSlide,direction, setDirection,directionFunc }}
+    >
+      {children}
+    </SlideContext.Provider>
+  );
+};
+
+
+export const useSlideContext = (): SlideContextProps => {
+  const context = useContext(SlideContext);
+  if (!context) {
+    throw new Error("useSlideContext must be used within an SlideProvider");
+  }
+  return context;
+};
+
+

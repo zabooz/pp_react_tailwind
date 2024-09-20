@@ -33,12 +33,12 @@ function GylphSorcery() {
 
   return (
     <Card
-      className="max-w-md mx-auto border-4"
+      className="max-w-md mx-auto border-4 "
       imgAlt="Glyph Sorcery picture"
       imgSrc="src\assets\passwordGenerating\glyphSorcery.jpeg"
     >
       <div className="relative">
-        <div className="absolute  -top-[145px] flex items-center justify-center w-full">
+        <div className="absolute   -top-[145px] flex items-center justify-center w-full">
           <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   text-gray-200">
             Glyph  Sorcery
           </h5>

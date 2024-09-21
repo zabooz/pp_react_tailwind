@@ -1,4 +1,4 @@
-import Mojo from "./mojo/Mojo.tsx";
+import Mojo from "./Mojo/Mojo.tsx";
 import Excalibur from "./excalibur/Excalibur.tsx";
 import { useRef } from "react";
 

@@ -36,7 +36,7 @@ function GlyphSorcerySwitch({ data }: Props) {
 
 
   return (
-    <div className="flex text-gray-200 justify-between w-full">
+    <div className="flex dark:text-gray-200 justify-between w-full">
       <img
         src="/assets/icons/arrowRight.svg"
         alt="arrowLeft"

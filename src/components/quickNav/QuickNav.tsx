@@ -27,7 +27,7 @@ function QuickNav() {
       >
         <Button
           data-drawer="sanchez"
-          className="w-60 text-left hover:animate-move-out p-0 flex  border-2 border-[#0891b2] justify-start dark:bg-slate-700  items-center "
+          className="w-60 text-left hover:animate-move-out p-0 flex  border-2 dark:border-[#0891b2] justify-start dark:bg-slate-700  items-center border-[#ea6954] bg-[#ea6954] "
           onClick={handleClick}
         >
           <img
@@ -41,7 +41,7 @@ function QuickNav() {
         </Button>
         <Button
           data-drawer="clippy"
-          className="w-50 hover:animate-move-out text-left border-2 border-[#0891b2]  p-0 flex items-center justify-start  dark:bg-slate-700"
+          className="w-50 hover:animate-move-out text-left border-2 dark:border-[#0891b2] border-[#ea6954] bg-[#ea6954]   p-0 flex items-center justify-start  dark:bg-slate-700"
           onClick={handleClick}
         >
           <img

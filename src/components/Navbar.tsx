@@ -49,7 +49,7 @@ export const NavbarCom = () => {
         <Navbar
           fluid
           rounded
-          className="	fixed w-full z-20 dark:bg-slate-700 !justify-center h-16"
+          className="	fixed w-full z-20 dark:bg-slate-700 bg-gray-200 !justify-center h-16"
         >
           <NavbarBrand
             onClick={() => {
@@ -116,7 +116,7 @@ export const NavbarCom = () => {
           </div>
           <NavbarCollapse className=" dark:text-gray-400 text-lg  justify-between">
             <a
-              className="py-2 px-4 font-bold text-lg tracking-wider dark:text-gray-400 dark:hover:text-[#0891b2d9] hover:underline underline-offset-8 cursor-pointer"
+              className="py-2 px-4 font-bold text-lg tracking-wider dark:text-gray-400 dark:hover:text-[#0891b2d9] hover:text-[#ea6954] hover:underline underline-offset-8 cursor-pointer"
               onClick={() => {
                 directionFunc(1);
                 setTimeout(() => {
@@ -131,7 +131,7 @@ export const NavbarCom = () => {
               </p>
             </a>
             <a
-              className=" py-2 px-4 text-lg font-bold tracking-wider dark:hover:text-[#0891b2d9] hover:underline underline-offset-8 cursor-pointer"
+              className=" py-2 px-4 text-lg font-bold tracking-wider dark:hover:text-[#0891b2d9] hover:text-[#ea6954] hover:underline underline-offset-8 cursor-pointer"
               onClick={() => {
                 directionFunc(2);
                 setTimeout(() => {
@@ -146,7 +146,7 @@ export const NavbarCom = () => {
               </p>
             </a>
             <a
-              className="py-2 px-4 text-lg tracking-wider font-bold dark:hover:text-[#0891b2d9] hover:underline underline-offset-8 cursor-pointer"
+              className="py-2 px-4 text-lg tracking-wider font-bold dark:hover:text-[#0891b2d9] hover:text-[#ea6954] hover:underline underline-offset-8 cursor-pointer"
               onClick={() => {
                 directionFunc(3);
                 setTimeout(() => {

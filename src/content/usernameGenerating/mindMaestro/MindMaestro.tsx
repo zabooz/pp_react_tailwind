@@ -49,7 +49,7 @@ function MindMaestro() {
         )}
       </div>
       <Button
-        className="mt-4"
+        className="mt-4 bg-[#ea6954]"
         onClick={() => {
           setAnswers([]);
           setStartQuiz(true);

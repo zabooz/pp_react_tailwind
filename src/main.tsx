@@ -9,7 +9,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Flowbite>
       <LoginProvider>
-      <App />
+      <App  />
       </LoginProvider>
     </Flowbite>
   </StrictMode>

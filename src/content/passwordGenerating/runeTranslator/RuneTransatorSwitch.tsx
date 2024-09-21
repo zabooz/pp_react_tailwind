@@ -21,7 +21,7 @@ function RuneTransatorSwitch({ runes }: Props) {
   };
 
   return (
-    <div className="flex text-gray-200 justify-between w-full">
+    <div className="flex bg:text-gray-200 justify-between w-full">
       <img
         src="/assets/icons/arrowRight.svg"
         alt="arrowLeft"

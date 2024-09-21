@@ -14,7 +14,7 @@ function Header() {
 
   return (
     <header
-      className={`dark:bg-slate-800 dark:text-gray-400 min-h-[97vh] flex flex-col items-center p-2  sm:justify-evenly  ${
+      className={`dark:bg-slate-800 dark:text-gray-400 min-h-[97vh] flex flex-col items-center p-2  sm:justify-evenly   ${
         startAnimation ? "animate-fade-out" : "animate-fade-in"
       }`}
     >

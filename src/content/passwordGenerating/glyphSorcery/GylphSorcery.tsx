@@ -82,7 +82,7 @@ function GylphSorcery() {
         </div>
       </div>
       <GlyphSorcerySwitch data={data} />
-      <Button onClick={handeClick} className="mt-3">Los geht's</Button>
+      <Button onClick={handeClick} className="mt-3 bg-[#ea6954]">Los geht's</Button>
     </Card>
   );
 }

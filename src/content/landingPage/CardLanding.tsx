@@ -40,7 +40,7 @@ function CardCom({ data, index }: Props) {
   return (
     <>
       <Card
-        className={`max-w-lg mx-auto border-2  dark:bg-slate-700 lg:mt-16 ${
+        className={`max-w-lg mx-auto dark:border-2   dark:bg-slate-700 lg:mt-16 ${
           startAnimation ? "animate-fade-out" : " sm:hover:animate-glow"
         }`}
         imgSrc={data.imgSrc}
@@ -57,7 +57,7 @@ function CardCom({ data, index }: Props) {
         </p>
 
         <Button
-          className="sm:mt-12 text-lg text-gray-200 tracking-wide w-full"
+          className="sm:mt-12 text-lg text-gray-200 tracking-wide w-full bg-[#ea6954]"
           onClick={() => {
             directionFunc(index + 1);
             setTimeout(() => {

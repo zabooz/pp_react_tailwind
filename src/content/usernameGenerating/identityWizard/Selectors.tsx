@@ -76,7 +76,7 @@ function Selectors() {
         </Select>
       </div>
       <div className="grid grid-cols-2 gap-4 mt-10">
-        <Button className=" w-2/3" onClick={() => handleClick()}>
+        <Button className=" w-2/3 bg-[#ea6954]" onClick={() => handleClick()}>
           Los Geht's
         </Button>
         <p className="border-2 border-2-slate-400 rounded text-center p-2 text-gray-400">

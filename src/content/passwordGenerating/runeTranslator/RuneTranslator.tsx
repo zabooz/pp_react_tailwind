@@ -29,7 +29,7 @@ function RuneTranslator({ handleDrawerClick }: Props) {
   const {startAnimation} = useSlideContext()
   return (
     <Card
-      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl`}
+      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl `}
       imgAlt="Rune Translator Picture"
       imgSrc="/assets/passwordGenerating/runeTranslator.jpeg"
   
@@ -44,7 +44,7 @@ function RuneTranslator({ handleDrawerClick }: Props) {
       <div className="h-full">
         <p className="font-normal text-gray-700 dark:text-gray-400 mb-8">
           <span
-            className="font-bold cursor-pointer text-[#0ea5e9] underline underline-offset-2"
+            className="font-bold cursor-pointer dark:text-[#0ea5e9] text-[#ea6954] underline underline-offset-2"
             onClick={() => handleDrawerClick(leetspeakTextShortened)}
           >
             Leetspeak
@@ -55,13 +55,14 @@ function RuneTranslator({ handleDrawerClick }: Props) {
         </p>
 
         <div className="flex flex-col">
-          <TextInput type="text" onChange={(e) => setInput(e.target.value)} />
-          <span className="text-gray-400 mt-2">*Maximal 12 Zeichen</span>
+          <TextInput type="text" onChange={(e) => setInput(e.target.value)}
+           />
+          <span className="dark:text-gray-400 mt-2">*Maximal 12 Zeichen</span>
         </div>
       </div>
       <RuneTransatorSwitch runes={runes} />
 
-      <Button onClick={() => handleClick()} className="mt-3">Los geht's</Button>
+      <Button onClick={() => handleClick()} className="mt-3 bg-[#ea6954]">Los geht's</Button>
     </Card>
   );
 }

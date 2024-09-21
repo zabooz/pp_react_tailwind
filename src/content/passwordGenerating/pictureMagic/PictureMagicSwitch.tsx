@@ -31,7 +31,7 @@ function PictureMagicSwitch({ storageData }: Props) {
   }, [storageData]);
 
   return (
-    <div className="flex text-gray-200  justify-between w-full ">
+    <div className="flex dark:text-gray-200  justify-between w-full ">
       <div className=" mt-11 mb-auto rounded-full me-2 ">
         <img
           src="/assets/icons/arrowRight.svg"

@@ -77,7 +77,7 @@ function PictureMagic() {
         </div>
       </div>
       <PictureMagicSwitch storageData={storageData} />
-      <Button className="mt-3" onClick={() => handleClick()}>
+      <Button className="mt-3 bg-[#ea6954]" onClick={() => handleClick()}>
         Los geht's
       </Button>
     </Card>

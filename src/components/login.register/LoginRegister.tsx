@@ -16,7 +16,7 @@ function LoginRegister() {
   const {openModal, setOpenModal} = useModalContext();
 
   return (
-    <Modal show={openModal} size="md" popup onClose={() => {
+    <Modal dismissible show={openModal} size="md" popup onClose={() => {
       setOpenModal(false)
       setWantToRegister(false)
       }}>

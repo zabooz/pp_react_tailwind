@@ -15,7 +15,7 @@ function PasswordTesting() {
   return (
     <>
       <main
-        className={` grid sm:grid-cols-1 lg:grid-cols-2  lg:gap-10 w-full overflow-hidden min-h-[90vh] mt-12 lg:mt-0 lg:hiden content-center
+        className={` grid sm:grid-cols-1 lg:grid-cols-2  lg:gap-10 w-full overflow-hidden min-h-[90vh] mt-12 lg:mt-0  lg:hiden content-center
         }`}
       >
         <Mojo />

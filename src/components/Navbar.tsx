@@ -67,7 +67,7 @@ export const NavbarCom = () => {
               className="mr-3 h-9"
               alt="Flowbite React Logo"
             />
-            <span className="self-center whitespace-nowrap text-3xl font-semibold  md:hidden lg:block dark:text-gray-400">
+            <span className="self-center whitespace-nowrap text-3xl font-semibold hidden sm:block  md:hidden lg:block dark:text-gray-400">
               Password Playground
             </span>
           </NavbarBrand>

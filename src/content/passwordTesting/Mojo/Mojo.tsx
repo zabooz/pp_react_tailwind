@@ -87,12 +87,11 @@ function Mojo() {
     }
   };
 
-
   return (
     <>   
 
       <Card
-        className={`max-w-lg mx-auto border-4 ${startAnimation ?'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl   `}
+        className={`max-w-lg mx-auto border-4 ${startAnimation ?'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl  `}
         imgAlt="Mojo APP picture"
         imgSrc="src/assets/passwordTesting/mojo.png"
       >

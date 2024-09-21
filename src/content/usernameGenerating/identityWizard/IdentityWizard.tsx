@@ -1,17 +1,15 @@
-
-
-import {Card } from "flowbite-react";
+import { Card } from "flowbite-react";
 import Selectors from "./Selectors";
 
 import { useSlideContext } from "../../../contexts/Contexts";
-const  IdentityWizard =() =>{
-
-
-  const {startAnimation} = useSlideContext()
+const IdentityWizard = () => {
+  const { startAnimation } = useSlideContext();
 
   return (
     <Card
-      className={`max-w-lg mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl`}
+      className={`max-w-lg mx-auto border-4 ${
+        startAnimation ? "animate-fade-out" : "animate-fade-in"
+      } dark:hover:shadow-2xl`}
       imgAlt="Identity Wizard Picture"
       imgSrc="src/assets/usernameGenerating/identityWizard.jpg"
     >
@@ -27,13 +25,12 @@ const  IdentityWizard =() =>{
         von Adjektiven und eine Gruppe von Substantiven auswählst, oder lass den
         Generator eine zufällige Kombination für dich erstellen.{" "}
       </p>
-        <div className="flex flex-col">
-         <Selectors/>
-        <div>
-        </div>
+      <div className="flex flex-col">
+        <Selectors />
+        <div></div>
       </div>
     </Card>
   );
-}
+};
 
 export default IdentityWizard;

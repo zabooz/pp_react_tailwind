@@ -62,7 +62,7 @@ function GylphSorcery() {
           onInput={(e) =>
             setPasswordLength(Number((e.target as HTMLInputElement).value))
           }
-          theme={customRange}
+     
         />
         <div onClick={(e) => handleLanguageClick(e)} className="w-full flex justify-evenly mt-3">
           <div >

@@ -126,7 +126,7 @@ export const mindQuestions = [
         answer: "Drachen und Einhörner",
         dataArr: "fantasyCreatures",
         imagePath:
-          "/usernameGenerating/mindMaestro/question5/fantasyCreatures.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question5/fantasyCreatures.jpeg",
       },
       {
         answer: "Elfen und Zwerge",
@@ -137,7 +137,7 @@ export const mindQuestions = [
       {
         answer: "Nichts davon",
         dataArr: "bodyParts",
-        imagePath: "/usernameGenerating/mindMaestro/question5/bodyParts.jpeg",
+        imagePath: "/assets/usernameGenerating/mindMaestro/question5/bodyParts.jpeg",
       },
     ],
   },

@@ -9,11 +9,16 @@ function NotMindCards({ values }: Props) {
   const username = mindMaestro({ values });
 
   return (
-    <div className="w-full h-full  dark:text-gray-400">
+    <div className="w-full  dark:text-gray-400">
       {values.length === 5 ? (
-        <div className="w-full h-full flex  flex-col items-center border">
-          <h5 className="text-lg mt-8 font-semibold">Dein Ergebnis</h5>
-          <p className="mt-12 border p-2 w-2/3 text-center text-xl font-bold">
+        <div className="w-full  flex h-[300px] flex-col items-center border rounded"
+        style={{ backgroundImage:"url('/assets/usernameGenerating/mindMaestro/endCard.jpeg')"  }}
+        >
+          <h5 className="text-lg mt-8 font-semibold  dark:text-gray-300">Dein Ergebnis</h5>
+          <p className="mt-12 border rounded p-2 w-2/3 text-center text-xl dark:bg-slate-800  font-bold"
+           
+          
+          >
             <CopyToClipBoard password={username} type="username">
             {username}
             </CopyToClipBoard>

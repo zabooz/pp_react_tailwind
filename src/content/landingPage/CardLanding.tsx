@@ -40,8 +40,8 @@ function CardCom({ data, index }: Props) {
   return (
     <>
       <Card
-        className={`max-w-lg mx-auto  p-2  dark:bg-slate-700 mt-16 ${
-          startAnimation ? "animate-fade-out" : " hover:animate-glow"
+        className={`max-w-lg mx-auto border-2  dark:bg-slate-700 lg:mt-16 ${
+          startAnimation ? "animate-fade-out" : " sm:hover:animate-glow"
         }`}
         imgSrc={data.imgSrc}
         imgAlt={data.imgAlt}
@@ -49,7 +49,7 @@ function CardCom({ data, index }: Props) {
         <h5 className="text-2xl font-bold tracking-wider text-center text-gray-900 dark:text-gray-200">
           {data.title}
         </h5>
-        <h6 className="mb-2 text-lg font-normal text-gray-500 dark:text-gray-400 text-center">
+        <h6 className="sm:mb-2 text-lg font-normal text-gray-500 dark:text-gray-400 text-center">
           {data.subtitle}
         </h6>
         <p className="font-normal text-gray-700 dark:text-gray-400 ">
@@ -57,7 +57,7 @@ function CardCom({ data, index }: Props) {
         </p>
 
         <Button
-          className="mt-12 text-lg text-gray-200 tracking-wide w-full"
+          className="sm:mt-12 text-lg text-gray-200 tracking-wide w-full"
           onClick={() => {
             directionFunc(index + 1);
             setTimeout(() => {
@@ -84,7 +84,7 @@ function CardCom({ data, index }: Props) {
       <img
         src="/assets/landingPage/arrow.svg"
         alt="arrow"
-        className="max-w-[4rem] cursor-pointer lg:hidden  rotate-180 mx-auto my-16 "
+        className="max-w-[4rem] cursor-pointer lg:hidden hidden sm:block rotate-180 mx-auto my-16 "
         onClick={() => scrollToElement(scrollDiv1)}
         ref={scrollDiv1}
       />

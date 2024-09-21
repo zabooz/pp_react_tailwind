@@ -34,7 +34,7 @@ function MindMaestro() {
           </h5>
         </div>
       </div>
-      <div className="h-[360px]">
+      <div className="">
         {startQuiz ? (
           <MindCards
             index={index}

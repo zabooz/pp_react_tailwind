@@ -44,11 +44,11 @@ function MindCards({
             <div
               key={i}
               data-type={answer.dataArr}
-              className="overflow-hidden w-full h-[170px] relative"
+              className="overflow-hidden w-full h-[140px] relative"
             >
               <div
                 data-type={answer.dataArr}
-                className={` mx-auto w-full h-full rounded-md dark:border-slate-400 border-4  bg-cover relative`}
+                className={` mx-auto w-full h-full rounded-md dark:border-slate-400 border-4  bg-center bg-cover relative`}
                 style={{ backgroundImage: `url('${answer.imagePath}')` }}
                 onClick={(e) => {
                   if (mindQuestions.length - 1 === index) {
@@ -63,7 +63,7 @@ function MindCards({
                   }
                 }}
               >
-                <p className="text-center absolute bottom-16 bg-slate-400 font-semibold text-gray-100 bg-opacity-90 w-full ">
+                <p className="text-center absolute bottom-2 bg-slate-400 font-semibold text-gray-100 bg-opacity-90 w-full ">
                   {answer.answer}
                 </p>
               </div>

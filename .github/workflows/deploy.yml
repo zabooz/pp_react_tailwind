@@ -34,6 +34,9 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}  # Plesk Passwort
           PATH: '/react.passwordplayground.com/httpdocs/'  # Pfad zum Uploaden
         run: |
-             apt-get install -y openssh-client  # Installiere den SSH-Client
-             cd ./dist
-             scp -r * $USERNAME@$HOST:$PATH
+                 echo "deb http://deb.debian.org/debian stable main" >> /etc/apt/sources.list
+                  apt-get update
+                  apt-get install -y lftp
+                  lftp -u $USERNAME,$PLESK_PASSWORD $HOST <<EOF
+                  mirror -R ./dist $PATH
+                  quit

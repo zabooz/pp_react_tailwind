@@ -28,7 +28,7 @@ jobs:
         env:
           HOST: ${{ secrets.HOST }}  # Hostname oder IP-Adresse von Plesk
           USERNAME: ${{ secrets.USERNAME }}  # Plesk Benutzername
-          PASSWORD: ${{ secrets.PLESK_PASSWORD }}  # Plesk Passwort
+          PASSWORD: ${{ secrets.PASSWORD }}  # Plesk Passwort
           PATH: '/react.passwordplayground.com/httpdocs/'  # Pfad zum Uploaden
         run: |
           curl -T ./dist/* -u $PLESK:$PASSWORD $HOST/$PATH/

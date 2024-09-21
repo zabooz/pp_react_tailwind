@@ -34,4 +34,4 @@ jobs:
           PLESK_PASSWORD: ${{ secrets.PASSWORD }}  # Plesk Passwort
           PATH: '/react.passwordplayground.com/httpdocs/'  # Pfad zum Uploaden
         run: |
-          curl -T ./dist/* -u $PLESK_USERNAME:$PLESK_PASSWORD $PLESK_HOST/$PLESK_PATH/
+         /bin/bash -c curl -T ./dist/* -u $PLESK_USERNAME:$PLESK_PASSWORD $PLESK_HOST/$PLESK_PATH/

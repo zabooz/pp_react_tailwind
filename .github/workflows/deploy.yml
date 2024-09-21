@@ -23,7 +23,11 @@ jobs:
 
       - name: Build project
         run: npm run build
-        
+      
+      - name: Install curl
+        run: sudo apt-get install -y curl
+
+
       - name: Upload files to Plesk
         env:
           HOST: ${{ secrets.HOST }}  # Hostname oder IP-Adresse von Plesk

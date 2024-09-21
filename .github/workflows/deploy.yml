@@ -23,12 +23,15 @@ jobs:
 
       - name: Build project
         run: npm run build
-
+        
+      - name: Install curl
+        run: sudo apt-get install curl
+      
       - name: Upload files to Plesk
         env:
           HOST: ${{ secrets.HOST }}  # Hostname oder IP-Adresse von Plesk
           USERNAME: ${{ secrets.USERNAME }}  # Plesk Benutzername
-          PLESK_PASSWORD: ${{ secrets.PLESK_PASSWORD }}  # Plesk Passwort
+          PLESK_PASSWORD: ${{ secrets.PASSWORD }}  # Plesk Passwort
           PATH: '/react.passwordplayground.com/httpdocs/'  # Pfad zum Uploaden
         run: |
           curl -T ./dist/* -u $PLESK_USERNAME:$PLESK_PASSWORD $PLESK_HOST/$PLESK_PATH/

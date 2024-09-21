@@ -24,19 +24,11 @@ jobs:
       - name: Build project
         run: npm run build
         
-      - name: Install curl
-        run: sudo apt-get install curl
-      
       - name: Upload files to Plesk
         env:
           HOST: ${{ secrets.HOST }}  # Hostname oder IP-Adresse von Plesk
           USERNAME: ${{ secrets.USERNAME }}  # Plesk Benutzername
-          PASSWORD: ${{ secrets.PASSWORD }}  # Plesk Passwort
+          PASSWORD: ${{ secrets.PLESK_PASSWORD }}  # Plesk Passwort
           PATH: '/react.passwordplayground.com/httpdocs/'  # Pfad zum Uploaden
         run: |
-                 echo "deb http://deb.debian.org/debian stable main" >> /etc/apt/sources.list
-                  apt-get update
-                  apt-get install -y lftp
-                  lftp -u $USERNAME,$PLESK_PASSWORD $HOST <<EOF
-                  mirror -R ./dist $PATH
-                  quit
+          curl -T ./dist/* -u $PLESK:$PASSWORD $HOST/$PATH/

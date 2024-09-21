@@ -19,12 +19,8 @@ function MindCards({
   index,
   setStartQuiz,
   setAnswers,
-  userAnswers
+  userAnswers,
 }: Props) {
-
-
-    console.log(answers[0].imagePath)
-
   return (
     <>
       {!true ? (
@@ -55,20 +51,21 @@ function MindCards({
                 className={` mx-auto w-full h-full rounded-md dark:border-slate-400 border-4  bg-cover relative`}
                 style={{ backgroundImage: `url('${answer.imagePath}')` }}
                 onClick={(e) => {
-
-                  if (mindQuestions.length-1  === index) {
+                  if (mindQuestions.length - 1 === index) {
                     const target = e.currentTarget;
                     setAnswers([...userAnswers, target.dataset.type!]);
                     setStartQuiz(false);
                     setIndex(0);
-                } else {
+                  } else {
                     const target = e.currentTarget;
                     setAnswers([...userAnswers, target.dataset.type!]);
                     setIndex(index + 1);
                   }
                 }}
               >
-                <p className="text-center absolute bottom-16 bg-slate-400 font-semibold text-gray-100 bg-opacity-90 w-full ">{answer.answer}</p>
+                <p className="text-center absolute bottom-16 bg-slate-400 font-semibold text-gray-100 bg-opacity-90 w-full ">
+                  {answer.answer}
+                </p>
               </div>
             </div>
           ))}

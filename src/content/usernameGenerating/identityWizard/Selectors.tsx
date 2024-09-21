@@ -5,7 +5,8 @@ import {
   translateKeysToGerman,
 } from "../../../data/translations/englishGenerator.data";
 import { userGenerator } from "../usernameGeneratingScript";
-import { useMemo, useRef} from "react";
+import { useMemo, useState } from "react";
+import { CopyToClipBoard } from "../../../utillities/CopyToClipBoard";
 
 function Selectors() {
   const adjectives: string[] = useMemo(() => {
@@ -18,17 +19,13 @@ function Selectors() {
       a.localeCompare(b)
     );
   }, []);
-
-
-  const usernameRef = useRef<HTMLParagraphElement>(null)
+  const [username, setUsername] = useState<HTMLSpanElement | null>(null);
   const handleClick = () => {
     const choices: string[] = [];
     document
       .querySelectorAll("select")
       .forEach((item) => choices.push(item.value));
-    usernameRef.current!.innerHTML = ""
-    usernameRef.current?.appendChild(userGenerator({choices}))
-
+    setUsername(userGenerator({ choices }));
   };
 
   return (
@@ -82,8 +79,16 @@ function Selectors() {
         <Button className=" w-2/3" onClick={() => handleClick()}>
           Los Geht's
         </Button>
-        <p className="border-2 border-2-slate-400 rounded text-center p-2 text-gray-400" ref={usernameRef}>
-          
+        <p className="border-2 border-2-slate-400 rounded text-center p-2 text-gray-400">
+          {username && (
+            <CopyToClipBoard
+              clippy={false}
+              password={username.innerText}
+              type="username"
+            >
+              <span>{username.innerText}</span>
+            </CopyToClipBoard>
+          )}
         </p>
       </div>
     </div>

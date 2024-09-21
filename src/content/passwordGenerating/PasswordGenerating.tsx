@@ -6,7 +6,7 @@ import { leetspeakTextShortened } from "../../data/drawer/drawerData";
 
 import { DrawerData } from "../../interfaces/interfaces";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 function PasswordGenerating() {
   const [drawer, setDrawerShow] = useState<boolean>(false);
@@ -23,19 +23,43 @@ function PasswordGenerating() {
     setDrawerShow(!drawer);
   };
 
+  const scrollDiv1 = useRef<HTMLImageElement>(null);
+  const scrollDiv2 = useRef<HTMLImageElement>(null);
+  const scrollToElement = (scroll: React.RefObject<HTMLImageElement>) => {
+    const { current } = scroll;
+
+    if (current !== null) {
+      current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-      <main className="grid grid-cols-1 md:grid-cols-3 w-full overflow-hidden h-[90vh] content-center">
+      <main className="grid grid-cols-1 my-12 lg:mt-0 lg:grid-cols-3 w-full overflow-hidden min-h-[90vh] content-center">
         <RuneTranslator
           handleDrawerClick={() => handleClickDrawer(leetspeakTextShortened)}
         />
+        <img
+          src="../src/assets/landingPage/arrow.svg"
+          alt="arrow"
+          className="max-w-[4rem] cursor-pointer lg:hidden  rotate-180 mx-auto my-16 "
+          onClick={() => scrollToElement(scrollDiv1)}
+          ref={scrollDiv1}
+        />
         <PictureMagic />
+        <img
+          src="../src/assets/landingPage/arrow.svg"
+          alt="arrow"
+          className="max-w-[4rem] cursor-pointer lg:hidden rotate-180 mx-auto my-14 "
+          onClick={() => scrollToElement(scrollDiv2)}
+          ref={scrollDiv2}
+        />
         <GylphSorcery />
-      <TextCanvas
-        handleClose={handleCloseDrawer}
-        show={drawer}
-        data={drawerContent}
-      ></TextCanvas>
+        <TextCanvas
+          handleClose={handleCloseDrawer}
+          show={drawer}
+          data={drawerContent}
+        ></TextCanvas>
       </main>
     </>
   );

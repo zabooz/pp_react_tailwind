@@ -35,6 +35,7 @@ function RuneTransatorSwitch({ runes }: Props) {
           <div className="border-b w-full mb-[6.5px]">Passwort</div>
           {runes.length > 0 && (
             <CopyToClipBoard
+              clippy={false}
               password={runes[switchCount].password}
               type={"password"}
             >

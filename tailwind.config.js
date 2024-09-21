@@ -10,6 +10,7 @@ module.exports = {
       },
       animation: {
         bounce: "bounce 1s ease-in 1.5 0.05s",
+        bouncing: "bouncing 1s ease-in infinite 0.05s",
         "move-out": "move-out .3s ease-in forwards",
         glow: "glow 1s 1 forwards",
         glowing: "glowing 1.8s infinite",
@@ -25,6 +26,11 @@ module.exports = {
         "move-out": {
           "0%": { right: "0px" },
           "100%": { right: "75px" },
+        },
+        bouncing:{
+          "0%": { transform: "translateY(0px) rotate(180deg)" },
+          "50%": { transform: "translateY(-10px) rotate(180deg)" },
+          "100%": { transform: "translateY(0px) rotate(180deg)" },
         },
         glow: {
           "0%": { "box-shadow": "0 0 0px rgba(8, 145, 178, 1)" },

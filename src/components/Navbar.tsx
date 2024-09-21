@@ -49,7 +49,7 @@ export const NavbarCom = () => {
         <Navbar
           fluid
           rounded
-          className="	fixed w-full z-20 dark:bg-slate-700 !justify-center"
+          className="	fixed w-full z-20 dark:bg-slate-700 !justify-center h-16"
         >
           <NavbarBrand
             onClick={() => {
@@ -120,6 +120,7 @@ export const NavbarCom = () => {
               onClick={() => {
                 directionFunc(1);
                 setTimeout(() => {
+                  scrollToTop();
                   navigate("/password-generating");
                 }, 800);
               }}
@@ -134,6 +135,7 @@ export const NavbarCom = () => {
               onClick={() => {
                 directionFunc(2);
                 setTimeout(() => {
+                  scrollToTop();
                   navigate("/password-testing");
                 }, 800);
               }}
@@ -148,6 +150,7 @@ export const NavbarCom = () => {
               onClick={() => {
                 directionFunc(3);
                 setTimeout(() => {
+                  scrollToTop();
                   navigate("/username-generating");
                 }, 800);
               }}
@@ -162,11 +165,11 @@ export const NavbarCom = () => {
                 <p
                   onClick={() => {
                     directionFunc(4);
+                    scrollToTop();
                     setTimeout(() => {
                       navigate("/dashBoard");
                     }, 800);
                   }}
- 
                   className="flex gap-2 cursor-pointer py-2 px-4 text-lg tracking-wider font-bold dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"
                 >
                   Dashboard

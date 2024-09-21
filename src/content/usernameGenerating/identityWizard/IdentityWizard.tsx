@@ -27,7 +27,6 @@ const IdentityWizard = () => {
       </p>
       <div className="flex flex-col">
         <Selectors />
-        <div></div>
       </div>
     </Card>
   );

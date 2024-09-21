@@ -11,7 +11,8 @@ interface Props {
 export const mindMaestro = ({ values }: Props) => {
   let partOne = "";
   let partTwo = "";
-
+  console.log(values)
+  
   values.forEach((value) => {
     if (
       englishArraysObjAdjectives[
@@ -28,7 +29,7 @@ export const mindMaestro = ({ values }: Props) => {
       const arr =
     englishArraysObj[value as keyof typeof englishArraysObj];
       const token = arr[Math.floor(Math.random() * arr.length)] as string;
-      console.log(token);
+
       partTwo = (token.slice(0, 1).toUpperCase() + token.slice(1));
     }
   });

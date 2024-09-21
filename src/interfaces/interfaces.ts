@@ -1,5 +1,3 @@
-
-
 export interface DrawerData {
   title: string;
   paragraphs: string[];
@@ -32,16 +30,13 @@ export interface dataKrakenGivesData {
 export interface dataKrakenGivesResponse {
   success: boolean;
   message: string;
-  data: string[];  
+  data: string[];
 }
 
 export interface StorageData {
-
-    key: string;
-    catch: string;
-    password: string;
-
-
+  key: string;
+  catch: string;
+  password: string;
 }
 
 export interface dataKrakenTradesData {
@@ -52,7 +47,7 @@ export interface dataKrakenTradesData {
 export interface userDataResponse {
   success: boolean;
   message: string;
-  data: userData | LeaderBoardData
+  data: userData | LeaderBoardData;
 }
 
 export interface userData {
@@ -71,8 +66,8 @@ export interface LeaderBoardData {
   tested_passwords: number;
   generated_usernames: number;
   avatar: string;
-  rank?: number
-  user?: userData
+  rank?: number;
+  user?: userData;
 }
 export interface EnglishArrays {
   colors: string[];
@@ -106,3 +101,11 @@ export interface EnglishArrays {
   desserts: string[];
 }
 
+export interface Question {
+  question: string;
+  answers: {
+    answer: string;
+    dataArr: string;
+    imagePath: string;
+  }[];
+}

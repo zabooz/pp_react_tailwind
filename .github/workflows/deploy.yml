@@ -34,4 +34,6 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}  # Plesk Passwort
           PATH: '/react.passwordplayground.com/httpdocs/'  # Pfad zum Uploaden
         run: |
-          curl -T ./dist/* -u $USERNAME:$PASSWORD $HOST/$PATH/
+             apt-get install -y openssh-client  # Installiere den SSH-Client
+             cd ./dist
+             scp -r * $USERNAME@$HOST:$PATH

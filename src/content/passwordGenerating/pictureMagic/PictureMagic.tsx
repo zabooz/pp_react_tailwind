@@ -31,7 +31,7 @@ function PictureMagic() {
     <Card
       className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl `}
       imgAlt="PictureMAgic picture"
-      imgSrc="src\assets\passwordGenerating\pictureMagic.jpeg"
+      imgSrc="/assets/passwordGenerating/pictureMagic.jpeg"
     >
       <div className="relative">
         <div className="absolute  -top-[145px] flex items-center justify-center w-full">
@@ -54,7 +54,7 @@ function PictureMagic() {
             <div className="flex flex-col items-center  justify-center  ">
               <img
                 ref={previewImgRef}
-                src="src/assets/passwordGenerating/upload.jpeg"
+                src="/assets/passwordGenerating/upload.jpeg"
                 alt="uploadPicture"
                 className="aspect-video mx-auto rounded"
               />

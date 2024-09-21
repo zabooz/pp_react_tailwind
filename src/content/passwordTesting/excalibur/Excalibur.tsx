@@ -36,7 +36,7 @@ function Excalibur() {
       <Card
         className={`max-w-lg mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl` }
         imgAlt="Excalibur Picture"
-        imgSrc="src/assets/passwordTesting/excalibur.png"
+        imgSrc="/assets/passwordTesting/excalibur.png"
       >
         <div className="h-full mt-3">
           <div className="relative">

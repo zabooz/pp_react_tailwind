@@ -2,14 +2,14 @@ function Project() {
   return (
     <div>
       <header>
-        <img src="src/assets/project/image8.png" alt="" />
+        <img src="/assets/project/image8.png" alt="" />
         <div>
           <h1>Ein BBRZ-IT-Projekt</h1>
           <h3>oder</h3>
           <h1>From Zero to Hero</h1>
         </div>
-        <img src="src/assets/project/image16.png" alt="" />
-        <img src="src/assets/project/34.png" alt="" />
+        <img src="/assets/project/image16.png" alt="" />
+        <img src="/assets/project/34.png" alt="" />
       </header>
 
       <main id="projectMain">
@@ -88,13 +88,13 @@ function Project() {
           </div>
           <div>
             <div>
-              <img src="src/assets/project/image11.png" alt="" />
-              <img src="src/assets/project/image9.png" alt="" />
-              <img src="src/assets/project/image3.png" alt="" />
+              <img src="/assets/project/image11.png" alt="" />
+              <img src="/assets/project/image9.png" alt="" />
+              <img src="/assets/project/image3.png" alt="" />
             </div>
             <div>
-              <img src="src/assets/project/image19.png" alt="" />
-              <img src="src/assets/project/image12.png" alt="" />
+              <img src="/assets/project/image19.png" alt="" />
+              <img src="/assets/project/image12.png" alt="" />
             </div>
           </div>
         </section>
@@ -140,7 +140,7 @@ function Project() {
             <p>Damit war das Fundament für Phase 2 gelegt.</p>
           </div>
           <div>
-            <img src="src/assets/project/image10.png" alt="" />
+            <img src="/assets/project/image10.png" alt="" />
           </div>
         </section>
         <section>
@@ -280,13 +280,13 @@ function Project() {
           </div>
           <div>
             <div>
-              <img src="src/assets/project/image18.png" alt="" />
-              <img src="src/assets/project/image5.png" alt="" />
-              <img src="src/assets/project//image17.png" alt="" />
+              <img src="/assets/project/image18.png" alt="" />
+              <img src="/assets/project/image5.png" alt="" />
+              <img src="/assets/project//image17.png" alt="" />
             </div>
             <div>
-              <img src="src/assets/project/image14.png" alt="" />
-              <img src="src/assets/project/image1.png" alt="" />
+              <img src="/assets/project/image14.png" alt="" />
+              <img src="/assets/project/image1.png" alt="" />
             </div>
           </div>
         </section>
@@ -349,9 +349,9 @@ function Project() {
           </div>
           <div>
             <div>
-              <img src="src/assets/project/image6.png" alt="" />
-              <img src="src/assets/project/image15.png" alt="" />
-              <img src="src/assets/project/image7.png" alt="" />
+              <img src="/assets/project/image6.png" alt="" />
+              <img src="/assets/project/image15.png" alt="" />
+              <img src="/assets/project/image7.png" alt="" />
             </div>
           </div>
         </section>
@@ -408,12 +408,12 @@ function Project() {
           </p>
           <div>
             <div>
-              <img src="src/assets/project/image13.png" />
-              <img src="src/assets/project/image4.png" />
+              <img src="/assets/project/image13.png" />
+              <img src="/assets/project/image4.png" />
             </div>
             <div>
-              <img src="src/assets/project/image20.png" />
-              <img src="src/assets/project/image2.png" />
+              <img src="/assets/project/image20.png" />
+              <img src="/assets/project/image2.png" />
             </div>
           </div>
         </section>

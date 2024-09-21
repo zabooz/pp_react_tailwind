@@ -8,7 +8,7 @@ import { useModalContext, useLoginContext } from "../../contexts/Contexts.tsx";
 
 function Register() {
 
-    const [userData, setUserData] = useState<registryData>({username: "", password: "", email: "", visits: 1, generated_passwords: 0, tested_passwords: 0, generated_usernames: 0, avatar: "src/assets/profilePics/default.jpeg"});
+    const [userData, setUserData] = useState<registryData>({username: "", password: "", email: "", visits: 1, generated_passwords: 0, tested_passwords: 0, generated_usernames: 0, avatar: "/assets/profilePics/default.jpeg"});
 
     const {setOpenModal } = useModalContext();
     const {setLoggedIn } = useLoginContext();

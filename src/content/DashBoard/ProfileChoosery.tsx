@@ -1,7 +1,7 @@
 import { Button, Drawer } from "flowbite-react";
 import { pictureArray } from "../../utillities/pictureArray";
-import { useState, useContext } from "react";
-import { LoginContext } from "../../contexts/Contexts";
+import { useState } from "react";
+import {  useLoginContext } from "../../contexts/Contexts";
 import { dataKrakenGives, dataKrakenTrades } from "../../backend/dataKraken";
 import { dataKrakenTradesData } from "../../interfaces/interfaces";
 interface ModalProps {
@@ -14,7 +14,7 @@ interface DrawerData {
   type: string;
 }
 
-const pictures = pictureArray("src/assets/profilePics/", ".jpeg", 24);
+const pictures = pictureArray("/assets/profilePics/", ".jpeg", 24);
 
 function ProfileChoosery({
   openDrawer,
@@ -22,9 +22,9 @@ function ProfileChoosery({
   drawerData,
 }: ModalProps) {
   const [avatar, setAvatar] = useState<string>(
-    "src/assets/profilePics/default.jpeg"
+    "/assets/profilePics/default.jpeg"
   );
-  const { change, setChange } = useContext(LoginContext);
+  const { change, setChange } = useLoginContext()
 
   const handelChange = async ({ key, value }: dataKrakenTradesData) => {
     sessionStorage.removeItem("userStats");

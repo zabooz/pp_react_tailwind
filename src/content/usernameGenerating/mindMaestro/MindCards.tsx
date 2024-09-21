@@ -31,7 +31,7 @@ function MindCards({
               className="overflow-hidden w-full h-[170px] relative"
             >
               <img
-                src="src/assets/usernameGenerating/mindMaestro/cardDeck.jpeg"
+                src="/assets/usernameGenerating/mindMaestro/cardDeck.jpeg"
                 alt="carddeck"
                 className=" mx-auto w-[10rem] object-fit rounded-md border-slate-400 border-4"
               />

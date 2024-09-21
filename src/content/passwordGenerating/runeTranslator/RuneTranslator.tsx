@@ -31,7 +31,7 @@ function RuneTranslator({ handleDrawerClick }: Props) {
     <Card
       className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl`}
       imgAlt="Rune Translator Picture"
-      imgSrc="src/assets/passwordGenerating/runeTranslator.jpeg"
+      imgSrc="/assets/passwordGenerating/runeTranslator.jpeg"
   
     >
       <div className="relative">

@@ -25,7 +25,7 @@ function MindMaestro() {
         startAnimation ? "animate-fade-out" : "animate-fade-in"
       } dark:hover:shadow-2xl`}
       imgAlt="MindMaestro Picture"
-      imgSrc="src/assets/usernameGenerating/mindMaestro.jpeg"
+      imgSrc="/assets/usernameGenerating/mindMaestro.jpeg"
     >
       <div className="relative">
         <div className="absolute  -top-[185px] flex items-center justify-center w-full">

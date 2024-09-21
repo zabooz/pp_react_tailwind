@@ -6,7 +6,7 @@ interface Props {
   password: string;
   children: React.ReactNode;
   type: string;
-  clippy: boolean;
+  clippy?: boolean;
 }
 
 export const CopyToClipBoard = ({

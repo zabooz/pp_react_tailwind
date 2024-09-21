@@ -36,7 +36,7 @@ function GylphSorcery() {
     <Card
       className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl`}
       imgAlt="Glyph Sorcery picture"
-      imgSrc="src\assets\passwordGenerating\glyphSorcery.jpeg"
+      imgSrc="/assets/passwordGenerating/glyphSorcery.jpeg"
     >
       <div className="relative">
         <div className="absolute   -top-[145px] flex items-center justify-center w-full">

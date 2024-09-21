@@ -8,16 +8,16 @@ export function updateAttempts(
 
   const mojoIcon = document.createElement("img");
   const rowCount = Math.floor(Math.random() * 1000000);
-  mojoIcon.src = "src/assets/icons/eye-slash.svg";
+  mojoIcon.src = "/assets/icons/eye-slash.svg";
   mojoIcon.addEventListener("click", () => {
     const target = document.getElementById(`td${rowCount}`)!;
     if (target.textContent === stars) {
       target.textContent = data[data.length - 1][0];
-      mojoIcon.src = "src/assets/icons/eye-slash.svg";
+      mojoIcon.src = "/assets/icons/eye-slash.svg";
       target.append(mojoIcon);
     } else {
       target.textContent = stars;
-      mojoIcon.src = "src/assets/icons/eye.svg";
+      mojoIcon.src = "/assets/icons/eye.svg";
       target.append(mojoIcon);
     }
   });
@@ -25,17 +25,17 @@ export function updateAttempts(
   if (data.length === 1) {
     const hideArr = [stars, data[data.length - 1][0]];
     const mojoIconDisplay = document.createElement("img");
-    mojoIconDisplay.src = "src/assets/icons/eye.svg";
+    mojoIconDisplay.src = "/assets/icons/eye.svg";
     const rowCount = Math.floor(Math.random() * 1000000);
     mojoIconDisplay.addEventListener("click", () => {
       const target = document.getElementById(`td${rowCount}`)!;
       if (target.textContent === stars) {
         target.textContent = data[data.length - 1][0];
-        mojoIconDisplay.src = "src/assets/icons/eye-slash.svg";
+        mojoIconDisplay.src = "/assets/icons/eye-slash.svg";
         target.append(mojoIconDisplay);
       } else {
         target.textContent = stars;
-        mojoIconDisplay.className = "src/assets/icons/eye.svg" ;
+        mojoIconDisplay.className = "/assets/icons/eye.svg" ;
         target.append(mojoIconDisplay);
       }
     });
@@ -72,17 +72,17 @@ export function updateAttempts(
         const hideArr = [stars, data[rowIndex][0]]; // Verwende rowIndex statt index
         const mojoIcon = document.createElement("img");
         const rowCount = Math.floor(Math.random() * 1000000); // Zufällige ID für jede Zeile
-        mojoIcon.src = "src/assets/icons/eye-slash.svg";
+        mojoIcon.src = "/assets/icons/eye-slash.svg";
 
         mojoIcon.addEventListener("click", () => {
           const target = document.getElementById(`td${rowCount}`)!;
           if (target.textContent === stars) {
             target.textContent = hideArr[1]; // Verwende das tatsächliche Passwort für die Zeile
-            mojoIcon.src = "src/assets/icons/eye.svg";
+            mojoIcon.src = "/assets/icons/eye.svg";
             target.append(mojoIcon);
           } else {
             target.textContent = stars;
-            mojoIcon.src = "src/assets/icons/eye-slash.svg";
+            mojoIcon.src = "/assets/icons/eye-slash.svg";
             target.append(mojoIcon);
           }
         });

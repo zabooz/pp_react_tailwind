@@ -25,7 +25,7 @@ function Sanchez({ isOpen, handleClose }: Props) {
       <Drawer.Header titleIcon={() => <></>} />
       <div>
         <img
-          src="src/assets/sanchez/_sanchez.jpeg"
+          src="/assets/sanchez/_sanchez.jpeg"
           alt="sanchez"
           className="rounded-full mx-auto  w-24"
         />

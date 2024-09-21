@@ -1,8 +1,8 @@
 import { Button, Modal, Card, Label, TextInput } from "flowbite-react";
 import { dataKrakenTrades, dataKrakenGives } from "../../backend/dataKraken";
 import { dataKrakenTradesData } from "../../interfaces/interfaces";
-import { useContext } from "react";
-import { LoginContext } from "../../contexts/Contexts";
+
+import { useLoginContext } from "../../contexts/Contexts";
 interface ModalProps {
   openModal: boolean;
   setOpenModal: (openModal: boolean) => void;
@@ -14,7 +14,7 @@ interface ModalData {
 }
 
 function ChangeCredsModal({ openModal, setOpenModal, modalData }: ModalProps) {
-  const { change, setChange } = useContext(LoginContext);
+  const { change, setChange } = useLoginContext()
 
   const handelChange = async ({ key, value }: dataKrakenTradesData) => {
     sessionStorage.removeItem("userStats");

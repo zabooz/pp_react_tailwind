@@ -38,7 +38,7 @@ function GlyphSorcerySwitch({ data }: Props) {
   return (
     <div className="flex text-gray-200 justify-between w-full">
       <img
-        src="src/assets/icons/arrowRight.svg"
+        src="/assets/icons/arrowRight.svg"
         alt="arrowLeft"
         className="rotate-180 cursor-pointer mt-6"
         data-type="left"
@@ -67,7 +67,7 @@ function GlyphSorcerySwitch({ data }: Props) {
       </div>
 
       <img
-        src="src/assets/icons/arrowRight.svg"
+        src="/assets/icons/arrowRight.svg"
         alt="arrowRight"
         data-type="right"
         onClick={(e) => handleSwitch(e)}

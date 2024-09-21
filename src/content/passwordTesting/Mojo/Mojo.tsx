@@ -93,7 +93,7 @@ function Mojo() {
       <Card
         className={`max-w-lg mx-auto border-4 ${startAnimation ?'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl  `}
         imgAlt="Mojo APP picture"
-        imgSrc="src/assets/passwordTesting/mojo.png"
+        imgSrc="/assets/passwordTesting/mojo.png"
       >
         <div className="relative">
           <div className="absolute  -top-[160px] flex items-center justify-center w-full">

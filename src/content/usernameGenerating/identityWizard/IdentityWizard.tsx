@@ -11,7 +11,7 @@ const IdentityWizard = () => {
         startAnimation ? "animate-fade-out" : "animate-fade-in"
       } dark:hover:shadow-2xl`}
       imgAlt="Identity Wizard Picture"
-      imgSrc="src/assets/usernameGenerating/identityWizard.jpg"
+      imgSrc="/assets/usernameGenerating/identityWizard.jpg"
     >
       <div className="relative">
         <div className="absolute  -top-[185px] flex items-center justify-center w-full">

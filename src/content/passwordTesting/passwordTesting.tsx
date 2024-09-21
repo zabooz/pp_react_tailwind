@@ -20,7 +20,7 @@ function PasswordTesting() {
       >
         <Mojo />
         <img
-          src="../src/assets/landingPage/arrow.svg"
+          src="/assets/landingPage/arrow.svg"
           alt="arrow"
           className="max-w-[4rem] cursor-pointer lg:hidden  rotate-180 mx-auto my-20 "
           onClick={() => scrollToElement(scrollDiv1)}

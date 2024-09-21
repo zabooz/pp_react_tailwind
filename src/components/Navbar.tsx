@@ -25,7 +25,7 @@ export const NavbarCom = () => {
   const { directionFunc } = useSlideContext();
   const navigate = useNavigate();
   const [data, setData] = useState<string[]>([
-    "src/assets/profile/default.png",
+    "/assets/profile/default.png",
     "John Doe",
   ]);
 
@@ -63,7 +63,7 @@ export const NavbarCom = () => {
             className="cursor-pointer"
           >
             <img
-              src="src/assets/landingPage/logo_transparent.png"
+              src="/assets/landingPage/logo_transparent.png"
               className="mr-3 h-9"
               alt="Flowbite React Logo"
             />
@@ -105,7 +105,7 @@ export const NavbarCom = () => {
               </Dropdown>
             ) : (
               <img
-                src="src/assets/navbar/login.svg"
+                src="/assets/navbar/login.svg"
                 className="w-12 cursor-pointer hidden md:block"
                 alt="login"
                 onClick={() => setOpenModal(true)}

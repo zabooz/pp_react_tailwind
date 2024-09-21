@@ -34,7 +34,7 @@ function PictureMagicSwitch({ storageData }: Props) {
     <div className="flex text-gray-200  justify-between w-full ">
       <div className=" mt-11 mb-auto rounded-full me-2 ">
         <img
-          src="src/assets/icons/arrowRight.svg"
+          src="/assets/icons/arrowRight.svg"
           alt="arrowLeft"
           className="rotate-180 cursor-pointer w-6 "
           data-type="left"
@@ -71,7 +71,7 @@ function PictureMagicSwitch({ storageData }: Props) {
       </div>
       <div className="mt-11 mb-auto rounded-full ms-2 ">
         <img
-          src="src/assets/icons/arrowRight.svg"
+          src="/assets/icons/arrowRight.svg"
           alt="arrowRight"
           data-type="right"
           className="cursor-pointer w-6 "

@@ -16,7 +16,7 @@ import ContentBox from "./components/ContentBox";
 
 import LandingPage from "./content/landingPage/LandingPage";
 import PasswordGenerating from "./content/passwordGenerating/PasswordGenerating";
-import PasswordTesting from "./content/passwordTesting/PasswordTesting";
+import PasswordTesting from "./content/passwordTesting/passwordTesting"; // Corrected casing
 import UsernameGenerating from "./content/usernameGenerating/UsernameGenerating";
 import AboutUs from "./content/aboutUs/AboutUs";
 import Project from "./content/aboutUs/Project";

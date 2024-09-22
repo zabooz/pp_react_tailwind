@@ -6,12 +6,9 @@ interface Props {
 }
 
 function GlyphSorcerySwitch({ data }: Props) {
-  const [switchCount, setSwitchCount] = useState<number>(0 );
-
-
+  const [switchCount, setSwitchCount] = useState<number>(0);
 
   const handleSwitch = (e: any) => {
-
     const icon = e.target;
     const type = icon.getAttribute("data-type");
     const length = data.length;
@@ -25,15 +22,14 @@ function GlyphSorcerySwitch({ data }: Props) {
   };
 
   useEffect(() => {
-
-    if(data.length > 0){
-        setSwitchCount(data.length-1)
-    }else{
-        setSwitchCount(data.length)
+    if (data.length > 0) {
+      setSwitchCount(data.length - 1);
+    } else {
+      setSwitchCount(data.length);
     }
-  }, [data.length])
+  }, [data.length]);
 
-
+  console.log(data[switchCount].password);
 
   return (
     <div className="flex dark:text-gray-200 justify-between w-full">
@@ -43,7 +39,6 @@ function GlyphSorcerySwitch({ data }: Props) {
         className="rotate-180 cursor-pointer mt-6"
         data-type="left"
         onClick={(e) => handleSwitch(e)}
-
       />
 
       <div className="flex justify-evenly w-full  h-20">
@@ -51,10 +46,11 @@ function GlyphSorcerySwitch({ data }: Props) {
           <div className="border-b w-full mb-[6.5px]">Passwort</div>
           {data.length > 0 && (
             <CopyToClipBoard
-              password={data[switchCount].password}
+              value={data[switchCount].password}
               type={"password"}
+              clippy={false}
             >
-              <div className="cursor-pointer ">
+              <div className="cursor-pointer " key={data[switchCount].password}>
                 {data[switchCount].password}
               </div>
             </CopyToClipBoard>

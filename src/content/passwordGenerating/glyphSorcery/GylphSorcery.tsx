@@ -13,9 +13,10 @@ function GylphSorcery() {
   const storedData = JSON.parse(sessionStorage.getItem("storedGlyphArray") || "[]");
 
 
-  const [passwordLength, setPasswordLength] = useState(0);
+  const [passwordLength, setPasswordLength] = useState(6);
   const [language, setLanguage] = useState("english");
   const [data, setData] = useState<StorageData[]>(storedData);
+  const {startAnimation} = useSlideContext(); 
 
 
   const handleLanguageClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -27,11 +28,10 @@ function GylphSorcery() {
 
     const handeClick = async () => {
       const data = await glyphSorcery(language, passwordLength);
-      
+      console.log(data);
       setData(data);
     };
     
-    const {startAnimation} = useSlideContext(); 
   return (
     <Card
       className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl transition-shadow duration-1000 `}
@@ -59,7 +59,7 @@ function GylphSorcery() {
           min={2}
           max={14}
           defaultValue={6}
-          onInput={(e) =>
+          onChange={(e) =>
             setPasswordLength(Number((e.target as HTMLInputElement).value))
           }
      

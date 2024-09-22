@@ -59,7 +59,7 @@ function Clippy({ isOpen, handleClose }: Props) {
                       className="font-semibold text-lg flex items-center gap-3 text-gray-400"
                     >
                       <FaRegTrashAlt onClick={() => handleDelete(index)}/>
-                      <CopyToClipBoard clippy={true} type={"password"} password={password}>
+                      <CopyToClipBoard clippy={true} type={"password"} value={password}>
                         {password}
                       </CopyToClipBoard>
                     </li>
@@ -77,7 +77,7 @@ function Clippy({ isOpen, handleClose }: Props) {
                       className="font-semibold text-lg text-gray-400 flex items-center gap-3"
                     >
                       <FaRegTrashAlt onClick={() => handleDelete(index)}/>
-                      <CopyToClipBoard clippy={true} type={"username"} password={username}>
+                      <CopyToClipBoard clippy={true} type={"username"} value={username}>
                         {username}
                       </CopyToClipBoard>
                     </li>

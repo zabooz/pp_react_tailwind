@@ -47,10 +47,11 @@ function PictureMagicSwitch({ storageData }: Props) {
           <div className="border-b">Passwort</div>
           {storageData.length > 0 && (
             <CopyToClipBoard
-              password={storageData[switchCount].password}
+              value={storageData[switchCount].password}
               type={"password"}
+              clippy={false}
             >
-              <div className="cursor-pointer mt-4">
+              <div className="cursor-pointer mt-4" key={switchCount}>
                 {storageData[switchCount].password}
               </div>
             </CopyToClipBoard>

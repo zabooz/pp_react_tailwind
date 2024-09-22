@@ -83,7 +83,7 @@ function Selectors() {
           {username && (
             <CopyToClipBoard
               clippy={false}
-              password={username.innerText}
+              value={username.innerText}
               type="username"
             >
               <span>{username.innerText}</span>

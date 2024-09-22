@@ -36,10 +36,10 @@ function RuneTransatorSwitch({ runes }: Props) {
           {runes.length > 0 && (
             <CopyToClipBoard
               clippy={false}
-              password={runes[switchCount].password}
+              value={runes[switchCount].password}
               type={"password"}
             >
-              <span className="cursor-pointer">
+              <span className="cursor-pointer" key={runes[switchCount].password}>
                 {runes[switchCount].password}
               </span>
             </CopyToClipBoard>

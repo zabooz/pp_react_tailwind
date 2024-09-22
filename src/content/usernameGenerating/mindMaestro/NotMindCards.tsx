@@ -19,7 +19,7 @@ function NotMindCards({ values }: Props) {
            
           
           >
-            <CopyToClipBoard password={username} type="username">
+            <CopyToClipBoard value={username} type="username" clippy={false}>
             {username}
             </CopyToClipBoard>
           </p>

@@ -29,7 +29,7 @@ function GlyphSorcerySwitch({ data }: Props) {
     }
   }, [data.length]);
 
-  console.log(data[switchCount].password);
+
 
   return (
     <div className="flex dark:text-gray-200 justify-between w-full">

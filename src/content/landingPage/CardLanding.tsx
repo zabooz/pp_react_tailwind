@@ -59,7 +59,7 @@ function CardCom({ data, index }: Props) {
         <Button
           className="sm:mt-12 text-lg text-gray-200 tracking-wide w-full bg-[#ea6954]"
           onClick={() => {
-            directionFunc(index + 1);
+            directionFunc(index);
             setTimeout(() => {
               scrollToTop();
               navigate("/password-generating");

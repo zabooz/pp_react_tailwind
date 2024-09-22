@@ -118,6 +118,7 @@ export const SlideProvider = ({ children }: SlideProviderProps) => {
   const [currentSite, setCurrentSite] = useState<number| null>(null);
   const directionFunc = (nextSite: number) => {
 
+    
     if(nextSite !== currentSite){
       setStartAnimation(true); 
       setCurrentSite(nextSite);

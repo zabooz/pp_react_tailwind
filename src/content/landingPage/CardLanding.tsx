@@ -40,8 +40,8 @@ function CardCom({ data, index }: Props) {
   return (
     <>
       <Card
-        className={`max-w-lg mx-auto dark:border-2   dark:bg-slate-700 lg:mt-16 ${
-          startAnimation ? "animate-fade-out" : " sm:hover:animate-glow"
+        className={`max-w-lg mx-auto dark:border-2 dark:hover:shadow-2xl transition-shadow duration-1000   dark:bg-slate-700 lg:mt-16 ${
+          startAnimation ? "animate-fade-out" : ""
         }`}
         imgSrc={data.imgSrc}
         imgAlt={data.imgAlt}

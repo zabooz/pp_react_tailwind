@@ -29,7 +29,7 @@ function RuneTranslator({ handleDrawerClick }: Props) {
   const {startAnimation} = useSlideContext()
   return (
     <Card
-      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl `}
+      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl transition-shadow duration-1000  `}
       imgAlt="Rune Translator Picture"
       imgSrc="/assets/passwordGenerating/runeTranslator.jpeg"
   

@@ -44,7 +44,7 @@ function Header() {
         <img
           src={landingData.arrowSrc}
           alt={landingData.arrowAlt}
-          className="max-w-[4rem] sm:max-w-[5rem] cursor-pointer   mx-auto rotate-180"
+          className="max-w-[4rem] sm:max-w-[5rem] cursor-pointer   mx-auto rotate-180 hover:scale-110  transition-all duration-300"
           onClick={scrollToElement}
         />
         <div ref={divRef}></div>

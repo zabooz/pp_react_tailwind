@@ -1,0 +1,18 @@
+.cardsAnimation {
+  animation: cards 2s ease-out 1;
+}
+@keyframes cards {
+
+
+  
+  0% {
+    opacity: 1;
+
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;;
+  }
+}

@@ -2,23 +2,29 @@ import { useSlideContext } from "../../contexts/Contexts";
 import { landingData } from "../../data/landingPage/landingData";
 import { useRef } from "react";
 function Header() {
-  const divRef = useRef<HTMLDivElement>(null);
+  const arrowRef = useRef<HTMLImageElement>(null);
+  const { startAnimation } = useSlideContext();
 
-  const scrollToElement = () => {
-    const { current } = divRef;
+  const scrollNew = () => {
+    const { current } = arrowRef;
     if (current !== null) {
-      current.scrollIntoView({ behavior: "smooth" });
+      const rect = current.getBoundingClientRect();
+      const offsetY = -50
+
+      window.scrollTo({
+        top: window.scrollY + rect.top - offsetY,
+        behavior: "smooth",
+      });
     }
   };
-  const { startAnimation } = useSlideContext();
 
   return (
     <header
-      className={`dark:bg-slate-800 dark:text-gray-400 min-h-[95vh] flex flex-col items-center p-2  sm:justify-evenly  ${
+      className={`dark:bg-slate-800 dark:text-gray-400 min-h-[90vh] flex flex-col items-center justify-between lg:pt-16 ${
         startAnimation ? "animate-fade-out" : "animate-fade-in"
       }`}
     >
-      <div className=" flex flex-col-reverse lg:flex-row justify-center w-4/4 sm:w-3/4 mt-14  items-center">
+      <div className=" flex flex-col-reverse lg:flex-row justify-center w-4/4 sm:w-3/4  items-center">
         <div className=" flex flex-col gap-4 sm:gap:10 items-center lg:items-start ">
           <div className="2xl:text-9xl  xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-3xl text-center flex gap-2 sm:flex-col md:text-left dark:text-gray-200">
             <p>{landingData.brandNameTop}</p>
@@ -40,14 +46,14 @@ function Header() {
           ></img>
         </div>
       </div>
-      <div className="my-auto">
+      <div>
         <img
           src={landingData.arrowSrc}
           alt={landingData.arrowAlt}
           className="max-w-[4rem] sm:max-w-[5rem] cursor-pointer   mx-auto rotate-180 hover:scale-110  transition-all duration-300"
-          onClick={scrollToElement}
+          onClick={scrollNew}
+          ref={arrowRef}
         />
-        <div ref={divRef}></div>
       </div>
     </header>
   );

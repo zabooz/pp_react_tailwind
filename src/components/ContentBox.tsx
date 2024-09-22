@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 function ContentBox() {
   return (
-    <div className="pt-16 min-h-[100vh] bg-[#23bbb870] dark:bg-slate-800 flex flex-col items-center justify-center">
+    <div className="min-h-[100vh] pt-[5rem] px-4 lg:pt-[4rem] bg-[#23bbb870]  dark:bg-slate-800 content-center  flex-col items-center justify-center">
       <Outlet />
     </div>
   );

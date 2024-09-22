@@ -15,14 +15,13 @@ function PasswordTesting() {
   return (
     <>
       <main
-        className={` grid sm:grid-cols-1 lg:grid-cols-2  lg:gap-10 w-full overflow-hidden min-h-[90vh] mt-12 lg:mt-0  lg:hiden content-center
-        }`}
+        className="grid sm:grid-cols-1 lg:grid-cols-2 gap-5  w-full max-w-[1980px]  min-h-[90vh]  mx-auto  content-center"
       >
         <Mojo />
         <img
           src="/assets/landingPage/arrow.svg"
           alt="arrow"
-          className="max-w-[4rem] cursor-pointer lg:hidden  rotate-180 mx-auto my-20 "
+          className="max-w-[4rem] cursor-pointer lg:hidden  rotate-180 mx-auto my-5 "
           onClick={() => scrollToElement(scrollDiv1)}
           ref={scrollDiv1}
         />

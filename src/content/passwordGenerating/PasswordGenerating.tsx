@@ -35,14 +35,14 @@ function PasswordGenerating() {
 
   return (
     <>
-      <main className="grid grid-cols-1 p-2  gap-4 my-4 lg:mt-0 lg:grid-cols-3 w-full overflow-hidden min-h-[80vh] py-5  ">
+      <main className="grid grid-cols-1  gap-4  lg:grid-cols-3 w-full content-center min-h-[90vh]">
         <RuneTranslator
           handleDrawerClick={() => handleClickDrawer(leetspeakTextShortened)}
         />
         <img
           src="/assets/landingPage/arrow.svg"
           alt="arrow"
-          className="max-w-[4rem] cursor-pointer lg:hidden  rotate-180 mx-auto my-16 "
+          className="max-w-[4rem] cursor-pointer lg:hidden  rotate-180 mx-auto mt-8 "
           onClick={() => scrollToElement(scrollDiv1)}
           ref={scrollDiv1}
         />
@@ -50,7 +50,7 @@ function PasswordGenerating() {
         <img
           src="/assets/landingPage/arrow.svg"
           alt="arrow"
-          className="max-w-[4rem] cursor-pointer lg:hidden rotate-180 mx-auto my-14 "
+          className="max-w-[4rem] cursor-pointer lg:hidden rotate-180 mx-auto mt-4 "
           onClick={() => scrollToElement(scrollDiv2)}
           ref={scrollDiv2}
         />

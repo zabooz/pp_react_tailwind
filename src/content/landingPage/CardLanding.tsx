@@ -40,7 +40,7 @@ function CardCom({ data, index }: Props) {
   return (
     <>
       <Card
-        className={`max-w-lg mx-auto dark:border-2 dark:hover:shadow-2xl transition-shadow duration-1000  dark:bg-slate-700 lg:mt-16 ${
+        className={`max-w-lg mx-auto dark:border-2 dark:hover:shadow-2xl transition-shadow duration-1000  dark:bg-slate-700  ${
           startAnimation ? "animate-fade-out" : ""
         }`}
         imgSrc={data.imgSrc}
@@ -84,7 +84,9 @@ function CardCom({ data, index }: Props) {
       <img
         src="/assets/landingPage/arrow.svg"
         alt="arrow"
-        className="max-w-[4rem] cursor-pointer lg:hidden hidden sm:block rotate-180 mx-auto my-16 "
+        className={`max-w-[4rem] cursor-pointer lg:hidden rotate-180 mx-auto my-16  ${
+          index === 2 ? "hidden" : ""
+        } `}
         onClick={() => scrollToElement(scrollDiv1)}
         ref={scrollDiv1}
       />

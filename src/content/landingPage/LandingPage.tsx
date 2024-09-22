@@ -6,16 +6,19 @@ import BounceOnScroll from "../../utillities/BounceScroll";
 function LandingPage() {
   return (
     <>
-      <Header />
+      <Header  />
       <main
         className="grid gap-20 lg:gap-10 md:grid-cols-1 lg:grid-cols-3 mb-36 w-full p-2"
+     
       >
         {Object.entries(cardData).map(([key, data],index) => (
-          <>
-            <BounceOnScroll key={key}>
+          <div key={index}>
+            <BounceOnScroll key={key+index}>
               <CardCom key={key} index={index} data={data} />
             </BounceOnScroll>
-          </>
+        
+          </div>
+          
         ))}
       </main>
     </>

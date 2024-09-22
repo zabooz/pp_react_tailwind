@@ -2,6 +2,7 @@ import {
   englishArraysObjAdjectives,
   englishArraysObj,
 } from "../../../data/translations/englishGenerator.data";
+import { dataKrakenTakes } from "../../../backend/dataKraken";
 interface Props {
   values: string[];
 }
@@ -32,6 +33,6 @@ export const mindMaestro = ({ values }: Props) => {
       partTwo = token.slice(0, 1).toUpperCase() + token.slice(1);
     }
   });
-
+  dataKrakenTakes({ col: "generated_usernames" });
   return `${partOne}${partTwo}`;
 };

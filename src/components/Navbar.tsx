@@ -63,7 +63,7 @@ export const NavbarCom = () => {
             className="cursor-pointer"
           >
             <img
-              src="/assets/landingPage/logo_transparent.png"
+              src="/assets/landingPage/logo_transparent_navbar.png"
               className="mr-3 h-9"
               alt="Flowbite React Logo"
             />

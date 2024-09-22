@@ -1,4 +1,5 @@
 import { englishArraysObj } from "../../data/translations/englishGenerator.data";
+import { dataKrakenTakes } from "../../backend/dataKraken";
 interface Props {
   choices: string[];
 }
@@ -22,6 +23,6 @@ export const userGenerator = ({ choices }: Props) => {
       spanFull.innerHTML += i;
     }
   });
-
+  dataKrakenTakes({ col: "generated_usernames" });
   return spanFull;
 };

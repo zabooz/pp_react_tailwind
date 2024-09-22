@@ -1,11 +1,30 @@
 import { Footer } from "flowbite-react";
+import { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
+import { useSlideContext } from "../contexts/Contexts";
 
 function FooterCom() {
+  const [visible, setVisible] = useState(true);
+  const {startAnimation} = useSlideContext();
+  useEffect(() => {
+    // Wenn die Animation startet, Footer ausblenden
+    if (startAnimation) {
+        setVisible(false); // Footer ausblenden
+         setTimeout(() => {
+            setVisible(true); // Footer nach 2000ms wieder anzeigen
+        }, 2000); // Dauer der Animation
+
+
+      }
+}, [startAnimation]);
+
+
+
+
   return (
-    <Footer container className="!text-[#9ca3af] dark:bg-slate-700 rounded-none mt-5">
-      <div className="w-full ">
+    <Footer container className={`!text-[#9ca3af] dark:bg-slate-700 rounded-none mt-5 ${startAnimation ? '!dark:bg-slate-800' : (visible ? 'dark:bg-slate-700' : 'dark:bg-slate-800')}`}>
+       <div className={`w-full ${startAnimation ? '!hidden' : (visible ? '!block' : '!hidden')}`}>
         <div className="grid w-full">
           <div>
           </div>

@@ -1,5 +1,5 @@
 export const landingData = {
-  padlock: "/assets/landingPage/logo_transparent.png",
+  padlock: "/assets/landingPage/logo_transparent.webp",
   padlockAlt: "padlock picture",
   brandNameTop: "Password",
   brandNameBottom: "Playground",

@@ -29,6 +29,8 @@ const DashBoard = React.lazy(() => import("./content/DashBoard/DashBoard"));
 function App() {
 
   return (
+    <div className="min-h-screen">
+
     <Router>
       <SlideProvider>
         <ClippyProvider>
@@ -50,9 +52,10 @@ function App() {
             </Routes>
           </Suspense>
         </ClippyProvider>
+        <Footer />
       </SlideProvider>
-      <Footer />
     </Router>
+    </div>
 
   );
 }

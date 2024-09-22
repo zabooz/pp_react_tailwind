@@ -35,7 +35,7 @@ function PasswordGenerating() {
 
   return (
     <>
-      <main className="grid grid-cols-1 my-4 lg:mt-0 lg:grid-cols-3 w-full overflow-hidden min-h-[80vh] py-5  ">
+      <main className="grid grid-cols-1 p-2  gap-4 my-4 lg:mt-0 lg:grid-cols-3 w-full overflow-hidden min-h-[80vh] py-5  ">
         <RuneTranslator
           handleDrawerClick={() => handleClickDrawer(leetspeakTextShortened)}
         />

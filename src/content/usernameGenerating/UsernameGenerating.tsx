@@ -15,7 +15,7 @@ function UsernameGenerating() {
 
   return (
     <main
-      className="grid md:grid-cols-1 lg:grid-cols-2  w-full  min-h-[80vh] "
+      className="grid md:grid-cols-1 lg:grid-cols-2  w-full mt-12 lg:mt-0  min-h-[80vh] "
     >
       <IdentityWizard />
       <img

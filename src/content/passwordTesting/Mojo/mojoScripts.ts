@@ -7,7 +7,6 @@ export const startBruteForce = async (
   bruteType: string,
   password: string,
   setBruteActive: (value: boolean) => void,
-  interval: number,
   display: HTMLTableSectionElement,
   showAllResults: (value: boolean) => void,
   setBruteForceResults: (value: string[][]) => void,
@@ -29,7 +28,6 @@ export const startBruteForce = async (
     console.error("fetch data:", error);
   } finally {
     setBruteActive(false);
-    clearInterval(interval);
     showAllResults(true);
     updateAttempts([result], display);
 

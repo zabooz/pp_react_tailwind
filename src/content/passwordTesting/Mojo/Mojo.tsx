@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef, lazy, useCallback } from "react";
 import {
   Button,
   Card,
@@ -7,21 +8,19 @@ import {
   Label,
   Spinner,
 } from "flowbite-react";
+
 import {
   bruteForceAttackList,
   bruteForceAttackSimple,
 } from "../../../data/drawer/drawerData";
+import { DrawerData } from "../../../interfaces/interfaces";
+
+const TextCanvas = lazy(() => import("../../../components/TextCanvas"));
+const ResultsModal = lazy(() => import("./ResultsModal"));
+
 import { startBruteForce, stopBruteForce } from "./mojoScripts";
 import { thinker } from "../../../utillities/thinker";
-import { useState, useEffect, useRef } from "react";
-import { DrawerData } from "../../../interfaces/interfaces";
-import TextCanvas from "../../../components/TextCanvas";
-import ResultsModal from "./ResultsModal";
 import { useSlideContext } from "../../../contexts/Contexts";
-
-
-
-
 
 function Mojo() {
   const [drawer, setDrawerShow] = useState<boolean>(false);
@@ -39,16 +38,19 @@ function Mojo() {
   const [bruteForceResults, setBruteForceResults] = useState<string[][]>([]);
   const displayResult = useRef<HTMLTableSectionElement | null>(null);
 
-  const handleClickDrawer = (content: DrawerData) => {
-    setDrawerShow(!drawer);
-    setDrawerContent(content);
-  };
+  const handleClickDrawer = useCallback(
+    (content: DrawerData) => {
+      setDrawerShow(!drawer);
+      setDrawerContent(content);
+    },
+    [drawer]
+  );
+
   const handleCloseDrawer = () => {
     setDrawerShow(!drawer);
   };
 
-  const {startAnimation} = useSlideContext()
-
+  const { startAnimation } = useSlideContext();
 
   useEffect(() => {
     if (isBruteActive) {
@@ -61,21 +63,25 @@ function Mojo() {
     } else {
       clearInterval(bruteForceThinkerInterval);
     }
+
+    return () => {
+      clearInterval(bruteForceThinkerInterval);
+    };
   }, [isBruteActive]);
 
-  const handleBruteForceStart = async () => {
+  const handleBruteForceStart = useCallback(async () => {
     setIsBruteActive(true);
     await startBruteForce(
       bruteType,
       password,
       setIsBruteActive,
-      bruteForceThinkerInterval,
       displayResult.current!,
       setShowResults,
       setBruteForceResults,
       bruteForceResults
     );
-  };
+  }, [isBruteActive]);
+
   const handleBruteForceStop = async () => {
     await stopBruteForce(setIsBruteActive, bruteForceThinkerInterval);
   };
@@ -88,10 +94,11 @@ function Mojo() {
   };
 
   return (
-    <>   
-
+    <>
       <Card
-        className={`max-w-lg mx-auto border-4 ${startAnimation ?'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl  `}
+        className={`max-w-lg mx-auto border-4 ${
+          startAnimation ? "animate-fade-out" : "animate-fade-in"
+        } dark:hover:shadow-2xl  `}
         imgAlt="Mojo APP picture"
         imgSrc="/assets/passwordTesting/mojo.png"
       >
@@ -130,30 +137,36 @@ function Mojo() {
             className="w-full flex justify-evenly my-5"
           >
             <div className="my-2">
-              <Label htmlFor="simple" className="!text-gray-400 me-2">Einfach</Label>
+              <Label htmlFor="simple" className="!text-gray-400 me-2">
+                Einfach
+              </Label>
               <Radio
                 id="simple"
                 name="bruteForce"
                 value={"Einfach"}
                 data-type="simple"
-                />
+              />
             </div>
             <div className="my-2">
-              <label htmlFor="list" className="text-gray-400 me-2">Liste</label>
+              <label htmlFor="list" className="text-gray-400 me-2">
+                Liste
+              </label>
               <Radio
                 id="list"
                 name="bruteForce"
                 value={"Liste"}
                 data-type="library"
                 defaultChecked
-                />
+              />
             </div>
           </div>
           <div className="flex">
             <div className="flex flex-row gap-3 w-full justify-between my-3">
-              <Button onClick={handleBruteForceStart} disabled={isBruteActive}
+              <Button
+                onClick={handleBruteForceStart}
+                disabled={isBruteActive}
                 className="w-full"
-                >
+              >
                 {isBruteActive ? (
                   <>
                     <Spinner aria-label="Spinner button example" size="sm" />
@@ -163,9 +176,10 @@ function Mojo() {
                   <span className="pl-3">Start</span>
                 )}
               </Button>
-              <Button disabled={false} onClick={handleBruteForceStop}
-              
-              className="w-full"
+              <Button
+                disabled={false}
+                onClick={handleBruteForceStop}
+                className="w-full"
               >
                 Stop
               </Button>

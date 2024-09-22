@@ -1,34 +1,41 @@
 import Head from "./components/Head";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
+import { HeadProvider } from "react-head";
+import { Flowbite } from "flowbite-react";
 
 import {
   useLoginContext,
   ClippyProvider,
   SlideProvider,
 } from "./contexts/Contexts";
-import { HeadProvider } from "react-head";
-import { autoLogin } from "./backend/autoLogin";
 
+import { autoLogin } from "./backend/autoLogin";
 import { NavbarCom } from "./components/Navbar";
 import Footer from "./components/Footer";
 import ContentBox from "./components/ContentBox";
+import QuickNav from "./components/quickNav/QuickNav";
 
 import LandingPage from "./content/landingPage/LandingPage";
-import PasswordGenerating from "./content/passwordGenerating/PasswordGenerating";
-import PasswordTesting from "./content/passwordTesting/passwordTesting"; // Corrected casing
-import UsernameGenerating from "./content/usernameGenerating/UsernameGenerating";
-import AboutUs from "./content/aboutUs/AboutUs";
-import Project from "./content/aboutUs/Project";
-import Impressum from "./content/legalStuff/Impressum";
-import PrivacyPolicy from "./content/legalStuff/PrivacyPolicy";
-import DashBoard from "./content/DashBoard/DashBoard";
-import { Flowbite } from "flowbite-react";
-import QuickNav from "./components/quickNav/QuickNav";
+const PasswordGenerating = React.lazy(
+  () => import("./content/passwordGenerating/PasswordGenerating")
+);
+const PasswordTesting = React.lazy(
+  () => import("./content/passwordTesting/passwordTesting")
+);
+const UsernameGenerating = React.lazy(
+  () => import("./content/usernameGenerating/UsernameGenerating")
+);
+const AboutUs = React.lazy(() => import("./content/aboutUs/AboutUs"));
+const Project = React.lazy(() => import("./content/aboutUs/Project"));
+const Impressum = React.lazy(() => import("./content/legalStuff/Impressum"));
+const PrivacyPolicy = React.lazy(
+  () => import("./content/legalStuff/PrivacyPolicy")
+);
+const DashBoard = React.lazy(() => import("./content/DashBoard/DashBoard"));
 
 function App() {
   const { setLoggedIn } = useLoginContext();
-
   useEffect(() => {
     (async () => {
       const result = await autoLogin();
@@ -46,28 +53,31 @@ function App() {
 
             <ClippyProvider>
               <QuickNav />
-              <Routes>
-                <Route path="/" element={<ContentBox />}>
-                  <Route index element={<LandingPage />} />
-                  <Route
-                    path="password-generating"
-                    element={<PasswordGenerating />}
-                  />
-                  <Route
-                    path="password-testing"
-                    element={<PasswordTesting />}
-                  />
-                  <Route
-                    path="username-generating"
-                    element={<UsernameGenerating />}
-                  />
-                  <Route path="dashBoard" element={<DashBoard />} />
-                  <Route path="about-us" element={<AboutUs />} />
-                  <Route path="project" element={<Project />} />
-                  <Route path="impressum" element={<Impressum />} />
-                  <Route path="privacy-policy" element={<PrivacyPolicy />} />
-                </Route>
-              </Routes>
+
+              <Suspense>
+                <Routes>
+                  <Route path="/" element={<ContentBox />}>
+                    <Route index element={<LandingPage />} />
+                    <Route
+                      path="password-generating"
+                      element={<PasswordGenerating />}
+                    />
+                    <Route
+                      path="password-testing"
+                      element={<PasswordTesting />}
+                    />
+                    <Route
+                      path="username-generating"
+                      element={<UsernameGenerating />}
+                    />
+                    <Route path="dashBoard" element={<DashBoard />} />
+                    <Route path="about-us" element={<AboutUs />} />
+                    <Route path="project" element={<Project />} />
+                    <Route path="impressum" element={<Impressum />} />
+                    <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                  </Route>
+                </Routes>
+              </Suspense>
             </ClippyProvider>
           </SlideProvider>
 

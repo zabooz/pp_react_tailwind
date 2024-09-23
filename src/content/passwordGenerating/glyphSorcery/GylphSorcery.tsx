@@ -1,11 +1,9 @@
 import { Card, Button, Label, RangeSlider, Radio } from "flowbite-react";
 import { useState } from "react";
 import { glyphSorcery } from "./glyphSorceryScript";
-
 import { StorageData } from "../../../interfaces/interfaces";
-import GlyphSorcerySwitch from "./GlyphSorcerySwitch";
-
 import { useSlideContext } from "../../../contexts/Contexts";
+import Switcher from "../../../utillities/Switcher";
 
 function GylphSorcery() {
   const [passwordLength, setPasswordLength] = useState(6);
@@ -85,7 +83,7 @@ function GylphSorcery() {
           </div>
         </div>
       </div>
-      <GlyphSorcerySwitch data={dataArr} />
+      <Switcher app="glyphSorcery" data={dataArr} />
       <Button onClick={handeClick} className="mt-3 bg-[#ea6954]">
         Los geht's
       </Button>

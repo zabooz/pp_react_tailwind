@@ -9,7 +9,7 @@ function HoverSound({ children,hoverTimer }: { children: React.ReactNode,hoverTi
       audioRef.current.volume = 0.1;
       setTimeout(() => {
         audioRef.current!.play();
-      }, 150);
+      }, 100);
     }
   };
   return (

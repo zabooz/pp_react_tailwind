@@ -3,9 +3,9 @@ import { Label, FileInput } from "flowbite-react";
 import { useState, useRef } from "react";
 import { fileUpload } from "./pictureMagicScript";
 import { pictureMagic } from "./pictureMagicScript";
-
+import Switcher from "../../../utillities/Switcher";
 import { StorageData } from "../../../interfaces/interfaces";
-import PictureMagicSwitch from "./PictureMagicSwitch";
+
 import { useSlideContext } from "../../../contexts/Contexts";
 function PictureMagic() {
   const [pictureFile, setPictureFile] = useState<File>(new File([""], ""));
@@ -16,6 +16,7 @@ function PictureMagic() {
 
   const handleClick = async () => {
     const result = await pictureMagic(pictureFile, pictureBase64);
+    console.log(result);
     setStorageData([...storageData, result]);
   };
 
@@ -70,7 +71,7 @@ function PictureMagic() {
           </Label>
         </div>
       </div>
-      <PictureMagicSwitch storageData={storageData} />
+      <Switcher app="pictureMagic" data={storageData} />
       <Button className="mt-3 bg-[#ea6954]" onClick={() => handleClick()}>
         Los geht's
       </Button>

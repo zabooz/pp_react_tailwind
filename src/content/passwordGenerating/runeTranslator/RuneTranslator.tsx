@@ -1,12 +1,11 @@
-import { Button, Card } from "flowbite-react";
-import { leetspeakTextShortened } from "../../../data/drawer/drawerData";
 import { useState } from "react";
+import { Button, Card,TextInput } from "flowbite-react";
 import { DrawerData } from "../../../interfaces/interfaces";
-import { TextInput } from "flowbite-react";
-import runeTranslator from "./runeTranslatorScript";
 import { StorageData } from "../../../interfaces/interfaces";
-import RuneTransatorSwitch from "./RuneTransatorSwitch";
 import { useSlideContext } from "../../../contexts/Contexts";
+import { leetspeakTextShortened } from "../../../data/drawer/drawerData";
+import Switcher from "../../../utillities/Switcher";
+import runeTranslator from "./runeTranslatorScript";
 interface Props {
   handleDrawerClick: (content: DrawerData) => void;
 }
@@ -16,7 +15,6 @@ function RuneTranslator({ handleDrawerClick }: Props) {
   const [runes, setRunes] = useState<StorageData[]>([]);
   const handleClick = async () => {
     const result = await runeTranslator(input);
-    console.log(result);
     setRunes([...result!]);
   };
 
@@ -54,7 +52,7 @@ function RuneTranslator({ handleDrawerClick }: Props) {
           <span className="dark:text-gray-400 mt-2">*Maximal 12 Zeichen</span>
         </div>
       </div>
-      <RuneTransatorSwitch runes={runes} />
+      <Switcher app="runeTranslator" data={runes} />
 
       <Button onClick={() => handleClick()} className="mt-3 bg-[#ea6954]">
         Los geht's

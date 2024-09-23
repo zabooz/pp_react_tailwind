@@ -24,7 +24,6 @@ function CardCom({ data, index }: Props) {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Sanfte Scrollbewegung
     });
   };
 

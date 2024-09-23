@@ -24,7 +24,6 @@ function HoverSound({ hoverTimer, soundFile, children, volume }: Props) {
     }
   };
 
-  console.log(soundFile);
   return (
     <div onMouseEnter={playSound} className="cursor-pointer  mx-auto  ">
       <audio ref={audioRef} src={soundFile} />

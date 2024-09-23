@@ -1,42 +1,36 @@
-import { useState, useEffect, useRef, lazy, useCallback } from "react";
-import {
-  Button,
-  Card,
-  Radio,
-  Table,
-  TextInput,
-  Label,
-  Spinner,
-} from "flowbite-react";
-
+import { useState, lazy, useCallback } from "react";
+import { Card } from "flowbite-react";
+import "./mojo.css";
 import {
   bruteForceAttackList,
   bruteForceAttackSimple,
 } from "../../../data/drawer/drawerData";
-import { DrawerData } from "../../../interfaces/interfaces";
 
 const TextCanvas = lazy(() => import("../../../components/TextCanvas"));
 const ResultsModal = lazy(() => import("./ResultsModal"));
-
-import { startBruteForce, stopBruteForce } from "./mojoScripts";
-import { thinker } from "../../../utillities/thinker";
 import { useSlideContext } from "../../../contexts/Contexts";
+import MojoControll from "./MojoControl";
+import MojoTable from "./mojoTable";
+import { useBruteForce } from "../../../contexts/Contexts";
+import { DrawerData } from "../../../interfaces/interfaces";
 
-function Mojo() {
+
+interface Props {
+  mojoGrow: boolean;
+  handleCardGrow: (grow: boolean) => void;
+  onSite: boolean;
+}
+
+
+function Mojo({ mojoGrow,handleCardGrow,onSite }: Props) {
+  const { setOpenResultModal, bruteForceResults, openResultModal } =
+    useBruteForce();
+  const { startAnimation } = useSlideContext();
   const [drawer, setDrawerShow] = useState<boolean>(false);
   const [drawerContent, setDrawerContent] = useState<DrawerData>({
     title: "",
     paragraphs: [],
   });
-  const [isBruteActive, setIsBruteActive] = useState<boolean>(false);
-  const [bruteForceThinkerInterval, setBruteThinkerInterval] =
-    useState<number>(0);
-  const [bruteType, setBruteType] = useState<string>("library");
-  const [password, setPassword] = useState<string>("");
-  const [showResults, setShowResults] = useState<boolean>(false);
-  const [openResultModal, setOpenResultModal] = useState<boolean>(false);
-  const [bruteForceResults, setBruteForceResults] = useState<string[][]>([]);
-  const displayResult = useRef<HTMLTableSectionElement | null>(null);
 
   const handleClickDrawer = useCallback(
     (content: DrawerData) => {
@@ -50,57 +44,19 @@ function Mojo() {
     setDrawerShow(!drawer);
   };
 
-  const { startAnimation } = useSlideContext();
 
-  useEffect(() => {
-    if (isBruteActive) {
-      const spinner = document.getElementById("spinner")!;
-      spinner.textContent = "...";
-      const intervalId = setInterval(() => {
-        spinner!.textContent = thinker();
-      }, 1500);
-      setBruteThinkerInterval(intervalId);
-    } else {
-      clearInterval(bruteForceThinkerInterval);
-    }
-
-    return () => {
-      clearInterval(bruteForceThinkerInterval);
-    };
-  }, [isBruteActive]);
-
-  const handleBruteForceStart = useCallback(async () => {
-    setIsBruteActive(true);
-    await startBruteForce(
-      bruteType,
-      password,
-      setIsBruteActive,
-      displayResult.current!,
-      setShowResults,
-      setBruteForceResults,
-      bruteForceResults
-    );
-  }, [isBruteActive]);
-
-
-
-  const handleBruteForceStop = async () => {
-    await stopBruteForce(setIsBruteActive, bruteForceThinkerInterval);
-  };
-
-  const handleBruteTypeClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const target = event.target as HTMLInputElement;
-    if (target.tagName === "INPUT" && target.type === "radio") {
-      setBruteType(target.dataset.type!);
-    }
-  };
+  console.log(onSite,mojoGrow)
 
   return (
-    <>
+    <div className={`flex  ${ !onSite ? "" : mojoGrow ? "growBox" : "shrinkBox"}  min-h-[715px] transition-all rounded dark:border-slate-700 relative dark:hover:shadow-2xl  duration-1000 `}
+    onClick={()=>{
+      handleCardGrow(!mojoGrow)
+
+    } }>
       <Card
-        className={`max-w-lg mx-auto border-4 ${
-          startAnimation ? "animate-fade-out" : "animate-fade-in"
-        } dark:hover:shadow-2xl transition-shadow duration-1000 `}  
+        className={`max-w-lg ${
+          startAnimation ? "animate-fade-out" : "animate-fade-in "
+        }  border-2 border-r-1`}
         imgAlt="Mojo APP picture"
         imgSrc="/assets/passwordTesting/mojo.webp"
       >
@@ -112,7 +68,7 @@ function Mojo() {
           </div>
         </div>
         <p className="font-normal text-gray-700 dark:text-gray-400">
-          Wählen Sie einen Modus, um Ihr Passwort gegen Brute-Force-Angriffe zu
+          Wähle  einen Modus, um dein Passwort gegen Brute-Force-Angriffe zu
           testen. Im{" "}
           <span
             onClick={() => handleClickDrawer(bruteForceAttackSimple)}
@@ -127,87 +83,18 @@ function Mojo() {
           >
             Listen-Modus
           </span>{" "}
-          prüft bekannte Passwörter
+          prüft bekannte Passwörter.
         </p>
-        <div>
-          <TextInput
-            type="text"
-            onInput={(e) => setPassword((e.target as HTMLInputElement).value)}
-          />
-          <div
-            onClick={(e) => handleBruteTypeClick(e)}
-            className="w-full flex justify-evenly my-5"
-          >
-            <div className="my-2">
-              <Label htmlFor="simple" className="!text-gray-400 me-2">
-                Einfach
-              </Label>
-              <Radio
-                id="simple"
-                name="bruteForce"
-                value={"Einfach"}
-                data-type="simple"
-              />
-            </div>
-            <div className="my-2">
-              <label htmlFor="list" className="text-gray-400 me-2">
-                Liste
-              </label>
-              <Radio
-                id="list"
-                name="bruteForce"
-                value={"Liste"}
-                data-type="library"
-                defaultChecked
-              />
-            </div>
-          </div>
-          <div className="flex">
-            <div className="flex flex-row gap-3 w-full justify-between my-3">
-              <Button
-                onClick={handleBruteForceStart}
-                disabled={isBruteActive}
-                className="w-full"
-              >
-                {isBruteActive ? (
-                  <>
-                    <Spinner aria-label="Spinner button example" size="sm" />
-                    <span className="pl-3" id="spinner"></span>
-                  </>
-                ) : (
-                  <span className="pl-3">Start</span>
-                )}
-              </Button>
-              <Button
-                disabled={false}
-                onClick={handleBruteForceStop}
-                className="w-full"
-              >
-                Stop
-              </Button>
-            </div>
-          </div>
+        <MojoControll className="block lg:hidden" />
+        <div className="hidden lg:block dark:text-gray-400">
+          <p>Beide Modi helfen dir, die Stärke deines Passworts zu bewerten und potenzielle Schwachstellen aufzudecken</p>
+          <p>Wähle den Modus, der am besten zu deinen Sicherheitsanforderungen passt, um deine Passwörter effektiv zu schützen.</p>
+          <p className="mb-16">Denke daran, dass komplexe und einzigartige Passwörter der erste Schritt zur Verbesserung deiner Sicherheit sind.</p>
+
+
         </div>
-        <div className="overflow-x-auto">
-          <Table>
-            <Table.Head>
-              <Table.HeadCell>Passwort</Table.HeadCell>
-              <Table.HeadCell>Versuche</Table.HeadCell>
-              <Table.HeadCell>Modus</Table.HeadCell>
-              <Table.HeadCell>Zeit</Table.HeadCell>
-            </Table.Head>
-            <Table.Body className="divide-y" ref={displayResult}></Table.Body>
-          </Table>
-        </div>
-        {showResults ? (
-          <span
-            onClick={() => setOpenResultModal(true)}
-            className="cursor-pointer font-bold text-gray-400 hover:text-[#0891b2d9] hover:underline underline-offset-4"
-          >
-            Siehe alle Ergebnisse!
-          </span>
-        ) : null}
       </Card>
+      <MojoTable  />
       <TextCanvas
         handleClose={handleCloseDrawer}
         show={drawer}
@@ -218,7 +105,7 @@ function Mojo() {
         setOpenModal={setOpenResultModal}
         bruteForceResults={bruteForceResults}
       />
-    </>
+    </div>
   );
 }
 

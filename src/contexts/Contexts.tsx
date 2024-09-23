@@ -148,3 +148,65 @@ export const useSlideContext = (): SlideContextProps => {
 };
 
 
+interface BruteForceContextProps {
+  bruteForceThinkerInterval: number;
+  setBruteThinkerInterval: (value: number) => void;
+  isBruteActive: boolean;
+  setIsBruteActive: (value: boolean) => void;
+  bruteType: string;
+  setBruteType: (value: string) => void;
+  password: string;
+  setPassword: (value: string) => void;
+  showResults: boolean;
+  setShowResults: (value: boolean) => void;
+  openResultModal: boolean;
+  setOpenResultModal: (value: boolean) => void;
+  bruteForceResults: string[][];
+  setBruteForceResults: (value: string[][]) => void;
+}
+
+// Erstelle den Kontext mit einem Standardwert (kann `null` oder initialisiert sein)
+const BruteForceContext = createContext<BruteForceContextProps | undefined>(undefined);
+
+// Erstelle einen benutzerdefinierten Hook, um den Kontext zu verwenden
+export const useBruteForce = () => {
+  const context = useContext(BruteForceContext);
+  if (!context) {
+    throw new Error("useBruteForce must be used within a BruteForceProvider");
+  }
+  return context;
+};
+
+// Erstelle den Provider
+export const BruteForceProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [bruteForceThinkerInterval, setBruteThinkerInterval] = useState<number>(0);
+  const [isBruteActive, setIsBruteActive] = useState<boolean>(false);
+  const [bruteType, setBruteType] = useState<string>("library");
+  const [password, setPassword] = useState<string>("");
+  const [showResults, setShowResults] = useState<boolean>(false);
+  const [openResultModal, setOpenResultModal] = useState<boolean>(false);
+  const [bruteForceResults, setBruteForceResults] = useState<string[][]>([]);
+
+  return (
+    <BruteForceContext.Provider
+      value={{
+        bruteForceThinkerInterval,
+        setBruteThinkerInterval,
+        isBruteActive,
+        setIsBruteActive,
+        bruteType,
+        setBruteType,
+        password,
+        setPassword,
+        showResults,
+        setShowResults,
+        openResultModal,
+        setOpenResultModal,
+        bruteForceResults,
+        setBruteForceResults,
+      }}
+    >
+      {children}
+    </BruteForceContext.Provider>
+  );
+};

@@ -1,11 +1,14 @@
+import { BruteForceProvider } from "../../contexts/Contexts.tsx";
 import HoverSound from "../../utillities/HoverSound.tsx";
 import Mojo from "./Mojo/Mojo.tsx";
 import Excalibur from "./excalibur/Excalibur.tsx";
-import { useRef } from "react";
+import {  useRef, useState } from "react";
 
 function PasswordTesting() {
   const scrollDiv1 = useRef<HTMLImageElement>(null);
-
+  const [mojoGrow, setMojoGrow] = useState(false);
+  const [colDelay, setColDelay] = useState(false);
+  const [onSite, setOnSite] = useState(false);
   const scrollToElement = (scroll: React.RefObject<HTMLImageElement>) => {
     const { current } = scroll;
 
@@ -14,16 +17,33 @@ function PasswordTesting() {
     }
   };
 
+  const handleCardGrow = () => {
+    setMojoGrow(!mojoGrow);
+    setOnSite(true);
+      setTimeout(() => {
+        setColDelay(!colDelay);
+      }, 2000);
 
-  console.log("password testing");
+  };
+
+
+
 
   return (
     <>
       <main
-        className="grid sm:grid-cols-1 lg:grid-cols-2 gap-5  w-full max-w-[1980px]  min-h-[90vh]  mx-auto  content-center"
+        className={`grid sm:grid-cols-1   ${
+          colDelay ? "lg:grid-cols-1" : "lg:grid-cols-2"
+        }   gap-5  w-full max-w-[1980px] overflow-x-hidden min-h-[90vh]  mx-auto  content-center`}
       >
-        <HoverSound hoverTimer={false} soundFile="/assets/sounds/mojo.wav" volume={.1}>
-        <Mojo />
+        <HoverSound
+          hoverTimer={false}
+          soundFile="/assets/sounds/mojo.wav"
+          volume={0.1}
+        >
+          <BruteForceProvider>
+            <Mojo mojoGrow={mojoGrow} onSite={onSite} handleCardGrow={handleCardGrow} />
+          </BruteForceProvider>
         </HoverSound>
         <img
           src="/assets/landingPage/arrow.svg"
@@ -33,7 +53,12 @@ function PasswordTesting() {
           ref={scrollDiv1}
         />
         <HoverSound hoverTimer={false} soundFile="/assets/sounds/excalibur.wav" volume={.1}>
-        <Excalibur />
+        <Excalibur
+          mojoGrow={mojoGrow}
+          handleCardGrow={handleCardGrow}
+          colDelay={colDelay}
+          onSite={onSite}
+        />
         </HoverSound>
       </main>
     </>

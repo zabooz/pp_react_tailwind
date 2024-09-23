@@ -1,0 +1,49 @@
+.moveSideCard {
+  transform-origin: left;
+  animation: sideCard 4s ease-in-out 1 forwards;
+}
+
+.growBox {
+  animation: grow 4s ease-in-out 1 forwards;
+}
+.shrinkBox {
+  animation: shrink 4s ease-in-out 1 forwards;
+}
+
+@keyframes sideCard {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-1%);
+  }
+}
+
+@keyframes grow {
+  0% {
+    opacity: 1;
+    width: 510px;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    width: 1003px;
+    opacity: 1;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    opacity:1;
+    width: 1003px; 
+  }
+  50%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 510px;
+  }
+    
+}

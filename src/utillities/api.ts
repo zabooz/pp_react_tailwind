@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export const apiToken = axios.create({
-  baseURL: "https://passwordplayground.coolify.machma.app",
+  // baseURL: "https://passwordplayground.coolify.machma.app",
+  baseURL: "http://localhost:3000",
 });
 
 apiToken.interceptors.request.use(
@@ -19,5 +20,6 @@ apiToken.interceptors.request.use(
 );
 
 export const api = axios.create({
-  baseURL: "https://passwordplayground.coolify.machma.app",
+  // baseURL: "https://passwordplayground.coolify.machma.app",
+  baseURL: "http://localhost:3000",
 });

@@ -6,7 +6,15 @@ import { ZxcvbnResult } from "@zxcvbn-ts/core";
 import { Points } from "./passwordStrengthTester";
 import { thinker } from "../../../utillities/thinker";
 import { useSlideContext } from "../../../contexts/Contexts";
-function Excalibur() {
+import "../testing.css"
+interface Props {
+      mojoGrow: boolean;
+      colDelay: boolean;
+      handleCardGrow: (grow: boolean) => void;
+      onSite: boolean;
+}
+
+function Excalibur({ mojoGrow,onSite }: Props) {
   const [showModal, setShowModal] = useState(false);
   const [showModalLink, setShowModalLink] = useState(false);
   const [modalLinkText, setModalLinkText] = useState("");
@@ -17,6 +25,7 @@ function Excalibur() {
   >([0, {}]);
   const [intervalId, setIntervalId] = useState<number>(0);
   const [isThinking, setIsThinking] = useState<boolean>(false);
+  const { startAnimation } = useSlideContext();
 
   useEffect(() => {
     if (isThinking) {
@@ -30,11 +39,13 @@ function Excalibur() {
       clearInterval(intervalId);
     }
   }, [isThinking]);
-  const { startAnimation } = useSlideContext();
+
   return (
-    <>
+    <div className={` ${ !onSite ? "" : mojoGrow ? "vanish" : "appear"}`}>
       <Card
-        className={`max-w-lg mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl transition-shadow duration-1000 min-h-[715px] ` }
+        className={`max-w-lg mx-auto border-4 ${
+          startAnimation ? "animate-fade-out" : "animate-fade-in"
+        } dark:hover:shadow-2xl transition-shadow duration-1000 min-h-[715px]  `}
         imgAlt="Excalibur Picture"
         imgSrc="/assets/passwordTesting/excalibur.webp"
       >
@@ -47,9 +58,10 @@ function Excalibur() {
             </div>
           </div>
           <p className="font-normal text-gray-700 dark:text-gray-400 ">
-            Excalibur ist ein Tool, dass die Stärke deines Passworts überprüft. Es
-            bewertet dabei Faktoren wie Länge, Komplexität und Vorhersehbarkeit
-            und gibt dir eine umfassende Bewertung deiner Passwortsicherheit.
+            Excalibur ist ein Tool, dass die Stärke deines Passworts überprüft.
+            Es bewertet dabei Faktoren wie Länge, Komplexität und
+            Vorhersehbarkeit und gibt dir eine umfassende Bewertung deiner
+            Passwortsicherheit.
           </p>
           <div className="my-4">
             <TextInput
@@ -106,7 +118,7 @@ function Excalibur() {
         nerdStats={nerdStats}
         passwordStrength={passwordStrength}
       />
-    </>
+    </div>
   );
 }
 

@@ -4,7 +4,7 @@ export function updateAttempts(
 ) {
   const stars = "******";
 
-  display!.innerHTML = "";
+  // display!.innerHTML = "";
 
   const mojoIcon = document.createElement("img");
   const rowCount = Math.floor(Math.random() * 1000000);
@@ -59,7 +59,7 @@ export function updateAttempts(
       });
     });
 
-    display!.innerHTML = "";
+    // display!.innerHTML = "";
     display!.append(displayTr);
  
   }

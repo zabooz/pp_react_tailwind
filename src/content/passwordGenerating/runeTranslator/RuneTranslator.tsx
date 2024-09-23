@@ -1,6 +1,6 @@
 import { Button, Card } from "flowbite-react";
 import { leetspeakTextShortened } from "../../../data/drawer/drawerData";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { DrawerData } from "../../../interfaces/interfaces";
 import { TextInput } from "flowbite-react";
 import runeTranslator from "./runeTranslatorScript";
@@ -16,23 +16,18 @@ function RuneTranslator({ handleDrawerClick }: Props) {
   const [runes, setRunes] = useState<StorageData[]>([]);
   const handleClick = async () => {
     const result = await runeTranslator(input);
-    setRunes(result);
+    console.log(result);
+    setRunes([...result!]);
   };
 
-  useEffect(() => {
-    if (sessionStorage.getItem("runeTranslatorArray")) {
-      setRunes(
-        JSON.parse(sessionStorage.getItem("runeTranslatorArray") || "[]")
-      );
-    }
-  }, []);
-  const {startAnimation} = useSlideContext()
+  const { startAnimation } = useSlideContext();
   return (
     <Card
-      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl transition-shadow duration-1000  `}
+      className={`max-w-md mx-auto border-4 ${
+        startAnimation ? "animate-fade-out" : "animate-fade-in"
+      } dark:hover:shadow-2xl transition-shadow duration-1000  `}
       imgAlt="Rune Translator Picture"
       imgSrc="/assets/passwordGenerating/runeTranslator.jpeg"
-  
     >
       <div className="relative">
         <div className="absolute  -top-[145px] flex items-center justify-center w-full">
@@ -55,14 +50,15 @@ function RuneTranslator({ handleDrawerClick }: Props) {
         </p>
 
         <div className="flex flex-col">
-          <TextInput type="text" onChange={(e) => setInput(e.target.value)}
-           />
+          <TextInput type="text" onChange={(e) => setInput(e.target.value)} />
           <span className="dark:text-gray-400 mt-2">*Maximal 12 Zeichen</span>
         </div>
       </div>
       <RuneTransatorSwitch runes={runes} />
 
-      <Button onClick={() => handleClick()} className="mt-3 bg-[#ea6954]">Los geht's</Button>
+      <Button onClick={() => handleClick()} className="mt-3 bg-[#ea6954]">
+        Los geht's
+      </Button>
     </Card>
   );
 }

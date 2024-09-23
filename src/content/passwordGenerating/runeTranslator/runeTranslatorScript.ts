@@ -12,16 +12,11 @@ export default async function runeTranslator(input: string) {
     const data = {
       key: key,
       catch: versionArray[i],
-      password: newPasswordArray[i],
+      value: newPasswordArray[i],
+      type: "password",
     };
 
     runeTranslatorArray.push(data);
   }
-
-  sessionStorage.setItem(
-    "runeTranslatorArray",
-    JSON.stringify(runeTranslatorArray)
-  );
-
   return runeTranslatorArray;
 }

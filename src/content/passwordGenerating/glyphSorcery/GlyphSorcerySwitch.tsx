@@ -29,8 +29,6 @@ function GlyphSorcerySwitch({ data }: Props) {
     }
   }, [data.length]);
 
-
-
   return (
     <div className="flex dark:text-gray-200 justify-between w-full">
       <img
@@ -46,12 +44,12 @@ function GlyphSorcerySwitch({ data }: Props) {
           <div className="border-b w-full mb-[6.5px]">Passwort</div>
           {data.length > 0 && (
             <CopyToClipBoard
-              value={data[switchCount].password}
+              value={data[switchCount].value}
               type={"password"}
               clippy={false}
             >
-              <div className="cursor-pointer " key={data[switchCount].password}>
-                {data[switchCount].password}
+              <div className="cursor-pointer " key={data[switchCount].value}>
+                {data[switchCount].value}
               </div>
             </CopyToClipBoard>
           )}

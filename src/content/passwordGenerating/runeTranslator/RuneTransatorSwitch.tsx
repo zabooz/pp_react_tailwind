@@ -20,6 +20,8 @@ function RuneTransatorSwitch({ runes }: Props) {
     }
   };
 
+  console.log(runes);
+
   return (
     <div className="flex dark:text-gray-200 justify-between w-full">
       <img
@@ -36,11 +38,11 @@ function RuneTransatorSwitch({ runes }: Props) {
           {runes.length > 0 && (
             <CopyToClipBoard
               clippy={false}
-              value={runes[switchCount].password}
+              value={runes[switchCount].value}
               type={"password"}
             >
-              <span className="cursor-pointer" key={runes[switchCount].password}>
-                {runes[switchCount].password}
+              <span className="cursor-pointer" key={runes[switchCount].value}>
+                {runes[switchCount].value}
               </span>
             </CopyToClipBoard>
           )}

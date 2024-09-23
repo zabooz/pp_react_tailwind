@@ -8,7 +8,6 @@ interface Props {
 function PictureMagicSwitch({ storageData }: Props) {
   const [switchCount, setSwitchCount] = useState<number>(0);
 
-
   const handleSwitch = (e: any) => {
     const icon = e.target;
     const type = icon.getAttribute("data-type");
@@ -47,27 +46,26 @@ function PictureMagicSwitch({ storageData }: Props) {
           <div className="border-b">Passwort</div>
           {storageData.length > 0 && (
             <CopyToClipBoard
-              value={storageData[switchCount].password}
+              value={storageData[switchCount].value}
               type={"password"}
               clippy={false}
             >
               <div className="cursor-pointer mt-4" key={switchCount}>
-                {storageData[switchCount].password}
+                {storageData[switchCount].value}
               </div>
             </CopyToClipBoard>
           )}
         </div>
         <div className="flex flex-col gap-1 w-2/5 text-center items-center  ">
           <div className="border-b w-full">Dein Bild</div>
-     
-            {storageData.length > 0 && (
-              <img
-                src={storageData[switchCount].catch}
-                className="aspect-square w-10 mt-2 rounded "
-                alt="dein hochgeladenes Bild"
-              />
-            )}
-   
+
+          {storageData.length > 0 && (
+            <img
+              src={storageData[switchCount].catch}
+              className="aspect-square w-10 mt-2 rounded "
+              alt="dein hochgeladenes Bild"
+            />
+          )}
         </div>
       </div>
       <div className="mt-11 mb-auto rounded-full ms-2 ">

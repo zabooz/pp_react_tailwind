@@ -1,5 +1,5 @@
-import { Card, Button,  Label, RangeSlider, Radio } from "flowbite-react";
-import { useState} from "react";
+import { Card, Button, Label, RangeSlider, Radio } from "flowbite-react";
+import { useState } from "react";
 import { glyphSorcery } from "./glyphSorceryScript";
 
 import { StorageData } from "../../../interfaces/interfaces";
@@ -7,41 +7,36 @@ import GlyphSorcerySwitch from "./GlyphSorcerySwitch";
 
 import { useSlideContext } from "../../../contexts/Contexts";
 
-
 function GylphSorcery() {
-
-  const storedData = JSON.parse(sessionStorage.getItem("storedGlyphArray") || "[]");
-
-
   const [passwordLength, setPasswordLength] = useState(6);
   const [language, setLanguage] = useState("english");
-  const [data, setData] = useState<StorageData[]>(storedData);
-  const {startAnimation} = useSlideContext(); 
-
+  const [dataArr, setDataArr] = useState<StorageData[]>([]);
+  const { startAnimation } = useSlideContext();
 
   const handleLanguageClick = (event: React.MouseEvent<HTMLDivElement>) => {
-      const target = event.target as HTMLInputElement;
-      if (target.tagName === "INPUT" && target.type === "radio") {
-        setLanguage(target.value);
-      }
-    };
+    const target = event.target as HTMLInputElement;
+    if (target.tagName === "INPUT" && target.type === "radio") {
+      setLanguage(target.value);
+    }
+  };
 
-    const handeClick = async () => {
-      const data = await glyphSorcery(language, passwordLength);
-      console.log(data);
-      setData(data);
-    };
-    
+  const handeClick = async () => {
+    const data = await glyphSorcery(language, passwordLength);
+    setDataArr([...dataArr, data]);
+  };
+
   return (
     <Card
-      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl transition-shadow duration-1000 `}
+      className={`max-w-md mx-auto border-4 ${
+        startAnimation ? "animate-fade-out" : "animate-fade-in"
+      } dark:hover:shadow-2xl transition-shadow duration-1000 `}
       imgAlt="Glyph Sorcery picture"
       imgSrc="/assets/passwordGenerating/glyphSorcery.jpeg"
     >
       <div className="relative">
         <div className="absolute   -top-[145px] flex items-center justify-center w-full">
           <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   text-gray-200">
-            Glyph  Sorcery
+            Glyph Sorcery
           </h5>
         </div>
       </div>
@@ -51,8 +46,10 @@ function GylphSorcery() {
         gewünschten Länge erstellen, die den Richtlinien für sichere Passwörter
         entsprechen.
       </p>
-      < div className="h-full">
-        <Label htmlFor="glyphrange">Passwortlänge: {passwordLength ? passwordLength : 6}</Label>
+      <div className="h-full">
+        <Label htmlFor="glyphrange">
+          Passwortlänge: {passwordLength ? passwordLength : 6}
+        </Label>
         <RangeSlider
           id="glyphrange"
           name="glyphrange"
@@ -62,10 +59,12 @@ function GylphSorcery() {
           onChange={(e) =>
             setPasswordLength(Number((e.target as HTMLInputElement).value))
           }
-     
         />
-        <div onClick={(e) => handleLanguageClick(e)} className="w-full flex justify-evenly mt-3">
-          <div >
+        <div
+          onClick={(e) => handleLanguageClick(e)}
+          className="w-full flex justify-evenly mt-3"
+        >
+          <div>
             <Label htmlFor="english">English</Label>
             <Radio
               id="english"
@@ -75,14 +74,21 @@ function GylphSorcery() {
               className="ms-3"
             />
           </div>
-          <div >
+          <div>
             <Label htmlFor="german">German</Label>
-            <Radio id="german" name="language" value={"german"} className="ms-3"/>
+            <Radio
+              id="german"
+              name="language"
+              value={"german"}
+              className="ms-3"
+            />
           </div>
         </div>
       </div>
-      <GlyphSorcerySwitch data={data} />
-      <Button onClick={handeClick} className="mt-3 bg-[#ea6954]">Los geht's</Button>
+      <GlyphSorcerySwitch data={dataArr} />
+      <Button onClick={handeClick} className="mt-3 bg-[#ea6954]">
+        Los geht's
+      </Button>
     </Card>
   );
 }

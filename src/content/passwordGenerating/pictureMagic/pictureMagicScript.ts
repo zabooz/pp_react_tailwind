@@ -29,30 +29,25 @@ export const fileUpload = async (
   };
 
   reader.readAsDataURL(file);
-
 };
 
-export const pictureMagic = async (
-  file: File,
-  base64: string,
-) => {
+export const pictureMagic = async (file: File, base64: string) => {
   const id = `picturePassword_${Math.floor(Math.random() * 1000)}`;
   const data = {
     key: id,
     catch: base64,
-    password: "",
+    value: "",
+    type: "password",
   };
-  
+
   try {
     const result = await pictureToString(file);
-    data.password = result as string;
+    data.value = result as string;
   } catch (error) {
     console.error(error);
-  }finally{
+  } finally {
     dataKrakenTakes({ col: "generated_passwords" });
   }
 
-
-  return data
-
+  return data;
 };

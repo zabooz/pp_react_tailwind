@@ -1,6 +1,6 @@
 import { Card, Button } from "flowbite-react";
 import { Label, FileInput } from "flowbite-react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { fileUpload } from "./pictureMagicScript";
 import { pictureMagic } from "./pictureMagicScript";
 
@@ -10,26 +10,20 @@ import { useSlideContext } from "../../../contexts/Contexts";
 function PictureMagic() {
   const [pictureFile, setPictureFile] = useState<File>(new File([""], ""));
   const [pictureBase64, setPictureBase64] = useState<string>("");
-  const [data, setdata] = useState<StorageData>({} as StorageData);
   const previewImgRef = useRef<HTMLImageElement>(null);
-  const [storageData, setStorageData] = useState<StorageData[]>(
-    JSON.parse(sessionStorage.getItem("storagePictureData") || "[]")
-  );
+  const [storageData, setStorageData] = useState<StorageData[]>([]);
+  const { startAnimation } = useSlideContext();
 
   const handleClick = async () => {
     const result = await pictureMagic(pictureFile, pictureBase64);
-    setdata(result);
     setStorageData([...storageData, result]);
   };
-  useEffect(() => {
-    sessionStorage.setItem("storagePictureData", JSON.stringify(storageData));
-  }, [data]);
-
-  const {startAnimation} = useSlideContext()
 
   return (
     <Card
-      className={`max-w-md mx-auto border-4 ${startAnimation ? 'animate-fade-out' : 'animate-fade-in'} dark:hover:shadow-2xl transition-shadow duration-1000  `}
+      className={`max-w-md mx-auto border-4 ${
+        startAnimation ? "animate-fade-out" : "animate-fade-in"
+      } dark:hover:shadow-2xl transition-shadow duration-1000  `}
       imgAlt="PictureMAgic picture"
       imgSrc="/assets/passwordGenerating/pictureMagic.jpeg"
     >

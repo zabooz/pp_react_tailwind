@@ -35,8 +35,9 @@ export interface dataKrakenGivesResponse {
 
 export interface StorageData {
   key: string;
-  catch: string;
-  password: string;
+  catch?: string;
+  value: string;
+  type: string;
 }
 
 export interface dataKrakenTradesData {

@@ -6,15 +6,15 @@ import { ZxcvbnResult } from "@zxcvbn-ts/core";
 import { Points } from "./passwordStrengthTester";
 import { thinker } from "../../../utillities/thinker";
 import { useSlideContext } from "../../../contexts/Contexts";
-import "../testing.css"
+
 interface Props {
-      mojoGrow: boolean;
-      colDelay: boolean;
-      handleCardGrow: (grow: boolean) => void;
-      onSite: boolean;
+  mojoGrow: boolean;
+  colDelay: boolean;
+  handleCardGrow: (grow: boolean) => void;
+  onSite: boolean;
 }
 
-function Excalibur({ mojoGrow,onSite }: Props) {
+function Excalibur({ mojoGrow, onSite }: Props) {
   const [showModal, setShowModal] = useState(false);
   const [showModalLink, setShowModalLink] = useState(false);
   const [modalLinkText, setModalLinkText] = useState("");
@@ -41,11 +41,11 @@ function Excalibur({ mojoGrow,onSite }: Props) {
   }, [isThinking]);
 
   return (
-    <div className={` ${ !onSite ? "" : mojoGrow ? "vanish" : "appear"}`}>
+    <div className={` ${!onSite ? "" : mojoGrow ? "lg:vanish" : "lg:appear"} `}>
       <Card
         className={`max-w-lg mx-auto border-4 ${
           startAnimation ? "animate-fade-out" : "animate-fade-in"
-        } dark:hover:shadow-2xl transition-shadow duration-1000 min-h-[715px]  `}
+        } dark:hover:shadow-2xl transition-shadow duration-1000 min-h-[670px]  `}
         imgAlt="Excalibur Picture"
         imgSrc="/assets/passwordTesting/excalibur.webp"
       >

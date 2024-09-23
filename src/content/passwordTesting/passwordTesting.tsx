@@ -2,7 +2,7 @@ import { BruteForceProvider } from "../../contexts/Contexts.tsx";
 import HoverSound from "../../utillities/HoverSound.tsx";
 import Mojo from "./Mojo/Mojo.tsx";
 import Excalibur from "./excalibur/Excalibur.tsx";
-import {  useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 function PasswordTesting() {
   const scrollDiv1 = useRef<HTMLImageElement>(null);
@@ -20,21 +20,17 @@ function PasswordTesting() {
   const handleCardGrow = () => {
     setMojoGrow(!mojoGrow);
     setOnSite(true);
-      setTimeout(() => {
-        setColDelay(!colDelay);
-      }, 2000);
-
+    setTimeout(() => {
+      setColDelay(!colDelay);
+    }, 2000);
   };
-
-
-
 
   return (
     <>
       <main
-        className={`grid sm:grid-cols-1   ${
+        className={`grid grid-cols-1   ${
           colDelay ? "lg:grid-cols-1" : "lg:grid-cols-2"
-        }   gap-5  w-full max-w-[1980px] overflow-x-hidden min-h-[90vh]  mx-auto  content-center`}
+        }  gap-5  w-full max-w-[1980px] overflow-x-hidden min-h-[90vh]  mx-auto  content-center`}
       >
         <HoverSound
           hoverTimer={false}
@@ -42,7 +38,11 @@ function PasswordTesting() {
           volume={0.1}
         >
           <BruteForceProvider>
-            <Mojo mojoGrow={mojoGrow} onSite={onSite} handleCardGrow={handleCardGrow} />
+            <Mojo
+              mojoGrow={mojoGrow}
+              onSite={onSite}
+              handleCardGrow={handleCardGrow}
+            />
           </BruteForceProvider>
         </HoverSound>
         <img
@@ -52,13 +52,17 @@ function PasswordTesting() {
           onClick={() => scrollToElement(scrollDiv1)}
           ref={scrollDiv1}
         />
-        <HoverSound hoverTimer={false} soundFile="/assets/sounds/excalibur.wav" volume={.1}>
-        <Excalibur
-          mojoGrow={mojoGrow}
-          handleCardGrow={handleCardGrow}
-          colDelay={colDelay}
-          onSite={onSite}
-        />
+        <HoverSound
+          hoverTimer={false}
+          soundFile="/assets/sounds/excalibur.wav"
+          volume={0.1}
+        >
+          <Excalibur
+            mojoGrow={mojoGrow}
+            handleCardGrow={handleCardGrow}
+            colDelay={colDelay}
+            onSite={onSite}
+          />
         </HoverSound>
       </main>
     </>

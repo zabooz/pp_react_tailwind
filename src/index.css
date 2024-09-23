@@ -3,9 +3,91 @@
 @tailwind components;
 @tailwind utilities;
 
-.background{
-
-    background-color:#23bbb870 ;
-
-
+.background {
+  background-color: #23bbb870;
 }
+
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .vanish {
+    animation: vanish 2s ease-in 1 forwards;
+  }
+
+  .appear {
+    animation: appear 4s ease-in 1 forwards;
+  }
+  .growBox {
+    animation: grow 4s ease-in-out 1 forwards;
+  }
+  .shrinkBox {
+    animation: shrink 4s ease-in-out 1 forwards;
+  }
+  .soft-grayscale {
+    filter: grayscale(80%);
+  }
+  
+}
+
+@keyframes vanish {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes appear {
+  0% {
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+  }
+  70% {
+    height: auto;
+    opacity: 0;
+    position: relative;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Du kannst weiterhin andere globale Stile hinzufügen */
+.background {
+  background-color: #23bbb870;
+}
+@keyframes grow {
+    0% {
+      opacity: 1;
+      width: 510px;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      width: 1003px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes shrink {
+    0% {
+      opacity:1;
+      width: 1003px; 
+    }
+    50%{
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 510px;
+    }
+      
+  }

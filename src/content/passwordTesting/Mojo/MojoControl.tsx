@@ -20,7 +20,7 @@ function MojoControl({ className }: Props) {
     setBruteThinkerInterval,
     isBruteActive,
     setPassword,
-    setBruteType
+    setBruteType,
   } = useBruteForce();
   const handleBruteForceStart = async () => {
     setIsBruteActive(true);
@@ -45,8 +45,6 @@ function MojoControl({ className }: Props) {
     }
   };
 
-
-
   useEffect(() => {
     if (isBruteActive) {
       const spinner = document.getElementById("spinner")!;
@@ -65,14 +63,16 @@ function MojoControl({ className }: Props) {
   }, [isBruteActive]);
 
   return (
-    <div className={className}
-    onClick= {(e) => {
-      e.stopPropagation()
-    }}
+    <div
+      className={className}
+      onClick={(e) => {
+        e.stopPropagation();
+      }}
     >
       <TextInput
         type="text"
         onInput={(e) => setPassword((e.target as HTMLInputElement).value)}
+        placeholder="Teste ein Passwort"
       />
       <div
         onClick={(e) => handleBruteTypeClick(e)}

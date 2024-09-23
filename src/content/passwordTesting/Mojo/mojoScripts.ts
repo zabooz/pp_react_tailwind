@@ -7,11 +7,10 @@ export const startBruteForce = async (
   password: string,
   setBruteActive: (value: boolean) => void,
 
-  showAllResults: (value: boolean) => void,
+  setShowResults: (value: boolean) => void,
   setBruteForceResults: (value: string[][]) => void,
   bruteForceResults: string[][]
 ) => {
-
   const [encodedPwd, key] = passwordEncoder(password);
 
   sessionStorage.setItem("stopKey", encodedPwd as string);
@@ -23,17 +22,18 @@ export const startBruteForce = async (
       `/bruteforce${bruteType}?pwd=${encodedPwd}&key=${key}`
     );
     result = response.data;
-
-    setBruteForceResults([result,...bruteForceResults]);
+    
+    console.log(123)
+    setBruteForceResults([result, ...bruteForceResults]);
   } catch (error) {
     console.error("fetch data:", error);
   } finally {
     setBruteActive(false);
-    showAllResults(true);
+    setShowResults(true);
+
     await dataKrakenTakes({ col: "tested_passwords" });
   }
 };
-
 export const stopBruteForce = async (
   setBruteActive: (value: boolean) => void,
   interval: number

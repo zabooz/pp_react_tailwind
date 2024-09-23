@@ -1,4 +1,6 @@
-import TextCanvas from "../../components/TextCanvas.tsx";
+import React from "react";
+
+const TextCanvas = React.lazy(() => import("../../components/TextCanvas"));
 import GylphSorcery from "./glyphSorcery/GylphSorcery";
 import PictureMagic from "./pictureMagic/PictureMagic.tsx";
 import RuneTranslator from "./runeTranslator/RuneTranslator.tsx";

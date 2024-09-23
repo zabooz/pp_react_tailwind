@@ -2,7 +2,6 @@ import { Card, Button } from "flowbite-react";
 import { useNavigate } from "react-router-dom";
 import { useSlideContext } from "../../contexts/Contexts";
 import { useRef } from "react";
-import "./landingPage.css"
 interface CardData {
   title: string;
   subtitle: string;

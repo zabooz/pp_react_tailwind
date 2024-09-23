@@ -9,15 +9,14 @@ interface Props {
 
 function HoverSound({ hoverTimer, soundFile, children, volume }: Props) {
   const audioRef = useRef<HTMLAudioElement>(null);
-  
+
   const playSound = () => {
-    
     audioRef.current!.volume = volume;
     if (audioRef.current && hoverTimer) {
       setTimeout(() => {
         audioRef.current!.play();
       }, 100);
-    } else if(audioRef.current) {
+    } else if (audioRef.current) {
       setTimeout(() => {
         audioRef.current!.play();
       }, 200);

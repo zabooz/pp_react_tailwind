@@ -6,25 +6,25 @@ export const mindQuestions = [
         answer: "Eine angenehme Temperatur",
         dataArr: "temperatures",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question1/temperatures.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question1/temperatures.webp",
       },
       {
         answer: "Bequemlichkeit",
         dataArr: "qualities",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question1/qualities.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question1/qualities.webp",
       },
       {
         answer: "Farb-Fernsehen",
         dataArr: "colors",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question1/colors.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question1/colors.webp",
       },
       {
         answer: "Wahre Größe",
         dataArr: "sizes",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question1/sizes.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question1/sizes.webp",
       },
     ],
   },
@@ -35,25 +35,25 @@ export const mindQuestions = [
         answer: "Im Kreis fahren",
         dataArr: "vehicles",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question2/vehicles.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question2/vehicles.webp",
       },
       {
         answer: "Arbeiten mit den Händen",
         dataArr: "tools",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question2/tools.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question2/tools.webp",
       },
       {
         answer: "Löffel verbiegen",
         dataArr: "fantasyCreatures",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question2/fantasyCreatures.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question2/fantasyCreatures.webp",
       },
       {
         answer: "Musik",
         dataArr: "instruments",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question2/instruments.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question2/instruments.webp",
       },
     ],
   },
@@ -64,24 +64,24 @@ export const mindQuestions = [
         answer: "Früchte & Gemüse",
         dataArr: "fruits",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question3/fruits.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question3/fruits.webp",
       },
       {
         answer: "Getränke",
         dataArr: "beverages",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question3/beverages.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question3/beverages.webp",
       },
       {
         answer: "Desserts",
         dataArr: "desserts",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question3/desserts.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question3/desserts.webp",
       },
       {
         answer: "Essen im Allgemeinen",
         dataArr: "food",
-        imagePath: "/assets/usernameGenerating/mindMaestro/question3/food.jpeg",
+        imagePath: "/assets/usernameGenerating/mindMaestro/question3/food.webp",
       },
     ],
   },
@@ -91,25 +91,25 @@ export const mindQuestions = [
       {
         answer: "Das Leben",
         dataArr: "ages",
-        imagePath: "/assets/usernameGenerating/mindMaestro/question4/ages.jpeg",
+        imagePath: "/assets/usernameGenerating/mindMaestro/question4/ages.webp",
       },
       {
         answer: "Blumen",
         dataArr: "shapes",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question4/flowers.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question4/flowers.webp",
       },
       {
         answer: "den Klimawandel",
         dataArr: "weatherTypes",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question4/weatherTypes.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question4/weatherTypes.webp",
       },
       {
         answer: "Egal, hauptsache was gespürt",
         dataArr: "intensities",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question4/intensities.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question4/intensities.webp",
       },
     ],
   },
@@ -120,24 +120,24 @@ export const mindQuestions = [
         answer: "Hunde und Katzen",
         dataArr: "animals",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question5/animals.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question5/animals.webp",
       },
       {
         answer: "Drachen und Einhörner",
         dataArr: "fantasyCreatures",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question5/fantasyCreatures.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question5/fantasyCreatures.webp",
       },
       {
         answer: "Elfen und Zwerge",
         dataArr: "fantasyRaces",
         imagePath:
-          "/assets/usernameGenerating/mindMaestro/question5/fantasyRaces.jpeg",
+          "/assets/usernameGenerating/mindMaestro/question5/fantasyRaces.webp",
       },
       {
         answer: "Nichts davon",
         dataArr: "bodyParts",
-        imagePath: "/assets/usernameGenerating/mindMaestro/question5/bodyParts.jpeg",
+        imagePath: "/assets/usernameGenerating/mindMaestro/question5/bodyParts.webp",
       },
     ],
   },

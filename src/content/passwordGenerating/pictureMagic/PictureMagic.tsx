@@ -26,7 +26,7 @@ function PictureMagic() {
         startAnimation ? "animate-fade-out" : "animate-fade-in"
       } dark:hover:shadow-2xl transition-shadow duration-1000  `}
       imgAlt="PictureMAgic picture"
-      imgSrc="/assets/passwordGenerating/pictureMagic.jpeg"
+      imgSrc="/assets/passwordGenerating/pictureMagic.webp"
     >
       <div className="relative">
         <div className="absolute  -top-[145px] flex items-center justify-center w-full">
@@ -49,7 +49,7 @@ function PictureMagic() {
             <div className="flex flex-col items-center  justify-center  ">
               <img
                 ref={previewImgRef}
-                src="/assets/passwordGenerating/upload.jpeg"
+                src="/assets/passwordGenerating/upload.webp"
                 alt="uploadPicture"
                 className="aspect-video mx-auto rounded"
               />

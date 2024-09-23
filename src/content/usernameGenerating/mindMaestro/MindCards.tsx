@@ -60,7 +60,7 @@ function MindCards({
               style={{
                 backgroundImage: background
                   ? `url('${answer.imagePath}')`
-                  : `url('/assets/usernameGenerating/mindMaestro/cardDeck.jpeg')`,
+                  : `url('/assets/usernameGenerating/mindMaestro/cardDeck.webp')`,
               }}
               onClick={(e) => {
                 const target = e.currentTarget;

@@ -29,7 +29,7 @@ function GylphSorcery() {
         startAnimation ? "animate-fade-out" : "animate-fade-in"
       } dark:hover:shadow-2xl transition-shadow duration-1000 `}
       imgAlt="Glyph Sorcery picture"
-      imgSrc="/assets/passwordGenerating/glyphSorcery.jpeg"
+      imgSrc="/assets/passwordGenerating/glyphSorcery.webp"
     >
       <div className="relative">
         <div className="absolute   -top-[145px] flex items-center justify-center w-full">

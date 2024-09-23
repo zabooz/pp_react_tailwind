@@ -18,7 +18,7 @@ export const cardData = {
     btnLink: "/password-testing",
   },
   username: {
-    title: "Erstelle",
+    title: "Erfinde",
     subtitle: "deinen Usernamen",
     text: "Nutze unsere beiden Tools, um den perfekten Benutzernamen zu erstellen: Identity Wizardry generiert zufällige Benutzernamen basierend auf deinen Parametern, undMind Maestro erstellt kreative Namen durch ein unterhaltsames Quiz.",
     btnText: "Erstelle Username",

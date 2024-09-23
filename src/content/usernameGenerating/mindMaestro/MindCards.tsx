@@ -75,7 +75,7 @@ function MindCards({
               }}
             >
               <p
-                className={`text-center absolute bottom-2 bg-slate-400 font-semibold text-gray-100 bg-opacity-90 w-full ${
+                className={`text-center absolute bottom-0 bg-slate-500 font-semibold text-gray-100 bg-opacity-90 w-full ${
                   !background ? "hidden" : ""
                 }`}
               >

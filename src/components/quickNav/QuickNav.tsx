@@ -31,7 +31,7 @@ function QuickNav() {
           onClick={handleClick}
         >
           <img
-            src="/assets/sanchez/_sanchez.jpeg"
+            src="/assets/sanchez/sanchez.webp"
             alt="sanchez"
             className="w-12 rounded-full"
           />
@@ -45,7 +45,7 @@ function QuickNav() {
           onClick={handleClick}
         >
           <img
-            src="/assets/clippy/copyCat1.jpeg"
+            src="/assets/clippy/clippy.webp"
             alt="clippy"
             className="w-12 rounded-full"
           />

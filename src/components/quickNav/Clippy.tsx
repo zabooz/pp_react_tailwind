@@ -26,7 +26,7 @@ function Clippy({ isOpen, handleClose }: Props) {
       <Drawer.Header titleIcon={() => <></>} />
       <div>
         <img
-          src="/assets/clippy/copyCat1.jpeg"
+          src="/assets/clippy/clippy.webp"
           alt="sanchez"
           className="rounded-full mx-auto  w-24"
         />

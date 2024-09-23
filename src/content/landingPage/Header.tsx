@@ -1,7 +1,7 @@
 import { useSlideContext } from "../../contexts/Contexts";
 import { landingData } from "../../data/landingPage/landingData";
 import { useRef } from "react";
-function Header() {
+function Header({setHoverTimer}: {setHoverTimer:(value:boolean) =>  void}) {
   const arrowRef = useRef<HTMLImageElement>(null);
   const { startAnimation } = useSlideContext();
 
@@ -16,6 +16,11 @@ function Header() {
         behavior: "smooth",
       });
     }
+
+    setTimeout(() => {
+      setHoverTimer(true);
+    }, 1000);
+
   };
 
   return (

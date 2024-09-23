@@ -9,22 +9,17 @@ interface Props {
   handleClose: () => void;
 }
 function Clippy({ isOpen, handleClose }: Props) {
-  const { passwords, usernames, setPasswords, setUsernames } = useClippyContext();
+  const { passwords, usernames, setPasswords, setUsernames } =
+    useClippyContext();
 
-  const handleDelete = (index:number) => {
-    
+  const handleDelete = (index: number) => {
     const newPasswords = [...passwords];
     const newUsernames = [...usernames];
     newPasswords.splice(index, 1);
     newUsernames.splice(index, 1);
     setPasswords(newPasswords);
     setUsernames(newUsernames);
-
-
-
-  } 
-
-
+  };
 
   return (
     <Drawer open={isOpen} onClose={handleClose} className="pt-20">
@@ -52,19 +47,23 @@ function Clippy({ isOpen, handleClose }: Props) {
           >
             <ul>
               {passwords.length > 0 &&
-                passwords.map((password: string, index: number) => (
-                  <>
+                passwords.map((password: string, index: number) => {
+                  return (
                     <li
-                      key={index + password}
+                      key={password}
                       className="font-semibold text-lg flex items-center gap-3 text-gray-400"
                     >
-                      <FaRegTrashAlt onClick={() => handleDelete(index)}/>
-                      <CopyToClipBoard clippy={true} type={"password"} value={password}>
+                      <FaRegTrashAlt onClick={() => handleDelete(index)} />
+                      <CopyToClipBoard
+                        clippy={true}
+                        type={"password"}
+                        value={password}
+                      >
                         {password}
                       </CopyToClipBoard>
                     </li>
-                  </>
-                ))}
+                  );
+                })}
             </ul>
           </Tabs.Item>
           <Tabs.Item title="Benutzernamen">
@@ -73,11 +72,15 @@ function Clippy({ isOpen, handleClose }: Props) {
                 usernames.map((username: string, index: number) => (
                   <>
                     <li
-                      key={index + username}
+                      key={username}
                       className="font-semibold text-lg text-gray-400 flex items-center gap-3"
                     >
-                      <FaRegTrashAlt onClick={() => handleDelete(index)}/>
-                      <CopyToClipBoard clippy={true} type={"username"} value={username}>
+                      <FaRegTrashAlt onClick={() => handleDelete(index)} />
+                      <CopyToClipBoard
+                        clippy={true}
+                        type={"username"}
+                        value={username}
+                      >
                         {username}
                       </CopyToClipBoard>
                     </li>

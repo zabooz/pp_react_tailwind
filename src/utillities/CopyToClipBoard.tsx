@@ -9,21 +9,16 @@ interface Props {
   clippy: boolean;
 }
 
-export const CopyToClipBoard = ({
-  value,
-  children,
-  type,
-  clippy,
-}: Props) => {
+export const CopyToClipBoard = ({ value, children, type, clippy }: Props) => {
   const { setPasswords, passwords, setUsernames, usernames } =
     useClippyContext();
-  const [copiedValue, setCopiedValue] = useState<string | null>(null);
-
+  const [isCopied, setIsCopied] = useState(false);
+  let arr = type === "password" ? passwords : usernames;
   const copy = (type: string, password: string) => {
+    setIsCopied(true);
     navigator.clipboard.writeText(password).catch((err) => {
       console.error("Failed to copy: ", err);
     });
-    setCopiedValue(value); 
     if (type === "password") {
       if (passwords.includes(value)) return;
       setPasswords([...passwords, value]);
@@ -32,19 +27,19 @@ export const CopyToClipBoard = ({
       setUsernames([...usernames, value]);
     }
   };
-  console.log(value);
   return (
     <span
       onClick={() => copy(type, value)}
       className="cursor-pointer flex w-full items-center"
-    
       style={
         clippy
           ? { justifyContent: "space-between" }
           : { justifyContent: "space-evenly" }
       }
     >
-      {copiedValue === value ? ( 
+      {arr.includes(value) && !clippy ? (
+        <BsClipboard2Check size={18} />
+      ) : clippy && isCopied ? (
         <BsClipboard2Check size={18} />
       ) : (
         <BsClipboard2 size={18} />

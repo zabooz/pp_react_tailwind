@@ -3,9 +3,9 @@ import { cardData } from "../../data/landingPage/CardsData";
 import Header from "./Header";
 import BounceOnScroll from "../../utillities/BounceScroll";
 import { useLoginContext } from "../../contexts/Contexts.tsx";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { autoLogin } from "../../backend/autoLogin.ts";
-
+import HoverSound from "../../utillities/HoverSound.tsx";
 function LandingPage() {
 
   const { setLoggedIn } = useLoginContext();
@@ -16,18 +16,21 @@ function LandingPage() {
     })();
   }, []);
 
+  const [hoverTimer, setHoverTimer] = useState<boolean>(false);
 
   return (
     <>
-      <Header  />
+      <Header setHoverTimer={setHoverTimer} />
       <main
-        className="grid gap-10 md:grid-cols-1 lg:grid-cols-3  w-full min-h-[90vh]  content-center  mt-16 lg:mt-0"
+        className="grid gap-10 md:grid-cols-1 lg:grid-cols-3  w-full min-h-[95vh] content-center  mt-16 lg:mt-0"
      
       >
         {Object.entries(cardData).map(([key, data],index) => (
-          <div key={index}>
+          <div key={index}  >
             <BounceOnScroll key={key+index}>
+              <HoverSound hoverTimer={hoverTimer}>
               <CardCom key={key} index={index} data={data} />
+              </HoverSound>
             </BounceOnScroll>
         
           </div>

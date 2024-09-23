@@ -2,7 +2,7 @@ import { Card, Button } from "flowbite-react";
 import { useNavigate } from "react-router-dom";
 import { useSlideContext } from "../../contexts/Contexts";
 import { useRef } from "react";
-
+import "./landingPage.css"
 interface CardData {
   title: string;
   subtitle: string;
@@ -40,11 +40,19 @@ function CardCom({ data, index }: Props) {
   return (
     <>
       <Card
-        className={`max-w-lg mx-auto dark:border-2 dark:hover:shadow-2xl transition-shadow duration-1000  dark:bg-slate-700  ${
+        className={`max-w-md mx-auto dark:border-2 dark:hover:shadow-2xl transition-all  soft-grayscale  hover:grayscale-0 duration-1000  min-h-[600px] dark:bg-slate-700  ${
           startAnimation ? "animate-fade-out" : ""
         }`}
         imgSrc={data.imgSrc}
         imgAlt={data.imgAlt}
+        onClick={() => {
+          directionFunc(index);
+          setTimeout(() => {
+            scrollToTop();
+            navigate(data.btnLink);
+            
+          },800)
+        }}
       >
         <h5 className="text-2xl font-bold tracking-wider text-center text-gray-900 dark:text-gray-200">
           {data.title}
@@ -52,12 +60,12 @@ function CardCom({ data, index }: Props) {
         <h6 className="sm:mb-2 text-lg font-normal text-gray-500 dark:text-gray-400 text-center">
           {data.subtitle}
         </h6>
-        <p className="font-normal text-gray-700 dark:text-gray-400 ">
+        <p className="font-normal text-gray-700 sm:mb-20 dark:text-gray-400 ">
           {data.text}
         </p>
 
-        <Button
-          className="sm:mt-12 text-lg text-gray-200 tracking-wide w-full bg-[#ea6954]"
+        { <Button
+          className="sm:mt-auto  lg:hidden mb-6 text-lg text-gray-200 tracking-wide w-full bg-[#ea6954]"
           onClick={() => {
             directionFunc(index);
             setTimeout(() => {
@@ -79,7 +87,7 @@ function CardCom({ data, index }: Props) {
               clipRule="evenodd"
             />
           </svg>
-        </Button>
+        </Button> }
       </Card>
       <img
         src="/assets/landingPage/arrow.svg"

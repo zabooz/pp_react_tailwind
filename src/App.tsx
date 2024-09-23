@@ -10,7 +10,7 @@ import QuickNav from "./components/quickNav/QuickNav";
 
 import LandingPage from "./content/landingPage/LandingPage";
 import PasswordGenerating from "./content/passwordGenerating/PasswordGenerating";
-import PasswordTesting from "./content/passwordGenerating/passwordTesting";
+import PasswordTesting from "./content/passwordTesting/passwordTesting";
 import UsernameGenerating from "./content/usernameGenerating/UsernameGenerating";
 
 const AboutUs = React.lazy(() => import("./content/aboutUs/AboutUs"));

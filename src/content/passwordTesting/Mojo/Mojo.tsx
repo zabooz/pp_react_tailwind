@@ -82,6 +82,8 @@ function Mojo() {
     );
   }, [isBruteActive]);
 
+
+
   const handleBruteForceStop = async () => {
     await stopBruteForce(setIsBruteActive, bruteForceThinkerInterval);
   };
@@ -100,7 +102,7 @@ function Mojo() {
           startAnimation ? "animate-fade-out" : "animate-fade-in"
         } dark:hover:shadow-2xl transition-shadow duration-1000 `}  
         imgAlt="Mojo APP picture"
-        imgSrc="/assets/passwordTesting/mojo.png"
+        imgSrc="/assets/passwordTesting/mojo.webp"
       >
         <div className="relative">
           <div className="absolute  -top-[160px] flex items-center justify-center w-full">

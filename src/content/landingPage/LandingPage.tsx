@@ -28,7 +28,7 @@ function LandingPage() {
         {Object.entries(cardData).map(([key, data],index) => (
           <div key={index}  >
             <BounceOnScroll key={key+index}>
-              <HoverSound hoverTimer={hoverTimer}>
+              <HoverSound hoverTimer={hoverTimer} soundFile="/assets/sounds/cardSound.mp3" volume={0.1}>
               <CardCom key={key} index={index} data={data} />
               </HoverSound>
             </BounceOnScroll>

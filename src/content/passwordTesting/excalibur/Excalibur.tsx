@@ -6,18 +6,17 @@ import { thinker } from "../../../utillities/thinker";
 import { useExcalibur, useSlideContext } from "../../../contexts/Contexts";
 import ExcaliburControl from "./ExcaliburControl";
 import ExcaliburTextContent from "./ExcaliburTextContent";
-import ExcaliburHeader from "./ExcaliburHeader";
 import ModalLink from "./modal/ModalLink";
+import CardHeader from "../../../components/CardHeader";
 
 interface Props {
   mojoGrow: boolean;
   colDelay: boolean;
   handleCardGrow: (grow: boolean) => void;
   onSite: boolean;
-  excaliburGrow: boolean;
 }
 
-function Excalibur({ mojoGrow, onSite, excaliburGrow }: Props) {
+function Excalibur({ mojoGrow, onSite}: Props) {
   const { isThinking, passwordStrength, nerdStats, showModal, setShowModal } =
     useExcalibur();
 
@@ -45,7 +44,7 @@ function Excalibur({ mojoGrow, onSite, excaliburGrow }: Props) {
         imgAlt="Excalibur Picture"
         imgSrc="/assets/passwordTesting/excalibur.webp"
       >
-        <ExcaliburHeader />
+        <CardHeader title="Excalibur" top={165} />
         <ExcaliburTextContent />
         <ExcaliburControl />
         <ModalLink />

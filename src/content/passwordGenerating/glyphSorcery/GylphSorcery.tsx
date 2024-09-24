@@ -4,9 +4,9 @@ import { glyphSorcery } from "./glyphSorceryScript";
 import { StorageData } from "../../../interfaces/interfaces";
 import { useSlideContext } from "../../../contexts/Contexts";
 import Switcher from "../../../utillities/Switcher";
-import GlyphHeader from "./GlyphHeader";
 import GlpyhText from "./GlpyhText";
 import GlyphControl from "./GlyphControl";
+import CardHeader from "../../../components/CardHeader";
 
 function GylphSorcery() {
   const [passwordLength, setPasswordLength] = useState(6);
@@ -27,7 +27,7 @@ function GylphSorcery() {
       imgAlt="Glyph Sorcery picture"
       imgSrc="/assets/passwordGenerating/glyphSorcery.webp"
     >
-      <GlyphHeader />
+      <CardHeader title="Glyph Sorcery" top={145} />
       <GlpyhText />
       <GlyphControl
         passwordLength={passwordLength}

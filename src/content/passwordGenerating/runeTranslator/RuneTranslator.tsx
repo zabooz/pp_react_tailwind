@@ -5,9 +5,10 @@ import { StorageData } from "../../../interfaces/interfaces";
 import { useSlideContext } from "../../../contexts/Contexts";
 import Switcher from "../../../utillities/Switcher";
 import runeTranslator from "./runeTranslatorScript";
-import RuneHeader from "./RuneHeader";
+
 import RuneText from "./RuneText";
 import RuneControl from "./RuneControl";
+import CardHeader from "../../../components/CardHeader";
 interface Props {
   handleDrawerClick: (content: DrawerData) => void;
 }
@@ -29,7 +30,7 @@ function RuneTranslator({ handleDrawerClick }: Props) {
       imgAlt="Rune Translator Picture"
       imgSrc="/assets/passwordGenerating/runeTranslator.webp"
     >
-      <RuneHeader />
+      <CardHeader title="Rune Translator" top={145} />
       <RuneText handleDrawerClick={handleDrawerClick} />
       <RuneControl setInput={setInput} />
       <Switcher app="runeTranslator" data={runes} />

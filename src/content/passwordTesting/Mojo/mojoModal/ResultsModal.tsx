@@ -1,5 +1,5 @@
 import { Button, Modal, Table } from "flowbite-react";
-import { updateAttempts } from "../../../utillities/updateResult";
+import { updateAttempts } from "../../../../utillities/updateResult";
 
 import { useEffect, useRef } from "react";
 interface ResultsModalProps {
@@ -29,7 +29,7 @@ function ResultsModal({
 
   return (
     <Modal show={openModal} onClose={() => setOpenModal(false)}>
-      <Modal.Header>Bruteforce  Ergebnisse</Modal.Header>
+      <Modal.Header>Bruteforce Ergebnisse</Modal.Header>
       <Modal.Body>
         <div className="overflow-x-auto">
           <Table>

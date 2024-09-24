@@ -1,18 +1,19 @@
 import { lazy } from "react";
 
 const TextCanvas = lazy(() => import("../../../components/TextCanvas"));
-const ResultsModal = lazy(() => import("./ResultsModal"));
+const ResultsModal = lazy(() => import("./mojoModal/ResultsModal"));
 import { useSlideContext } from "../../../contexts/Contexts";
 import MojoControll from "./MojoControl";
 import { useBruteForce } from "../../../contexts/Contexts";
 
-import MojoHeader from "./MojoHeader";
 import MojoTextContent from "./MojoTextContent";
 import MojoAllResultsLink from "./MojoAllResultsLink";
-import MojoExtendet from "./MojoExtendet";
+import MojoExtendetTextButton from "./mojoExtendet/MojoExtendetTextButton";
+
 import MojoTable from "./MojoTable";
-import MojoExtendetTextButton from "./MojoExtendetTextButton";
 import { Card } from "flowbite-react";
+import CardHeader from "../../../components/CardHeader";
+import MojoExtendet from "./mojoExtendet/MojoExtendet";
 interface Props {
   mojoGrow: boolean;
   handleCardGrow: (grow: boolean) => void;
@@ -43,7 +44,7 @@ function Mojo({ mojoGrow, handleCardGrow, onSite }: Props) {
         imgAlt="Mojo APP picture"
         imgSrc="/assets/passwordTesting/mojo.webp"
       >
-        <MojoHeader />
+        <CardHeader title="Mojo" top={165} />
         <MojoTextContent />
         <MojoTable />
         <MojoAllResultsLink />

@@ -14,6 +14,8 @@ interface Props {
   colDelay: boolean;
   handleCardGrow: (grow: boolean) => void;
   onSite: boolean;
+  excaliburGrow: boolean;
+  setExcaliburGrow: (grow: boolean) => void;
 }
 
 function Excalibur({ mojoGrow, onSite}: Props) {

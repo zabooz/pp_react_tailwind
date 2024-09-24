@@ -66,6 +66,7 @@ function PasswordTesting() {
             handleCardGrow={handleCardGrow}
             colDelay={colDelay}
             onSite={onSite}
+            setExcaliburGrow={setExcaliburGrow}
             />
             </ExcaliburProvider>
         </HoverSound>

@@ -1,5 +1,5 @@
-import { aiApiCall } from "../../../utillities/aiApiCall";
-
+import { aiApiCall } from "./aiApiCall";
+import { Points } from "../interfaces/interfaces";
 const sonderzeichen = [
   "!",
   "@",
@@ -32,27 +32,17 @@ const sonderzeichen = [
   "/",
 ];
 
-
-export type Points = {
-  [key: string]: {
-    value: boolean;
-    textTrue: string;
-    textFalse: string;
-  };
-};
-
-
 const kleinbuchstaben = "abcdefghijklmnopqrstuvwxyz".split("");
 const grossbuchstaben = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const zahlen = "0123456789".split("");
 
-export async function passwordStrengthTester(password:string) {
+export async function passwordStrengthTester(password: string) {
   let result = 0;
 
   const sysContent =
     "you can only answer with one word, it should be yes or no. does this password contains a word, either in german,english,france or spanish?";
 
-  const points:Points = {
+  const points: Points = {
     pointForNumber: {
       value: false,
       textTrue: "Enthält mindestens eine Ziffer.",

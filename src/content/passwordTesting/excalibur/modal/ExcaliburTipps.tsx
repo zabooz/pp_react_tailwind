@@ -1,14 +1,14 @@
 import { List, ListItem } from "flowbite-react";
 import { FaCheck } from "react-icons/fa6";
 import { MdOutlineClose } from "react-icons/md";
-import { Points } from "../passwordStrengthTester";
+import { Points } from "../../../../interfaces/interfaces";
 import { useMemo } from "react";
 
 interface Props {
-  passwordStrength: [result: number, points: Points];
+  passwordStrength: {result: number, points: Points} | null;
 }
 function ExcaliburTipps({ passwordStrength }: Props) {
-  const points = passwordStrength[1];
+  const points = passwordStrength!.points;
   const { succesArray, failArray } = useMemo(() => {
     const succesArray: string[] = [];
     const failArray: string[] = [];

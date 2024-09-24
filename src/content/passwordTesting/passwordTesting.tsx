@@ -1,4 +1,4 @@
-import { BruteForceProvider } from "../../contexts/Contexts.tsx";
+import { BruteForceProvider, ExcaliburProvider } from "../../contexts/Contexts.tsx";
 import HoverSound from "../../utillities/HoverSound.tsx";
 import Mojo from "./Mojo/Mojo.tsx";
 import Excalibur from "./excalibur/Excalibur.tsx";
@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 function PasswordTesting() {
   const scrollDiv1 = useRef<HTMLImageElement>(null);
   const [mojoGrow, setMojoGrow] = useState(false);
+  const [excaliburGrow, setExcaliburGrow] = useState(false);
   const [colDelay, setColDelay] = useState(false);
   const [onSite, setOnSite] = useState(false);
   const scrollToElement = (scroll: React.RefObject<HTMLImageElement>) => {
@@ -42,6 +43,7 @@ function PasswordTesting() {
               mojoGrow={mojoGrow}
               onSite={onSite}
               handleCardGrow={handleCardGrow}
+              excaliburGrow={excaliburGrow}
             />
           </BruteForceProvider>
         </HoverSound>
@@ -57,12 +59,15 @@ function PasswordTesting() {
           soundFile="/assets/sounds/excalibur.wav"
           volume={0.1}
         >
+          <ExcaliburProvider>
           <Excalibur
             mojoGrow={mojoGrow}
+            excaliburGrow={excaliburGrow}
             handleCardGrow={handleCardGrow}
             colDelay={colDelay}
             onSite={onSite}
-          />
+            />
+            </ExcaliburProvider>
         </HoverSound>
       </main>
     </>

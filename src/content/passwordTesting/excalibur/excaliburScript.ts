@@ -1,7 +1,7 @@
 import { zxcvbnTesting } from "./zxcvbn";
 import { ZxcvbnResult } from "@zxcvbn-ts/core";
-import { passwordStrengthTester } from "./passwordStrengthTester";
-import {Points} from "./passwordStrengthTester";
+import { passwordStrengthTester } from "../../../utillities/passwordStrengthTester";
+import { Points } from "../../../interfaces/interfaces";
 import { dataKrakenTakes } from "../../../backend/dataKraken";
 
 interface Props {
@@ -9,14 +9,13 @@ interface Props {
   password: string;
   setShowModalLink: (value: boolean) => void;
   setModalLinkText: (value: string) => void;
-  setPasswordStrength: (value:[result: number, points: Points]) => void;
+  setPasswordStrength: (value: { result: number; points: Points }) => void;
   setIsThinking: (value: boolean) => void;
 }
 interface Result {
   result: number;
-  points: Points
+  points: Points;
 }
-
 
 export const excaliburTesting = async ({
   setNerdStats,
@@ -24,26 +23,25 @@ export const excaliburTesting = async ({
   setShowModalLink,
   setModalLinkText,
   setPasswordStrength,
-  setIsThinking
+  setIsThinking,
 }: Props) => {
   const zxcvbnObject = zxcvbnTesting(password);
   setNerdStats(zxcvbnObject);
 
-    setIsThinking(true);
+  setIsThinking(true);
 
-
-    try {
+  try {
     const result: Result = await passwordStrengthTester(password);
     setIsThinking(false);
     if (result) {
-        const text =
+      const text =
         result.result === 100
-        ? "Dein Passwort ist sicher! Keine weiteren Anpassungen erforderlich."
-        : "Schau dir diese Tipps an, um dein Passwort zu verbessern.";
-        
+          ? "Dein Passwort ist sicher! Keine weiteren Anpassungen erforderlich."
+          : "Schau dir diese Tipps an, um dein Passwort zu verbessern.";
+
       setShowModalLink(true);
       setModalLinkText(text);
-      setPasswordStrength([result.result, result.points]);
+      setPasswordStrength({ result: result.result, points: result.points });
       await dataKrakenTakes({ col: "tested_passwords" });
     }
   } catch (error) {

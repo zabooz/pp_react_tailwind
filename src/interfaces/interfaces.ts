@@ -110,3 +110,15 @@ export interface Question {
     imagePath: string;
   }[];
 }
+export interface PasswordStrength {
+  result: number;
+  points: Points
+}
+
+export type Points = {
+  [key: string]: {
+    value: boolean;
+    textTrue: string;
+    textFalse: string;
+  };
+};

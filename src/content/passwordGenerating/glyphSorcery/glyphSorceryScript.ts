@@ -1,4 +1,4 @@
-import { generateEzPw } from "./passwordSandBox";
+import { generateEzPw } from "../../../utillities/passwordSandBox";
 import { dataKrakenTakes } from "../../../backend/dataKraken";
 
 export const glyphSorcery = async (language: string, length: number) => {

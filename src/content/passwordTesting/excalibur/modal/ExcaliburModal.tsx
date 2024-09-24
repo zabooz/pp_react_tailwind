@@ -3,12 +3,12 @@ import { FaRobot, FaRegLightbulb } from "react-icons/fa6";
 import ExcaliburTipps from "./ExcaliburTipps";
 import ExcaliburNerdStats from "./ExcaliburNerdStats";
 import { ZxcvbnResult } from "@zxcvbn-ts/core";
-import { Points } from "../passwordStrengthTester";
+import { Points } from "../../../../interfaces/interfaces";
 interface ExcaliburModalProps {
   openModal: boolean;
   setOpenModal: (openModal: boolean) => void;
   nerdStats: ZxcvbnResult | null;
-  passwordStrength: [result: number, points: Points]
+  passwordStrength: {result: number, points: Points} | null;
 }
 
 function ExcaliburModal({

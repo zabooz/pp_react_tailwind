@@ -23,7 +23,6 @@ export const startBruteForce = async (
     );
     result = response.data;
     
-    console.log(123)
     setBruteForceResults([result, ...bruteForceResults]);
   } catch (error) {
     console.error("fetch data:", error);

@@ -1,22 +1,18 @@
-import { Card, Button, Label, RangeSlider, Radio } from "flowbite-react";
+import { Card, Button} from "flowbite-react";
 import { useState } from "react";
 import { glyphSorcery } from "./glyphSorceryScript";
 import { StorageData } from "../../../interfaces/interfaces";
 import { useSlideContext } from "../../../contexts/Contexts";
 import Switcher from "../../../utillities/Switcher";
+import GlyphHeader from "./GlyphHeader";
+import GlpyhText from "./GlpyhText";
+import GlyphControl from "./GlyphControl";
 
 function GylphSorcery() {
   const [passwordLength, setPasswordLength] = useState(6);
   const [language, setLanguage] = useState("english");
   const [dataArr, setDataArr] = useState<StorageData[]>([]);
   const { startAnimation } = useSlideContext();
-
-  const handleLanguageClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const target = event.target as HTMLInputElement;
-    if (target.tagName === "INPUT" && target.type === "radio") {
-      setLanguage(target.value);
-    }
-  };
 
   const handeClick = async () => {
     const data = await glyphSorcery(language, passwordLength);
@@ -31,58 +27,13 @@ function GylphSorcery() {
       imgAlt="Glyph Sorcery picture"
       imgSrc="/assets/passwordGenerating/glyphSorcery.webp"
     >
-      <div className="relative">
-        <div className="absolute   -top-[145px] flex items-center justify-center w-full">
-          <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   text-gray-200">
-            Glyph Sorcery
-          </h5>
-        </div>
-      </div>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        Je länger dein Passwort ist, desto sicherer ist es. Mit Glyph Sourcery
-        kannst du dir schnell und unkompliziert ein Passwort in deiner
-        gewünschten Länge erstellen, die den Richtlinien für sichere Passwörter
-        entsprechen.
-      </p>
-      <div className="h-full">
-        <Label htmlFor="glyphrange">
-          Passwortlänge: {passwordLength ? passwordLength : 6}
-        </Label>
-        <RangeSlider
-          id="glyphrange"
-          name="glyphrange"
-          min={2}
-          max={14}
-          defaultValue={6}
-          onChange={(e) =>
-            setPasswordLength(Number((e.target as HTMLInputElement).value))
-          }
-        />
-        <div
-          onClick={(e) => handleLanguageClick(e)}
-          className="w-full flex justify-evenly mt-3"
-        >
-          <div>
-            <Label htmlFor="english">English</Label>
-            <Radio
-              id="english"
-              name="language"
-              value={"english"}
-              defaultChecked
-              className="ms-3"
-            />
-          </div>
-          <div>
-            <Label htmlFor="german">German</Label>
-            <Radio
-              id="german"
-              name="language"
-              value={"german"}
-              className="ms-3"
-            />
-          </div>
-        </div>
-      </div>
+      <GlyphHeader />
+      <GlpyhText />
+      <GlyphControl
+        passwordLength={passwordLength}
+        setPasswordLength={setPasswordLength}
+        setLanguage={setLanguage}
+      />
       <Switcher app="glyphSorcery" data={dataArr} />
       <Button onClick={handeClick} className="mt-3 bg-[#ea6954]">
         Los geht's

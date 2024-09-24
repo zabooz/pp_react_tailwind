@@ -1,14 +1,13 @@
-
-import { passwordConverter } from "../../../utillities/converter/passwordConverter.ts";
-import { allNounsGerman } from "../../../data/translations/germanGenerator.data.ts";
-import { allNounsEnglish } from "../../../data/translations/englishGenerator.data.ts";
+import { passwordConverter } from "./converter/passwordConverter.ts";
+import { allNounsGerman } from "../data/translations/germanGenerator.data.ts";
+import { allNounsEnglish } from "../data/translations/englishGenerator.data.ts";
 import {
   capitalizeFirstLetter,
   shuffleArray,
   rndNumInLen,
-} from "../../../utillities/helperFunctions.ts";
+} from "./helperFunctions.ts";
 
-function filterWordsByLength(words: string[], length:number) {
+function filterWordsByLength(words: string[], length: number) {
   // Use the filter method to filter words based on the specified length
   return words.filter((word) => word.length === length);
 }
@@ -60,7 +59,7 @@ export function generateEzPw(length: number, language: string) {
 
   let ezPw =
     capitalizeFirstLetter(firstChar) +
-    passwordConverter({password, mode: "leetSimple"}) +
+    passwordConverter({ password, mode: "leetSimple" }) +
     generatePassword(3);
 
   return ezPw;

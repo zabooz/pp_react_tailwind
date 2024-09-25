@@ -237,10 +237,8 @@ type ExcaliburContextType = {
   setPassword: (value: string) => void;
   passwordStrength: PasswordStrength | null;
   setPasswordStrength: (value: PasswordStrength | null) => void;
-  isThinking: boolean;
-  setIsThinking: (value: boolean) => void;
-  showModal: boolean;
-  setShowModal: (value: boolean) => void;
+  openModal: boolean;
+  setOpenModal: (value: boolean) => void;
 };
 
 // Erstellen des Excalibur-Kontexts
@@ -258,8 +256,8 @@ export const ExcaliburProvider: React.FC<{ children: React.ReactNode }> = ({
   const [password, setPassword] = useState<string>("");
   const [passwordStrength, setPasswordStrength] =
     useState<PasswordStrength | null>(null);
-  const [isThinking, setIsThinking] = useState<boolean>(false);
-  const [showModal, setShowModal] = useState<boolean>(false);
+
+  const [openModal, setOpenModal] = useState<boolean>(false);
   return (
     <ExcaliburContext.Provider
       value={{
@@ -273,10 +271,8 @@ export const ExcaliburProvider: React.FC<{ children: React.ReactNode }> = ({
         setPassword,
         passwordStrength,
         setPasswordStrength,
-        isThinking,
-        setIsThinking,
-        showModal,
-        setShowModal,
+        openModal,
+        setOpenModal,
       }}
     >
       {children}
@@ -290,4 +286,78 @@ export const useExcalibur = () => {
     throw new Error("useExcalibur must be used within an ExcaliburProvider");
   }
   return context;
+};
+// Definiere den Typ für den Kontext
+interface PasswordTestingContextType {
+  mojoGrow: boolean;
+  excaliburGrow: boolean;
+  colDelay: boolean;
+  onSite: boolean;
+  setMojoGrow: (value: boolean) => void;
+  setExcaliburGrow: (value: boolean) => void;
+  setColDelay: (value: boolean) => void;
+  setOnSite: (value: boolean) => void;
+  handleCardGrow: (value: boolean, useState: (value: boolean) => void) => void;
+  isThinking: boolean;
+  setIsThinking: (value: boolean) => void;
+}
+
+// Erstelle den Kontext
+const PasswordTestingContext = createContext<
+  PasswordTestingContextType | undefined
+>(undefined);
+
+// Custom Hook
+export const usePasswordTesting = () => {
+  const context = useContext(PasswordTestingContext);
+  if (!context) {
+    throw new Error(
+      "usePasswordTesting must be used within a PasswordTestingProvider"
+    );
+  }
+  return context;
+};
+
+// Provider-Komponente
+export const PasswordTestingProvider = ({
+  children,
+}: {
+  children: ReactNode;
+}) => {
+  const [mojoGrow, setMojoGrow] = useState(false);
+  const [excaliburGrow, setExcaliburGrow] = useState(false);
+  const [colDelay, setColDelay] = useState(false);
+  const [onSite, setOnSite] = useState(false);
+  const [isThinking, setIsThinking] = useState<boolean>(false);
+
+  const handleCardGrow = (
+    value: boolean,
+    useState: (value: boolean) => void
+  ) => {
+    if (!onSite) setOnSite(true);
+    useState(!value);
+    setTimeout(() => {
+      setColDelay(!colDelay);
+    }, 2000);
+  };
+
+  return (
+    <PasswordTestingContext.Provider
+      value={{
+        mojoGrow,
+        excaliburGrow,
+        colDelay,
+        onSite,
+        setMojoGrow,
+        setExcaliburGrow,
+        setColDelay,
+        setOnSite,
+        isThinking,
+        setIsThinking,
+        handleCardGrow,
+      }}
+    >
+      {children}
+    </PasswordTestingContext.Provider>
+  );
 };

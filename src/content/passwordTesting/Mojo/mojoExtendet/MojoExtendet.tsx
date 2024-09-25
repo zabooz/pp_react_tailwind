@@ -12,12 +12,9 @@ function mojoExtendet() {
 
   return (
     <div
-      className={`  absolute top-0 min-h-[696px]   right-0 w-[500px] hidden border-2  border-slate-700 dark:border-slate-600  ${
+      className={`  absolute top-0 min-h-[680px]   right-0 w-[500px] hidden border-2  border-slate-700 dark:border-slate-600  ${
         startAnimation ? "animate-fade-out" : "animate-fade-in"
-      }  lg:flex flex-col -z-10 cursor-default`}
-      onClick={(e) => {
-        e.stopPropagation();
-      }}
+      }  lg:flex flex-col -z-10 `}
     >
       <MojoExtendetTable />
       <div className="my-auto ms-auto flex flex-row-reverse items-center w-full justify-evenly">

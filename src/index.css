@@ -7,10 +7,6 @@
   background-color: #23bbb870;
 }
 
-/* src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer utilities {
   .vanish {

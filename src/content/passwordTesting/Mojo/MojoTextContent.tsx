@@ -17,8 +17,8 @@ function MojoTextContent() {
   );
 
   return (
-    <div>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
+    <div className="font-normal text-gray-700 dark:text-gray-400">
+      <p>
         Wähle einen Modus, um dein Passwort gegen Brute-Force-Angriffe zu
         testen. Im{" "}
         <span
@@ -41,6 +41,15 @@ function MojoTextContent() {
           Listen-Modus
         </span>{" "}
         prüft bekannte Passwörter.
+      </p>
+
+      <p className="my-4 hidden lg:block">
+        Beide Modi helfen dir, die Stärke deines Passworts zu bewerten und
+        potenzielle Schwachstellen aufzudecken
+      </p>
+      <p>
+        Wähle den Modus, der am besten zu deinen Sicherheitsanforderungen passt,
+        um deine Passwörter effektiv zu schützen.
       </p>
     </div>
   );

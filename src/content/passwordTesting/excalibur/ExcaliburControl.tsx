@@ -1,10 +1,13 @@
 import { Button, Progress, Spinner, TextInput } from "flowbite-react";
 import { excaliburTesting } from "./excaliburScript";
-import { useExcalibur } from "../../../contexts/Contexts";
+import { useExcalibur, usePasswordTesting } from "../../../contexts/Contexts";
 
-function ExcaliburControl() {
+interface Props {
+  className?: string;
+}
+
+function ExcaliburControl({ className }: Props) {
   const {
-    setIsThinking,
     setPassword,
     setPasswordStrength,
     setNerdStats,
@@ -12,11 +15,12 @@ function ExcaliburControl() {
     setModalLinkText,
     passwordStrength,
     password,
-    isThinking,
   } = useExcalibur();
 
+  const { isThinking, setIsThinking } = usePasswordTesting();
+
   return (
-    <div>
+    <div className={`${className} `}>
       <div className="my-4">
         <TextInput
           type="text"
@@ -35,27 +39,27 @@ function ExcaliburControl() {
         />
       </div>
       <Button
-            onClick={() =>
-              excaliburTesting({
-                setNerdStats,
-                password,
-                setShowModalLink,
-                setModalLinkText,
-                setPasswordStrength,
-                setIsThinking,
-              })
-            }
-            className="w-2/3 mx-auto mt-7 mb-4"
-          >
-            {isThinking ? (
-              <>
-                <Spinner aria-label="Spinner button example" size="sm" />
-                <span className="pl-3" id="spinner"></span>
-              </>
-            ) : (
-              <span className="pl-3">Start</span>
-            )}
-          </Button>
+        onClick={() =>
+          excaliburTesting({
+            setNerdStats,
+            password,
+            setShowModalLink,
+            setModalLinkText,
+            setPasswordStrength,
+            setIsThinking,
+          })
+        }
+        className="w-1/2 mx-auto mt-7 mb-7"
+      >
+        {isThinking ? (
+          <>
+            <Spinner aria-label="Spinner button example" size="sm" />
+            <span className="pl-3" id="spinner"></span>
+          </>
+        ) : (
+          <span className="pl-3">Start</span>
+        )}
+      </Button>
     </div>
   );
 }

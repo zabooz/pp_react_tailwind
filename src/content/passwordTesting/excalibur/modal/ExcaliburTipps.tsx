@@ -5,10 +5,10 @@ import { Points } from "../../../../interfaces/interfaces";
 import { useMemo } from "react";
 
 interface Props {
-  passwordStrength: {result: number, points: Points} | null;
+  passwordStrength: { result: number; points: Points } | null;
 }
 function ExcaliburTipps({ passwordStrength }: Props) {
-  const points = passwordStrength!.points;
+  const points = passwordStrength?.points;
   const { succesArray, failArray } = useMemo(() => {
     const succesArray: string[] = [];
     const failArray: string[] = [];
@@ -22,11 +22,11 @@ function ExcaliburTipps({ passwordStrength }: Props) {
     return { succesArray, failArray };
   }, [points]);
 
-  return (
-    <div>
+  return passwordStrength ? (
+    <div className="text-lg text-gray-700 dark:text-gray-400">
       <List>
         {succesArray.map((item, index) => (
-          <ListItem color="green" icon={FaCheck} key={index}>
+          <ListItem icon={FaCheck} key={index}>
             {item}
           </ListItem>
         ))}
@@ -39,6 +39,8 @@ function ExcaliburTipps({ passwordStrength }: Props) {
         ))}
       </List>
     </div>
+  ) : (
+    <p>Hier könnte ihre Werbung stehen</p>
   );
 }
 

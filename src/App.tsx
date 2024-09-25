@@ -1,7 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { Suspense } from "react";
 
-import { ClippyProvider, SlideProvider } from "./contexts/Contexts";
+import {
+  ClippyProvider,
+  PasswordTestingProvider,
+  SlideProvider,
+} from "./contexts/Contexts";
 
 import { NavbarCom } from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -39,7 +43,11 @@ function App() {
                   />
                   <Route
                     path="password-testing"
-                    element={<PasswordTesting />}
+                    element={
+                      <PasswordTestingProvider>
+                        <PasswordTesting />
+                      </PasswordTestingProvider>
+                    }
                   />
                   <Route
                     path="username-generating"

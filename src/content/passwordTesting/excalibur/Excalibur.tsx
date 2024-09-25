@@ -57,7 +57,7 @@ function Excalibur() {
       <Card
         className={`max-w-lg border-2  ${
           startAnimation ? "animate-fade-out" : "animate-fade-in"
-        } dark:hover:shadow-2xl transition-shadow duration-1000 min-h-[680px]  `}
+        }  min-h-[680px]  `}
         imgAlt="Excalibur Picture"
         imgSrc="/assets/passwordTesting/excalibur.webp"
       >
@@ -66,13 +66,13 @@ function Excalibur() {
         <ExcaliburControl className="lg:hidden" />
         <ModalLink />
         <Button
-          className="w-1/2 mx-auto"
+          className="w-1/2 mx-auto hidden lg:flex"
           onClick={() => {
             handleCardGrow(excaliburGrow, setExcaliburGrow);
             setCount(count + 1);
           }}
         >
-          testen
+          {excaliburGrow ? "Verkleinern" : "Vergrössern"}
         </Button>
       </Card>
       <ExcaliburExtendet />

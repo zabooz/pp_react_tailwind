@@ -12,7 +12,7 @@ function mojoExtendet() {
 
   return (
     <div
-      className={`  absolute top-0 min-h-[680px]   right-0 w-[500px] hidden border-2  border-slate-700 dark:border-slate-600  ${
+      className={`  absolute top-0 min-h-[680px] rounded-lg  right-0 w-[500px] hidden border-2  border-slate-700 dark:border-slate-700  ${
         startAnimation ? "animate-fade-out" : "animate-fade-in"
       }  lg:flex flex-col -z-10 `}
     >

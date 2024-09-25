@@ -64,12 +64,12 @@ export async function passwordStrengthTester(password: string) {
       textFalse: "Enthält kein Sonderzeichen.",
     },
     noSequence: {
-      value: false,
+      value: true,
       textTrue: "Hat keine aufeinander folgende Zeichen.",
       textFalse: "Hat aufeinander folgende Zeichen.",
     },
     noRepeat: {
-      value: false,
+      value: true,
       textTrue: "Keine wiederholenden Zeichen.",
       textFalse: "Enthält wiederholende Zeichen.",
     },
@@ -99,36 +99,31 @@ export async function passwordStrengthTester(password: string) {
   }
 
   password = password.toLowerCase();
-  for (let i = 0; i < password.length - 2; i++) {
+  for (let i = 0; i < password.length; i++) {
     const charCodeOne = password.charCodeAt(i);
     const charCodeTwo = password.charCodeAt(i + 1);
     const charCodeThree = password.charCodeAt(i + 2);
-
-    if (!(charCodeOne === charCodeTwo && charCodeTwo === charCodeThree)) {
-      points.noRepeat.value = true;
+    const charArr = password.split("")
+    console.log(charArr[i],charArr[i+2],charArr[i+2])
+    if (charArr[i] === charArr[i+1] && charArr[i+1] === charArr[i+2]) {
+      console.log(123)
+      points.noRepeat.value = false;
+    }
+    if ((charCodeOne + 1 === charCodeTwo && charCodeTwo + 1 === charCodeThree)) {
+      points.noSequence.value = false;
+    }
+    if ((charCodeOne - 1 === charCodeTwo && charCodeTwo - 1 === charCodeThree)) {
+      points.noSequence.value = false;
     }
 
-    if (!sonderzeichen.some((z) => password[i] === z)) {
-      if (
-        !(charCodeOne + 1 === charCodeTwo && charCodeTwo + 1 === charCodeThree)
-      ) {
-        points.noSequence.value = true;
-      }
-    }
-
-    if (!sonderzeichen.some((z) => password[i] === z)) {
-      if (
-        !(charCodeOne - 1 === charCodeTwo && charCodeTwo - 1 === charCodeThree)
-      ) {
-        points.noSequence.value = true;
-      }
-    }
   }
+
+
 
   try {
     const response = await aiApiCall(password, sysContent);
     points.hasNoWord.value = !response.toLowerCase().includes("yes");
-  } catch (error) {
+  } catch (error) { 
     console.error("API call error:", error);
     points.hasNoWord.value = false;
   }

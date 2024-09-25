@@ -103,27 +103,23 @@ export async function passwordStrengthTester(password: string) {
     const charCodeOne = password.charCodeAt(i);
     const charCodeTwo = password.charCodeAt(i + 1);
     const charCodeThree = password.charCodeAt(i + 2);
-    const charArr = password.split("")
-    console.log(charArr[i],charArr[i+2],charArr[i+2])
-    if (charArr[i] === charArr[i+1] && charArr[i+1] === charArr[i+2]) {
-      console.log(123)
+    const charArr = password.split("");
+
+    if (charArr[i] === charArr[i + 1] && charArr[i + 1] === charArr[i + 2]) {
       points.noRepeat.value = false;
     }
-    if ((charCodeOne + 1 === charCodeTwo && charCodeTwo + 1 === charCodeThree)) {
+    if (charCodeOne + 1 === charCodeTwo && charCodeTwo + 1 === charCodeThree) {
       points.noSequence.value = false;
     }
-    if ((charCodeOne - 1 === charCodeTwo && charCodeTwo - 1 === charCodeThree)) {
+    if (charCodeOne - 1 === charCodeTwo && charCodeTwo - 1 === charCodeThree) {
       points.noSequence.value = false;
     }
-
   }
-
-
 
   try {
     const response = await aiApiCall(password, sysContent);
     points.hasNoWord.value = !response.toLowerCase().includes("yes");
-  } catch (error) { 
+  } catch (error) {
     console.error("API call error:", error);
     points.hasNoWord.value = false;
   }

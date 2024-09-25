@@ -44,7 +44,7 @@ function CardCom({ data, index }: Props) {
         imgSrc={data.imgSrc}
         imgAlt={data.imgAlt}
         onClick={() => {
-          directionFunc(index);
+          directionFunc(index+1);
           setTimeout(() => {
             scrollToTop();
             navigate(data.btnLink);

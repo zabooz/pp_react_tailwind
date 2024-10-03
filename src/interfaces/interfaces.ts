@@ -102,7 +102,7 @@ export interface EnglishArrays {
   desserts: string[];
 }
 
-export interface Question {
+export interface Questions {
   question: string;
   answers: {
     answer: string;

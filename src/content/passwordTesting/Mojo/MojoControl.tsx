@@ -52,7 +52,7 @@ function MojoControl({ className }: Props) {
       const intervalId = setInterval(() => {
         spinner!.textContent = thinker();
       }, 1500);
-      setBruteThinkerInterval(intervalId);
+      setBruteThinkerInterval(intervalId as unknown as number);
     } else {
       clearInterval(bruteForceThinkerInterval);
     }

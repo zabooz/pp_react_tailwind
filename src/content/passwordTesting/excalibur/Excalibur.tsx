@@ -35,7 +35,7 @@ function Excalibur() {
       const number = setInterval(() => {
         spinner!.textContent = thinker();
       }, 1500);
-      setIntervalId(number);
+      setIntervalId(number as unknown as number);
     } else {
       clearInterval(intervalId);
     }

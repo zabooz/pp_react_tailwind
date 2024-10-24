@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useModalContext, useLoginContext } from "../../contexts/Contexts.tsx";
 import ForgotPassword from "./ForgotPassword.tsx";
 import { loginData } from "../../interfaces/interfaces";
-import { login } from "../../backend/login.ts";
+import { login } from "./backend/login.ts";
 interface Props {
   handleRegisterClick: () => void;
 }

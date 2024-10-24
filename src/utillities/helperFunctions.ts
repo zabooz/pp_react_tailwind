@@ -6,13 +6,9 @@ export function capitalizeFirstLetter(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-
-
 export function rndNumInLen(array: any[]) {
   return Math.floor(Math.random() * array.length);
 }
-
-
 
 export function getUniqueRandomWord(
   array: string[],
@@ -31,4 +27,3 @@ export function shuffleArray(array: any[]) {
   }
   return array;
 }
-

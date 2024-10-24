@@ -12,18 +12,18 @@ import Footer from "./components/Footer";
 import ContentBox from "./components/ContentBox";
 import QuickNav from "./components/quickNav/QuickNav";
 
-import LandingPage from "./content/landingPage/LandingPage";
-import PasswordGenerating from "./content/passwordGenerating/PasswordGenerating";
-import PasswordTesting from "./content/passwordTesting/passwordTesting";
-import UsernameGenerating from "./content/usernameGenerating/UsernameGenerating";
+import LandingPage from "./features/landingPage/LandingPage";
+import PasswordGenerating from "./features/passwordGenerating/PasswordGenerating";
+import PasswordTesting from "./features/passwordTesting/passwordTesting";
+import UsernameGenerating from "./features/usernameGenerating/UsernameGenerating";
 
-const AboutUs = React.lazy(() => import("./content/aboutUs/AboutUs"));
-const Project = React.lazy(() => import("./content/aboutUs/Project"));
-const Impressum = React.lazy(() => import("./content/legalStuff/Impressum"));
+const AboutUs = React.lazy(() => import("./features/aboutUs/AboutUs"));
+const Project = React.lazy(() => import("./features/aboutUs/Project"));
+const Impressum = React.lazy(() => import("./features/legalStuff/Impressum"));
 const PrivacyPolicy = React.lazy(
-  () => import("./content/legalStuff/PrivacyPolicy")
+  () => import("./features/legalStuff/PrivacyPolicy")
 );
-const DashBoard = React.lazy(() => import("./content/DashBoard/DashBoard"));
+const DashBoard = React.lazy(() => import("./features/DashBoard/DashBoard"));
 
 function App() {
   return (

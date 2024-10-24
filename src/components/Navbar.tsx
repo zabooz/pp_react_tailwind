@@ -6,7 +6,7 @@ import {
 } from "../contexts/Contexts";
 import { useNavigate } from "react-router-dom";
 import LoginRegister from "./login.register/LoginRegister";
-import { logOut } from "../backend/logout";
+import { logOut } from "./login.register/backend/logout";
 import {
   Avatar,
   Dropdown,

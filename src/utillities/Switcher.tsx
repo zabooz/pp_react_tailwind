@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { StorageData } from "../interfaces/interfaces";
-import { CopyToClipBoard } from "./CopyToClipBoard";
+import { CopyToClipBoard } from "../components/CopyToClipBoard";
 interface Props {
   data: StorageData[];
   app: string;

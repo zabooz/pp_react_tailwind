@@ -1,7 +1,7 @@
 import { Tabs, Drawer } from "flowbite-react";
 
 import { useClippyContext } from "../../contexts/Contexts";
-import { CopyToClipBoard } from "../../utillities/CopyToClipBoard";
+import { CopyToClipBoard } from "../CopyToClipBoard";
 import { FaRegTrashAlt } from "react-icons/fa";
 
 interface Props {

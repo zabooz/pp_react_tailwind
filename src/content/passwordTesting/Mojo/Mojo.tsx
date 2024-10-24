@@ -13,7 +13,7 @@ import MojoTextContent from "./MojoTextContent";
 import MojoAllResultsLink from "./MojoAllResultsLink";
 import MojoExtendetButton from "./mojoExtendet/MojoExtendetButton";
 
-import MojoTable from "./MojoTable";
+import MojoTable from "./mojoTable";
 import { Card } from "flowbite-react";
 import CardHeader from "../../../components/CardHeader";
 import MojoExtendet from "./mojoExtendet/MojoExtendet";

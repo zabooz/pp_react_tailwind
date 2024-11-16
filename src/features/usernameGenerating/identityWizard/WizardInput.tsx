@@ -13,7 +13,7 @@ function WizardInput({ wordList,value }: Props) {
   return (
     <div className="grid grid-cols-2 gap-4 my-2">
       <Label className="dark:text-gray-400 tracking-wider">{value}</Label>
-      <Select>
+      <Select className="wizard-input">
         {wordList.map((key, index) => (
           <option key={key} value={wordList[index]}>
             {translateKeysToGerman[key as keyof typeof translateKeysToGerman]}

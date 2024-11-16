@@ -9,6 +9,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 function WizardControl() {
     const [username, setUsername] = useState<HTMLSpanElement | null>(null);
     const intl = useIntl();
+    
     const adjectives: string[] = useMemo(() => {
         return Array.from(Object.keys(englishArraysObjAdjectives)).sort((a, b) => a.localeCompare(b));
     }, []);
@@ -18,7 +19,7 @@ function WizardControl() {
 
     const handleClick = () => {
         const choices: string[] = [];
-        document.querySelectorAll('select').forEach((item) => choices.push(item.value));
+        document.querySelectorAll('.wizard-input select').forEach((item) => choices.push(item.value));
         setUsername(userGenerator({ choices }));
     };
 
@@ -29,7 +30,7 @@ function WizardControl() {
             <WizardInput wordList={nouns} value={intl.formatMessage({ id: 'noun' ,defaultMessage: 'Begriff: '})}/>
             <div className="grid grid-cols-2 gap-4 mt-10">
                 <Button className=" w-2/3 bg-[#ea6954]" onClick={() => handleClick()}>
-                    <FormattedMessage id="generate-identity-wizard" defaultMessage="  Los Geht's" />
+                    <FormattedMessage id="generate-identity-wizard" defaultMessage="Los Geht's" />
                 </Button>
                 <WizardOutput username={username} />
             </div>

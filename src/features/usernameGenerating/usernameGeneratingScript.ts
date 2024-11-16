@@ -6,13 +6,14 @@ interface Props {
 
 export const userGenerator = ({ choices }: Props) => {
   let word: string = "";
-  choices.forEach((i) => {
-    const arr = englishArraysObj[i as keyof typeof englishArraysObj];
+  console.log(choices,englishArraysObj);
+  choices.forEach((choice) => {
+    const arr = englishArraysObj[choice as keyof typeof englishArraysObj];
     const token = arr[Math.floor(Math.random() * arr.length)] as string;
     word += token.slice(0, 1).toUpperCase() + token.slice(1);
   });
 
-  let spanFull = document.createElement("span");
+ const spanFull = document.createElement("span");
   word.split("").forEach((i) => {
     if (i === i.toUpperCase()) {
       const span = document.createElement("span");

@@ -1,198 +1,188 @@
 {
-    "GlyphControl.language.english": {
-        "defaultMessage": "English"
-    },
-    "GlyphControl.language.german": {
-        "defaultMessage": "German"
-    },
-    "GlyphControl.passwordLength": {
-        "defaultMessage": "Password Length:"
-    },
-    "MindMaestro.introText": {
-        "defaultMessage": "Mind Maestro is an interactive quiz where you get your unique username based on your answers to 5 targeted questions."
-    },
-    "MindMaestro.introText2": {
-        "defaultMessage": "Each question aims to explore specific preferences, interests, or personality traits. At the end of the quiz, a suitable username will be generated based on your answers, reflecting your individual personality."
-    },
-    "MindMaestro.introText3": {
-        "defaultMessage": "Be surprised and discover your personal Mind Maestro name!"
-    },
-    "arabic-selected": {
-        "defaultMessage": "Arabic"
-    },
-    "chinese-selected": {
-        "defaultMessage": "Chinese"
-    },
-    "english-selected": {
-        "defaultMessage": "English"
-    },
-    "find-username-nav": {
-        "defaultMessage": "Invent",
-        "description": "Find Username button text"
-    },
-    "find-username-nav-long": {
-        "defaultMessage": "your username",
-        "description": "Find Username button text long"
-    },
-    "french-selected": {
-        "defaultMessage": "French"
-    },
-    "generate-identity-wizard": {
-        "defaultMessage": "Let's Go"
-    },
-    "generate-password-nav": {
-        "defaultMessage": "Create",
-        "description": "Generate Password button text"
-    },
-    "generate-password-nav-long": {
-        "defaultMessage": "your password",
-        "description": "Generate Password button text long"
-    },
-    "german-selected": {
-        "defaultMessage": "German"
-    },
-    "hindi-selected": {
-        "defaultMessage": "Hindi"
-    },
-    "identityWizard.text": {
-        "defaultMessage": "Create a unique username by selecting up to two groups of adjectives and a group of nouns, or let the generator create a random combination for you."
-    },
-    "italian-selected": {
-        "defaultMessage": "Italian"
-    },
-    "japanese-selected": {
-        "defaultMessage": "Japanese"
-    },
-    "landing-cta-text": {
-        "defaultMessage": "Discover now how easy it is to increase your security!",
-        "description": "Landing page CTA text"
-    },
-    "landing-lead-text": {
-        "defaultMessage": "Say goodbye to boring passwords and usernames!",
-        "description": "Landing page lead text"
-    },
-    "landing-sub-lead-text": {
-        "defaultMessage": "Optimize your passwords and usernames with our tools. Test their strength, create new secure options, and find the perfect online name.",
-        "description": "Landing page sub-lead text"
-    },
-    "latin-selected": {
-        "defaultMessage": "Latin"
-    },
-    "login-menu": {
-        "defaultMessage": "Login",
-        "description": "Login button text"
-    },
-    "logout": {
-        "defaultMessage": "Logout",
-        "description": "Logout button text"
-    },
-    "logout-menu": {
-        "defaultMessage": "Logout"
-    },
-    "passwordGenerating.generate.button": {
-        "defaultMessage": "Let's Go"
-    },
-    "passwordGenerating.glyphSorcery.description": {
-        "defaultMessage": "The longer your password, the more secure it is. With Glyph Sorcery, you can quickly and easily create a password in your desired length that meets secure password guidelines."
-    },
-    "passwordGenerating.pictureMagic.button": {
-        "defaultMessage": "Let's Go"
-    },
-    "passwordGenerating.pictureMagic.pictureTextContent": {
-        "defaultMessage": "Simply upload a photo, and our app will turn it into a secure password"
-    },
-    "passwordGenerating.runeTranslator.generate": {
-        "defaultMessage": "Let's Go"
-    },
-    "passwordGenerating.runeTranslator.runeControl.limit": {
-        "defaultMessage": "*Max 12 characters"
-    },
-    "passwordGenerator.version": {
-        "defaultMessage": "Version"
-    },
-    "passwordTesting.excalibur.benefits": {
-        "defaultMessage": "By using Excalibur, you can strengthen your password protection and improve your security."
-    },
-    "passwordTesting.excalibur.button.start": {
-        "defaultMessage": "Start"
-    },
-    "passwordTesting.excalibur.description": {
-        "defaultMessage": "Excalibur is a tool that checks the strength of your password. It evaluates factors like length, complexity, and predictability and provides you with a comprehensive assessment of your password security."
-    },
-    "passwordTesting.excalibur.grow": {
-        "defaultMessage": "Grow"
-    },
-    "passwordTesting.excalibur.howItWorks": {
-        "defaultMessage": "With this tool, you can ensure that your password is well protected against brute-force attacks and common password lists."
-    },
-    "passwordTesting.excalibur.shrink": {
-        "defaultMessage": "Shrink"
-    },
-    "passwordTesting.mojo.allResultsLink": {
-        "defaultMessage": "See all results!"
-    },
-    "passwordTesting.mojo.textContent": {
-        "defaultMessage": "Choose a mode to test your password against brute-force attacks. In the"
-    },
-    "passwordTesting.mojo.textContent.description": {
-        "defaultMessage": "Both modes help you assess the strength of your password and uncover potential vulnerabilities"
-    },
-    "passwordTesting.mojo.textContent.list": {
-        "defaultMessage": "List Mode"
-    },
-    "passwordTesting.mojo.textContent.list.description": {
-        "defaultMessage": "tests known passwords"
-    },
-    "passwordTesting.mojo.textContent.recommendation": {
-        "defaultMessage": "Choose the mode that best suits your security needs to effectively protect your passwords."
-    },
-    "passwordTesting.mojo.textContent.simple": {
-        "defaultMessage": "Simple Mode"
-    },
-    "passwordTesting.mojo.textContent.simple.description": {
-        "defaultMessage": "tries all possible characters. The"
-    },
-    "passwordTesting.mojoTable.guesses": {
-        "defaultMessage": "Guesses"
-    },
-    "passwordTesting.mojoTable.password": {
-        "defaultMessage": "Password"
-    },
-    "passwordTesting.mojoTable.time": {
-        "defaultMessage": "Time"
-    },
-    "pictureMagic.table": {
-        "defaultMessage": "Password"
-    },
-    "pictureMagic.table.image": {
-        "defaultMessage": "Image"
-    },
-    "runeText-description": {
-        "defaultMessage": "Leetspeak is a type of text transformation where certain letters and characters are replaced by others. Try it out to better protect your password.",
-        "description": "Description of Leetspeak"
-    },
-    "runeText-link": {
-        "defaultMessage": "Leetspeak",
-        "description": "Link to Leetspeak drawer"
-    },
-    "runeTranslator.catchPhrase": {
-        "defaultMessage": "Length"
-    },
-    "russian-selected": {
-        "defaultMessage": "Russian"
-    },
-    "spanish-selected": {
-        "defaultMessage": "Spanish"
-    },
-    "test-password-nav": {
-        "defaultMessage": "Test",
-        "description": "Test Password button text"
-    },
-    "test-password-nav-long": {
-        "defaultMessage": "your password",
-        "description": "Test Password button text long"
-    },
-    "usernameGenerating.mindMaestro.next": {
-        "defaultMessage": "Next"
-    }
+  "GlyphControl.language.english": {
+    "defaultMessage": "English"
+  },
+  "GlyphControl.language.german": {
+    "defaultMessage": "German"
+  },
+  "GlyphControl.passwordLength": {
+    "defaultMessage": "Password Length:"
+  },
+  "MindMaestro.introText": {
+    "defaultMessage": "Mind Maestro is an interactive quiz where you get your unique username based on your answers to 5 targeted questions."
+  },
+  "MindMaestro.introText2": {
+    "defaultMessage": "Each question aims to explore specific preferences, interests, or personality traits. At the end of the quiz, a suitable username will be generated from your answers that reflects your individual personality."
+  },
+  "MindMaestro.introText3": {
+    "defaultMessage": "Be surprised and discover your personal Mind Maestro name!"
+  },
+  "english-selected": {
+    "defaultMessage": "English"
+  },
+  "find-username-nav": {
+    "defaultMessage": "Create",
+    "description": "Find Username button text"
+  },
+  "find-username-nav-long": {
+    "defaultMessage": "your username",
+    "description": "Find Username button text long"
+  },
+  "french-selected": {
+    "defaultMessage": "French"
+  },
+  "generate-identity-wizard": {
+    "defaultMessage": "Let's Go"
+  },
+  "generate-password-nav": {
+    "defaultMessage": "Generate",
+    "description": "Generate Password button text"
+  },
+  "generate-password-nav-long": {
+    "defaultMessage": "your password",
+    "description": "Generate Password button text long"
+  },
+  "german-selected": {
+    "defaultMessage": "German"
+  },
+  "identityWizard.text": {
+    "defaultMessage": "Create a unique username by selecting up to two groups of adjectives and one group of nouns, or let the generator create a random combination for you."
+  },
+  "landing-cta-text": {
+    "defaultMessage": "Discover now how easy it is to improve your security!",
+    "description": "Landing page CTA text"
+  },
+  "landing-lead-text": {
+    "defaultMessage": "Say goodbye to boring passwords and names!",
+    "description": "Landing page lead text"
+  },
+  "landing-sub-lead-text": {
+    "defaultMessage": "Optimize your passwords and usernames with our tools. Test their strength, create new and secure options, and find the perfect online name.",
+    "description": "Landing page sub-lead text"
+  },
+  "latin-selected": {
+    "defaultMessage": "Latin"
+  },
+  "login-menu": {
+    "defaultMessage": "Login",
+    "description": "Login button text"
+  },
+  "logout": {
+    "defaultMessage": "Logout",
+    "description": "Logout button text"
+  },
+  "logout-menu": {
+    "defaultMessage": "Logout"
+  },
+  "password.gen.btn": {
+    "defaultMessage": "Create Password"
+  },
+  "password.gen.subtitle": {
+    "defaultMessage": "a secure password"
+  },
+  "password.gen.text": {
+    "defaultMessage": "Use our three tools to generate the ideal password: Picture Magic turns images into passwords, Rune Translator converts text into Leetspeak, and GlyphSorcery creates random, secure passwords"
+  },
+  "password.gen.title": {
+    "defaultMessage": "Create"
+  },
+  "password.test.btn": {
+    "defaultMessage": "Test Password"
+  },
+  "password.test.subtitle": {
+    "defaultMessage": "the strength of your password"
+  },
+  "password.test.text": {
+    "defaultMessage": "Use our evaluation tool Excalibur to test your password strength and simulate brute-force attacks with Mojo to see how long it would take to crack your password."
+  },
+  "password.test.title": {
+    "defaultMessage": "Test"
+  },
+  "passwordGenerating.generate.button": {
+    "defaultMessage": "Let's Go"
+  },
+  "passwordGenerating.glyphSorcery.description": {
+    "defaultMessage": "The longer your password is, the more secure it is. With Glyph Sorcery, you can quickly and easily create a password of your desired length that meets the security password guidelines."
+  },
+  "passwordGenerating.lang.leet.paragraphLeet1": {
+    "defaultMessage": "Leetspeak, also known as '1337 speak', replaces letters with numbers and symbols. Originally, it was a secret language for hackers to hide from automated systems. Users saw it as a creative form of expression and used it to encrypt messages."
+  },
+  "passwordGenerating.lang.leet.paragraphLeet2": {
+    "defaultMessage": "Leetspeak replaces letters with similar-looking characters. For example, 'A' becomes '4', 'E' becomes '3', and 'I' becomes '1'. Words like 'Leet' become 'L33t', giving communication a creative flair."
+  },
+  "passwordGenerating.lang.leet.paragraphLeet3": {
+    "defaultMessage": "Leetspeak can enhance password security as it becomes harder to guess passwords. Using numbers instead of letters makes passwords less predictable, which has become more important with increasing cyber threats."
+  },
+  "passwordGenerating.lang.leet.paragraphLeet4": {
+    "defaultMessage": "Despite the benefits, Leetspeak is not foolproof. Predictable patterns make it easier for attackers to guess letters. Additionally, readability can be compromised, which can be problematic in some contexts. Nevertheless, it remains a form of creativity in online communities."
+  },
+  "passwordGenerating.lang.leet.paragraphLeet5": {
+    "defaultMessage": "Dumbledore dies."
+  },
+  "passwordGenerating.lang.list.paragraphList1": {
+    "defaultMessage": "In a simple brute-force attack, an attacker systematically tries to guess a password or secret key by testing all possible combinations. The attacker typically starts with the simplest combinations, such as '0000' or '1234', and works through all possible combinations until the correct one is found."
+  },
+  "passwordGenerating.lang.list.paragraphList2": {
+    "defaultMessage": "Goal: The attacker has a specific goal, such as accessing a user account, an encrypted file, or a protected system."
+  },
+  "passwordGenerating.lang.list.paragraphList3": {
+    "defaultMessage": "Combination Selection: The attacker generates all possible combinations of characters that can be used for the password. For a four-digit numeric password, this would be all combinations from '0000' to '9999'."
+  },
+  "passwordGenerating.lang.list.paragraphList4": {
+    "defaultMessage": "Trial: The attacker tries each combination until the correct one is found and access is gained. Depending on the length of the password and the character set used, this process can be completed quickly or take a long time."
+  },
+  "passwordGenerating.lang.simple.paragraphSimple1": {
+    "defaultMessage": "In a simple brute-force attack, an attacker systematically tries to guess a password or secret key by testing all possible combinations. The attacker typically starts with the simplest combinations, such as '0000' or '1234', and works through all possible combinations until the correct one is found."
+  },
+  "passwordGenerating.lang.simple.paragraphSimple2": {
+    "defaultMessage": "Goal: The attacker has a specific goal, such as accessing a user account, an encrypted file, or a protected system."
+  },
+  "passwordGenerating.lang.simple.paragraphSimple3": {
+    "defaultMessage": "Combination Selection: The attacker generates all possible combinations of characters that can be used for the password. For a four-digit numeric password, this would be all combinations from '0000' to '9999'."
+  },
+  "passwordGenerating.pictureMagic.button": {
+    "defaultMessage": "Let's Go"
+  },
+  "passwordGenerating.pictureMagic.pictureTextContent": {
+    "defaultMessage": "Simply upload a photo, and our app will turn it into a secure password"
+  },
+  "passwordGenerating.runeTranslator.generate": {
+    "defaultMessage": "Let's Go"
+  },
+  "passwordGenerating.runeTranslator.runeControl.limit": {
+    "defaultMessage": "*Maximum 12 characters"
+  },
+  "passwordGenerator.version": {
+    "defaultMessage": "Version"
+  },
+  "passwordTesting.excalibur.benefits": {
+    "defaultMessage": "By using Excalibur, you can better protect your password and improve your security."
+  },
+  "passwordTesting.excalibur.button.start": {
+    "defaultMessage": "Start"
+  },
+  "passwordTesting.excalibur.description": {
+    "defaultMessage": "Excalibur is a tool that checks the strength of your password. It evaluates factors such as length, complexity, and predictability and provides you with a comprehensive assessment of your password security."
+  },
+  "passwordTesting.excalibur.grow": {
+    "defaultMessage": "Expand"
+  },
+  "passwordTesting.excalibur.howItWorks": {
+    "defaultMessage": "With this tool, you can ensure that your password is well protected against brute-force attacks and common password lists."
+  },
+  "passwordTesting.excalibur.shrink": {
+    "defaultMessage": "Shrink"
+  },
+  "passwordTesting.mojo.allResultsLink": {
+    "defaultMessage": "See all results!"
+  },
+  "passwordTesting.mojo.textContent": {
+    "defaultMessage": "Choose a mode to test your password against brute-force attacks. In"
+  },
+  "passwordTesting.mojo.textContent.description": {
+    "defaultMessage": "Both modes help you assess your password strength under different conditions."
+  },
+  "spanish-selected": {
+    "defaultMessage": "Spanish"
+  }
 }

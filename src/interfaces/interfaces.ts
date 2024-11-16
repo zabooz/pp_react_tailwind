@@ -1,7 +1,13 @@
 export interface DrawerData {
   title: string;
-  paragraphs: string[];
+  paragraphs: Paragraph[];
 }
+
+interface Paragraph {
+    id: string;
+    defaultMessage: string;
+}
+
 export interface registryData {
   username: string;
   password: string;

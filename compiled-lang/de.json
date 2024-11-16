@@ -35,18 +35,6 @@
       "value": "Lass dich überraschen und entdecke deinen persönlichen Mind Maestro-Namen!"
     }
   ],
-  "arabic-selected": [
-    {
-      "type": 0,
-      "value": "Arabisch"
-    }
-  ],
-  "chinese-selected": [
-    {
-      "type": 0,
-      "value": "Chinesisch"
-    }
-  ],
   "english-selected": [
     {
       "type": 0,
@@ -95,28 +83,10 @@
       "value": "Deutsch"
     }
   ],
-  "hindi-selected": [
-    {
-      "type": 0,
-      "value": "Hindi"
-    }
-  ],
   "identityWizard.text": [
     {
       "type": 0,
       "value": "Erstelle einen einzigartigen Benutzernamen, indem du bis zu zwei Gruppenvon Adjektiven und eine Gruppe von Substantiven auswählst, oder lass den Generator eine zufällige Kombination für dich erstellen."
-    }
-  ],
-  "italian-selected": [
-    {
-      "type": 0,
-      "value": "Italienisch"
-    }
-  ],
-  "japanese-selected": [
-    {
-      "type": 0,
-      "value": "Japanisch"
     }
   ],
   "landing-cta-text": [
@@ -161,6 +131,54 @@
       "value": "Ausloggen"
     }
   ],
+  "password.gen.btn": [
+    {
+      "type": 0,
+      "value": "Erstelle Passwort"
+    }
+  ],
+  "password.gen.subtitle": [
+    {
+      "type": 0,
+      "value": "ein sicheres Passwort"
+    }
+  ],
+  "password.gen.text": [
+    {
+      "type": 0,
+      "value": "Nutze unsere drei Tools, um das ideale Passwort zu generieren: Picture Magic verwandelt Bilder in Passwörter, Rune Translator konvertiert Texte in Leetspeak und GlyphSorcery erstellt zufällige, sichere Passwörter"
+    }
+  ],
+  "password.gen.title": [
+    {
+      "type": 0,
+      "value": "Erstelle"
+    }
+  ],
+  "password.test.btn": [
+    {
+      "type": 0,
+      "value": "Teste Passwort"
+    }
+  ],
+  "password.test.subtitle": [
+    {
+      "type": 0,
+      "value": "die Stärke deines Passworts"
+    }
+  ],
+  "password.test.text": [
+    {
+      "type": 0,
+      "value": "Verwende unser Bewertungstool Excalibur, um die Stärke deines Passworts zu testen und simuliere Brute-Force-Angriffe mit Mojo, um zu sehen, wie lange es dauern würde, bis dein Passwort geknackt wird."
+    }
+  ],
+  "password.test.title": [
+    {
+      "type": 0,
+      "value": "Teste"
+    }
+  ],
   "passwordGenerating.generate.button": [
     {
       "type": 0,
@@ -171,6 +189,78 @@
     {
       "type": 0,
       "value": "Je länger dein Passwort ist, desto sicherer ist es. Mit Glyph Sourcery kannst du dir schnell und unkompliziert ein Passwort in deiner gewünschten Länge erstellen, die den Richtlinien für sichere Passwörter entsprechen."
+    }
+  ],
+  "passwordGenerating.lang.leet.paragraphLeet1": [
+    {
+      "type": 0,
+      "value": "Leetspeak, auch '1337 speak' genannt, ersetzt Buchstaben durch Zahlen und Symbole. Ursprünglich war es eine Geheimsprache für Hacker, um sich vor automatisierten Systemen zu verstecken. Nutzer sahen darin eine kreative Ausdrucksform und nutzten es, um Nachrichten zu verschlüsseln."
+    }
+  ],
+  "passwordGenerating.lang.leet.paragraphLeet2": [
+    {
+      "type": 0,
+      "value": "Leetspeak ersetzt Buchstaben durch ähnlich aussehende Zeichen. Zum Beispiel wird 'A' durch '4', 'E' durch '3' und 'I' durch '1' ersetzt. Wörter wie 'Leet' werden zu 'L33t', was der Kommunikation eine kreative Note verleiht."
+    }
+  ],
+  "passwordGenerating.lang.leet.paragraphLeet3": [
+    {
+      "type": 0,
+      "value": "Leetspeak kann die Passwortsicherheit erhöhen, da es schwieriger wird, Passwörter zu erraten. Die Verwendung von Zahlen statt Buchstaben macht Passwörter weniger vorhersehbar, was angesichts zunehmender Cyberbedrohungen an Bedeutung gewonnen hat."
+    }
+  ],
+  "passwordGenerating.lang.leet.paragraphLeet4": [
+    {
+      "type": 0,
+      "value": "Trotz der Vorteile ist Leetspeak nicht unfehlbar. Vorhersehbare Muster erleichtern Angreifern das Erraten von Buchstaben. Außerdem kann die Lesbarkeit eingeschränkt sein, was in manchen Kontexten problematisch ist. Dennoch bleibt es ein Ausdruck von Kreativität in Online-Communities."
+    }
+  ],
+  "passwordGenerating.lang.leet.paragraphLeet5": [
+    {
+      "type": 0,
+      "value": "Dumbledore stirbt."
+    }
+  ],
+  "passwordGenerating.lang.list.paragraphList1": [
+    {
+      "type": 0,
+      "value": "Bei einem einfachen Bruteforce-Angriff versucht ein Angreifer systematisch, ein Passwort oder einen geheimen Schlüssel zu erraten, indem er alle möglichen Kombinationen nacheinander ausprobiert. Der Angreifer beginnt in der Regel mit den einfachsten Kombinationen, wie '0000' oder '1234', und arbeitet sich dann durch alle möglichen Kombinationen, bis er die richtige gefunden hat."
+    }
+  ],
+  "passwordGenerating.lang.list.paragraphList2": [
+    {
+      "type": 0,
+      "value": "Zielsetzung: Der Angreifer hat ein spezifisches Ziel, wie z.B. den Zugriff auf ein Benutzerkonto, eine verschlüsselte Datei oder ein geschütztes System."
+    }
+  ],
+  "passwordGenerating.lang.list.paragraphList3": [
+    {
+      "type": 0,
+      "value": "Kombinationsauswahl: Der Angreifer generiert alle möglichen Kombinationen aus Zeichen, die für das Passwort verwendet werden können. Bei einem vierstelligen numerischen Passwort wären dies z.B. alle Kombinationen von '0000' bis '9999'."
+    }
+  ],
+  "passwordGenerating.lang.list.paragraphList4": [
+    {
+      "type": 0,
+      "value": "Ausprobieren: Der Angreifer probiert jede Kombination aus, bis er die richtige findet und Zugang erhält. Je nachdem, wie lang das Passwort ist und welchen Zeichensatz es verwendet, kann dieser Prozess schnell abgeschlossen sein oder sehr lange dauern."
+    }
+  ],
+  "passwordGenerating.lang.simple.paragraphSimple1": [
+    {
+      "type": 0,
+      "value": "Bei einem einfachen Bruteforce-Angriff versucht ein Angreifer systematisch, ein Passwort oder einen geheimen Schlüssel zu erraten, indem er alle möglichen Kombinationen nacheinander ausprobiert. Der Angreifer beginnt in der Regel mit den einfachsten Kombinationen, wie '0000' oder '1234', und arbeitet sich dann durch alle möglichen Kombinationen, bis er die richtige gefunden hat."
+    }
+  ],
+  "passwordGenerating.lang.simple.paragraphSimple2": [
+    {
+      "type": 0,
+      "value": "Zielsetzung: Der Angreifer hat ein spezifisches Ziel, wie z.B. den Zugriff auf ein Benutzerkonto, eine verschlüsselte Datei oder ein geschütztes System."
+    }
+  ],
+  "passwordGenerating.lang.simple.paragraphSimple3": [
+    {
+      "type": 0,
+      "value": "Kombinationsauswahl: Der Angreifer generiert alle möglichen Kombinationen aus Zeichen, die für das Passwort verwendet werden können. Bei einem vierstelligen numerischen Passwort wären dies z.B. alle Kombinationen von '0000' bis '9999'."
     }
   ],
   "passwordGenerating.pictureMagic.button": [
@@ -335,12 +425,6 @@
       "value": "Länge"
     }
   ],
-  "russian-selected": [
-    {
-      "type": 0,
-      "value": "Russisch"
-    }
-  ],
   "spanish-selected": [
     {
       "type": 0,
@@ -357,6 +441,30 @@
     {
       "type": 0,
       "value": "dein Passwort"
+    }
+  ],
+  "username.gen.btn": [
+    {
+      "type": 0,
+      "value": "Erstelle Username"
+    }
+  ],
+  "username.gen.subtitle": [
+    {
+      "type": 0,
+      "value": "deinen Usernamen"
+    }
+  ],
+  "username.gen.text": [
+    {
+      "type": 0,
+      "value": "Nutze unsere beiden Tools, um den perfekten Benutzernamen zu erstellen: Identity Wizardry generiert zufällige Benutzernamen basierend auf deinen Parametern, und Mind Maestro erstellt kreative Namen durch ein unterhaltsames Quiz."
+    }
+  ],
+  "username.gen.title": [
+    {
+      "type": 0,
+      "value": "Erfinde"
     }
   ],
   "usernameGenerating.mindMaestro.next": [

@@ -1,5 +1,5 @@
 import { Select } from 'flowbite-react';
-import { useLanguageContext } from '../contexts/languageContext/languageContext';
+import { Locale, useLanguageContext } from '../contexts/languageContext/languageContext';
 
 import { FormattedMessage } from 'react-intl';
 
@@ -7,7 +7,8 @@ function LanguageSwitch() {
     const { setLanguage } = useLanguageContext();
     return (
         <div>
-            <Select id="countries" size={1} className="p-[0rem]" onChange={(e) => setLanguage(e.target.value)}>
+
+            <Select id="countries" size={1} className="p-[0rem]" onChange={(e) => setLanguage(e.target.value as Locale)}> 
                 <option value={'en'}>
                     <FormattedMessage id="english-selected" defaultMessage="Englisch" />
                 </option>

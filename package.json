@@ -7,10 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "extract": "formatjs extract",
+    "compile": "formatjs compile"
   },
   "dependencies": {
-    "@changesets/cli": "^2.27.9",
     "@zxcvbn-ts/core": "^3.0.4",
     "@zxcvbn-ts/language-common": "^3.0.4",
     "@zxcvbn-ts/language-de": "^3.0.2",
@@ -20,16 +21,20 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-head": "^3.4.2",
+    "react-intl": "^6.8.7",
     "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.9",
     "@eslint/js": "^9.9.0",
+    "@formatjs/cli": "^6.3.8",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/react-helmet": "^6.1.11",
     "@vite-pwa/assets-generator": "^0.2.6",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
+    "babel-plugin-formatjs": "^10.5.24",
     "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",

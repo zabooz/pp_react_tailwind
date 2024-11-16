@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import { leetspeakTextShortened } from "../../../data/drawer/drawerData";
 import { DrawerData } from "../../../interfaces/interfaces";
 
@@ -12,11 +13,13 @@ function RuneText({ handleDrawerClick }: Props) {
         className="font-bold cursor-pointer dark:text-[#0ea5e9] text-[#ea6954] underline underline-offset-2"
         onClick={() => handleDrawerClick(leetspeakTextShortened)}
       >
-        Leetspeak
+        <FormattedMessage id="runeText-link"
+          defaultMessage="Leetspeak"
+          description={"Link to Leetspeak drawer"} />
       </span>{" "}
-      ersetzt die Buchstaben und Zeichen deine Passwortes mit anderen Zeichen,
-      so dass du besser vor Angriffen geschützt bist. Probier aus, welche
-      Variante - von einfach bis stark verändert - du bevorzugst.
+      <FormattedMessage id="runeText-description"
+        defaultMessage="Leetspeak ist eine Art von Textumwandlung, bei der bestimmte Buchstaben und Zeichen durch andere ersetzt werden. Probier es aus, um dein Passwort besser zu schützen."
+        description={"Description of Leetspeak"} />{" "}
     </p>
   );
 }

@@ -4,7 +4,6 @@ interface Props {
 }
 
 function CardHeader({ title, top }: Props) {
-  console.log("hello world")
   return (
     <div className="relative">
       <div className="absolute  flex items-center justify-center w-full"

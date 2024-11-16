@@ -13,7 +13,7 @@ function LandingPage() {
       const result = await autoLogin();
       if (result) setLoggedIn(true);
     })();
-  }, []);
+  }, [setLoggedIn]);
 
   const [hoverTimer, setHoverTimer] = useState<boolean>(false);
 

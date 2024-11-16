@@ -1,0 +1,368 @@
+{
+  "GlyphControl.language.english": [
+    {
+      "type": 0,
+      "value": "English"
+    }
+  ],
+  "GlyphControl.language.german": [
+    {
+      "type": 0,
+      "value": "German"
+    }
+  ],
+  "GlyphControl.passwordLength": [
+    {
+      "type": 0,
+      "value": "Password Length:"
+    }
+  ],
+  "MindMaestro.introText": [
+    {
+      "type": 0,
+      "value": "Mind Maestro is an interactive quiz where you get your unique username based on your answers to 5 targeted questions."
+    }
+  ],
+  "MindMaestro.introText2": [
+    {
+      "type": 0,
+      "value": "Each question aims to explore specific preferences, interests, or personality traits. At the end of the quiz, a suitable username will be generated based on your answers, reflecting your individual personality."
+    }
+  ],
+  "MindMaestro.introText3": [
+    {
+      "type": 0,
+      "value": "Be surprised and discover your personal Mind Maestro name!"
+    }
+  ],
+  "arabic-selected": [
+    {
+      "type": 0,
+      "value": "Arabic"
+    }
+  ],
+  "chinese-selected": [
+    {
+      "type": 0,
+      "value": "Chinese"
+    }
+  ],
+  "english-selected": [
+    {
+      "type": 0,
+      "value": "English"
+    }
+  ],
+  "find-username-nav": [
+    {
+      "type": 0,
+      "value": "Invent"
+    }
+  ],
+  "find-username-nav-long": [
+    {
+      "type": 0,
+      "value": "your username"
+    }
+  ],
+  "french-selected": [
+    {
+      "type": 0,
+      "value": "French"
+    }
+  ],
+  "generate-identity-wizard": [
+    {
+      "type": 0,
+      "value": "Let's Go"
+    }
+  ],
+  "generate-password-nav": [
+    {
+      "type": 0,
+      "value": "Create"
+    }
+  ],
+  "generate-password-nav-long": [
+    {
+      "type": 0,
+      "value": "your password"
+    }
+  ],
+  "german-selected": [
+    {
+      "type": 0,
+      "value": "German"
+    }
+  ],
+  "hindi-selected": [
+    {
+      "type": 0,
+      "value": "Hindi"
+    }
+  ],
+  "identityWizard.text": [
+    {
+      "type": 0,
+      "value": "Create a unique username by selecting up to two groups of adjectives and a group of nouns, or let the generator create a random combination for you."
+    }
+  ],
+  "italian-selected": [
+    {
+      "type": 0,
+      "value": "Italian"
+    }
+  ],
+  "japanese-selected": [
+    {
+      "type": 0,
+      "value": "Japanese"
+    }
+  ],
+  "landing-cta-text": [
+    {
+      "type": 0,
+      "value": "Discover now how easy it is to increase your security!"
+    }
+  ],
+  "landing-lead-text": [
+    {
+      "type": 0,
+      "value": "Say goodbye to boring passwords and usernames!"
+    }
+  ],
+  "landing-sub-lead-text": [
+    {
+      "type": 0,
+      "value": "Optimize your passwords and usernames with our tools. Test their strength, create new secure options, and find the perfect online name."
+    }
+  ],
+  "latin-selected": [
+    {
+      "type": 0,
+      "value": "Latin"
+    }
+  ],
+  "login-menu": [
+    {
+      "type": 0,
+      "value": "Login"
+    }
+  ],
+  "logout": [
+    {
+      "type": 0,
+      "value": "Logout"
+    }
+  ],
+  "logout-menu": [
+    {
+      "type": 0,
+      "value": "Logout"
+    }
+  ],
+  "passwordGenerating.generate.button": [
+    {
+      "type": 0,
+      "value": "Let's Go"
+    }
+  ],
+  "passwordGenerating.glyphSorcery.description": [
+    {
+      "type": 0,
+      "value": "The longer your password, the more secure it is. With Glyph Sorcery, you can quickly and easily create a password in your desired length that meets secure password guidelines."
+    }
+  ],
+  "passwordGenerating.pictureMagic.button": [
+    {
+      "type": 0,
+      "value": "Let's Go"
+    }
+  ],
+  "passwordGenerating.pictureMagic.pictureTextContent": [
+    {
+      "type": 0,
+      "value": "Simply upload a photo, and our app will turn it into a secure password"
+    }
+  ],
+  "passwordGenerating.runeTranslator.generate": [
+    {
+      "type": 0,
+      "value": "Let's Go"
+    }
+  ],
+  "passwordGenerating.runeTranslator.runeControl.limit": [
+    {
+      "type": 0,
+      "value": "*Max 12 characters"
+    }
+  ],
+  "passwordGenerator.version": [
+    {
+      "type": 0,
+      "value": "Version"
+    }
+  ],
+  "passwordTesting.excalibur.benefits": [
+    {
+      "type": 0,
+      "value": "By using Excalibur, you can strengthen your password protection and improve your security."
+    }
+  ],
+  "passwordTesting.excalibur.button.start": [
+    {
+      "type": 0,
+      "value": "Start"
+    }
+  ],
+  "passwordTesting.excalibur.description": [
+    {
+      "type": 0,
+      "value": "Excalibur is a tool that checks the strength of your password. It evaluates factors like length, complexity, and predictability and provides you with a comprehensive assessment of your password security."
+    }
+  ],
+  "passwordTesting.excalibur.grow": [
+    {
+      "type": 0,
+      "value": "Grow"
+    }
+  ],
+  "passwordTesting.excalibur.howItWorks": [
+    {
+      "type": 0,
+      "value": "With this tool, you can ensure that your password is well protected against brute-force attacks and common password lists."
+    }
+  ],
+  "passwordTesting.excalibur.shrink": [
+    {
+      "type": 0,
+      "value": "Shrink"
+    }
+  ],
+  "passwordTesting.mojo.allResultsLink": [
+    {
+      "type": 0,
+      "value": "See all results!"
+    }
+  ],
+  "passwordTesting.mojo.textContent": [
+    {
+      "type": 0,
+      "value": "Choose a mode to test your password against brute-force attacks. In the"
+    }
+  ],
+  "passwordTesting.mojo.textContent.description": [
+    {
+      "type": 0,
+      "value": "Both modes help you assess the strength of your password and uncover potential vulnerabilities"
+    }
+  ],
+  "passwordTesting.mojo.textContent.list": [
+    {
+      "type": 0,
+      "value": "List Mode"
+    }
+  ],
+  "passwordTesting.mojo.textContent.list.description": [
+    {
+      "type": 0,
+      "value": "tests known passwords"
+    }
+  ],
+  "passwordTesting.mojo.textContent.recommendation": [
+    {
+      "type": 0,
+      "value": "Choose the mode that best suits your security needs to effectively protect your passwords."
+    }
+  ],
+  "passwordTesting.mojo.textContent.simple": [
+    {
+      "type": 0,
+      "value": "Simple Mode"
+    }
+  ],
+  "passwordTesting.mojo.textContent.simple.description": [
+    {
+      "type": 0,
+      "value": "tries all possible characters. The"
+    }
+  ],
+  "passwordTesting.mojoTable.guesses": [
+    {
+      "type": 0,
+      "value": "Guesses"
+    }
+  ],
+  "passwordTesting.mojoTable.password": [
+    {
+      "type": 0,
+      "value": "Password"
+    }
+  ],
+  "passwordTesting.mojoTable.time": [
+    {
+      "type": 0,
+      "value": "Time"
+    }
+  ],
+  "pictureMagic.table": [
+    {
+      "type": 0,
+      "value": "Password"
+    }
+  ],
+  "pictureMagic.table.image": [
+    {
+      "type": 0,
+      "value": "Image"
+    }
+  ],
+  "runeText-description": [
+    {
+      "type": 0,
+      "value": "Leetspeak is a type of text transformation where certain letters and characters are replaced by others. Try it out to better protect your password."
+    }
+  ],
+  "runeText-link": [
+    {
+      "type": 0,
+      "value": "Leetspeak"
+    }
+  ],
+  "runeTranslator.catchPhrase": [
+    {
+      "type": 0,
+      "value": "Length"
+    }
+  ],
+  "russian-selected": [
+    {
+      "type": 0,
+      "value": "Russian"
+    }
+  ],
+  "spanish-selected": [
+    {
+      "type": 0,
+      "value": "Spanish"
+    }
+  ],
+  "test-password-nav": [
+    {
+      "type": 0,
+      "value": "Test"
+    }
+  ],
+  "test-password-nav-long": [
+    {
+      "type": 0,
+      "value": "your password"
+    }
+  ],
+  "usernameGenerating.mindMaestro.next": [
+    {
+      "type": 0,
+      "value": "Next"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+    "GlyphControl.language.english": {
+        "defaultMessage": "Inglés"
+    },
+    "GlyphControl.language.german": {
+        "defaultMessage": "Alemán"
+    },
+    "GlyphControl.passwordLength": {
+        "defaultMessage": "Longitud de la contraseña:"
+    },
+    "MindMaestro.introText": {
+        "defaultMessage": "Mind Maestro es un quiz interactivo en el que obtienes un nombre de usuario único basado en tus respuestas a 5 preguntas específicas."
+    },
+    "MindMaestro.introText2": {
+        "defaultMessage": "Cada pregunta está diseñada para explorar preferencias, intereses o rasgos específicos de personalidad. Al final del quiz, se genera un nombre de usuario basado en tus respuestas, reflejando tu personalidad única."
+    },
+    "MindMaestro.introText3": {
+        "defaultMessage": "¡Déjate sorprender y descubre tu nombre personal de Mind Maestro!"
+    },
+    "arabic-selected": {
+        "defaultMessage": "Árabe"
+    },
+    "chinese-selected": {
+        "defaultMessage": "Chino"
+    },
+    "english-selected": {
+        "defaultMessage": "Inglés"
+    },
+    "find-username-nav": {
+        "defaultMessage": "Inventar",
+        "description": "Texto del botón para encontrar un nombre de usuario"
+    },
+    "find-username-nav-long": {
+        "defaultMessage": "tu nombre de usuario",
+        "description": "Texto largo del botón para encontrar un nombre de usuario"
+    },
+    "french-selected": {
+        "defaultMessage": "Francés"
+    },
+    "generate-identity-wizard": {
+        "defaultMessage": "Comencemos"
+    },
+    "generate-password-nav": {
+        "defaultMessage": "Generar",
+        "description": "Texto del botón para generar una contraseña"
+    },
+    "generate-password-nav-long": {
+        "defaultMessage": "tu contraseña",
+        "description": "Texto largo del botón para generar una contraseña"
+    },
+    "german-selected": {
+        "defaultMessage": "Alemán"
+    },
+    "hindi-selected": {
+        "defaultMessage": "Hindi"
+    },
+    "identityWizard.text": {
+        "defaultMessage": "Crea un nombre de usuario único eligiendo hasta dos grupos de adjetivos y un grupo de sustantivos, o deja que el generador cree una combinación aleatoria para ti."
+    },
+    "italian-selected": {
+        "defaultMessage": "Italiano"
+    },
+    "japanese-selected": {
+        "defaultMessage": "Japonés"
+    },
+    "landing-cta-text": {
+        "defaultMessage": "Descubre ahora lo fácil que es mejorar tu seguridad",
+        "description": "Texto CTA de la página de inicio"
+    },
+    "landing-lead-text": {
+        "defaultMessage": "¡Di adiós a los nombres y contraseñas aburridas!",
+        "description": "Texto principal de la página de inicio"
+    },
+    "landing-sub-lead-text": {
+        "defaultMessage": "Optimiza tus contraseñas y nombres de usuario con nuestras herramientas. Pruébalos, créalos nuevos y seguros, y encuentra el nombre perfecto para tus cuentas en línea.",
+        "description": "Texto secundario de la página de inicio"
+    },
+    "latin-selected": {
+        "defaultMessage": "Latín"
+    },
+    "login-menu": {
+        "defaultMessage": "Iniciar sesión",
+        "description": "Texto del botón de iniciar sesión"
+    },
+    "logout": {
+        "defaultMessage": "Cerrar sesión",
+        "description": "Texto del botón de cerrar sesión"
+    },
+    "logout-menu": {
+        "defaultMessage": "Cerrar sesión"
+    },
+    "passwordGenerating.generate.button": {
+        "defaultMessage": "Comencemos"
+    },
+    "passwordGenerating.glyphSorcery.description": {
+        "defaultMessage": "Cuanto más largo sea tu contraseña, más segura será. Con Glyph Sorcery, puedes crear rápidamente una contraseña de la longitud que desees, cumpliendo con los requisitos de seguridad de contraseñas."
+    },
+    "passwordGenerating.pictureMagic.button": {
+        "defaultMessage": "Comencemos"
+    },
+    "passwordGenerating.pictureMagic.pictureTextContent": {
+        "defaultMessage": "Solo sube una foto y nuestra aplicación la convertirá en una contraseña segura."
+    },
+    "passwordGenerating.runeTranslator.generate": {
+        "defaultMessage": "Comencemos"
+    },
+    "passwordGenerating.runeTranslator.runeControl.limit": {
+        "defaultMessage": "*Máximo 12 caracteres"
+    },
+    "passwordGenerator.version": {
+        "defaultMessage": "Versión"
+    },
+    "passwordTesting.excalibur.benefits": {
+        "defaultMessage": "Al usar Excalibur, puedes fortalecer tu contraseña y mejorar tu seguridad."
+    },
+    "passwordTesting.excalibur.button.start": {
+        "defaultMessage": "Comenzar"
+    },
+    "passwordTesting.excalibur.description": {
+        "defaultMessage": "Excalibur es una herramienta que verifica la fortaleza de tu contraseña. Evalúa factores como la longitud, complejidad y previsibilidad, y te proporciona una evaluación completa de la seguridad de tu contraseña."
+    },
+    "passwordTesting.excalibur.grow": {
+        "defaultMessage": "Aumentar"
+    },
+    "passwordTesting.excalibur.howItWorks": {
+        "defaultMessage": "Esta herramienta te permite asegurarte de que tu contraseña esté protegida contra ataques de fuerza bruta y listas de contraseñas comunes."
+    },
+    "passwordTesting.excalibur.shrink": {
+        "defaultMessage": "Reducir"
+    },
+    "passwordTesting.mojo.allResultsLink": {
+        "defaultMessage": "¡Ver todos los resultados!"
+    },
+    "passwordTesting.mojo.textContent": {
+        "defaultMessage": "Elige un modo para probar tu contraseña contra ataques de fuerza bruta. En el"
+    },
+    "passwordTesting.mojo.textContent.description": {
+        "defaultMessage": "Ambos modos te ayudan a evaluar la fortaleza de tu contraseña y descubrir posibles debilidades."
+    },
+    "passwordTesting.mojo.textContent.list": {
+        "defaultMessage": "Modo lista"
+    },
+    "passwordTesting.mojo.textContent.list.description": {
+        "defaultMessage": "prueba las contraseñas conocidas"
+    },
+    "passwordTesting.mojo.textContent.recommendation": {
+        "defaultMessage": "Elige el modo que mejor se adapte a tus necesidades de seguridad para proteger tus contraseñas eficazmente."
+    },
+    "passwordTesting.mojo.textContent.simple": {
+        "defaultMessage": "modo simple"
+    },
+    "passwordTesting.mojo.textContent.simple.description": {
+        "defaultMessage": "se prueban todos los caracteres posibles. El"
+    },
+    "passwordTesting.mojoTable.guesses": {
+        "defaultMessage": "Intentos"
+    },
+    "passwordTesting.mojoTable.password": {
+        "defaultMessage": "Contraseña"
+    },
+    "passwordTesting.mojoTable.time": {
+        "defaultMessage": "Tiempo"
+    },
+    "pictureMagic.table": {
+        "defaultMessage": "Contraseña"
+    },
+    "pictureMagic.table.image": {
+        "defaultMessage": "Imagen"
+    },
+    "runeText-description": {
+        "defaultMessage": "El Leetspeak es un tipo de transformación de texto donde algunas letras y caracteres son reemplazados por otros. Pruébalo para proteger mejor tu contraseña.",
+        "description": "Descripción del Leetspeak"
+    },
+    "runeText-link": {
+        "defaultMessage": "Leetspeak",
+        "description": "Enlace al cajón Leetspeak"
+    },
+    "runeTranslator.catchPhrase": {
+        "defaultMessage": "Longitud"
+    },
+    "russian-selected": {
+        "defaultMessage": "Ruso"
+    },
+    "spanish-selected": {
+        "defaultMessage": "Español"
+    },
+    "test-password-nav": {
+        "defaultMessage": "Probar",
+        "description": "Texto del botón para probar la contraseña"
+    },
+    "test-password-nav-long": {
+        "defaultMessage": "tu contraseña",
+        "description": "Texto largo del botón para probar la contraseña"
+    },
+    "usernameGenerating.mindMaestro.next": {
+        "defaultMessage": "Siguiente"
+    }
+}

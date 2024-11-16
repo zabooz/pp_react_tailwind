@@ -1,0 +1,368 @@
+{
+  "GlyphControl.language.english": [
+    {
+      "type": 0,
+      "value": "Englisch"
+    }
+  ],
+  "GlyphControl.language.german": [
+    {
+      "type": 0,
+      "value": "Deutsch"
+    }
+  ],
+  "GlyphControl.passwordLength": [
+    {
+      "type": 0,
+      "value": "Passwortlänge:"
+    }
+  ],
+  "MindMaestro.introText": [
+    {
+      "type": 0,
+      "value": "Mind Maestro ist ein interaktives Quiz, bei dem du deinen einzigartigen Benutzernamen basierend auf deinen Antworten auf 5 gezielte Fragen erhältst."
+    }
+  ],
+  "MindMaestro.introText2": [
+    {
+      "type": 0,
+      "value": "Jede Frage zielt darauf ab, bestimmte Vorlieben, Interessen oder Persönlichkeitsmerkmale zu erkunden. Am Ende des Quiz wird aus deinen Antworten ein passender Username generiert, der deine individuelle Persönlichkeit widerspiegelt."
+    }
+  ],
+  "MindMaestro.introText3": [
+    {
+      "type": 0,
+      "value": "Lass dich überraschen und entdecke deinen persönlichen Mind Maestro-Namen!"
+    }
+  ],
+  "arabic-selected": [
+    {
+      "type": 0,
+      "value": "Arabisch"
+    }
+  ],
+  "chinese-selected": [
+    {
+      "type": 0,
+      "value": "Chinesisch"
+    }
+  ],
+  "english-selected": [
+    {
+      "type": 0,
+      "value": "Englisch"
+    }
+  ],
+  "find-username-nav": [
+    {
+      "type": 0,
+      "value": "Erfinde"
+    }
+  ],
+  "find-username-nav-long": [
+    {
+      "type": 0,
+      "value": "deinen Benutzernamen"
+    }
+  ],
+  "french-selected": [
+    {
+      "type": 0,
+      "value": "Französisch"
+    }
+  ],
+  "generate-identity-wizard": [
+    {
+      "type": 0,
+      "value": "Los Geht's"
+    }
+  ],
+  "generate-password-nav": [
+    {
+      "type": 0,
+      "value": "Erstelle"
+    }
+  ],
+  "generate-password-nav-long": [
+    {
+      "type": 0,
+      "value": "dein Passwort"
+    }
+  ],
+  "german-selected": [
+    {
+      "type": 0,
+      "value": "Deutsch"
+    }
+  ],
+  "hindi-selected": [
+    {
+      "type": 0,
+      "value": "Hindi"
+    }
+  ],
+  "identityWizard.text": [
+    {
+      "type": 0,
+      "value": "Erstelle einen einzigartigen Benutzernamen, indem du bis zu zwei Gruppenvon Adjektiven und eine Gruppe von Substantiven auswählst, oder lass den Generator eine zufällige Kombination für dich erstellen."
+    }
+  ],
+  "italian-selected": [
+    {
+      "type": 0,
+      "value": "Italienisch"
+    }
+  ],
+  "japanese-selected": [
+    {
+      "type": 0,
+      "value": "Japanisch"
+    }
+  ],
+  "landing-cta-text": [
+    {
+      "type": 0,
+      "value": "Entdecke jetzt, wie einfach es ist, deine Sicherheit zu erhöhen!"
+    }
+  ],
+  "landing-lead-text": [
+    {
+      "type": 0,
+      "value": "Mach Schluss mit langweiligen Passwörtern und Namen!"
+    }
+  ],
+  "landing-sub-lead-text": [
+    {
+      "type": 0,
+      "value": "Optimiere mit unseren Tools deine Passwörter und Benutzernamen. Teste ihre Stärke, erschaffe neue und sichere Optionen und finde den perfekten Online-Namen."
+    }
+  ],
+  "latin-selected": [
+    {
+      "type": 0,
+      "value": "Latein"
+    }
+  ],
+  "login-menu": [
+    {
+      "type": 0,
+      "value": "Anmelden"
+    }
+  ],
+  "logout": [
+    {
+      "type": 0,
+      "value": "Ausloggen"
+    }
+  ],
+  "logout-menu": [
+    {
+      "type": 0,
+      "value": "Ausloggen"
+    }
+  ],
+  "passwordGenerating.generate.button": [
+    {
+      "type": 0,
+      "value": "Los geht's"
+    }
+  ],
+  "passwordGenerating.glyphSorcery.description": [
+    {
+      "type": 0,
+      "value": "Je länger dein Passwort ist, desto sicherer ist es. Mit Glyph Sourcery kannst du dir schnell und unkompliziert ein Passwort in deiner gewünschten Länge erstellen, die den Richtlinien für sichere Passwörter entsprechen."
+    }
+  ],
+  "passwordGenerating.pictureMagic.button": [
+    {
+      "type": 0,
+      "value": "Los geht's"
+    }
+  ],
+  "passwordGenerating.pictureMagic.pictureTextContent": [
+    {
+      "type": 0,
+      "value": "Lade einfach ein Foto hoch, und unsere App verwandelt es in ein sicheres Passwort"
+    }
+  ],
+  "passwordGenerating.runeTranslator.generate": [
+    {
+      "type": 0,
+      "value": "Los geht's"
+    }
+  ],
+  "passwordGenerating.runeTranslator.runeControl.limit": [
+    {
+      "type": 0,
+      "value": "*Maximal 12 Zeichen"
+    }
+  ],
+  "passwordGenerator.version": [
+    {
+      "type": 0,
+      "value": "Version"
+    }
+  ],
+  "passwordTesting.excalibur.benefits": [
+    {
+      "type": 0,
+      "value": "Durch die Verwendung von Excalibur kannst du dein Passwort stärker schützen und deine Sicherheit verbessern."
+    }
+  ],
+  "passwordTesting.excalibur.button.start": [
+    {
+      "type": 0,
+      "value": "Start"
+    }
+  ],
+  "passwordTesting.excalibur.description": [
+    {
+      "type": 0,
+      "value": "Excalibur ist ein Tool, dass die Stärke deines Passworts überprüft. Es bewertet dabei Faktoren wie Länge, Komplexität und Vorhersehbarkeit und gibt dir eine umfassende Bewertung deiner Passwortsicherheit."
+    }
+  ],
+  "passwordTesting.excalibur.grow": [
+    {
+      "type": 0,
+      "value": "Vergrößern"
+    }
+  ],
+  "passwordTesting.excalibur.howItWorks": [
+    {
+      "type": 0,
+      "value": "Mit diesem Tool kannst du sicherstellen, dass dein Passwort gegen Brute-Force-Angriffe und gängige Passwortlisten gut geschützt ist."
+    }
+  ],
+  "passwordTesting.excalibur.shrink": [
+    {
+      "type": 0,
+      "value": "Verkleinern"
+    }
+  ],
+  "passwordTesting.mojo.allResultsLink": [
+    {
+      "type": 0,
+      "value": "Siehe alle Ergebnisse!"
+    }
+  ],
+  "passwordTesting.mojo.textContent": [
+    {
+      "type": 0,
+      "value": "Wähle einen Modus, um dein Passwort gegen Brute-Force-Angriffe zu testen. Im"
+    }
+  ],
+  "passwordTesting.mojo.textContent.description": [
+    {
+      "type": 0,
+      "value": "Beide Modi helfen dir, die Stärke deines Passworts zu bewerten und potenzielle Schwachstellen aufzudecken"
+    }
+  ],
+  "passwordTesting.mojo.textContent.list": [
+    {
+      "type": 0,
+      "value": "Listen-Modus"
+    }
+  ],
+  "passwordTesting.mojo.textContent.list.description": [
+    {
+      "type": 0,
+      "value": "prüft bekannte Passwörter"
+    }
+  ],
+  "passwordTesting.mojo.textContent.recommendation": [
+    {
+      "type": 0,
+      "value": "Wähle den Modus, der am besten zu deinen Sicherheitsanforderungen passt,um deine Passwörter effektiv zu schützen."
+    }
+  ],
+  "passwordTesting.mojo.textContent.simple": [
+    {
+      "type": 0,
+      "value": "einfachen Modus"
+    }
+  ],
+  "passwordTesting.mojo.textContent.simple.description": [
+    {
+      "type": 0,
+      "value": "werden alle möglichen Zeichen durchprobiert. Der"
+    }
+  ],
+  "passwordTesting.mojoTable.guesses": [
+    {
+      "type": 0,
+      "value": "Versuche"
+    }
+  ],
+  "passwordTesting.mojoTable.password": [
+    {
+      "type": 0,
+      "value": "Passwwort"
+    }
+  ],
+  "passwordTesting.mojoTable.time": [
+    {
+      "type": 0,
+      "value": "Zeit"
+    }
+  ],
+  "pictureMagic.table": [
+    {
+      "type": 0,
+      "value": "Passwort"
+    }
+  ],
+  "pictureMagic.table.image": [
+    {
+      "type": 0,
+      "value": "Bild"
+    }
+  ],
+  "runeText-description": [
+    {
+      "type": 0,
+      "value": "Leetspeak ist eine Art von Textumwandlung, bei der bestimmte Buchstaben und Zeichen durch andere ersetzt werden. Probier es aus, um dein Passwort besser zu schützen."
+    }
+  ],
+  "runeText-link": [
+    {
+      "type": 0,
+      "value": "Leetspeak"
+    }
+  ],
+  "runeTranslator.catchPhrase": [
+    {
+      "type": 0,
+      "value": "Länge"
+    }
+  ],
+  "russian-selected": [
+    {
+      "type": 0,
+      "value": "Russisch"
+    }
+  ],
+  "spanish-selected": [
+    {
+      "type": 0,
+      "value": "Spanisch"
+    }
+  ],
+  "test-password-nav": [
+    {
+      "type": 0,
+      "value": "Teste"
+    }
+  ],
+  "test-password-nav-long": [
+    {
+      "type": 0,
+      "value": "dein Passwort"
+    }
+  ],
+  "usernameGenerating.mindMaestro.next": [
+    {
+      "type": 0,
+      "value": "Weiter"
+    }
+  ]
+}

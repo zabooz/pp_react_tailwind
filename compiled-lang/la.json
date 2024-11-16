@@ -1,0 +1,368 @@
+{
+  "GlyphControl.language.english": [
+    {
+      "type": 0,
+      "value": "Anglice"
+    }
+  ],
+  "GlyphControl.language.german": [
+    {
+      "type": 0,
+      "value": "Theodisce"
+    }
+  ],
+  "GlyphControl.passwordLength": [
+    {
+      "type": 0,
+      "value": "Longitudo tesserae:"
+    }
+  ],
+  "MindMaestro.introText": [
+    {
+      "type": 0,
+      "value": "Mind Maestro est quaestio interactiva, ubi nomen tuum singulare ex responsis tuis ad 5 quaestiones specificas accipis."
+    }
+  ],
+  "MindMaestro.introText2": [
+    {
+      "type": 0,
+      "value": "Unaquaeque quaestio ad certos gustus, studia, aut mores personalitatis explorandos spectat. In fine quaestionarii, ex responsis tuis nomen aptum generabitur, quod singularitatem tuam repraesentabit."
+    }
+  ],
+  "MindMaestro.introText3": [
+    {
+      "type": 0,
+      "value": "Mirare et nomen tuum personalem Mind Maestro invenire!"
+    }
+  ],
+  "arabic-selected": [
+    {
+      "type": 0,
+      "value": "Arabice"
+    }
+  ],
+  "chinese-selected": [
+    {
+      "type": 0,
+      "value": "Sinice"
+    }
+  ],
+  "english-selected": [
+    {
+      "type": 0,
+      "value": "Anglice"
+    }
+  ],
+  "find-username-nav": [
+    {
+      "type": 0,
+      "value": "Inventa"
+    }
+  ],
+  "find-username-nav-long": [
+    {
+      "type": 0,
+      "value": "nomen tuum"
+    }
+  ],
+  "french-selected": [
+    {
+      "type": 0,
+      "value": "Francogallice"
+    }
+  ],
+  "generate-identity-wizard": [
+    {
+      "type": 0,
+      "value": "Eamus"
+    }
+  ],
+  "generate-password-nav": [
+    {
+      "type": 0,
+      "value": "Creare"
+    }
+  ],
+  "generate-password-nav-long": [
+    {
+      "type": 0,
+      "value": "tessera tua"
+    }
+  ],
+  "german-selected": [
+    {
+      "type": 0,
+      "value": "Theodisce"
+    }
+  ],
+  "hindi-selected": [
+    {
+      "type": 0,
+      "value": "Hindice"
+    }
+  ],
+  "identityWizard.text": [
+    {
+      "type": 0,
+      "value": "Crea nomen singulare eligendo usque ad duas coetus adiectivorum et unum coetum substantivorum, aut sponte generatoris nexum fortuitum ad te."
+    }
+  ],
+  "italian-selected": [
+    {
+      "type": 0,
+      "value": "Italice"
+    }
+  ],
+  "japanese-selected": [
+    {
+      "type": 0,
+      "value": "Iaponice"
+    }
+  ],
+  "landing-cta-text": [
+    {
+      "type": 0,
+      "value": "Nunc discas quomodo facilem fieri possis tuam securitatem augere!"
+    }
+  ],
+  "landing-lead-text": [
+    {
+      "type": 0,
+      "value": "Finis cum tessera et nominibus taediosis!"
+    }
+  ],
+  "landing-sub-lead-text": [
+    {
+      "type": 0,
+      "value": "Optimize cum instrumentis nostris tesserae et nominibus tuis. Testa robur eorum, crea novas et tutas optiones, et invenire perfectum nomen online."
+    }
+  ],
+  "latin-selected": [
+    {
+      "type": 0,
+      "value": "Latine"
+    }
+  ],
+  "login-menu": [
+    {
+      "type": 0,
+      "value": "Intra"
+    }
+  ],
+  "logout": [
+    {
+      "type": 0,
+      "value": "Exi"
+    }
+  ],
+  "logout-menu": [
+    {
+      "type": 0,
+      "value": "Exi"
+    }
+  ],
+  "passwordGenerating.generate.button": [
+    {
+      "type": 0,
+      "value": "Eamus"
+    }
+  ],
+  "passwordGenerating.glyphSorcery.description": [
+    {
+      "type": 0,
+      "value": "Quanto diuturnius tessera tua est, tanto tutior est. Cum Glyph Sorcery cito et facile tesserae longitudinem desideratam generare potes, quae ad normam tutorum tesserae conveniat."
+    }
+  ],
+  "passwordGenerating.pictureMagic.button": [
+    {
+      "type": 0,
+      "value": "Eamus"
+    }
+  ],
+  "passwordGenerating.pictureMagic.pictureTextContent": [
+    {
+      "type": 0,
+      "value": "Solum imaginem submove, et applicatio nostra eam in tessera securam vertet."
+    }
+  ],
+  "passwordGenerating.runeTranslator.generate": [
+    {
+      "type": 0,
+      "value": "Eamus"
+    }
+  ],
+  "passwordGenerating.runeTranslator.runeControl.limit": [
+    {
+      "type": 0,
+      "value": "*Maxima 12 litterae"
+    }
+  ],
+  "passwordGenerator.version": [
+    {
+      "type": 0,
+      "value": "Versio"
+    }
+  ],
+  "passwordTesting.excalibur.benefits": [
+    {
+      "type": 0,
+      "value": "Excalibur utendo, tessera tua melius protegi potest et securitas tua meliorari."
+    }
+  ],
+  "passwordTesting.excalibur.button.start": [
+    {
+      "type": 0,
+      "value": "Incipe"
+    }
+  ],
+  "passwordTesting.excalibur.description": [
+    {
+      "type": 0,
+      "value": "Excalibur est instrumentum, quod robur tesserae tuae examinabit. Id considerat factores ut longitudinem, complexitatem et praedictibilitatem et tibi amplam aestimationem securitatis tesserae tuae praebet."
+    }
+  ],
+  "passwordTesting.excalibur.grow": [
+    {
+      "type": 0,
+      "value": "Cresce"
+    }
+  ],
+  "passwordTesting.excalibur.howItWorks": [
+    {
+      "type": 0,
+      "value": "Hoc instrumento potes confirmare, quod tessera tua contra conatus Brute-Force et communes indices tesserae bene protegi."
+    }
+  ],
+  "passwordTesting.excalibur.shrink": [
+    {
+      "type": 0,
+      "value": "Minue"
+    }
+  ],
+  "passwordTesting.mojo.allResultsLink": [
+    {
+      "type": 0,
+      "value": "Vide omnia resultata!"
+    }
+  ],
+  "passwordTesting.mojo.textContent": [
+    {
+      "type": 0,
+      "value": "Elige modum ad testandum tesserae tuae contra conatus Brute-Force. In"
+    }
+  ],
+  "passwordTesting.mojo.textContent.description": [
+    {
+      "type": 0,
+      "value": "Utique modos uterque adiuvat te, ut robur tesserae tuae aestimes et infirma puncta invenias"
+    }
+  ],
+  "passwordTesting.mojo.textContent.list": [
+    {
+      "type": 0,
+      "value": "Index-Modus"
+    }
+  ],
+  "passwordTesting.mojo.textContent.list.description": [
+    {
+      "type": 0,
+      "value": "examinat tesserae notae"
+    }
+  ],
+  "passwordTesting.mojo.textContent.recommendation": [
+    {
+      "type": 0,
+      "value": "Elige modum qui melius aptet ad tutelam tuam, ut tesserae tuas efficaciter protegas."
+    }
+  ],
+  "passwordTesting.mojo.textContent.simple": [
+    {
+      "type": 0,
+      "value": "simplum Modum"
+    }
+  ],
+  "passwordTesting.mojo.textContent.simple.description": [
+    {
+      "type": 0,
+      "value": "omnes signa possibilia probat. In"
+    }
+  ],
+  "passwordTesting.mojoTable.guesses": [
+    {
+      "type": 0,
+      "value": "Coniecturae"
+    }
+  ],
+  "passwordTesting.mojoTable.password": [
+    {
+      "type": 0,
+      "value": "Tessera"
+    }
+  ],
+  "passwordTesting.mojoTable.time": [
+    {
+      "type": 0,
+      "value": "Tempus"
+    }
+  ],
+  "pictureMagic.table": [
+    {
+      "type": 0,
+      "value": "Tessera"
+    }
+  ],
+  "pictureMagic.table.image": [
+    {
+      "type": 0,
+      "value": "Imago"
+    }
+  ],
+  "runeText-description": [
+    {
+      "type": 0,
+      "value": "Leetspeak est genus transformationis textus ubi quaedam litterae et signa substituuntur. Proba ut tesserae tuae melior sit protectio."
+    }
+  ],
+  "runeText-link": [
+    {
+      "type": 0,
+      "value": "Leetspeak"
+    }
+  ],
+  "runeTranslator.catchPhrase": [
+    {
+      "type": 0,
+      "value": "Longitudo"
+    }
+  ],
+  "russian-selected": [
+    {
+      "type": 0,
+      "value": "Russice"
+    }
+  ],
+  "spanish-selected": [
+    {
+      "type": 0,
+      "value": "Hispanice"
+    }
+  ],
+  "test-password-nav": [
+    {
+      "type": 0,
+      "value": "Examine"
+    }
+  ],
+  "test-password-nav-long": [
+    {
+      "type": 0,
+      "value": "tessera tua"
+    }
+  ],
+  "usernameGenerating.mindMaestro.next": [
+    {
+      "type": 0,
+      "value": "Proficiscere"
+    }
+  ]
+}

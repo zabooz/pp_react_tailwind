@@ -6,7 +6,7 @@ export function capitalizeFirstLetter(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-export function rndNumInLen(array: string[]) {
+export function rndNumInLen(array: string[] | string[][]) {
   return Math.floor(Math.random() * array.length);
 }
 

@@ -1,6 +1,6 @@
 export interface DrawerData {
-  title: string;
-  paragraphs: Paragraph[];
+    title: string;
+    paragraphs: Paragraph[];
 }
 
 interface Paragraph {
@@ -9,122 +9,122 @@ interface Paragraph {
 }
 
 export interface registryData {
-  username: string;
-  password: string;
-  email: string;
-  visits: number;
-  generated_passwords: number;
-  tested_passwords: number;
-  generated_usernames: number;
-  avatar: string;
+    username: string;
+    password: string;
+    email: string;
+    visits: number;
+    generated_passwords: number;
+    tested_passwords: number;
+    generated_usernames: number;
+    avatar: string;
 }
 
 export interface loginData {
-  username: string;
-  password: string;
+    username: string;
+    password: string;
 }
 export interface loginResponse {
-  token: string;
+    token: string;
 }
 
 export interface dataKrakenTakesData {
-  col: string;
+    col: string;
 }
 export interface dataKrakenGivesData {
-  col?: string;
+    col?: string;
 }
 export interface dataKrakenGivesResponse {
-  success: boolean;
-  message: string;
-  data: string[];
+    success: boolean;
+    message: string;
+    data: string[];
 }
 
 export interface StorageData {
-  key: string;
-  catch?: string;
-  value: string;
-  type: string;
+    key: string;
+    catch?: string;
+    value: string;
+    type: string;
 }
 
 export interface dataKrakenTradesData {
-  key: string;
-  value: string;
+    key: string;
+    value: string;
 }
 
 export interface userDataResponse {
-  success: boolean;
-  message: string;
-  data: userData | LeaderBoardData;
+    success: boolean;
+    message: string;
+    data: userData | LeaderBoardData;
 }
 
 export interface userData {
-  username: string;
-  email: string;
-  visits: number;
-  generated_passwords: number;
-  tested_passwords: number;
-  generated_usernames: number;
-  avatar: string;
+    username: string;
+    email: string;
+    visits: number;
+    generated_passwords: number;
+    tested_passwords: number;
+    generated_usernames: number;
+    avatar: string;
 }
 export interface LeaderBoardData {
-  username: string;
-  visits: number;
-  generated_passwords: number;
-  tested_passwords: number;
-  generated_usernames: number;
-  avatar: string;
-  rank?: number;
-  user?: userData;
+    username: string;
+    visits: number;
+    generated_passwords: number;
+    tested_passwords: number;
+    generated_usernames: number;
+    avatar: string;
+    rank?: number;
+    user?: userData;
 }
 export interface EnglishArrays {
-  colors: string[];
-  shapes: string[];
-  textures: string[];
-  sizes: string[];
-  emotions: string[];
-  tastes: string[];
-  sounds: string[];
-  ages: string[];
-  intensities: string[];
-  temperatures: string[];
-  speeds: string[];
-  qualities: string[];
-  weatherTypes: string[];
-  instruments: string[];
-  fruits: string[];
-  animals: string[];
-  fantasyCreatures: string[];
-  vegetables: string[];
-  rpgClasses: string[];
-  fantasyRaces: string[];
-  occupations: string[];
-  vehicles: string[];
-  food: string[];
-  tools: string[];
-  beverages: string[];
-  clothingItems: string[];
-  bodyParts: string[];
-  flowers: string[];
-  desserts: string[];
+    colors: string[];
+    shapes: string[];
+    textures: string[];
+    sizes: string[];
+    emotions: string[];
+    tastes: string[];
+    sounds: string[];
+    ages: string[];
+    intensities: string[];
+    temperatures: string[];
+    speeds: string[];
+    qualities: string[];
+    weatherTypes: string[];
+    instruments: string[];
+    fruits: string[];
+    animals: string[];
+    fantasyCreatures: string[];
+    vegetables: string[];
+    rpgClasses: string[];
+    fantasyRaces: string[];
+    occupations: string[];
+    vehicles: string[];
+    food: string[];
+    tools: string[];
+    beverages: string[];
+    clothingItems: string[];
+    bodyParts: string[];
+    flowers: string[];
+    desserts: string[];
 }
 
 export interface Questions {
-  question: string;
-  answers: {
-    answer: string;
-    dataArr: string;
-    imagePath: string;
-  }[];
+    question: string;
+    answers: {
+        answer: string;
+        dataArr: string;
+        imagePath: string;
+    }[];
 }
 export interface PasswordStrength {
-  result: number;
-  points: Points
+    result: number;
+    points: Points;
 }
 
 export type Points = {
-  [key: string]: {
-    value: boolean;
-    textTrue: string;
-    textFalse: string;
-  };
+    [key: string]: {
+        value: boolean;
+        textTrue: string;
+        textFalse: string;
+    };
 };

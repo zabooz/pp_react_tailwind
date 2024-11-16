@@ -18,7 +18,7 @@ function Clippy({ isOpen, handleClose }: Props) {
         newUsernames.splice(index, 1);
         setPasswords(newPasswords);
         setUsernames(newUsernames);
-    };
+    }; 
     const intl = useIntl();
     return (
         <Drawer open={isOpen} onClose={handleClose} className="pt-20">

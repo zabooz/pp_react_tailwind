@@ -1,4 +1,4 @@
-import { Points } from "./interfaces";
+import { Points } from './interfaces';
 
 export type PasswordStrength = {
     result: number;

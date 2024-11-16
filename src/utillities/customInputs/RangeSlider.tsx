@@ -1,9 +1,7 @@
-import "./rangeSlider.css"
+import './rangeSlider.css';
 
 function RangeSlider() {
-  return (
-<input type="range" />
-  )
+    return <input type="range" />;
 }
 
-export default RangeSlider
+export default RangeSlider;

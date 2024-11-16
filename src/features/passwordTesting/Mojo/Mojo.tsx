@@ -14,7 +14,6 @@ import { usePasswordTesting } from '../../../contexts/passwordTestingContext/pas
 import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
 import { useBruteForceContext } from '../../../contexts/bruteForceContext/bruteForceContext';
 
-
 function Mojo() {
     const { setOpenResultModal, bruteForceResults, openResultModal, setDrawerShow, drawer, drawerContent } =
         useBruteForceContext();

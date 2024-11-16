@@ -20,8 +20,7 @@ function MojoTextContent() {
                 <FormattedMessage
                     id="passwordTesting.mojo.textContent"
                     defaultMessage="Wähle einen Modus, um dein Passwort gegen Brute-Force-Angriffe zu testen. Im"
-                />
-            {' '}
+                />{' '}
                 <span
                     onClick={(e) => {
                         e.stopPropagation();

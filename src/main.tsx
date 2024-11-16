@@ -9,12 +9,18 @@ import { LanguageProvider } from './contexts/languageContext/LanguageProvider.ts
 import { Locale } from './contexts/languageContext/languageContext.ts';
 
 const locale =
-    navigator.language.split('-')[0] === 'de' || navigator.language.split('-')[0] === 'en'
-        ? (navigator.language.split('-')[0] as Locale)
-        : 'en';
+    (localStorage.getItem('locale') as Locale) ||
+    (['de', 'en'].includes(navigator.language.split('-')[0]) 
+       ? navigator.language.split('-')[0] : 'en');
+
+localStorage.setItem('locale', locale);
+
+
+
+
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <LanguageProvider initialLanguage={locale}>
+        <LanguageProvider initialLanguage={localStorage.getItem('locale') as Locale}>
             <HeadProvider>
                 <Flowbite>
                     <LoginProvider>

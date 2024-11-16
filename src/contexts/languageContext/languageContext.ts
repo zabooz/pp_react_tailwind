@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react';
 
-export type Locale = 'en' | 'de' | 'fr' | 'es'  | 'la' ;
+export type Locale = 'en' | 'de' 
 
 interface LanguageProps {
     language: Locale;
@@ -16,3 +16,4 @@ export const useLanguageContext = (): LanguageProps => {
     }
     return context;
 };
+ 

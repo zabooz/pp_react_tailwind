@@ -22,9 +22,9 @@ const PrivacyPolicy = React.lazy(() => import('./features/legalStuff/PrivacyPoli
 const DashBoard = React.lazy(() => import('./features/DashBoard/DashBoard'));
 import deMessages from '../compiled-lang/de.json';
 import enMessages from '../compiled-lang/en.json';
-import esMessages from '../compiled-lang/es.json';
-import frMessages from '../compiled-lang/fr.json';
-import laMessages from '../compiled-lang/la.json';
+// import esMessages from '../compiled-lang/es.json';
+// import frMessages from '../compiled-lang/fr.json';
+// import laMessages from '../compiled-lang/la.json';
 
 
 function App() {
@@ -33,9 +33,9 @@ function App() {
     const messages = {
         en: enMessages,
         de: deMessages,
-        es: esMessages,
-        fr: frMessages,
-        la: laMessages
+        // es: esMessages,
+        // fr: frMessages,
+        // la: laMessages
     };
 
     return (

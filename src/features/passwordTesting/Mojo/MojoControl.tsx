@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { thinker } from "../../../utillities/thinker";
 import { startBruteForce, stopBruteForce } from "./scripts/mojoScripts";
 import { useBruteForce } from "../../../contexts/Contexts";
+import { FormattedMessage, useIntl } from "react-intl";
 
 interface Props {
   className?: string;
@@ -33,7 +34,7 @@ function MojoControl({ className }: Props) {
       bruteForceResults
     );
   };
-
+  const intl = useIntl()
   const handleBruteForceStop = async () => {
     await stopBruteForce(setIsBruteActive, bruteForceThinkerInterval);
   };
@@ -60,7 +61,7 @@ function MojoControl({ className }: Props) {
     return () => {
       clearInterval(bruteForceThinkerInterval);
     };
-  }, [isBruteActive]);
+  }, [isBruteActive, bruteForceThinkerInterval, setBruteThinkerInterval]);
 
   return (
     <div
@@ -72,7 +73,7 @@ function MojoControl({ className }: Props) {
       <TextInput
         type="text"
         onInput={(e) => setPassword((e.target as HTMLInputElement).value)}
-        placeholder="Teste ein Passwort"
+        placeholder={intl.formatMessage({id: "pl_mojo", defaultMessage: "Teste dein Passwort"})} 
       />
       <div
         onClick={(e) => handleBruteTypeClick(e)}
@@ -80,7 +81,7 @@ function MojoControl({ className }: Props) {
       >
         <div className="my-2">
           <Label htmlFor="simple" className="!text-gray-400 me-2">
-            Einfach
+            <FormattedMessage id="simple" defaultMessage="Einfach" />
           </Label>
           <Radio
             id="simple"
@@ -91,7 +92,7 @@ function MojoControl({ className }: Props) {
         </div>
         <div className="my-2">
           <label htmlFor="list" className="text-gray-400 me-2">
-            Liste
+            <FormattedMessage id="list" defaultMessage="Liste" />
           </label>
           <Radio
             id="list"

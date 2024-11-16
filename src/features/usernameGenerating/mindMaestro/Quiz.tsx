@@ -7,7 +7,7 @@ interface Props {
 }
 
 function Quiz({ index, setAnswer, startQuiz }: Props) {
-  console.log(index, mindQuestions.length);
+
   return index < mindQuestions.length && startQuiz ? (
     mindQuestions[index].answers.map((answer, i) => (
       <div

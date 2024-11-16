@@ -35,6 +35,36 @@
       "value": "Lass dich überraschen und entdecke deinen persönlichen Mind Maestro-Namen!"
     }
   ],
+  "adjective": [
+    {
+      "type": 0,
+      "value": "Eigenschaft:"
+    }
+  ],
+  "adjective2": [
+    {
+      "type": 0,
+      "value": "Eigenschaft:"
+    }
+  ],
+  "clearMojo": [
+    {
+      "type": 0,
+      "value": "Löschen"
+    }
+  ],
+  "clippy.passwords": [
+    {
+      "type": 0,
+      "value": "Passwörter"
+    }
+  ],
+  "clippy.usernames": [
+    {
+      "type": 0,
+      "value": "Benutzernamen"
+    }
+  ],
   "english-selected": [
     {
       "type": 0,
@@ -53,10 +83,58 @@
       "value": "deinen Benutzernamen"
     }
   ],
-  "french-selected": [
+  "footer.Datenschutz": [
     {
       "type": 0,
-      "value": "Französisch"
+      "value": "Datenschutz"
+    }
+  ],
+  "footer.aboutUs": [
+    {
+      "type": 0,
+      "value": "Über uns"
+    }
+  ],
+  "footer.discord": [
+    {
+      "type": 0,
+      "value": "Discord"
+    }
+  ],
+  "footer.followUs": [
+    {
+      "type": 0,
+      "value": "Folgen Sie uns"
+    }
+  ],
+  "footer.github": [
+    {
+      "type": 0,
+      "value": "GitHub"
+    }
+  ],
+  "footer.impressum": [
+    {
+      "type": 0,
+      "value": "Impressum"
+    }
+  ],
+  "footer.legacyDesign": [
+    {
+      "type": 0,
+      "value": "Legacy Design"
+    }
+  ],
+  "footer.legal": [
+    {
+      "type": 0,
+      "value": "Rechtliche Hinweise"
+    }
+  ],
+  "footer.project": [
+    {
+      "type": 0,
+      "value": "Projekt"
     }
   ],
   "generate-identity-wizard": [
@@ -107,10 +185,10 @@
       "value": "Optimiere mit unseren Tools deine Passwörter und Benutzernamen. Teste ihre Stärke, erschaffe neue und sichere Optionen und finde den perfekten Online-Namen."
     }
   ],
-  "latin-selected": [
+  "list": [
     {
       "type": 0,
-      "value": "Latein"
+      "value": "Liste"
     }
   ],
   "login-menu": [
@@ -129,6 +207,12 @@
     {
       "type": 0,
       "value": "Ausloggen"
+    }
+  ],
+  "noun": [
+    {
+      "type": 0,
+      "value": "Begriff:"
     }
   ],
   "password.gen.btn": [
@@ -335,6 +419,18 @@
       "value": "Siehe alle Ergebnisse!"
     }
   ],
+  "passwordTesting.mojo.mojoExtendet.button.grow": [
+    {
+      "type": 0,
+      "value": "Vergrössern"
+    }
+  ],
+  "passwordTesting.mojo.mojoExtendet.button.shrink": [
+    {
+      "type": 0,
+      "value": "Verkleinern"
+    }
+  ],
   "passwordTesting.mojo.textContent": [
     {
       "type": 0,
@@ -407,6 +503,24 @@
       "value": "Bild"
     }
   ],
+  "pl_mojo": [
+    {
+      "type": 0,
+      "value": "Teste dein Passwort"
+    }
+  ],
+  "pl_sanchez": [
+    {
+      "type": 0,
+      "value": "Hallo ich bin Sanchez und beantworte gerne deine Fragen über Internetsicherheit!"
+    }
+  ],
+  "quiz.endcard": [
+    {
+      "type": 0,
+      "value": "Endcard"
+    }
+  ],
   "runeText-description": [
     {
       "type": 0,
@@ -425,10 +539,16 @@
       "value": "Länge"
     }
   ],
-  "spanish-selected": [
+  "send": [
     {
       "type": 0,
-      "value": "Spanisch"
+      "value": "Senden"
+    }
+  ],
+  "simple": [
+    {
+      "type": 0,
+      "value": "Einfach"
     }
   ],
   "test-password-nav": [

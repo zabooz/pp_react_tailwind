@@ -3,19 +3,27 @@ import { Locale, useLanguageContext } from '../contexts/languageContext/language
 
 import { FormattedMessage } from 'react-intl';
 
+
 function LanguageSwitch() {
-    const { setLanguage } = useLanguageContext();
+    const {setLanguage } = useLanguageContext();
+    
+
+
     return (
         <div>
-
-            <Select id="countries" size={1} className="p-[0rem]" onChange={(e) => setLanguage(e.target.value as Locale)}> 
-                <option value={'en'}>
+            <Select
+                id="countries"
+                size={1}
+                className="p-[0rem]"
+                onChange={(e) => setLanguage(e.target.value as Locale)}
+            >
+                <option value={'en'}  >
                     <FormattedMessage id="english-selected" defaultMessage="Englisch" />
                 </option>
                 <option value={'de'}>
                     <FormattedMessage id="german-selected" defaultMessage="Deutsch" />
                 </option>
-                <option value={'fr'}>
+                {/* <option value={'fr'}>
                     <FormattedMessage id="french-selected" defaultMessage="Französisch" />
                 </option>
                 <option value={'es'}>
@@ -24,7 +32,7 @@ function LanguageSwitch() {
 
                 <option value={'la'}>
                     <FormattedMessage id="latin-selected" defaultMessage="Latein" />
-                </option>
+                </option> */}
             </Select>
         </div>
     );

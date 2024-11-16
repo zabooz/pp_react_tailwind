@@ -17,6 +17,21 @@
   "MindMaestro.introText3": {
     "defaultMessage": "Lass dich überraschen und entdecke deinen persönlichen Mind Maestro-Namen!"
   },
+  "adjective": {
+    "defaultMessage": "Eigenschaft:"
+  },
+  "adjective2": {
+    "defaultMessage": "Eigenschaft:"
+  },
+  "clearMojo": {
+    "defaultMessage": "Löschen"
+  },
+  "clippy.passwords": {
+    "defaultMessage": "Passwörter"
+  },
+  "clippy.usernames": {
+    "defaultMessage": "Benutzernamen"
+  },
   "english-selected": {
     "defaultMessage": "Englisch"
   },
@@ -28,8 +43,32 @@
     "defaultMessage": "deinen Benutzernamen",
     "description": "Find Username button text long"
   },
-  "french-selected": {
-    "defaultMessage": "Französisch"
+  "footer.Datenschutz": {
+    "defaultMessage": "Datenschutz"
+  },
+  "footer.aboutUs": {
+    "defaultMessage": "Über uns"
+  },
+  "footer.discord": {
+    "defaultMessage": "Discord"
+  },
+  "footer.followUs": {
+    "defaultMessage": "Folgen Sie uns"
+  },
+  "footer.github": {
+    "defaultMessage": "GitHub"
+  },
+  "footer.impressum": {
+    "defaultMessage": "Impressum"
+  },
+  "footer.legacyDesign": {
+    "defaultMessage": "Legacy Design"
+  },
+  "footer.legal": {
+    "defaultMessage": "Rechtliche Hinweise"
+  },
+  "footer.project": {
+    "defaultMessage": "Projekt"
   },
   "generate-identity-wizard": {
     "defaultMessage": "Los Geht's"
@@ -60,8 +99,8 @@
     "defaultMessage": "Optimiere mit unseren Tools deine Passwörter und Benutzernamen. Teste ihre Stärke, erschaffe neue und sichere Optionen und finde den perfekten Online-Namen.",
     "description": "Landing page sub-lead text"
   },
-  "latin-selected": {
-    "defaultMessage": "Latein"
+  "list": {
+    "defaultMessage": "Liste"
   },
   "login-menu": {
     "defaultMessage": "Anmelden",
@@ -73,6 +112,9 @@
   },
   "logout-menu": {
     "defaultMessage": "Ausloggen"
+  },
+  "noun": {
+    "defaultMessage": "Begriff:"
   },
   "password.gen.btn": {
     "defaultMessage": "Erstelle Passwort"
@@ -176,6 +218,12 @@
   "passwordTesting.mojo.allResultsLink": {
     "defaultMessage": "Siehe alle Ergebnisse!"
   },
+  "passwordTesting.mojo.mojoExtendet.button.grow": {
+    "defaultMessage": "Vergrössern"
+  },
+  "passwordTesting.mojo.mojoExtendet.button.shrink": {
+    "defaultMessage": "Verkleinern"
+  },
   "passwordTesting.mojo.textContent": {
     "defaultMessage": "Wähle einen Modus, um dein Passwort gegen Brute-Force-Angriffe zu testen. Im"
   },
@@ -212,6 +260,15 @@
   "pictureMagic.table.image": {
     "defaultMessage": "Bild"
   },
+  "pl_mojo": {
+    "defaultMessage": "Teste dein Passwort"
+  },
+  "pl_sanchez": {
+    "defaultMessage": "Hallo ich bin Sanchez und beantworte gerne deine Fragen über Internetsicherheit!"
+  },
+  "quiz.endcard": {
+    "defaultMessage": "Endcard"
+  },
   "runeText-description": {
     "defaultMessage": "Leetspeak ist eine Art von Textumwandlung, bei der bestimmte Buchstaben und Zeichen durch andere ersetzt werden. Probier es aus, um dein Passwort besser zu schützen.",
     "description": "Description of Leetspeak"
@@ -223,8 +280,11 @@
   "runeTranslator.catchPhrase": {
     "defaultMessage": "Länge"
   },
-  "spanish-selected": {
-    "defaultMessage": "Spanisch"
+  "send": {
+    "defaultMessage": "Senden"
+  },
+  "simple": {
+    "defaultMessage": "Einfach"
   },
   "test-password-nav": {
     "defaultMessage": "Teste",

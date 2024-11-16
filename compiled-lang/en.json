@@ -14,25 +14,25 @@
   "GlyphControl.passwordLength": [
     {
       "type": 0,
-      "value": "Password Length:"
+      "value": "Password length:"
     }
   ],
   "MindMaestro.introText": [
     {
       "type": 0,
-      "value": "Mind Maestro is an interactive quiz where you get your unique username based on your answers to 5 targeted questions."
+      "value": "Mind Maestro is an interactive quiz where you receive your unique username based on your answers to 5 targeted questions."
     }
   ],
   "MindMaestro.introText2": [
     {
       "type": 0,
-      "value": "Each question aims to explore specific preferences, interests, or personality traits. At the end of the quiz, a suitable username will be generated from your answers that reflects your individual personality."
+      "value": "Each question aims to explore specific preferences, interests, or personality traits. At the end of the quiz, a suitable username will be generated from your answers, reflecting your individual personality."
     }
   ],
   "MindMaestro.introText3": [
     {
       "type": 0,
-      "value": "Be surprised and discover your personal Mind Maestro name!"
+      "value": "Let yourself be surprised and discover your personal Mind Maestro name!"
     }
   ],
   "english-selected": [
@@ -53,6 +53,60 @@
       "value": "your username"
     }
   ],
+  "footer.Datenschutz": [
+    {
+      "type": 0,
+      "value": "Privacy Policy"
+    }
+  ],
+  "footer.aboutUs": [
+    {
+      "type": 0,
+      "value": "About Us"
+    }
+  ],
+  "footer.discord": [
+    {
+      "type": 0,
+      "value": "Discord"
+    }
+  ],
+  "footer.followUs": [
+    {
+      "type": 0,
+      "value": "Follow Us"
+    }
+  ],
+  "footer.github": [
+    {
+      "type": 0,
+      "value": "GitHub"
+    }
+  ],
+  "footer.impressum": [
+    {
+      "type": 0,
+      "value": "Legal Notice"
+    }
+  ],
+  "footer.legacyDesign": [
+    {
+      "type": 0,
+      "value": "Legacy Design"
+    }
+  ],
+  "footer.legal": [
+    {
+      "type": 0,
+      "value": "Legal Information"
+    }
+  ],
+  "footer.project": [
+    {
+      "type": 0,
+      "value": "Project"
+    }
+  ],
   "french-selected": [
     {
       "type": 0,
@@ -68,7 +122,7 @@
   "generate-password-nav": [
     {
       "type": 0,
-      "value": "Generate"
+      "value": "Create"
     }
   ],
   "generate-password-nav-long": [
@@ -92,7 +146,7 @@
   "landing-cta-text": [
     {
       "type": 0,
-      "value": "Discover now how easy it is to improve your security!"
+      "value": "Discover now how easy it is to increase your security!"
     }
   ],
   "landing-lead-text": [
@@ -146,7 +200,7 @@
   "password.gen.text": [
     {
       "type": 0,
-      "value": "Use our three tools to generate the ideal password: Picture Magic turns images into passwords, Rune Translator converts text into Leetspeak, and GlyphSorcery creates random, secure passwords"
+      "value": "Use our three tools to generate the ideal password: Picture Magic transforms images into passwords, Rune Translator converts text into leetspeak, and GlyphSorcery creates random, secure passwords"
     }
   ],
   "password.gen.title": [
@@ -170,7 +224,7 @@
   "password.test.text": [
     {
       "type": 0,
-      "value": "Use our evaluation tool Excalibur to test your password strength and simulate brute-force attacks with Mojo to see how long it would take to crack your password."
+      "value": "Use our Excalibur rating tool to test your password's strength and simulate brute force attacks with Mojo to see how long it would take to crack your password."
     }
   ],
   "password.test.title": [
@@ -188,31 +242,31 @@
   "passwordGenerating.glyphSorcery.description": [
     {
       "type": 0,
-      "value": "The longer your password is, the more secure it is. With Glyph Sorcery, you can quickly and easily create a password of your desired length that meets the security password guidelines."
+      "value": "The longer your password is, the more secure it is. With Glyph Sorcery, you can quickly and easily create a password of your desired length that meets secure password guidelines."
     }
   ],
   "passwordGenerating.lang.leet.paragraphLeet1": [
     {
       "type": 0,
-      "value": "Leetspeak, also known as '1337 speak', replaces letters with numbers and symbols. Originally, it was a secret language for hackers to hide from automated systems. Users saw it as a creative form of expression and used it to encrypt messages."
+      "value": "Leetspeak, also known as '1337 speak', replaces letters with numbers and symbols. Originally it was a secret language for hackers to hide from automated systems. Users saw it as a creative form of expression and used it to encrypt messages."
     }
   ],
   "passwordGenerating.lang.leet.paragraphLeet2": [
     {
       "type": 0,
-      "value": "Leetspeak replaces letters with similar-looking characters. For example, 'A' becomes '4', 'E' becomes '3', and 'I' becomes '1'. Words like 'Leet' become 'L33t', giving communication a creative flair."
+      "value": "Leetspeak replaces letters with similar-looking characters. For example, 'A' is replaced by '4', 'E' by '3', and 'I' by '1'. Words like 'Leet' become 'L33t', adding a creative touch to communication."
     }
   ],
   "passwordGenerating.lang.leet.paragraphLeet3": [
     {
       "type": 0,
-      "value": "Leetspeak can enhance password security as it becomes harder to guess passwords. Using numbers instead of letters makes passwords less predictable, which has become more important with increasing cyber threats."
+      "value": "Leetspeak can increase password security as it becomes harder to guess passwords. Using numbers instead of letters makes passwords less predictable, which has become increasingly important given growing cyber threats."
     }
   ],
   "passwordGenerating.lang.leet.paragraphLeet4": [
     {
       "type": 0,
-      "value": "Despite the benefits, Leetspeak is not foolproof. Predictable patterns make it easier for attackers to guess letters. Additionally, readability can be compromised, which can be problematic in some contexts. Nevertheless, it remains a form of creativity in online communities."
+      "value": "Despite the advantages, Leetspeak isn't infallible. Predictable patterns make it easier for attackers to guess letters. Also, readability can be limited, which is problematic in some contexts. Nevertheless, it remains an expression of creativity in online communities."
     }
   ],
   "passwordGenerating.lang.leet.paragraphLeet5": [
@@ -224,13 +278,13 @@
   "passwordGenerating.lang.list.paragraphList1": [
     {
       "type": 0,
-      "value": "In a simple brute-force attack, an attacker systematically tries to guess a password or secret key by testing all possible combinations. The attacker typically starts with the simplest combinations, such as '0000' or '1234', and works through all possible combinations until the correct one is found."
+      "value": "In a simple brute force attack, an attacker systematically tries to guess a password or secret key by trying all possible combinations one after another. The attacker usually starts with the simplest combinations, like '0000' or '1234', and then works through all possible combinations until finding the right one."
     }
   ],
   "passwordGenerating.lang.list.paragraphList2": [
     {
       "type": 0,
-      "value": "Goal: The attacker has a specific goal, such as accessing a user account, an encrypted file, or a protected system."
+      "value": "Objective: The attacker has a specific goal, such as accessing a user account, an encrypted file, or a protected system."
     }
   ],
   "passwordGenerating.lang.list.paragraphList3": [
@@ -242,19 +296,19 @@
   "passwordGenerating.lang.list.paragraphList4": [
     {
       "type": 0,
-      "value": "Trial: The attacker tries each combination until the correct one is found and access is gained. Depending on the length of the password and the character set used, this process can be completed quickly or take a long time."
+      "value": "Testing: The attacker tries each combination until finding the right one and gaining access. Depending on how long the password is and what character set it uses, this process can be completed quickly or take a very long time."
     }
   ],
   "passwordGenerating.lang.simple.paragraphSimple1": [
     {
       "type": 0,
-      "value": "In a simple brute-force attack, an attacker systematically tries to guess a password or secret key by testing all possible combinations. The attacker typically starts with the simplest combinations, such as '0000' or '1234', and works through all possible combinations until the correct one is found."
+      "value": "In a simple brute force attack, an attacker systematically tries to guess a password or secret key by trying all possible combinations one after another. The attacker usually starts with the simplest combinations, like '0000' or '1234', and then works through all possible combinations until finding the right one."
     }
   ],
   "passwordGenerating.lang.simple.paragraphSimple2": [
     {
       "type": 0,
-      "value": "Goal: The attacker has a specific goal, such as accessing a user account, an encrypted file, or a protected system."
+      "value": "Objective: The attacker has a specific goal, such as accessing a user account, an encrypted file, or a protected system."
     }
   ],
   "passwordGenerating.lang.simple.paragraphSimple3": [
@@ -272,7 +326,7 @@
   "passwordGenerating.pictureMagic.pictureTextContent": [
     {
       "type": 0,
-      "value": "Simply upload a photo, and our app will turn it into a secure password"
+      "value": "Simply upload a photo, and our app will transform it into a secure password"
     }
   ],
   "passwordGenerating.runeTranslator.generate": [
@@ -308,7 +362,7 @@
   "passwordTesting.excalibur.description": [
     {
       "type": 0,
-      "value": "Excalibur is a tool that checks the strength of your password. It evaluates factors such as length, complexity, and predictability and provides you with a comprehensive assessment of your password security."
+      "value": "Excalibur is a tool that checks the strength of your password. It evaluates factors such as length, complexity, and predictability and gives you a comprehensive rating of your password security."
     }
   ],
   "passwordTesting.excalibur.grow": [
@@ -320,7 +374,7 @@
   "passwordTesting.excalibur.howItWorks": [
     {
       "type": 0,
-      "value": "With this tool, you can ensure that your password is well protected against brute-force attacks and common password lists."
+      "value": "With this tool, you can ensure that your password is well protected against brute force attacks and common password lists."
     }
   ],
   "passwordTesting.excalibur.shrink": [
@@ -338,19 +392,139 @@
   "passwordTesting.mojo.textContent": [
     {
       "type": 0,
-      "value": "Choose a mode to test your password against brute-force attacks. In"
+      "value": "Choose a mode to test your password against brute force attacks. In"
     }
   ],
   "passwordTesting.mojo.textContent.description": [
     {
       "type": 0,
-      "value": "Both modes help you assess your password strength under different conditions."
+      "value": "Both modes help you evaluate the strength of your password and uncover potential weaknesses"
+    }
+  ],
+  "passwordTesting.mojo.textContent.list": [
+    {
+      "type": 0,
+      "value": "List Mode"
+    }
+  ],
+  "passwordTesting.mojo.textContent.list.description": [
+    {
+      "type": 0,
+      "value": "checks known passwords"
+    }
+  ],
+  "passwordTesting.mojo.textContent.recommendation": [
+    {
+      "type": 0,
+      "value": "Choose the mode that best suits your security requirements to effectively protect your passwords."
+    }
+  ],
+  "passwordTesting.mojo.textContent.simple": [
+    {
+      "type": 0,
+      "value": "simple mode"
+    }
+  ],
+  "passwordTesting.mojo.textContent.simple.description": [
+    {
+      "type": 0,
+      "value": "all possible characters are tried. The"
+    }
+  ],
+  "passwordTesting.mojoTable.guesses": [
+    {
+      "type": 0,
+      "value": "Attempts"
+    }
+  ],
+  "passwordTesting.mojoTable.password": [
+    {
+      "type": 0,
+      "value": "Password"
+    }
+  ],
+  "passwordTesting.mojoTable.time": [
+    {
+      "type": 0,
+      "value": "Time"
+    }
+  ],
+  "pictureMagic.table": [
+    {
+      "type": 0,
+      "value": "Password"
+    }
+  ],
+  "pictureMagic.table.image": [
+    {
+      "type": 0,
+      "value": "Image"
+    }
+  ],
+  "runeText-description": [
+    {
+      "type": 0,
+      "value": "Leetspeak is a type of text transformation where certain letters and characters are replaced with others. Try it out to better protect your password."
+    }
+  ],
+  "runeText-link": [
+    {
+      "type": 0,
+      "value": "LeetSpeak"
+    }
+  ],
+  "runeTranslator.catchPhrase": [
+    {
+      "type": 0,
+      "value": "Length"
     }
   ],
   "spanish-selected": [
     {
       "type": 0,
       "value": "Spanish"
+    }
+  ],
+  "test-password-nav": [
+    {
+      "type": 0,
+      "value": "Test"
+    }
+  ],
+  "test-password-nav-long": [
+    {
+      "type": 0,
+      "value": "your password"
+    }
+  ],
+  "username.gen.btn": [
+    {
+      "type": 0,
+      "value": "Create Username"
+    }
+  ],
+  "username.gen.subtitle": [
+    {
+      "type": 0,
+      "value": "your username"
+    }
+  ],
+  "username.gen.text": [
+    {
+      "type": 0,
+      "value": "Use our two tools to create the perfect username: Identity Wizardry generates random usernames based on your parameters, and Mind Maestro creates creative names through an entertaining quiz."
+    }
+  ],
+  "username.gen.title": [
+    {
+      "type": 0,
+      "value": "Create"
+    }
+  ],
+  "usernameGenerating.mindMaestro.next": [
+    {
+      "type": 0,
+      "value": "Next"
     }
   ]
 }

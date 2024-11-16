@@ -8,6 +8,7 @@ interface LanguageProviderProps {
 
 export const LanguageProvider = ({ children, initialLanguage }: LanguageProviderProps) => {
     const [language, setLanguage] = useState<Locale>(initialLanguage);
+    localStorage.setItem('locale', language);
     const value = useMemo(() => ({ language, setLanguage }), [language, setLanguage]);
 
     return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;

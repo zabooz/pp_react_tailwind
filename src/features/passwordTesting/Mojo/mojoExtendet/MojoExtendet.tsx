@@ -4,8 +4,9 @@ import { useBruteForce } from "../../../../contexts/Contexts";
 import MojoControl from "../MojoControl";
 import MojoExtendetTable from "./MojoExtendetTable";
 import MojoExtAllResultsLink from "./MojoExtAllResultsLink";
+import { FormattedMessage } from "react-intl";
 
-function mojoExtendet() {
+function MojoExtendet() {
   const { startAnimation } = useSlideContext();
 
   const { setBruteForceResults } = useBruteForce();
@@ -19,14 +20,14 @@ function mojoExtendet() {
       <MojoExtendetTable />
       <div className="my-auto ms-auto flex flex-row-reverse items-center w-full justify-evenly">
         <Button className="w-1/3" onClick={() => setBruteForceResults([])}>
-          Löschen
+          <FormattedMessage id="clearMojo"  defaultMessage={"Löschen"} />
         </Button>
 
         <MojoExtAllResultsLink />
       </div>
-      <MojoControl className="mb-6 px-5"></MojoControl>
+      <MojoControl className="mb-6 px-5"/>
     </div>
   );
 }
 
-export default mojoExtendet;
+export default MojoExtendet;

@@ -98,7 +98,9 @@ function Register() {
           <Label htmlFor="agree" className="flex">
             I agree with the&nbsp;
             <a
-              href="#"
+              href="https://www.flowbite.com/terms-and-conditions/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-cyan-600 hover:underline dark:text-cyan-500"
             >
               terms and conditions

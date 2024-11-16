@@ -66,7 +66,7 @@ function Settings() {
         className="max-w-md divide-y divide-gray-200 dark:divide-gray-700"
       >
         {li.sections.map((section) => (
-          <List.Item className="pb-3 sm:pb-4">
+          <List.Item className="pb-3 sm:pb-4" key={section}>
             <div className="flex items-center space-x-4 rtl:space-x-reverse">
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-medium text-gray-900 dark:text-white">

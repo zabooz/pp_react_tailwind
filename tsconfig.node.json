@@ -1,3 +1,5 @@
+//tsconfig.node.json
+
 {
   "compilerOptions": {
     "typeRoots": ["./node_modules/@types", "./types"],
@@ -12,12 +14,14 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
+    
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
   },
   "include": ["vite.config.ts","./types"]
 }

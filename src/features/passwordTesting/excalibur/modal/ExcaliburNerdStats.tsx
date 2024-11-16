@@ -27,10 +27,10 @@ function ExcaliburNerdStats({ nerdStats }: Props) {
                     <Accordion.Title>Base Stats</Accordion.Title>
                     <Accordion.Content>
                         <List>
-                            {baseStats.map((item, index) => {
+                            {baseStats.map((item) => {
                                 if ('stat' in item)
                                     {return (
-                                        <List.Item key={`${index}-base`}>
+                                        <List.Item key={item.stat + item.value}>
                                             {item.stat}: <span>{item.value}</span>
                                         </List.Item>
                                     );}
@@ -42,10 +42,10 @@ function ExcaliburNerdStats({ nerdStats }: Props) {
                     <Accordion.Title>Crack Time</Accordion.Title>
                     <Accordion.Content>
                         <List>
-                            {crackTime.map((item, index) => {
+                            {crackTime.map((item) => {
                                 if ('method' in item)
                                     {return (
-                                        <List.Item key={`${index}-crack`}>
+                                        <List.Item key={item.method + item.time}>
                                             {item.method}: <span>{item.time}</span>
                                         </List.Item>
                                     );}

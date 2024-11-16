@@ -24,10 +24,12 @@ function HoverSound({ hoverTimer, soundFile, children, volume }: Props) {
   };
 
   return (
-    <div onMouseEnter={playSound} className="cursor-pointer  mx-auto  ">
-      <audio ref={audioRef} src={soundFile} />
-      {children}
-    </div>
+      <div onMouseEnter={playSound} className="cursor-pointer  mx-auto  ">
+          <audio ref={audioRef} src={soundFile}>
+              <track kind="captions" label="English" srcLang="en" default />
+          </audio>
+          {children}
+      </div>
   );
 }
 

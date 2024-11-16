@@ -25,15 +25,15 @@ function ExcaliburTipps({ passwordStrength }: Props) {
     return passwordStrength ? (
         <div className="text-lg text-gray-700 dark:text-gray-400">
             <List>
-                {succesArray.map((item, index) => (
-                    <ListItem icon={FaCheck} key={index}>
+                {succesArray.map((item) => (
+                    <ListItem icon={FaCheck} key={item}>
                         {item}
                     </ListItem>
                 ))}
             </List>
             <List>
-                {failArray.map((item, index) => (
-                    <ListItem color="red" icon={MdOutlineClose} key={index}>
+                {failArray.map((item) => (
+                    <ListItem color="red" icon={MdOutlineClose} key={item}>
                         {item}
                     </ListItem>
                 ))}

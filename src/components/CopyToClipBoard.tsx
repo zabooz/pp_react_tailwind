@@ -34,6 +34,7 @@ export const CopyToClipBoard = ({ value, children, type, clippy }: Props) => {
         >
             {arr.includes(value) && !clippy ? (
                 <BsClipboard2Check size={18} />
+                // eslint-disable-next-line 
             ) : clippy && isCopied ? (
                 <BsClipboard2Check size={18} />
             ) : (

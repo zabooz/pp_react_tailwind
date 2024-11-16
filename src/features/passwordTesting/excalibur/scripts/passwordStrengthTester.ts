@@ -35,7 +35,7 @@ const sonderzeichen = [
 const kleinbuchstaben = 'abcdefghijklmnopqrstuvwxyz'.split('');
 const grossbuchstaben = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const zahlen = '0123456789'.split('');
-
+//eslint-disable-next-line
 export async function passwordStrengthTester(password: string) {
     let result = 0;
 
@@ -98,12 +98,13 @@ export async function passwordStrengthTester(password: string) {
         points.pointForNumber.value = true;
     }
 
-    password = password.toLowerCase();
+    const lowerCasePassword = password.toLowerCase();
+
     for (let i = 0; i < password.length; i++) {
-        const charCodeOne = password.charCodeAt(i);
-        const charCodeTwo = password.charCodeAt(i + 1);
-        const charCodeThree = password.charCodeAt(i + 2);
-        const charArr = password.split('');
+        const charCodeOne = lowerCasePassword.charCodeAt(i);
+        const charCodeTwo = lowerCasePassword.charCodeAt(i + 1);
+        const charCodeThree = lowerCasePassword.charCodeAt(i + 2);
+        const charArr = lowerCasePassword.split('');
 
         if (charArr[i] === charArr[i + 1] && charArr[i + 1] === charArr[i + 2]) {
             points.noRepeat.value = false;

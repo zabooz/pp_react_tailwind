@@ -14,8 +14,8 @@ function MojoExtendetTable() {
                     <Table.HeadCell>Zeit</Table.HeadCell>
                 </Table.Head>
                 <Table.Body className="divide-y  ">
-                    {bruteForceResults.map((result, index) => (
-                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800" key={index}>
+                    {bruteForceResults.map((result) => (
+                        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800" key={result.join()}>
                             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                                 {result[0]}
                             </Table.Cell>

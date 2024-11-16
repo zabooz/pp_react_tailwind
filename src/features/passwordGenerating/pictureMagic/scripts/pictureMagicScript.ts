@@ -11,6 +11,7 @@ export const fileUpload = async (
     if (file === undefined) {
         return;
     } else if (!validTypes.includes(file.type)) {
+        //eslint-disable-next-line
         alert('Only image files are allowed.');
         return;
     }

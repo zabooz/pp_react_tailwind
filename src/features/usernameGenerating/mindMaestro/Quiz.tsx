@@ -8,9 +8,9 @@ interface Props {
 
 function Quiz({ index, setAnswer, startQuiz }: Props) {
     return index < mindQuestions.length && startQuiz ? (
-        mindQuestions[index].answers.map((answer, i) => (
+        mindQuestions[index].answers.map((answer) => (
             <div
-                key={i}
+                key={answer.answer}
                 data-arr={answer.dataArr}
                 className={`relative  cursor-pointer ${startQuiz ? '' : 'hidden'}   `}
                 style={{ backgroundImage: `url(${answer.imagePath})` }}

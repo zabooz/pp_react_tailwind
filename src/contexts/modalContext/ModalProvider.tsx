@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useMemo, useState } from 'react';
 import { ModalContext } from './modalContext';
 
 interface ModalProviderProps {
@@ -7,5 +7,8 @@ interface ModalProviderProps {
 
 export const ModalProvider = ({ children }: ModalProviderProps) => {
     const [openModal, setOpenModal] = useState<boolean>(false);
-    return <ModalContext.Provider value={{ openModal, setOpenModal }}>{children}</ModalContext.Provider>;
+
+    const values = useMemo(() => ({ openModal, setOpenModal }), [openModal, setOpenModal]);
+
+    return <ModalContext.Provider value={values}>{children}</ModalContext.Provider>;
 };

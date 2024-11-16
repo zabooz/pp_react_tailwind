@@ -8,7 +8,7 @@ interface Paragraph {
     defaultMessage: string;
 }
 
-export interface registryData {
+export interface RegistryData {
     username: string;
     password: string;
     email: string;
@@ -19,21 +19,21 @@ export interface registryData {
     avatar: string;
 }
 
-export interface loginData {
+export interface LoginData {
     username: string;
     password: string;
 }
-export interface loginResponse {
+export interface LoginResponse {
     token: string;
 }
 
-export interface dataKrakenTakesData {
+export interface DataKrakenTakesData {
     col: string;
 }
-export interface dataKrakenGivesData {
+export interface DataKrakenGivesData {
     col?: string;
 }
-export interface dataKrakenGivesResponse {
+export interface DataKrakenGivesResponse {
     success: boolean;
     message: string;
     data: string[];
@@ -46,18 +46,18 @@ export interface StorageData {
     type: string;
 }
 
-export interface dataKrakenTradesData {
+export interface DataKrakenTradesData {
     key: string;
     value: string;
 }
 
-export interface userDataResponse {
+export interface UserDataResponse {
     success: boolean;
     message: string;
-    data: userData | LeaderBoardData;
+    data: UserData | LeaderBoardData;
 }
 
-export interface userData {
+export interface UserData {
     username: string;
     email: string;
     visits: number;
@@ -74,7 +74,7 @@ export interface LeaderBoardData {
     generated_usernames: number;
     avatar: string;
     rank?: number;
-    user?: userData;
+    user?: UserData;
 }
 export interface EnglishArrays {
     colors: string[];

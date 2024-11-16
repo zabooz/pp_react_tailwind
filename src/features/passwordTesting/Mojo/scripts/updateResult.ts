@@ -1,9 +1,10 @@
 export function updateAttempts(data: string[][], display: HTMLTableSectionElement | null) {
     const stars = '******';
 
-    // display!.innerHTML = "";
+
 
     const mojoIcon = document.createElement('img');
+    //eslint-disable-next-line
     const rowCount = Math.floor(Math.random() * 1000000);
     mojoIcon.src = '/assets/icons/eye-slash.svg';
     mojoIcon.addEventListener('click', () => {
@@ -23,6 +24,7 @@ export function updateAttempts(data: string[][], display: HTMLTableSectionElemen
         const hideArr = [stars, data[data.length - 1][0]];
         const mojoIconDisplay = document.createElement('img');
         mojoIconDisplay.src = '/assets/icons/eye.svg';
+        //eslint-disable-next-line
         const rowCount = Math.floor(Math.random() * 1000000);
         mojoIconDisplay.addEventListener('click', () => {
             const target = document.getElementById(`td${rowCount}`)!;
@@ -67,6 +69,7 @@ export function updateAttempts(data: string[][], display: HTMLTableSectionElemen
                 const td = document.createElement('td');
                 const hideArr = [stars, data[rowIndex][0]]; // Verwende rowIndex statt index
                 const mojoIcon = document.createElement('img');
+                //eslint-disable-next-line
                 const rowCount = Math.floor(Math.random() * 1000000); // Zufällige ID für jede Zeile
                 mojoIcon.src = '/assets/icons/eye-slash.svg';
 

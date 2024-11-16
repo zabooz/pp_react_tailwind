@@ -1,5 +1,5 @@
 // vite.config.ts
-/// <reference types="vitest/config" />
+// / <reference types="vitest/config" />
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import path from 'path';

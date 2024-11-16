@@ -3,7 +3,7 @@ import { DrawerData } from '../../interfaces/interfaces';
 
 interface BruteForceContextProps {
     bruteForceThinkerInterval: number;
-    setBruteThinkerInterval: (value: number) => void;
+    setBruteForceThinkerInterval: (value: number) => void;
     isBruteActive: boolean;
     setIsBruteActive: (value: boolean) => void;
     bruteType: string;

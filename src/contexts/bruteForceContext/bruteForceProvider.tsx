@@ -1,44 +1,55 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useMemo, useState } from 'react';
 import { BruteForceContext } from './bruteForceContext';
 import { DrawerData } from '../../interfaces/interfaces';
 
-export const BruteForceProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [bruteForceThinkerInterval, setBruteThinkerInterval] = useState<number>(0);
+//eslint-disable-next-line
+export const BruteForceProvider: React.FC<{ children: ReactNode }> = ({ children }: React.PropsWithChildren<{}>) => {
+    const [bruteForceThinkerInterval, setBruteForceThinkerInterval] = useState<number>(0);
     const [isBruteActive, setIsBruteActive] = useState<boolean>(false);
     const [bruteType, setBruteType] = useState<string>('library');
     const [password, setPassword] = useState<string>('');
     const [showResults, setShowResults] = useState<boolean>(false);
     const [openResultModal, setOpenResultModal] = useState<boolean>(false);
     const [bruteForceResults, setBruteForceResults] = useState<string[][]>([]);
-    const [drawer, setDrawerShow] = useState<boolean>(false);
+    const [drawer, setDrawer] = useState<boolean>(false);
     const [drawerContent, setDrawerContent] = useState<DrawerData>({
         title: '',
         paragraphs: [],
     });
-    return (
-        <BruteForceContext.Provider
-            value={{
-                bruteForceThinkerInterval,
-                setBruteThinkerInterval,
-                isBruteActive,
-                setIsBruteActive,
-                bruteType,
-                setBruteType,
-                password,
-                setPassword,
-                showResults,
-                setShowResults,
-                openResultModal,
-                setOpenResultModal,
-                bruteForceResults,
-                setBruteForceResults,
-                drawer,
-                setDrawerShow,
-                drawerContent,
-                setDrawerContent,
-            }}
-        >
-            {children}
-        </BruteForceContext.Provider>
+
+    const values = useMemo(
+        () => ({
+            bruteForceThinkerInterval,
+            setBruteForceThinkerInterval,
+            isBruteActive,
+            setIsBruteActive,
+            bruteType,
+            setBruteType,
+            password,
+            setPassword,
+            showResults,
+            setShowResults,
+            openResultModal,
+            setOpenResultModal,
+            bruteForceResults,
+            setBruteForceResults,
+            drawer,
+            setDrawer,
+            drawerContent,
+            setDrawerContent,
+        }),
+        [
+            bruteForceThinkerInterval,
+            isBruteActive,
+            bruteType,
+            password,
+            showResults,
+            openResultModal,
+            bruteForceResults,
+            drawer,
+            drawerContent,
+        ],
     );
+
+    return <BruteForceContext.Provider value={values}>{children}</BruteForceContext.Provider>;
 };

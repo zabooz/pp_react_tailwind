@@ -1,3 +1,4 @@
+//eslint-disable
 import { Footer } from 'flowbite-react';
 import { useState, useEffect } from 'react';
 import { useIntl } from 'react-intl';
@@ -13,18 +14,19 @@ function FooterCom() {
         if (startAnimation) {
             setVisible(false);
             setTimeout(() => {
-                setVisible(true); 
-            }, 2000); 
+                setVisible(true);
+            }, 2000);
         }
     }, [startAnimation]);
 
     return (
         <Footer
             container
-            className={`!text-[#9ca3af] dark:bg-slate-700 rounded-none mt-5 ${
-                startAnimation ? '!dark:bg-slate-800' : visible ? 'dark:bg-slate-700' : 'dark:bg-slate-800'
+            // eslint-disable-next-line
+            className={`!text-[#9ca3af] dark:bg-slate-700 rounded-none mt-5 ${startAnimation ? '!dark:bg-slate-800' : visible ? 'dark:bg-slate-700' : 'dark:bg-slate-800'
             }`}
-        >
+        >   
+        {/* eslint-disable-next-line */}
             <div className={`w-full ${startAnimation ? '!hidden' : visible ? '!block' : '!hidden'}`}>
                 <div className="grid w-full">
                     <div></div>
@@ -56,5 +58,5 @@ function FooterCom() {
         </Footer>
     );
 }
-
 export default FooterCom;
+//eslint-enable

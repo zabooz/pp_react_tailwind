@@ -19,7 +19,7 @@ function Sanchez({ isOpen, handleClose }: Props) {
 
     return (
         <Drawer open={isOpen} onClose={handleClose} className="pt-20">
-            <Drawer.Header titleIcon={() => <></>} />
+            <Drawer.Header  />
             <div>
                 <img src="/assets/sanchez/sanchez.webp" alt="sanchez" className="rounded-full mx-auto  w-24" />
                 <h2 className="text-4xl font-bold text-[#9ca3af] text-center mt-5">Sanchez</h2>

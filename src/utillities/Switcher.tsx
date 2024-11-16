@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { CopyToClipBoard } from '../components/CopyToClipBoard';
 import { StorageData } from '../interfaces/interfaces';
@@ -10,9 +10,8 @@ interface Props {
 function GlyphSorcerySwitch({ data, app }: Props) {
     const [switchCount, setSwitchCount] = useState<number>(0);
 
-    const handleSwitch = (e: any) => {
-         
-        const icon = e.target;
+    const handleSwitch = (e: React.MouseEvent<HTMLImageElement>) => {
+        const icon = e.target as HTMLImageElement;
         const type = icon.getAttribute('data-type');
         const length = data.length;
         if (type === 'left') {
@@ -65,12 +64,15 @@ function GlyphSorcerySwitch({ data, app }: Props) {
                             </div>
                             {data.length > 0 && (
                                 <img
+                                    alt="arrow left"
                                     src={data[switchCount].catch}
                                     className=" mb-auto mx-auto pt-5 w-6  rounded hover:scale-[3] z-10 cursor-pointer "
                                 />
                             )}
                         </>
-                    ) : app === 'runeTranslator' ? (
+                    ) : 
+                    // eslint-disable-next-line sonarjs/no-nested-conditional
+                    app === 'runeTranslator' ? (
                         <>
                             <div className="border-b">
                                 <FormattedMessage id="runeTranslator.catchPhrase" defaultMessage="Länge" />

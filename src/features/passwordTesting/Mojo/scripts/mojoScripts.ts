@@ -1,6 +1,6 @@
-import { api } from '../../../../api/api';
-import { dataKrakenTakes } from '../../../../components/login.register/backend/dataKraken';
-import { passwordEncoder } from '../../../../utillities/encoder';
+import { api } from '@/api/api';
+import { dataKrakenTakes } from '@/components/login.register/backend/dataKraken';
+import { passwordEncoder } from '@/utillities/encoder';
 
 export const startBruteForce = async (
     bruteType: string,

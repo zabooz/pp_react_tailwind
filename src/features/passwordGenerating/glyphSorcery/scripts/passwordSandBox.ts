@@ -13,32 +13,37 @@ function filterWordsByLength(words: string[], length: number) {
 }
 
 function generatePassword(length: number) {
+
+  let l = length;
+
   // Generates a password with user-defined length.
   const numberArray = '0123456789'.split('');
   const symbolArray = '!@#$%&*-_+=.?'.split('');
   const arrays = [numberArray, symbolArray];
-
+  
   // Ensure that all types of characters are used at least once if length allows
   const generatedPassword = [];
 
   // Add one character from each array if there is space
   arrays.forEach((array) => {
-    if (length > 0) {
+    if (l > 0) {
       generatedPassword.push(array[rndNumInLen(array)]);
-      length--;
+      l--;
     }
   });
 
   // Fill remaining length with random characters from the available arrays
-  while (length > 0) {
+  while (l> 0) {
     const randomArray = arrays[rndNumInLen(arrays)];
     generatedPassword.push(randomArray[rndNumInLen(randomArray)]);
-    length--;
+    l--;
   }
 
   // Shuffle the final password to ensure randomness
   return shuffleArray(generatedPassword).join('');
 }
+
+
 function languageSelect(language: string) {
   let chosenArray;
   if (language === 'german') {
@@ -49,6 +54,7 @@ function languageSelect(language: string) {
   return chosenArray;
 }
 export function generateEzPw(length: number, language: string) {
+
   const allNouns = languageSelect(language);
   const filteredArray = filterWordsByLength(allNouns, length);
 

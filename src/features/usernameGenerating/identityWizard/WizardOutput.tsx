@@ -1,4 +1,4 @@
-import { CopyToClipBoard } from '../../../components/CopyToClipBoard';
+import { CopyToClipBoard } from '@/components/CopyToClipBoard';
 
 interface Props {
     username: HTMLSpanElement | null;

@@ -10,18 +10,18 @@ import { DrawerData } from '../../interfaces/interfaces.ts';
 
 
 function PasswordGenerating() {
-  const [drawer, setDrawerShow] = useState<boolean>(false);
+  const [drawer, setDrawer] = useState<boolean>(false);
   const [drawerContent, setDrawerContent] = useState<DrawerData>({
     title: '',
     paragraphs: [],
   });
 
   const handleClickDrawer = (content: DrawerData) => {
-    setDrawerShow(!drawer);
+    setDrawer(!drawer);
     setDrawerContent(content);
   };
   const handleCloseDrawer = () => {
-    setDrawerShow(!drawer);
+    setDrawer(!drawer);
   };
 
   const scrollDiv1 = useRef<HTMLImageElement>(null);

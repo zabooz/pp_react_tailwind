@@ -1,4 +1,5 @@
 export const thinker = () => {
+    // eslint-disable-next-line sonarjs/pseudo-random
     const randomIndex = Math.floor(Math.random() * thinkWords.length);
     const verb = thinkWords[randomIndex];
     return verb;

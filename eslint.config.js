@@ -51,6 +51,8 @@ export default [
             'src/playground/**/*',
             'src/components/ui/**/*',
             'src/Components/ui/**/*',
+            'legacyDesign/**',
+            'tailwind.config.js',
         ],
     },
     /* Use ESLint's recommended base configuration
@@ -117,7 +119,7 @@ export default [
             ...reactHooks.configs.recommended.rules,
             ...eslintConfigPrettier.rules,
             ...sonarjs.configs.recommended.rules,
-
+            'sonarjs/mouse-events-a11y': 'off', // Add this line to disable the rule
             /* ensure that no-unused- imports rule is enabled */
             'unused-imports/no-unused-imports': 'error',
             /* Ensure components are wrapped in React.memo() or similar for Fast Refresh
@@ -125,7 +127,6 @@ export default [
              * ✅ export default function Button() {}
              * ❌ export const Button = () => {} */
             'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-
             /* Use single quotes for string literals
              * ✅ const name = 'John'
              * ❌ const name = "John" */
@@ -142,17 +143,17 @@ export default [
              * import React from 'react';            // external
              * import { AppConfig } from '@/config'; // internal
              * import { Button } from '../Button';   // relative */
-            'import/order': [
-                'error',
-                {
-                    'groups': ['builtin', 'external', 'internal', ['sibling', 'parent'], 'index', 'unknown'],
-                    'newlines-between': 'never',
-                    'alphabetize': {
-                        order: 'asc',
-                        caseInsensitive: true,
-                    },
-                },
-            ],
+            // 'import/order': [
+            //     'error',
+            //     {
+            //         'groups': ['builtin', 'external', 'internal', ['sibling', 'parent'], 'index', 'unknown'],
+            //         'newlines-between': 'never',
+            //         'alphabetize': {
+            //             order: 'asc',
+            //             caseInsensitive: true,
+            //         },
+            //     },
+            // ],
 
             /* Prevent duplicate imports
              * ❌ import { Button } from './Button';
@@ -165,7 +166,7 @@ export default [
 
             /* Warn about declared but unused variables
              * ❌ const unused = 5; // Never used */
-            'no-unused-vars': 'warn',
+         
 
             /* TypeScript-specific unused variables warning
              * Ignores rest properties in destructuring

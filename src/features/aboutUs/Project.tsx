@@ -408,12 +408,16 @@ function Project() {
           </p>
           <div>
             <div>
-              <img src="/assets/project/image13.png" />
-              <img src="/assets/project/image4.png" />
+              <img src="/assets/project/image13.png"
+              alt="Projektmanagerin in Personalunion" />
+              <img src="/assets/project/image4.png" 
+              alt="Trainerin in Personalunion" />
             </div>
             <div>
-              <img src="/assets/project/image20.png" />
-              <img src="/assets/project/image2.png" />
+              <img src="/assets/project/image20.png"
+              alt="Coach in Personalunion" />
+              <img src="/assets/project/image2.png"
+              alt="Software-Kundin in Personalunion" />
             </div>
           </div>
         </section>

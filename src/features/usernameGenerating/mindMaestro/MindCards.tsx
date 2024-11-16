@@ -32,8 +32,8 @@ function MindCards({ setIndex, answers, index, setStartQuiz, setAnswers, userAns
 
     return (
         <div className=" grid grid-cols-2 gap-4 grid-rows-2">
-                {answers.map((answer, i) => (
-                    <div key={i} data-type={answer.dataArr} className=" w-full h-[140px] relative">
+                {answers.map((answer) => (
+                    <div key={answer.answer} data-type={answer.dataArr} className=" w-full h-[140px] relative">
                         <div
                             data-type={answer.dataArr}
                             className={` mx-auto w-full h-full rounded-md dark:border-slate-400 border-4  bg-center bg-cover relative ${

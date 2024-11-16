@@ -2,6 +2,7 @@ import { Table } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { dataKrakenGives } from '../../components/login.register/backend/dataKraken';
 import { LeaderBoardData } from '../../interfaces/interfaces';
+import { randomUUID } from 'crypto';
 function LeaderBoard() {
   const [stat, setStat] = useState('visits');
   const [data, setData] = useState<LeaderBoardData[]>([]);
@@ -62,6 +63,7 @@ function LeaderBoard() {
             let avatar = user.avatar;
             if ('rank' in user) {
               rank = user.rank as number;
+              //eslint-disable-next-line
               user = user.user as LeaderBoardData;
               avatar = user.avatar as string;
               color = 'text-red-400';
@@ -80,13 +82,13 @@ function LeaderBoard() {
             return (
               <Table.Row
                 className={`bg-white dark:border-gray-700 dark:bg-gray-800 ${color} ${bgColor} ${fontWeight}`}
-                key={index}
+                key={randomUUID()}
               >
                 <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                   {rank}
                 </Table.Cell>
                 <Table.Cell className="flex gap-2 items-center ">
-                  <img src={avatar} className="w-8 rounded-full" />
+                  <img src={avatar} className="w-8 rounded-full" alt=""/>
                   {user.username}
                 </Table.Cell>
                 <Table.Cell>{user.visits}</Table.Cell>

@@ -22,7 +22,7 @@ function Clippy({ isOpen, handleClose }: Props) {
     const intl = useIntl();
     return (
         <Drawer open={isOpen} onClose={handleClose} className="pt-20">
-            <Drawer.Header titleIcon={() => <></>} />
+            <Drawer.Header  />
             <div>
                 <img src="/assets/clippy/clippy.webp" alt="sanchez" className="rounded-full mx-auto  w-24" />
                 <h2 className="text-4xl font-bold text-[#9ca3af] text-center mt-5">Clippy</h2>

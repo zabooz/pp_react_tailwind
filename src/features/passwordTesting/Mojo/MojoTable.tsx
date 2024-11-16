@@ -1,9 +1,9 @@
 import { Table } from 'flowbite-react';
-import { useBruteForce } from '../../../contexts/Contexts';
 import { FormattedMessage } from 'react-intl';
+import { useBruteForceContext } from '../../../contexts/bruteForceContext/bruteForceContext';
 
 function MojoTable() {
-    const { bruteForceResults } = useBruteForce();
+    const { bruteForceResults } = useBruteForceContext();
 
     return (
         <Table className=" lg:hidden">

@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { Suspense } from 'react';
 
-import { ClippyProvider, PasswordTestingProvider, SlideProvider } from './contexts/Contexts';
-
 import { NavbarCom } from './components/Navbar';
 import Footer from './components/Footer';
 import ContentBox from './components/ContentBox';
@@ -22,14 +20,15 @@ const PrivacyPolicy = React.lazy(() => import('./features/legalStuff/PrivacyPoli
 const DashBoard = React.lazy(() => import('./features/DashBoard/DashBoard'));
 import deMessages from '../compiled-lang/de.json';
 import enMessages from '../compiled-lang/en.json';
+import { ClippyProvider } from './contexts/clippyContext/ClippyProvider';
+import { PasswordTestingProvider } from './contexts/passwordTestingContext/PasswordTestingProvider';
+import { SlideProvider } from './contexts/slideProvider/SlideProvider';
 // import esMessages from '../compiled-lang/es.json';
 // import frMessages from '../compiled-lang/fr.json';
 // import laMessages from '../compiled-lang/la.json';
 
-
 function App() {
-
-    const {language} = useLanguageContext()
+    const { language } = useLanguageContext();
     const messages = {
         en: enMessages,
         de: deMessages,

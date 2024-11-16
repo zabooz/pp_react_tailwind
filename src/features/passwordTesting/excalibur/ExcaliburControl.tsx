@@ -1,7 +1,8 @@
 import { Button, Progress, Spinner, TextInput } from 'flowbite-react';
 import { excaliburTesting } from './scripts/excaliburScript';
-import { useExcalibur, usePasswordTesting } from '../../../contexts/Contexts';
 import { FormattedMessage } from 'react-intl';
+import { useExcalibur } from '../../../contexts/excaliburContext/excaliburContext';
+import { usePasswordTesting } from '../../../contexts/passwordTestingContext/passwordTestingContext';
 
 interface Props {
     className?: string;

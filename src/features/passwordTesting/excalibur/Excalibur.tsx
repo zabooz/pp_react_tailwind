@@ -1,9 +1,7 @@
 import { Button, Card } from 'flowbite-react';
-
 import { useState, useEffect } from 'react';
 import ExcaliburModal from './modal/ExcaliburModal';
 import { thinker } from '../../../utillities/thinker';
-import { usePasswordTesting, useSlideContext } from '../../../contexts/Contexts';
 import ExcaliburControl from './ExcaliburControl';
 import ExcaliburTextContent from './ExcaliburTextContent';
 import ModalLink from './modal/ModalLink';
@@ -11,6 +9,9 @@ import CardHeader from '../../../components/CardHeader';
 import ExcaliburExtendet from './ExcaliburExtendet';
 import { cardsGrow } from '../cardsGrow';
 import { FormattedMessage } from 'react-intl';
+import { usePasswordTesting } from '../../../contexts/passwordTestingContext/passwordTestingContext';
+import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
+
 function Excalibur() {
     const { onSite, mojoGrow, isThinking, excaliburGrow, setExcaliburGrow, handleCardGrow } = usePasswordTesting();
     const { startAnimation } = useSlideContext();

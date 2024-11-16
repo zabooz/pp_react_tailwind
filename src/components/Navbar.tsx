@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ModalContext, useLoginContext, useSlideContext } from '../contexts/Contexts';
+
 import { useNavigate } from 'react-router-dom';
 import LoginRegister from './login.register/LoginRegister';
 import { logOut } from './login.register/backend/logout';
@@ -16,6 +16,9 @@ import {
 } from 'flowbite-react';
 import { FormattedMessage } from 'react-intl';
 import LanguageSwitch from './LanguageSwitch';
+import { useLoginContext } from '../contexts/loginContext/loginContext';
+import { ModalContext } from '../contexts/modalContext/modalContext';
+import { useSlideContext } from '../contexts/slideProvider/slideContext';
 
 export const NavbarCom = () => {
     const [openModal, setOpenModal] = useState(false);

@@ -4,19 +4,16 @@ import { HeadProvider } from 'react-head';
 import { Flowbite } from 'flowbite-react';
 import App from './App.tsx';
 import './index.css';
-import { LoginProvider } from './contexts/Contexts.tsx';
+
 import { LanguageProvider } from './contexts/languageContext/LanguageProvider.tsx';
 import { Locale } from './contexts/languageContext/languageContext.ts';
+import { LoginProvider } from './contexts/loginContext/LoginProvider.tsx';
 
 const locale =
     (localStorage.getItem('locale') as Locale) ||
-    (['de', 'en'].includes(navigator.language.split('-')[0]) 
-       ? navigator.language.split('-')[0] : 'en');
+    (['de', 'en'].includes(navigator.language.split('-')[0]) ? navigator.language.split('-')[0] : 'en');
 
 localStorage.setItem('locale', locale);
-
-
-
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>

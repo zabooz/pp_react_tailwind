@@ -1,9 +1,8 @@
 import { Tabs, Drawer } from 'flowbite-react';
-
-import { useClippyContext } from '../../contexts/Contexts';
 import { CopyToClipBoard } from '../CopyToClipBoard';
 import { FaRegTrashAlt } from 'react-icons/fa';
 import { useIntl } from 'react-intl';
+import { useClippyContext } from '../../contexts/clippyContext/clippyContext';
 
 interface Props {
     isOpen: boolean;

@@ -104,7 +104,7 @@ export function updateAttempts(
         }
         tr.appendChild(td);
       });
-      let rows = Array.from(display.getElementsByTagName("tr"));
+      const rows = Array.from(display.getElementsByTagName("tr"));
       display.append(tr, ...rows);
     });
   }

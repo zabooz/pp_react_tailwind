@@ -94,7 +94,7 @@ export function passwordConverter({ password, mode }: Props) {
   let newPassword;
 
   // Converting to upper case to catch lower case letters for leetspeak.
-  let upperCasePw = password.toUpperCase();
+  const upperCasePw = password.toUpperCase();
 
   // Get the correct leetTable based on the selected converter.
   const leetTable = leetTables[mode as keyof typeof leetTables];

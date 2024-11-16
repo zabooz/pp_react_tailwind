@@ -6,7 +6,7 @@ export function capitalizeFirstLetter(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-export function rndNumInLen(array: any[]) {
+export function rndNumInLen(array: string[]) {
   return Math.floor(Math.random() * array.length);
 }
 
@@ -20,7 +20,7 @@ export function getUniqueRandomWord(
   } while (existingWords.includes(randomWord));
   return randomWord;
 }
-export function shuffleArray(array: any[]) {
+export function shuffleArray(array: string[]) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];

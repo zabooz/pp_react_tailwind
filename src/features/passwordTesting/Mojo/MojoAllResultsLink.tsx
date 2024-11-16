@@ -1,8 +1,9 @@
 import { FormattedMessage } from 'react-intl';
-import { useBruteForce } from '../../../contexts/Contexts';
+import { useBruteForceContext } from '../../../contexts/bruteForceContext/bruteForceContext';
+
 
 function MojoAllResultsLink() {
-    const { setOpenResultModal } = useBruteForce();
+    const { setOpenResultModal } = useBruteForceContext();
 
     return (
         <span

@@ -1,9 +1,11 @@
 import { Button, Label, Modal, TextInput } from "flowbite-react";
 import { useState } from "react";
-import { useModalContext, useLoginContext } from "../../contexts/Contexts.tsx";
+
 import ForgotPassword from "./ForgotPassword.tsx";
 import { loginData } from "../../interfaces/interfaces";
 import { login } from "./backend/login.ts";
+import { useModalContext } from "../../contexts/modalContext/modalContext.ts";
+import { useLoginContext } from "../../contexts/loginContext/loginContext.ts";
 interface Props {
   handleRegisterClick: () => void;
 }

@@ -1,27 +1,26 @@
 import { lazy, useEffect, useState } from 'react';
-
 const TextCanvas = lazy(() => import('../../../components/TextCanvas'));
 const ResultsModal = lazy(() => import('./mojoModal/ResultsModal'));
-import { usePasswordTesting, useSlideContext } from '../../../contexts/Contexts';
 import MojoControll from './MojoControl';
-import { useBruteForce } from '../../../contexts/Contexts';
-
 import MojoTextContent from './MojoTextContent';
 import MojoAllResultsLink from './MojoAllResultsLink';
 import MojoExtendetButton from './mojoExtendet/MojoExtendetButton';
-
 import MojoTable from './MojoTable';
 import { Card } from 'flowbite-react';
 import CardHeader from '../../../components/CardHeader';
 import MojoExtendet from './mojoExtendet/MojoExtendet';
-
 import { cardsGrow } from '../cardsGrow';
+import { usePasswordTesting } from '../../../contexts/passwordTestingContext/passwordTestingContext';
+import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
+import { useBruteForceContext } from '../../../contexts/bruteForceContext/bruteForceContext';
+
 
 function Mojo() {
-    const { setOpenResultModal, bruteForceResults, openResultModal } = useBruteForce();
+    const { setOpenResultModal, bruteForceResults, openResultModal, setDrawerShow, drawer, drawerContent } =
+        useBruteForceContext();
     const { onSite, mojoGrow, excaliburGrow } = usePasswordTesting();
     const { startAnimation } = useSlideContext();
-    const { setDrawerShow, drawer, drawerContent } = useBruteForce();
+
     const [animation, setAnimation] = useState<string>('');
     const [count, setCount] = useState<number>(0);
     const handleCloseDrawer = () => {

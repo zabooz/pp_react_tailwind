@@ -1,9 +1,9 @@
 import { Card } from "flowbite-react";
-import { useSlideContext } from "../../../contexts/Contexts";
-
 import WizardControl from "./WizardControl";
 import WizardHeader from "./WizardHeader";
 import WizardText from "./WizardText";
+import { useSlideContext } from "../../../contexts/slideProvider/slideContext";
+
 const IdentityWizard = () => {
   const { startAnimation } = useSlideContext();
 

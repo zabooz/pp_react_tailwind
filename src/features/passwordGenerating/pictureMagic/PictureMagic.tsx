@@ -1,16 +1,15 @@
 import { Card, Button } from 'flowbite-react';
-
 import { useState } from 'react';
-
 import { pictureMagic } from './scripts/pictureMagicScript';
 import Switcher from '../../../utillities/Switcher';
 import { StorageData } from '../../../interfaces/interfaces';
-import { useSlideContext } from '../../../contexts/Contexts';
-
 import PictureTextContent from './PictureTextContent';
 import PictureControl from './PictureControl';
 import CardHeader from '../../../components/CardHeader';
 import { FormattedMessage } from 'react-intl';
+import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
+
+
 function PictureMagic() {
     const [pictureFile, setPictureFile] = useState<File>(new File([''], ''));
     const [pictureBase64, setPictureBase64] = useState<string>('');

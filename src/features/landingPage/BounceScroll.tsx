@@ -24,7 +24,8 @@ const BounceOnScroll: React.FC<BounceOnScrollProps> = ({ children }) => {
 
     return () => {
       if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(elementRef.current); 
       }
     };
   }, []);

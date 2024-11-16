@@ -1,6 +1,6 @@
 import { Button } from 'flowbite-react';
-import { usePasswordTesting } from '../../../../contexts/Contexts';
 import { FormattedMessage } from 'react-intl';
+import { usePasswordTesting } from '../../../../contexts/passwordTestingContext/passwordTestingContext';
 
 interface Props {
     className?: string;

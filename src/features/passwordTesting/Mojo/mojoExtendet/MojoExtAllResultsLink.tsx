@@ -1,8 +1,9 @@
-import { useBruteForce } from "../../../../contexts/Contexts";
+import { useBruteForceContext } from "../../../../contexts/bruteForceContext/bruteForceContext";
+
 
 
 function MojoExtAllResultsLink() {
-    const { setOpenResultModal } = useBruteForce();
+    const { setOpenResultModal } = useBruteForceContext();
 
     return (
       <span

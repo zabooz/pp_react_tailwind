@@ -19,7 +19,7 @@ function generatePassword(length: number) {
   const arrays = [numberArray, symbolArray];
 
   // Ensure that all types of characters are used at least once if length allows
-  let generatedPassword = [];
+  const generatedPassword = [];
 
   // Add one character from each array if there is space
   arrays.forEach((array) => {
@@ -49,15 +49,15 @@ function languageSelect(language: string) {
   return chosenArray;
 }
 export function generateEzPw(length: number, language: string) {
-  let allNouns = languageSelect(language);
-  let filteredArray = filterWordsByLength(allNouns, length);
+  const allNouns = languageSelect(language);
+  const filteredArray = filterWordsByLength(allNouns, length);
 
-  let chosenWord = filteredArray[rndNumInLen(filteredArray)];
+  const chosenWord = filteredArray[rndNumInLen(filteredArray)];
 
   const firstChar = chosenWord.slice(0, 1);
   const password = chosenWord.slice(1);
 
-  let ezPw =
+  const ezPw =
     capitalizeFirstLetter(firstChar) +
     passwordConverter({ password, mode: "leetSimple" }) +
     generatePassword(3);

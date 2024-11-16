@@ -1,15 +1,15 @@
 import { Button } from "flowbite-react";
-import { useSlideContext } from "../../../../contexts/Contexts";
-import { useBruteForce } from "../../../../contexts/Contexts";
 import MojoControl from "../MojoControl";
 import MojoExtendetTable from "./MojoExtendetTable";
 import MojoExtAllResultsLink from "./MojoExtAllResultsLink";
 import { FormattedMessage } from "react-intl";
+import { useBruteForceContext } from "../../../../contexts/bruteForceContext/bruteForceContext";
+import { useSlideContext } from "../../../../contexts/slideProvider/slideContext";
 
 function MojoExtendet() {
   const { startAnimation } = useSlideContext();
 
-  const { setBruteForceResults } = useBruteForce();
+  const { setBruteForceResults } = useBruteForceContext();
 
   return (
     <div

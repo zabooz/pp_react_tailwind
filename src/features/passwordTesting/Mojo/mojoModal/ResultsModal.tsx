@@ -25,7 +25,7 @@ function ResultsModal({
 
       return () => clearTimeout(timer);
     }
-  }, [openModal]);
+  }, [openModal, bruteForceResults]);
 
   return (
     <Modal show={openModal} onClose={() => setOpenModal(false)}>

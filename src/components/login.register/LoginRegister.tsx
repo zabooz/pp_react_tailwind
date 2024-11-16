@@ -1,33 +1,29 @@
-import {  Modal} from "flowbite-react"
+import { Modal } from 'flowbite-react';
 
-import Login from "./Login"
-import Register from "./Register"
-import { useState } from "react";
-import { useModalContext } from "../../contexts/Contexts.tsx";
-
-
-
+import Login from './Login';
+import Register from './Register';
+import { useState } from 'react';
+import { useModalContext } from '../../contexts/modalContext/modalContext';
 
 function LoginRegister() {
+    const [wantToRegister, setWantToRegister] = useState<boolean>(false);
+    const { openModal, setOpenModal } = useModalContext();
 
-
-
-  const [wantToRegister, setWantToRegister] = useState<boolean>(false);
-  const {openModal, setOpenModal} = useModalContext();
-
-  return (
-    <Modal dismissible show={openModal} size="md" popup onClose={() => {
-      setOpenModal(false)
-      setWantToRegister(false)
-      }}>
-    <Modal.Header />
-    {wantToRegister ? <Register   />  
-    : <Login
-    handleRegisterClick={() => setWantToRegister(!wantToRegister)}
-    />  }
-
-  </Modal>
-  )
+    return (
+        <Modal
+            dismissible
+            show={openModal}
+            size="md"
+            popup
+            onClose={() => {
+                setOpenModal(false);
+                setWantToRegister(false);
+            }}
+        >
+            <Modal.Header />
+            {wantToRegister ? <Register /> : <Login handleRegisterClick={() => setWantToRegister(!wantToRegister)} />}
+        </Modal>
+    );
 }
 
-export default LoginRegister
+export default LoginRegister;

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useClippyContext } from '../contexts/Contexts';
 import { BsClipboard2, BsClipboard2Check } from 'react-icons/bs';
+import { useClippyContext } from '../contexts/clippyContext/clippyContext';
 
 interface Props {
     value: string;

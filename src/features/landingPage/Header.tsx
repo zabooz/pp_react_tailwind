@@ -1,7 +1,8 @@
 import { FormattedMessage } from 'react-intl';
-import { useSlideContext } from '../../contexts/Contexts';
 import { landingData } from '../../data/landingPage/landingData';
 import { useRef } from 'react';
+import { useSlideContext } from '../../contexts/slideProvider/slideContext';
+
 function Header({ setHoverTimer }: { setHoverTimer: (value: boolean) => void }) {
     const arrowRef = useRef<HTMLImageElement>(null);
     const { startAnimation } = useSlideContext();

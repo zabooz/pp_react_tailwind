@@ -2,7 +2,9 @@ import { Checkbox, Label, TextInput, Button, Modal } from "flowbite-react";
 import { register } from "./backend/register.ts";
 import { useState } from "react";
 import { registryData } from "../../interfaces/interfaces";
-import { useModalContext, useLoginContext } from "../../contexts/Contexts.tsx";
+import { useLoginContext } from "../../contexts/loginContext/loginContext.ts";
+import { useModalContext } from "../../contexts/modalContext/modalContext.ts";
+
 
 function Register() {
   const [userData, setUserData] = useState<registryData>({
@@ -19,7 +21,7 @@ function Register() {
   const { setOpenModal } = useModalContext();
   const { setLoggedIn } = useLoginContext();
 
-  const handleRegistry = async (e: any) => {
+  const handleRegistry = async (e: any) => { //eslint-disable-line
     e.preventDefault();
     const response = await register(userData);
     if (response) {

@@ -17,7 +17,7 @@ export function passwordEncoder (password:string) {
     let encodedString = "";
     const encodingKey = rndNumInLen(characters);
     
-    for (let char of (password)) {
+    for (const char of (password)) {
         const charIndex = characters.indexOf(char);
 
         if (charIndex === -1) {
@@ -32,7 +32,7 @@ export function passwordEncoder (password:string) {
 export function passwordDecoder(encodedString:string, encodingKey:number) {
     let decodedString = '';
 
-    for (let char of encodedString) {
+    for (const char of encodedString) {
         const charIndex = characters.indexOf(char);
 
         if (charIndex === -1) {

@@ -9,8 +9,8 @@ export async function aiApiCall(userContent: string, sysContent: string) {
   try {
     const response = await api.get(urlPara);
     if (response.status === 200) {
-      let result = response.data;
-      let formattedResult = result
+      const result = response.data;
+      const formattedResult = result
         .split(". ")
         .map((sentence: string) => `<p>${sentence.trim()}.</p>`)
         .join("");

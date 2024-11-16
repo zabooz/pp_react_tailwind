@@ -2,9 +2,10 @@ import { Footer } from 'flowbite-react';
 import { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
-import { useSlideContext } from '../contexts/Contexts';
+
 import { useIntl } from 'react-intl';
 import { footerMessages } from './lang/footer.message';
+import { useSlideContext } from '../contexts/slideProvider/slideContext';
 function FooterCom() {
     const [visible, setVisible] = useState(true);
     const { startAnimation } = useSlideContext();
@@ -12,10 +13,10 @@ function FooterCom() {
     useEffect(() => {
         // Wenn die Animation startet, Footer ausblenden
         if (startAnimation) {
-            setVisible(false); // Footer ausblenden
+            setVisible(false);
             setTimeout(() => {
-                setVisible(true); // Footer nach 2000ms wieder anzeigen
-            }, 2000); // Dauer der Animation
+                setVisible(true); 
+            }, 2000); 
         }
     }, [startAnimation]);
 

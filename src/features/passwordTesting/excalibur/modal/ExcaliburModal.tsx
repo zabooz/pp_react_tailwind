@@ -1,7 +1,7 @@
 import { Modal, Button, Tabs } from 'flowbite-react';
 import { FaRobot, FaRegLightbulb } from 'react-icons/fa6';
-import ExcaliburTipps from './ExcaliburTipps';
 import ExcaliburNerdStats from './ExcaliburNerdStats';
+import ExcaliburTipps from './ExcaliburTipps';
 import { useExcalibur } from '../../../../contexts/excaliburContext/excaliburContext';
 
 function ExcaliburModal() {

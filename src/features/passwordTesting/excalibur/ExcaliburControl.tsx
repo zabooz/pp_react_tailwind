@@ -1,6 +1,6 @@
 import { Button, Progress, Spinner, TextInput } from 'flowbite-react';
-import { excaliburTesting } from './scripts/excaliburScript';
 import { FormattedMessage } from 'react-intl';
+import { excaliburTesting } from './scripts/excaliburScript';
 import { useExcalibur } from '../../../contexts/excaliburContext/excaliburContext';
 import { usePasswordTesting } from '../../../contexts/passwordTestingContext/passwordTestingContext';
 

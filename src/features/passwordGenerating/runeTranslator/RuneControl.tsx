@@ -1,6 +1,6 @@
-import { TextInput } from "flowbite-react";
-import React from "react";
-import { FormattedMessage } from "react-intl";
+import { TextInput } from 'flowbite-react';
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 interface Props {
   setInput: React.Dispatch<React.SetStateAction<string>>;

@@ -197,14 +197,14 @@ function PrivacyPolicy() {
         Durch die Nutzung von Google Translate können personenbezogene Daten,
         wie z. B. die IP-Adresse, an Server von Google in den USA übermittelt
         und dort verarbeitet werden. Google speichert und verarbeitet diese
-        Daten entsprechend den eigenen Datenschutzrichtlinien, die unter{" "}
+        Daten entsprechend den eigenen Datenschutzrichtlinien, die unter{' '}
         <a
           href="https://policies.google.com/privacy?hl=de"
           target="_blank"
           rel="noopener noreferrer"
         >
           Google Datenschutzbestimmungen
-        </a>{" "}
+        </a>{' '}
         abrufbar sind.
       </p>
       <p>
@@ -242,7 +242,7 @@ function PrivacyPolicy() {
       <h3>Weitere Informationen</h3>
       <p>
         Weitere Informationen zur Datenverarbeitung durch Google Translate und
-        den entsprechenden Datenschutzrichtlinien von Google finden Sie unter:{" "}
+        den entsprechenden Datenschutzrichtlinien von Google finden Sie unter:{' '}
         <a
           href="https://policies.google.com/privacy?hl=de"
           target="_blank"

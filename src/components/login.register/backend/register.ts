@@ -1,7 +1,7 @@
-import { api } from "../../../api/api";
-import axios from "axios";
-import { registryData } from "../../../interfaces/interfaces";
-import { login } from "./login";
+import axios from 'axios';
+import { login } from './login';
+import { api } from '../../../api/api';
+import { registryData } from '../../../interfaces/interfaces';
 
 export const register = async ({
   username,
@@ -25,7 +25,7 @@ export const register = async ({
   };
 
   try {
-    const response = await api.post(`/register`, data);
+    const response = await api.post('/register', data);
 
     if (response.status >= 200 && response.status < 300) {
       await login({ username, password });
@@ -34,17 +34,17 @@ export const register = async ({
   } catch (error) {
     if (axios.isAxiosError(error)) {
       // Spezifische Fehlerbehandlung für Axios-Fehler
-      console.error("Axios-Fehler:", error.message);
+      console.error('Axios-Fehler:', error.message);
       if (error.response) {
         // Fehlerantwort vom Server
-        console.error("Serverantwort-Fehler:", error.response.data);
+        console.error('Serverantwort-Fehler:', error.response.data);
       } else if (error.request) {
         // Keine Antwort vom Server erhalten
-        console.error("Keine Antwort erhalten:", error.request);
+        console.error('Keine Antwort erhalten:', error.request);
       }
     } else {
       // Allgemeine Fehlerbehandlung
-      console.error("Unbekannter Fehler:", error);
+      console.error('Unbekannter Fehler:', error);
     }
   }
 };

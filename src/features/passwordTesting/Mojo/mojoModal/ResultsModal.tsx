@@ -1,7 +1,7 @@
 import { Button, Modal, Table } from 'flowbite-react';
+import { useEffect, useRef } from 'react';
 import { updateAttempts } from '../scripts/updateResult';
 
-import { useEffect, useRef } from 'react';
 interface ResultsModalProps {
     openModal: boolean;
     setOpenModal: (openModal: boolean) => void;

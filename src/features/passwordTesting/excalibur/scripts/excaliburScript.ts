@@ -1,8 +1,8 @@
-import { zxcvbnTesting } from './zxcvbn';
 import { ZxcvbnResult } from '@zxcvbn-ts/core';
 import { passwordStrengthTester } from './passwordStrengthTester';
-import { Points } from '../../../../interfaces/interfaces';
+import { zxcvbnTesting } from './zxcvbn';
 import { dataKrakenTakes } from '../../../../components/login.register/backend/dataKraken';
+import { Points } from '../../../../interfaces/interfaces';
 
 interface Props {
     setNerdStats: (value: ZxcvbnResult | null) => void;

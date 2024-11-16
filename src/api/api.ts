@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
 
-const baseUrl = "https://passwordplayground.coolify.machma.app";
+const baseUrl = 'https://passwordplayground.coolify.machma.app';
 // const baseUrl = "http://localhost:3000";
 
 export const apiToken = axios.create({
@@ -9,7 +9,7 @@ export const apiToken = axios.create({
 
 apiToken.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem("pp-token");
+    const token = localStorage.getItem('pp-token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

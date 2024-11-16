@@ -1,26 +1,24 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { Suspense } from 'react';
-
-import { NavbarCom } from './components/Navbar';
-import Footer from './components/Footer';
+import { IntlProvider } from 'react-intl';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContentBox from './components/ContentBox';
+import Footer from './components/Footer';
+import { NavbarCom } from './components/Navbar';
+import deMessages from '../compiled-lang/de.json';
+import enMessages from '../compiled-lang/en.json';
 import QuickNav from './components/quickNav/QuickNav';
-
+import { ClippyProvider } from './contexts/clippyContext/ClippyProvider';
+import { useLanguageContext } from './contexts/languageContext/languageContext';
 import LandingPage from './features/landingPage/LandingPage';
 import PasswordGenerating from './features/passwordGenerating/PasswordGenerating';
 import PasswordTesting from './features/passwordTesting/passwordTesting';
 import UsernameGenerating from './features/usernameGenerating/UsernameGenerating';
-import { IntlProvider } from 'react-intl';
-import { useLanguageContext } from './contexts/languageContext/languageContext';
 
 const AboutUs = React.lazy(() => import('./features/aboutUs/AboutUs'));
 const Project = React.lazy(() => import('./features/aboutUs/Project'));
 const Impressum = React.lazy(() => import('./features/legalStuff/Impressum'));
 const PrivacyPolicy = React.lazy(() => import('./features/legalStuff/PrivacyPolicy'));
 const DashBoard = React.lazy(() => import('./features/DashBoard/DashBoard'));
-import deMessages from '../compiled-lang/de.json';
-import enMessages from '../compiled-lang/en.json';
-import { ClippyProvider } from './contexts/clippyContext/ClippyProvider';
 import { PasswordTestingProvider } from './contexts/passwordTestingContext/PasswordTestingProvider';
 import { SlideProvider } from './contexts/slideProvider/SlideProvider';
 // import esMessages from '../compiled-lang/es.json';

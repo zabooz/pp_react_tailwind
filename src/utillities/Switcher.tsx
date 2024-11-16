@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { StorageData } from '../interfaces/interfaces';
-import { CopyToClipBoard } from '../components/CopyToClipBoard';
 import { FormattedMessage } from 'react-intl';
+import { CopyToClipBoard } from '../components/CopyToClipBoard';
+import { StorageData } from '../interfaces/interfaces';
 interface Props {
     data: StorageData[];
     app: string;
@@ -11,7 +11,7 @@ function GlyphSorcerySwitch({ data, app }: Props) {
     const [switchCount, setSwitchCount] = useState<number>(0);
 
     const handleSwitch = (e: any) => {
-        //eslint-disable-line
+         
         const icon = e.target;
         const type = icon.getAttribute('data-type');
         const length = data.length;

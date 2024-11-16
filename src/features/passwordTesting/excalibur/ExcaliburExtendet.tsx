@@ -1,10 +1,10 @@
 import { Tabs } from 'flowbite-react';
+import { FaRobot, FaRegLightbulb } from 'react-icons/fa6';
 import ExcaliburControl from './ExcaliburControl';
 import ExcaliburNerdStats from './modal/ExcaliburNerdStats';
 import ExcaliburTipps from './modal/ExcaliburTipps';
-import { FaRobot, FaRegLightbulb } from 'react-icons/fa6';
-import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
 import { useExcalibur } from '../../../contexts/excaliburContext/excaliburContext';
+import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
 
 function ExcaliburExtendet() {
     const { startAnimation } = useSlideContext();

@@ -1,5 +1,5 @@
-import { ReactNode, useState } from "react";
-import { PasswordTestingContext } from "./passwordTestingContext";
+import { ReactNode, useState } from 'react';
+import { PasswordTestingContext } from './passwordTestingContext';
 
 export const PasswordTestingProvider = ({ children }: { children: ReactNode }) => {
     const [mojoGrow, setMojoGrow] = useState(false);
@@ -9,7 +9,7 @@ export const PasswordTestingProvider = ({ children }: { children: ReactNode }) =
     const [isThinking, setIsThinking] = useState<boolean>(false);
 
     const handleCardGrow = (value: boolean, animate: (value: boolean) => void) => {
-        if (!onSite) setOnSite(true);
+        if (!onSite) {setOnSite(true);}
         animate(!value);
         setTimeout(() => {
             setColDelay(!colDelay);

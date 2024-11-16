@@ -1,6 +1,6 @@
-import { ZxcvbnResult } from "@zxcvbn-ts/core";
-import { createContext, useContext } from "react";
-import { PasswordStrength } from "../../interfaces/interfaces";
+import { ZxcvbnResult } from '@zxcvbn-ts/core';
+import { createContext, useContext } from 'react';
+import { PasswordStrength } from '../../interfaces/interfaces';
 
 interface ExcaliburContextType {
     showModalLink: boolean;

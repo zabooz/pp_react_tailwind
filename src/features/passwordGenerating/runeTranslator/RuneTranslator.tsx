@@ -1,15 +1,13 @@
-import { useState } from 'react';
 import { Button, Card } from 'flowbite-react';
-import { DrawerData } from '../../../interfaces/interfaces';
-import { StorageData } from '../../../interfaces/interfaces';
-import Switcher from '../../../utillities/Switcher';
-import runeTranslator from './runeTranslatorScript';
-
-import RuneText from './RuneText';
-import RuneControl from './RuneControl';
-import CardHeader from '../../../components/CardHeader';
+import { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+import RuneControl from './RuneControl';
+import RuneText from './RuneText';
+import runeTranslator from './runeTranslatorScript';
+import CardHeader from '../../../components/CardHeader';
 import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
+import { DrawerData , StorageData } from '../../../interfaces/interfaces';
+import Switcher from '../../../utillities/Switcher';
 interface Props {
     handleDrawerClick: (content: DrawerData) => void;
 }

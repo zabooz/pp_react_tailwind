@@ -5,7 +5,7 @@ function AboutUs() {
         <h1>Über Uns</h1>
         <h2>Willkommen auf unserer Reise in die Welt der Webentwicklung!</h2>
         <p>
-          Wir sind <strong>[Dein Name]</strong> und{" "}
+          Wir sind <strong>[Dein Name]</strong> und{' '}
           <strong>[Name deines Partners]</strong>, zwei Quereinsteiger, die ihre
           Leidenschaft für Technologie und Kreativität entdeckt haben. Unser
           Abenteuer in der Webentwicklung begann vor einigen Monaten im Rahmen

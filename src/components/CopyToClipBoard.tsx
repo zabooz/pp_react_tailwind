@@ -19,10 +19,10 @@ export const CopyToClipBoard = ({ value, children, type, clippy }: Props) => {
             console.error('Failed to copy: ', err);
         });
         if (type === 'password') {
-            if (passwords.includes(value)) return;
+            if (passwords.includes(value)) {return;}
             setPasswords([...passwords, value]);
         } else if (type === 'username') {
-            if (usernames.includes(password)) return;
+            if (usernames.includes(password)) {return;}
             setUsernames([...usernames, value]);
         }
     };

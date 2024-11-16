@@ -1,7 +1,6 @@
-import { useRef } from "react";
-import { Label, FileInput } from "flowbite-react";
-
-import { fileUpload } from "./scripts/pictureMagicScript";
+import { Label, FileInput } from 'flowbite-react';
+import { useRef } from 'react';
+import { fileUpload } from './scripts/pictureMagicScript';
 
 interface Props {
   setPictureBase64: (base64: string) => void;

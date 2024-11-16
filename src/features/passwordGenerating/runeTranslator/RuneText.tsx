@@ -1,6 +1,6 @@
-import { FormattedMessage } from "react-intl";
-import { leetspeakTextShortened } from "../../../data/drawer/drawerData";
-import { DrawerData } from "../../../interfaces/interfaces";
+import { FormattedMessage } from 'react-intl';
+import { leetspeakTextShortened } from '../../../data/drawer/drawerData';
+import { DrawerData } from '../../../interfaces/interfaces';
 
 interface Props {
   handleDrawerClick: (content: DrawerData) => void;
@@ -15,11 +15,11 @@ function RuneText({ handleDrawerClick }: Props) {
       >
         <FormattedMessage id="runeText-link"
           defaultMessage="Leetspeak"
-          description={"Link to Leetspeak drawer"} />
-      </span>{" "}
+          description={'Link to Leetspeak drawer'} />
+      </span>{' '}
       <FormattedMessage id="runeText-description"
         defaultMessage="Leetspeak ist eine Art von Textumwandlung, bei der bestimmte Buchstaben und Zeichen durch andere ersetzt werden. Probier es aus, um dein Passwort besser zu schützen."
-        description={"Description of Leetspeak"} />{" "}
+        description={'Description of Leetspeak'} />{' '}
     </p>
   );
 }

@@ -1,5 +1,5 @@
-import { Accordion, CustomFlowbiteTheme, Flowbite, List } from 'flowbite-react';
 import { ZxcvbnResult } from '@zxcvbn-ts/core';
+import { Accordion, CustomFlowbiteTheme, Flowbite, List } from 'flowbite-react';
 import { stats } from '../scripts/zxcvbn';
 import './excaliburModalStyle.css';
 
@@ -29,11 +29,11 @@ function ExcaliburNerdStats({ nerdStats }: Props) {
                         <List>
                             {baseStats.map((item, index) => {
                                 if ('stat' in item)
-                                    return (
+                                    {return (
                                         <List.Item key={`${index}-base`}>
                                             {item.stat}: <span>{item.value}</span>
                                         </List.Item>
-                                    );
+                                    );}
                             })}
                         </List>
                     </Accordion.Content>
@@ -44,11 +44,11 @@ function ExcaliburNerdStats({ nerdStats }: Props) {
                         <List>
                             {crackTime.map((item, index) => {
                                 if ('method' in item)
-                                    return (
+                                    {return (
                                         <List.Item key={`${index}-crack`}>
                                             {item.method}: <span>{item.time}</span>
                                         </List.Item>
-                                    );
+                                    );}
                             })}
                         </List>
                     </Accordion.Content>

@@ -1,10 +1,10 @@
+import { useRef } from 'react';
+import Excalibur from './excalibur/Excalibur.tsx';
+import Mojo from './Mojo/Mojo.tsx';
 import HoverSound from '../../components/HoverSound.tsx';
 import { BruteForceProvider } from '../../contexts/bruteForceContext/bruteForceProvider.tsx';
 import { ExcaliburProvider } from '../../contexts/excaliburContext/ExcaliburProvider.tsx';
 import { usePasswordTesting } from '../../contexts/passwordTestingContext/passwordTestingContext.ts';
-import Mojo from './Mojo/Mojo.tsx';
-import Excalibur from './excalibur/Excalibur.tsx';
-import { useRef } from 'react';
 
 function PasswordTesting() {
     const scrollDiv1 = useRef<HTMLImageElement>(null);

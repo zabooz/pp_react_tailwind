@@ -1,13 +1,13 @@
 import { Card, Button } from 'flowbite-react';
 import { useState } from 'react';
-import { glyphSorcery } from './scripts/glyphSorceryScript';
-import { StorageData } from '../../../interfaces/interfaces';
-import Switcher from '../../../utillities/Switcher';
+import { FormattedMessage } from 'react-intl';
 import GlpyhText from './GlpyhText';
 import GlyphControl from './GlyphControl';
+import { glyphSorcery } from './scripts/glyphSorceryScript';
 import CardHeader from '../../../components/CardHeader';
-import { FormattedMessage } from 'react-intl';
 import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
+import { StorageData } from '../../../interfaces/interfaces';
+import Switcher from '../../../utillities/Switcher';
 
 function GylphSorcery() {
     const [passwordLength, setPasswordLength] = useState(6);

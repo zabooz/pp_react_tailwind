@@ -1,7 +1,7 @@
-import { FormattedMessage } from 'react-intl';
-import { landingData } from '../../data/landingPage/landingData';
 import { useRef } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { useSlideContext } from '../../contexts/slideProvider/slideContext';
+import { landingData } from '../../data/landingPage/landingData';
 
 function Header({ setHoverTimer }: { setHoverTimer: (value: boolean) => void }) {
     const arrowRef = useRef<HTMLImageElement>(null);

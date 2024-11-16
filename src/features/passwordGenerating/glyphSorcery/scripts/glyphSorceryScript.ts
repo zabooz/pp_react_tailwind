@@ -1,5 +1,5 @@
-import { generateEzPw } from "./passwordSandBox";
-import { dataKrakenTakes } from "../../../../components/login.register/backend/dataKraken";
+import { generateEzPw } from './passwordSandBox';
+import { dataKrakenTakes } from '../../../../components/login.register/backend/dataKraken';
 
 export const glyphSorcery = async (language: string, length: number) => {
   const password = generateEzPw(length, language);
@@ -7,9 +7,9 @@ export const glyphSorcery = async (language: string, length: number) => {
   const data = {
     key: key,
     catch: length.toString(),
-    type: "password",
+    type: 'password',
     value: password,
   };
-  dataKrakenTakes({ col: "generated_passwords" });
+  dataKrakenTakes({ col: 'generated_passwords' });
   return data;
 };

@@ -1,8 +1,3 @@
-import { useState, useEffect } from 'react';
-
-import { useNavigate } from 'react-router-dom';
-import LoginRegister from './login.register/LoginRegister';
-import { logOut } from './login.register/backend/logout';
 import {
     Avatar,
     Dropdown,
@@ -14,8 +9,12 @@ import {
     NavbarToggle,
     DarkThemeToggle,
 } from 'flowbite-react';
+import { useState, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { useNavigate } from 'react-router-dom';
 import LanguageSwitch from './LanguageSwitch';
+import { logOut } from './login.register/backend/logout';
+import LoginRegister from './login.register/LoginRegister';
 import { useLoginContext } from '../contexts/loginContext/loginContext';
 import { ModalContext } from '../contexts/modalContext/modalContext';
 import { useSlideContext } from '../contexts/slideProvider/slideContext';
@@ -42,8 +41,7 @@ export const NavbarCom = () => {
     };
 
     return (
-        <>
-            <ModalContext.Provider value={{ openModal, setOpenModal }}>
+        <ModalContext.Provider value={{ openModal, setOpenModal }}>
                 <Navbar fluid rounded className="	fixed w-full z-20 dark:bg-slate-700 bg-gray-200 !justify-center h-16">
                     <NavbarBrand
                         onClick={() => {
@@ -231,6 +229,5 @@ export const NavbarCom = () => {
 
                 <LoginRegister />
             </ModalContext.Provider>
-        </>
     );
 };

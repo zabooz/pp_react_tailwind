@@ -1,21 +1,21 @@
-import { Checkbox, Label, TextInput, Button, Modal } from "flowbite-react";
-import { register } from "./backend/register.ts";
-import { useState } from "react";
-import { registryData } from "../../interfaces/interfaces";
-import { useLoginContext } from "../../contexts/loginContext/loginContext.ts";
-import { useModalContext } from "../../contexts/modalContext/modalContext.ts";
+import { Checkbox, Label, TextInput, Button, Modal } from 'flowbite-react';
+import { useState } from 'react';
+import { register } from './backend/register.ts';
+import { useLoginContext } from '../../contexts/loginContext/loginContext.ts';
+import { useModalContext } from '../../contexts/modalContext/modalContext.ts';
+import { registryData } from '../../interfaces/interfaces';
 
 
 function Register() {
   const [userData, setUserData] = useState<registryData>({
-    username: "",
-    password: "",
-    email: "",
+    username: '',
+    password: '',
+    email: '',
     visits: 1,
     generated_passwords: 0,
     tested_passwords: 0,
     generated_usernames: 0,
-    avatar: "/assets/profilePics/default.jpeg",
+    avatar: '/assets/profilePics/default.jpeg',
   });
 
   const { setOpenModal } = useModalContext();

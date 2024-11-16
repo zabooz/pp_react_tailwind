@@ -1,7 +1,7 @@
 import { Select } from 'flowbite-react';
+import { FormattedMessage } from 'react-intl';
 import { Locale, useLanguageContext } from '../contexts/languageContext/languageContext';
 
-import { FormattedMessage } from 'react-intl';
 
 
 function LanguageSwitch() {

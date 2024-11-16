@@ -1,5 +1,5 @@
-import { createContext, useContext } from "react";
-import { DrawerData } from "../../interfaces/interfaces";
+import { createContext, useContext } from 'react';
+import { DrawerData } from '../../interfaces/interfaces';
 
 interface BruteForceContextProps {
     bruteForceThinkerInterval: number;

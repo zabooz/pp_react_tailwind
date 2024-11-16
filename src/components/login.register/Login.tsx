@@ -1,19 +1,18 @@
-import { Button, Label, Modal, TextInput } from "flowbite-react";
-import { useState } from "react";
-
-import ForgotPassword from "./ForgotPassword.tsx";
-import { loginData } from "../../interfaces/interfaces";
-import { login } from "./backend/login.ts";
-import { useModalContext } from "../../contexts/modalContext/modalContext.ts";
-import { useLoginContext } from "../../contexts/loginContext/loginContext.ts";
+import { Button, Label, Modal, TextInput } from 'flowbite-react';
+import { useState } from 'react';
+import { login } from './backend/login.ts';
+import ForgotPassword from './ForgotPassword.tsx';
+import { useLoginContext } from '../../contexts/loginContext/loginContext.ts';
+import { useModalContext } from '../../contexts/modalContext/modalContext.ts';
+import { loginData } from '../../interfaces/interfaces';
 interface Props {
   handleRegisterClick: () => void;
 }
 
 function Login({ handleRegisterClick }: Props) {
   const [userData, setUserData] = useState<loginData>({
-    username: "",
-    password: "",
+    username: '',
+    password: '',
   });
   const { setOpenModal } = useModalContext();
   const { setLoggedIn } = useLoginContext();

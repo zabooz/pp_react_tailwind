@@ -1,7 +1,7 @@
-import { ZxcvbnResult } from "@zxcvbn-ts/core";
-import { useState } from "react";
-import { PasswordStrength } from "../../interfaces/interfaces";
-import { ExcaliburContext } from "./excaliburContext";
+import { ZxcvbnResult } from '@zxcvbn-ts/core';
+import { useState } from 'react';
+import { ExcaliburContext } from './excaliburContext';
+import { PasswordStrength } from '../../interfaces/interfaces';
 
 export const ExcaliburProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [showModalLink, setShowModalLink] = useState(false);

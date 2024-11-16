@@ -1,11 +1,10 @@
-import { useState } from "react";
-import { Button } from "flowbite-react";
-
-import Sanchez from "./Sanchez";
-import Clippy from "./Clippy";
+import { Button } from 'flowbite-react';
+import { useState } from 'react';
+import Clippy from './Clippy';
+import Sanchez from './Sanchez';
 function QuickNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [data, setData] = useState<string>("");
+  const [data, setData] = useState<string>('');
   const handleClose = () => {
     setIsOpen(false)
   };
@@ -13,7 +12,7 @@ function QuickNav() {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const button = e.currentTarget
     const data = button.dataset.drawer;
-    setData(data || "");
+    setData(data || '');
     setIsOpen(true);
 
   };
@@ -54,7 +53,7 @@ function QuickNav() {
           </span>
         </Button>
       </div>
-    {data === "sanchez" ? (
+    {data === 'sanchez' ? (
         <Sanchez isOpen={isOpen} handleClose={handleClose} /> )
         : (<Clippy isOpen={isOpen} handleClose={handleClose}/>)
         }

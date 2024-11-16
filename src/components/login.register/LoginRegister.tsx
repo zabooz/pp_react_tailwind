@@ -1,8 +1,7 @@
 import { Modal } from 'flowbite-react';
-
+import { useState } from 'react';
 import Login from './Login';
 import Register from './Register';
-import { useState } from 'react';
 import { useModalContext } from '../../contexts/modalContext/modalContext';
 
 function LoginRegister() {

@@ -1,6 +1,6 @@
-import { Drawer } from "flowbite-react";
-import { DrawerData } from "../interfaces/interfaces";
-import { useIntl } from "react-intl";
+import { Drawer } from 'flowbite-react';
+import { useIntl } from 'react-intl';
+import { DrawerData } from '../interfaces/interfaces';
 interface Props {
   show: boolean;
   handleClose: () => void;
@@ -10,8 +10,7 @@ interface Props {
 function TextCanvas({ show, handleClose, data }: Props) {
   const  intl = useIntl();
   return (
-    <>
-      <Drawer open={show} onClose={handleClose} className={`pt-20 ${show ? 'block' : 'hidden'}`}>
+    <Drawer open={show} onClose={handleClose} className={`pt-20 ${show ? 'block' : 'hidden'}`}>
         <Drawer.Header title={data.title} />
         <Drawer.Items>
           <p className="mb-6 text-sm text-gray-500 dark:text-gray-400"></p>
@@ -27,7 +26,6 @@ function TextCanvas({ show, handleClose, data }: Props) {
           </div>
         </Drawer.Items>
       </Drawer>
-    </>
   );
 }
 

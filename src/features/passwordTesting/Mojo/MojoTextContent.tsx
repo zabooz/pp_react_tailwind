@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
-import { bruteForceAttackList, bruteForceAttackSimple } from '../../../data/drawer/drawerData';
-import { DrawerData } from '../../../interfaces/interfaces';
 import { FormattedMessage } from 'react-intl';
 import { useBruteForceContext } from '../../../contexts/bruteForceContext/bruteForceContext';
+import { bruteForceAttackList, bruteForceAttackSimple } from '../../../data/drawer/drawerData';
+import { DrawerData } from '../../../interfaces/interfaces';
 
 function MojoTextContent() {
     const { setDrawerShow, setDrawerContent, drawer } = useBruteForceContext();

@@ -1,8 +1,8 @@
 import { List, ListItem } from 'flowbite-react';
+import { useMemo } from 'react';
 import { FaCheck } from 'react-icons/fa6';
 import { MdOutlineClose } from 'react-icons/md';
 import { Points } from '../../../../interfaces/interfaces';
-import { useMemo } from 'react';
 
 interface Props {
     passwordStrength: { result: number; points: Points } | null;

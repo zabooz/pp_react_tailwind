@@ -1,18 +1,17 @@
-import CardCom from './CardLanding.tsx';
-import { cardData } from '../../data/landingPage/CardsData.ts';
-import Header from './Header.tsx';
-import BounceOnScroll from './BounceScroll.tsx';
-
 import { useEffect, useState } from 'react';
-import { autoLogin } from '../../components/login.register/backend/autoLogin.ts';
+import BounceOnScroll from './BounceScroll.tsx';
+import CardCom from './CardLanding.tsx';
+import Header from './Header.tsx';
 import HoverSound from '../../components/HoverSound.tsx';
+import { autoLogin } from '../../components/login.register/backend/autoLogin.ts';
 import { useLoginContext } from '../../contexts/loginContext/loginContext.ts';
+import { cardData } from '../../data/landingPage/CardsData.ts';
 function LandingPage() {
     const { setLoggedIn } = useLoginContext();
     useEffect(() => {
         (async () => {
             const result = await autoLogin();
-            if (result) setLoggedIn(true);
+            if (result) {setLoggedIn(true);}
         })();
     }, [setLoggedIn]);
 

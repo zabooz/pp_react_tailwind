@@ -1,7 +1,7 @@
 import { Button, Label, Textarea, Drawer } from 'flowbite-react';
 import { useState } from 'react';
-import { sanchezAi } from './sanchezScript';
 import {  FormattedMessage, useIntl } from 'react-intl';
+import { sanchezAi } from './sanchezScript';
 
 interface Props {
     isOpen: boolean;

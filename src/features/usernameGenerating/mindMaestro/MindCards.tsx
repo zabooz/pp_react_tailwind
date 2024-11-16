@@ -1,6 +1,7 @@
-import { mindQuestions } from './questions/questions';
+
 import '../username.css';
 import { useEffect, useState } from 'react';
+import { mindQuestions } from './questions/questions';
 interface Props {
     setIndex: (value: number) => void;
     index: number;
@@ -30,8 +31,7 @@ function MindCards({ setIndex, answers, index, setStartQuiz, setAnswers, userAns
     }, [answers]);
 
     return (
-        <>
-            <div className=" grid grid-cols-2 gap-4 grid-rows-2">
+        <div className=" grid grid-cols-2 gap-4 grid-rows-2">
                 {answers.map((answer, i) => (
                     <div key={i} data-type={answer.dataArr} className=" w-full h-[140px] relative">
                         <div
@@ -49,7 +49,7 @@ function MindCards({ setIndex, answers, index, setStartQuiz, setAnswers, userAns
                             style={{
                                 backgroundImage: background
                                     ? `url('${answer.imagePath}')`
-                                    : `url('/assets/usernameGenerating/mindMaestro/cardDeck.webp')`,
+                                    : 'url(\'/assets/usernameGenerating/mindMaestro/cardDeck.webp\')',
                             }}
                             onClick={(e) => {
                                 const target = e.currentTarget;
@@ -74,7 +74,6 @@ function MindCards({ setIndex, answers, index, setStartQuiz, setAnswers, userAns
                     </div>
                 ))}
             </div>
-        </>
     );
 }
 

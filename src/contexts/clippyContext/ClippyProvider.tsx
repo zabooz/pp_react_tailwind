@@ -1,5 +1,5 @@
-import { ReactNode, useState } from "react";
-import { ClippyContext } from "./clippyContext";
+import { ReactNode, useState } from 'react';
+import { ClippyContext } from './clippyContext';
 
 interface ClippyProviderProps {
     children: ReactNode;

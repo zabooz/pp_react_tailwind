@@ -1,10 +1,10 @@
 import { Button } from 'flowbite-react';
+import { useMemo, useState } from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { englishArraysObjAdjectives, englishArraysObjNouns } from '../../../data/translations/englishGenerator.data';
 import { userGenerator } from '../usernameGeneratingScript';
-import { useMemo, useState } from 'react';
 import WizardInput from './WizardInput';
 import WizardOutput from './WizardOutput';
-import { FormattedMessage, useIntl } from 'react-intl';
 
 function WizardControl() {
     const [username, setUsername] = useState<HTMLSpanElement | null>(null);

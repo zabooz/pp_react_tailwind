@@ -1,14 +1,12 @@
 import { Card, Button } from 'flowbite-react';
 import { useState, useEffect } from 'react';
-
-import { Questions } from '../../../interfaces/interfaces';
-import { mindQuestions } from './questions/questions';
-
-import CardHeader from '../../../components/CardHeader';
-import IntroPage from './IntroPage';
-import Quiz from './Quiz';
 import { FormattedMessage } from 'react-intl';
+import IntroPage from './IntroPage';
+import { mindQuestions } from './questions/questions';
+import Quiz from './Quiz';
+import CardHeader from '../../../components/CardHeader';
 import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
+import { Questions } from '../../../interfaces/interfaces';
 
 function MindMaestro() {
     const { startAnimation } = useSlideContext();

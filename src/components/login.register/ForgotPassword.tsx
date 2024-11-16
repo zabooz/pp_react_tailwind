@@ -1,5 +1,5 @@
-import { Modal,Button, TextInput, Label } from "flowbite-react"
-import { useState } from "react"
+import { Modal,Button, TextInput, Label } from 'flowbite-react'
+import { useState } from 'react'
 
 interface Props {
   showPassword: boolean
@@ -9,7 +9,7 @@ interface Props {
 
 function ForgotPassword({ showPassword, setShowPassword  }: Props) {
 
-    const [newPassword,setNewPassword] = useState<string>("")
+    const [newPassword,setNewPassword] = useState<string>('')
 
     const handleClick = (newPassword : string) => {
 

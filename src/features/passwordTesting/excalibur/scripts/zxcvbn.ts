@@ -1,7 +1,7 @@
 import { zxcvbn, zxcvbnOptions, ZxcvbnResult } from '@zxcvbn-ts/core';
 import * as zxcvbnCommonPackage from '@zxcvbn-ts/language-common';
-import * as zxcvbnEnPackage from '@zxcvbn-ts/language-en';
 import * as zxcvbnDePackage from '@zxcvbn-ts/language-de';
+import * as zxcvbnEnPackage from '@zxcvbn-ts/language-en';
 
 export const zxcvbnTesting = (password: string) => {
     const options = {

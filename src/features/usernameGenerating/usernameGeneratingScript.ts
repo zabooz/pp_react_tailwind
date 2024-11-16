@@ -1,5 +1,5 @@
-import { englishArraysObj } from '../../data/translations/englishGenerator.data';
 import { dataKrakenTakes } from '../../components/login.register/backend/dataKraken';
+import { englishArraysObj } from '../../data/translations/englishGenerator.data';
 interface Props {
     choices: string[];
 }

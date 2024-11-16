@@ -4,7 +4,7 @@ export const listMessages = defineMessages({
     paragraphList1: {
         id: 'passwordGenerating.lang.list.paragraphList1',
         defaultMessage:
-            "Bei einem einfachen Bruteforce-Angriff versucht ein Angreifer systematisch, ein Passwort oder einen geheimen Schlüssel zu erraten, indem er alle möglichen Kombinationen nacheinander ausprobiert. Der Angreifer beginnt in der Regel mit den einfachsten Kombinationen, wie '0000' oder '1234', und arbeitet sich dann durch alle möglichen Kombinationen, bis er die richtige gefunden hat.",
+            'Bei einem einfachen Bruteforce-Angriff versucht ein Angreifer systematisch, ein Passwort oder einen geheimen Schlüssel zu erraten, indem er alle möglichen Kombinationen nacheinander ausprobiert. Der Angreifer beginnt in der Regel mit den einfachsten Kombinationen, wie \'0000\' oder \'1234\', und arbeitet sich dann durch alle möglichen Kombinationen, bis er die richtige gefunden hat.',
     },
     paragraphList2: {
         id: 'passwordGenerating.lang.list.paragraphList2',
@@ -14,7 +14,7 @@ export const listMessages = defineMessages({
     paragraphList3: {
         id: 'passwordGenerating.lang.list.paragraphList3',
         defaultMessage:
-            "Kombinationsauswahl: Der Angreifer generiert alle möglichen Kombinationen aus Zeichen, die für das Passwort verwendet werden können. Bei einem vierstelligen numerischen Passwort wären dies z.B. alle Kombinationen von '0000' bis '9999'.",
+            'Kombinationsauswahl: Der Angreifer generiert alle möglichen Kombinationen aus Zeichen, die für das Passwort verwendet werden können. Bei einem vierstelligen numerischen Passwort wären dies z.B. alle Kombinationen von \'0000\' bis \'9999\'.',
     },
     paragraphList4: {
         id: 'passwordGenerating.lang.list.paragraphList4',

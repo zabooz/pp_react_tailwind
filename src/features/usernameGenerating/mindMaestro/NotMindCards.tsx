@@ -12,7 +12,7 @@ function NotMindCards({ values }: Props) {
                 <div
                     className="w-full  flex h-[300px] flex-col items-center border rounded"
                     style={{
-                        backgroundImage: "url('/assets/usernameGenerating/mindMaestro/endCard.webp')",
+                        backgroundImage: 'url(\'/assets/usernameGenerating/mindMaestro/endCard.webp\')',
                     }}
                 >
                     <h5 className="text-lg mt-8 font-semibold  dark:text-gray-300">Dein Ergebnis</h5>

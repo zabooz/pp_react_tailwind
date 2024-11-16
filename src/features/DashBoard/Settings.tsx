@@ -1,13 +1,12 @@
-import { List } from "flowbite-react";
-
-import { useState } from "react";
-import ChangeCredsModal from "./ChangeCredsModal";
-import ProfileChoosery from "./ProfileChoosery";
+import { List } from 'flowbite-react';
+import { useState } from 'react';
+import ChangeCredsModal from './ChangeCredsModal';
+import ProfileChoosery from './ProfileChoosery';
 function Settings() {
   const [openModal, setOpenModal] = useState<boolean>(false);
-  const [modalData, setModalData] = useState({ text: "", type: "" });
+  const [modalData, setModalData] = useState({ text: '', type: '' });
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
-  const [drawerData, setDrawerData] = useState({ text: "", type: "" });
+  const [drawerData, setDrawerData] = useState({ text: '', type: '' });
 
   const handleModal = (e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.currentTarget; 
@@ -41,19 +40,19 @@ function Settings() {
     event: Record<string, (e: React.MouseEvent<HTMLDivElement>) => void>;
   } = {
     sections: [
-      "Benutzername",
-      "Passwort",
-      "E-mail",
-      "ProfilBild",
+      'Benutzername',
+      'Passwort',
+      'E-mail',
+      'ProfilBild',
     ],
     options: [
-      "ändern"
+      'ändern'
     ],
     event: {
-      "Benutzername": handleModal,
-      "Passwort": handleModal,
-      "E-mail": handleModal,
-      "ProfilBild": handleDrawer
+      'Benutzername': handleModal,
+      'Passwort': handleModal,
+      'E-mail': handleModal,
+      'ProfilBild': handleDrawer
     }
   };
 

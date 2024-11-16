@@ -1,5 +1,5 @@
-import { englishArraysObjAdjectives, englishArraysObj } from '../../../data/translations/englishGenerator.data';
 import { dataKrakenTakes } from '../../../components/login.register/backend/dataKraken';
+import { englishArraysObjAdjectives, englishArraysObj } from '../../../data/translations/englishGenerator.data';
 interface Props {
     values: string[];
 }

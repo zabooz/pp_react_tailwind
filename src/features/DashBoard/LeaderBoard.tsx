@@ -1,9 +1,9 @@
-import { Table } from "flowbite-react";
-import { useEffect, useState } from "react";
-import { dataKrakenGives } from "../../components/login.register/backend/dataKraken";
-import { LeaderBoardData } from "../../interfaces/interfaces";
+import { Table } from 'flowbite-react';
+import { useEffect, useState } from 'react';
+import { dataKrakenGives } from '../../components/login.register/backend/dataKraken';
+import { LeaderBoardData } from '../../interfaces/interfaces';
 function LeaderBoard() {
-  const [stat, setStat] = useState("visits");
+  const [stat, setStat] = useState('visits');
   const [data, setData] = useState<LeaderBoardData[]>([]);
 
   useEffect(() => {
@@ -17,11 +17,11 @@ function LeaderBoard() {
 
   const handleTableClick = (event: React.MouseEvent<HTMLTableElement>) => {
     const target = event.target as HTMLElement;
-    if (target.tagName === "TH") {
+    if (target.tagName === 'TH') {
       setStat(target.dataset.type!);
     }
   };
-  const username = JSON.parse(sessionStorage.getItem("userStats")!);
+  const username = JSON.parse(sessionStorage.getItem('userStats')!);
   return (
     <div className="overflow-x-auto">
       <Table hoverable onClick={handleTableClick}>
@@ -60,20 +60,20 @@ function LeaderBoard() {
             let fontWeight;
             let rank = index + 1;
             let avatar = user.avatar;
-            if ("rank" in user) {
+            if ('rank' in user) {
               rank = user.rank as number;
               user = user.user as LeaderBoardData;
               avatar = user.avatar as string;
-              color = "text-red-400";
-              bgColor = "bg-gray-200";
-              fontWeight = "font-bold";
+              color = 'text-red-400';
+              bgColor = 'bg-gray-200';
+              fontWeight = 'font-bold';
             } else {
               const match =
                 username[0].username === user.username ? true : false;
               if (match) {
-                color = "text-emerald-400";
-                bgColor = "bg-gray-200";
-                fontWeight = "font-bold";
+                color = 'text-emerald-400';
+                bgColor = 'bg-gray-200';
+                fontWeight = 'font-bold';
               }
             }
 

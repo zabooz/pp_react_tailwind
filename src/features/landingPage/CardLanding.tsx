@@ -1,8 +1,7 @@
 import { Card, Button } from 'flowbite-react';
-import { useNavigate } from 'react-router-dom';
-
 import { useRef } from 'react';
 import { useIntl } from 'react-intl';
+import { useNavigate } from 'react-router-dom';
 import { useSlideContext } from '../../contexts/slideProvider/slideContext';
 interface CardData {
     title: {

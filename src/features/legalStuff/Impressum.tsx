@@ -12,7 +12,7 @@ function Impressum() {
         Österreich
       </p>
       <p>
-        <strong>E-Mail:</strong>{" "}
+        <strong>E-Mail:</strong>{' '}
         <a href="mailto:hello@passwordplayground.com">
           hello@passwordplayground.com
         </a>
@@ -25,14 +25,14 @@ function Impressum() {
         Online-Streitbeilegungsplattform (OS-Plattform) informieren.
         <br />
         Verbraucher haben die Möglichkeit, Beschwerden an die
-        Online-Streitbeilegungsplattform der Europäischen Kommission unter{" "}
+        Online-Streitbeilegungsplattform der Europäischen Kommission unter{' '}
         <a
           href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&amp;lng=DE"
           target="_blank"
           rel="noopener noreferrer"
         >
           https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&amp;lng=DE
-        </a>{" "}
+        </a>{' '}
         zu richten. Die dafür notwendigen Kontaktdaten finden Sie oben in
         unserem Impressum.
       </p>
@@ -108,13 +108,13 @@ function Impressum() {
       </p>
       <p>Alle Texte sind urheberrechtlich geschützt.</p>
       <p>
-        Quelle: Erstellt mit dem{" "}
+        Quelle: Erstellt mit dem{' '}
         <a
           href="https://www.adsimple.at/impressum-generator/"
           title="Impressum Generator Österreich von AdSimple"
         >
           Impressum Generator
-        </a>{" "}
+        </a>{' '}
         von AdSimple
       </p>
 
@@ -123,14 +123,14 @@ function Impressum() {
       <h2 id="einleitung-ueberblick">Einleitung und Überblick</h2>
       <p>
         Wir haben diese Datenschutzerklärung (Fassung 29.08.2024) verfasst, um
-        Ihnen gemäß der Vorgaben der{" "}
+        Ihnen gemäß der Vorgaben der{' '}
         <a
           href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=122865215#d1e2269-1-1"
           target="_blank"
           rel="noopener noreferrer"
         >
           Datenschutz-Grundverordnung (EU) 2016/679
-        </a>{" "}
+        </a>{' '}
         und anwendbaren nationalen Gesetze zu erklären, welche personenbezogenen
         Daten (kurz Daten) wir als Verantwortliche – und die von uns
         beauftragten Auftragsverarbeiter (z. B. Provider) – verarbeiten,
@@ -198,10 +198,10 @@ function Impressum() {
         Was das EU-Recht betrifft, beziehen wir uns auf die VERORDNUNG (EU)
         2016/679 DES EUROPÄISCHEN PARLAMENTS UND DES RATES vom 27. April 2016.
         Diese Datenschutz-Grundverordnung der EU können Sie selbstverständlich
-        online auf EUR-Lex, dem Zugang zum EU-Recht, unter{" "}
+        online auf EUR-Lex, dem Zugang zum EU-Recht, unter{' '}
         <a href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679">
           https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679
-        </a>{" "}
+        </a>{' '}
         nachlesen.
       </p>
       <p>
@@ -253,7 +253,7 @@ function Impressum() {
           <strong>Datenschutzgesetz</strong>), kurz <strong>DSG</strong>.
         </li>
         <li>
-          In <strong>Deutschland</strong> gilt das{" "}
+          In <strong>Deutschland</strong> gilt das{' '}
           <strong>Bundesdatenschutzgesetz</strong>, kurz <strong>BDSG</strong>.
         </li>
       </ul>
@@ -270,13 +270,13 @@ function Impressum() {
         der verantwortlichen Person bzw. Stelle: passwordplayground.com
       </p>
       <p>
-        E-Mail:{" "}
+        E-Mail:{' '}
         <a href="mailto:hello@passwordplayground.com">
           hello@passwordplayground.com
         </a>
       </p>
       <p>
-        Impressum:{" "}
+        Impressum:{' '}
         <a href="https://www.passwordplayground.com/impressum/">
           https://www.passwordplayground.com/impressum/
         </a>
@@ -408,24 +408,24 @@ function Impressum() {
         Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche in
         sonst einer Weise verletzt worden sind, können Sie sich bei der
         Aufsichtsbehörde beschweren. Diese ist für Österreich die
-        Datenschutzbehörde, deren Website Sie unter{" "}
+        Datenschutzbehörde, deren Website Sie unter{' '}
         <a
           href="https://www.dsb.gv.at/?tid=122865215"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           https://www.dsb.gv.at/
-        </a>{" "}
+        </a>{' '}
         finden. In Deutschland gibt es für jedes Bundesland einen
-        Datenschutzbeauftragten. Für nähere Informationen können Sie sich an die{" "}
+        Datenschutzbeauftragten. Für nähere Informationen können Sie sich an die{' '}
         <a
           href="https://www.bfdi.bund.de/DE/Home/home_node.html"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           Bundesbeauftragte für den Datenschutz und die Informationsfreiheit
           (BfDI)
-        </a>{" "}
+        </a>{' '}
         wenden. Für unser Unternehmen ist die folgende lokale Datenschutzbehörde
         zuständig:
       </p>
@@ -494,12 +494,12 @@ function Impressum() {
         </li>
       </ul>
       <p>
-        Laut Europäischem Gerichtshof (EuGH) zählt auch Ihre{" "}
+        Laut Europäischem Gerichtshof (EuGH) zählt auch Ihre{' '}
         <strong>IP-Adresse zu den personenbezogenen Daten</strong>. IT-Experten
         können anhand Ihrer IP-Adresse zumindest den ungefähren Standort Ihres
         Geräts und in weiterer Folge Sie als Anschlussinhaber feststellen. Daher
         benötigt auch das Speichern einer IP-Adresse eine Rechtsgrundlage im
-        Sinne der DSGVO. Es gibt auch noch sogenannte{" "}
+        Sinne der DSGVO. Es gibt auch noch sogenannte{' '}
         <strong>„besondere Kategorien“</strong> der personenbezogenen Daten, die
         auch besonders schützenswert sind. Dazu zählen:
       </p>
@@ -585,7 +585,7 @@ function Impressum() {
         <p>
           <strong>
             <em>„Verarbeitung“</em>
-          </strong>{" "}
+          </strong>{' '}
           jeden mit oder ohne Hilfe automatisierter Verfahren ausgeführten
           Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit
           personenbezogenen Daten wie das Erheben, das Erfassen, die
@@ -605,13 +605,13 @@ function Impressum() {
       </p>
       <p>Alle Texte sind urheberrechtlich geschützt.</p>
       <p>
-        Quelle: Erstellt mit dem{" "}
+        Quelle: Erstellt mit dem{' '}
         <a
           href="https://www.adsimple.at/datenschutz-generator/"
           title="Datenschutz Generator Österreich von AdSimple"
         >
           Datenschutz Generator Österreich
-        </a>{" "}
+        </a>{' '}
         von AdSimple
       </p>
     </div>

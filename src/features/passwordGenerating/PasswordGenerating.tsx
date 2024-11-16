@@ -1,19 +1,18 @@
-import React from "react";
+import React, { useRef, useState } from 'react';
 
-const TextCanvas = React.lazy(() => import("../../components/TextCanvas.tsx"));
-import GylphSorcery from "./glyphSorcery/GylphSorcery.tsx";
-import PictureMagic from "./pictureMagic/PictureMagic.tsx";
-import RuneTranslator from "./runeTranslator/RuneTranslator.tsx";
-import { leetspeakTextShortened } from "../../data/drawer/drawerData.ts";
+const TextCanvas = React.lazy(() => import('../../components/TextCanvas.tsx'));
+import GylphSorcery from './glyphSorcery/GylphSorcery.tsx';
+import PictureMagic from './pictureMagic/PictureMagic.tsx';
+import RuneTranslator from './runeTranslator/RuneTranslator.tsx';
+import { leetspeakTextShortened } from '../../data/drawer/drawerData.ts';
+import { DrawerData } from '../../interfaces/interfaces.ts';
 
-import { DrawerData } from "../../interfaces/interfaces.ts";
 
-import { useRef, useState } from "react";
 
 function PasswordGenerating() {
   const [drawer, setDrawerShow] = useState<boolean>(false);
   const [drawerContent, setDrawerContent] = useState<DrawerData>({
-    title: "",
+    title: '',
     paragraphs: [],
   });
 
@@ -31,13 +30,12 @@ function PasswordGenerating() {
     const { current } = scroll;
 
     if (current !== null) {
-      current.scrollIntoView({ behavior: "smooth" });
+      current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <>
-      <main className="grid grid-cols-1  gap-4  lg:grid-cols-3 w-full content-center min-h-[90vh]">
+    <main className="grid grid-cols-1  gap-4  lg:grid-cols-3 w-full content-center min-h-[90vh]">
         <RuneTranslator
           handleDrawerClick={() => handleClickDrawer(leetspeakTextShortened)}
         />
@@ -63,7 +61,6 @@ function PasswordGenerating() {
           data={drawerContent}
         ></TextCanvas>
       </main>
-    </>
   );
 }
 

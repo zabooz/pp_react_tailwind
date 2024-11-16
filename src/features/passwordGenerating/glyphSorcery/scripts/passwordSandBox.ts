@@ -1,11 +1,11 @@
-import { passwordConverter } from "../../../../utillities/converter/passwordConverter.ts";
-import { allNounsGerman } from "../../../../data/translations/germanGenerator.data.ts";
-import { allNounsEnglish } from "../../../../data/translations/englishGenerator.data.ts";
+import { allNounsEnglish } from '../../../../data/translations/englishGenerator.data.ts';
+import { allNounsGerman } from '../../../../data/translations/germanGenerator.data.ts';
+import { passwordConverter } from '../../../../utillities/converter/passwordConverter.ts';
 import {
   capitalizeFirstLetter,
   shuffleArray,
   rndNumInLen,
-} from "../../../../utillities/helperFunctions.ts";
+} from '../../../../utillities/helperFunctions.ts';
 
 function filterWordsByLength(words: string[], length: number) {
   // Use the filter method to filter words based on the specified length
@@ -14,8 +14,8 @@ function filterWordsByLength(words: string[], length: number) {
 
 function generatePassword(length: number) {
   // Generates a password with user-defined length.
-  const numberArray = "0123456789".split("");
-  const symbolArray = "!@#$%&*-_+=.?".split("");
+  const numberArray = '0123456789'.split('');
+  const symbolArray = '!@#$%&*-_+=.?'.split('');
   const arrays = [numberArray, symbolArray];
 
   // Ensure that all types of characters are used at least once if length allows
@@ -37,11 +37,11 @@ function generatePassword(length: number) {
   }
 
   // Shuffle the final password to ensure randomness
-  return shuffleArray(generatedPassword).join("");
+  return shuffleArray(generatedPassword).join('');
 }
 function languageSelect(language: string) {
   let chosenArray;
-  if (language === "german") {
+  if (language === 'german') {
     chosenArray = allNounsGerman;
   } else {
     chosenArray = allNounsEnglish;
@@ -59,7 +59,7 @@ export function generateEzPw(length: number, language: string) {
 
   const ezPw =
     capitalizeFirstLetter(firstChar) +
-    passwordConverter({ password, mode: "leetSimple" }) +
+    passwordConverter({ password, mode: 'leetSimple' }) +
     generatePassword(3);
 
   return ezPw;

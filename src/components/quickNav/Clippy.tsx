@@ -1,8 +1,8 @@
 import { Tabs, Drawer } from 'flowbite-react';
-import { CopyToClipBoard } from '../CopyToClipBoard';
 import { FaRegTrashAlt } from 'react-icons/fa';
 import { useIntl } from 'react-intl';
 import { useClippyContext } from '../../contexts/clippyContext/clippyContext';
+import { CopyToClipBoard } from '../CopyToClipBoard';
 
 interface Props {
     isOpen: boolean;
@@ -55,8 +55,7 @@ function Clippy({ isOpen, handleClose }: Props) {
                         <ul>
                             {usernames.length > 0 &&
                                 usernames.map((username: string, index: number) => (
-                                    <>
-                                        <li
+                                    <li
                                             key={username}
                                             className="font-semibold text-lg text-gray-400 flex items-center gap-3"
                                         >
@@ -65,7 +64,6 @@ function Clippy({ isOpen, handleClose }: Props) {
                                                 {username}
                                             </CopyToClipBoard>
                                         </li>
-                                    </>
                                 ))}
                         </ul>
                     </Tabs.Item>

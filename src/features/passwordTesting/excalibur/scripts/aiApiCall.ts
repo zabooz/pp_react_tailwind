@@ -1,5 +1,5 @@
-import { passwordEncoder } from '../../../../utillities/encoder.js';
 import { api } from '../../../../api/api.js';
+import { passwordEncoder } from '../../../../utillities/encoder.js';
 
 export async function aiApiCall(userContent: string, sysContent: string) {
     const [encodedPwd, key] = passwordEncoder(userContent);

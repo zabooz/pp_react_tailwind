@@ -1,16 +1,16 @@
 import { Button, Card } from 'flowbite-react';
 import { useState, useEffect } from 'react';
-import ExcaliburModal from './modal/ExcaliburModal';
-import { thinker } from '../../../utillities/thinker';
+import { FormattedMessage } from 'react-intl';
 import ExcaliburControl from './ExcaliburControl';
+import ExcaliburExtendet from './ExcaliburExtendet';
 import ExcaliburTextContent from './ExcaliburTextContent';
+import { cardsGrow } from '../cardsGrow';
+import ExcaliburModal from './modal/ExcaliburModal';
 import ModalLink from './modal/ModalLink';
 import CardHeader from '../../../components/CardHeader';
-import ExcaliburExtendet from './ExcaliburExtendet';
-import { cardsGrow } from '../cardsGrow';
-import { FormattedMessage } from 'react-intl';
 import { usePasswordTesting } from '../../../contexts/passwordTestingContext/passwordTestingContext';
 import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
+import { thinker } from '../../../utillities/thinker';
 
 function Excalibur() {
     const { onSite, mojoGrow, isThinking, excaliburGrow, setExcaliburGrow, handleCardGrow } = usePasswordTesting();
@@ -37,7 +37,7 @@ function Excalibur() {
         const animation = cardsGrow(excaliburGrow, mojoGrow, count);
         setAnimation(animation);
 
-        if (count === 2) setCount(0);
+        if (count === 2) {setCount(0);}
     }, [excaliburGrow, mojoGrow, count]);
 
     return (

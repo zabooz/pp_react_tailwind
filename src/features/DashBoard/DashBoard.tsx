@@ -1,12 +1,12 @@
-import { Tabs } from "flowbite-react";
-import { HiAdjustments, HiUserCircle } from "react-icons/hi";
-import { MdDashboard } from "react-icons/md";
-import "./styles/dashboard.css";
+import { Tabs } from 'flowbite-react';
+import { HiAdjustments, HiUserCircle } from 'react-icons/hi';
+import { MdDashboard } from 'react-icons/md';
+import './styles/dashboard.css';
 
-import Profile from "./Profile";
-import LeaderBoard from "./LeaderBoard";
-import Settings from "./Settings";
-import { useSlideContext } from "../../contexts/Contexts";
+import LeaderBoard from './LeaderBoard';
+import Profile from './Profile';
+import Settings from './Settings';
+import { useSlideContext } from '../../contexts/Contexts';
 
 function DashBoard() {
 

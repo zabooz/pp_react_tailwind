@@ -4,12 +4,12 @@ export const cardsGrow = (
   count: number
 ) => {
   if (firstCard && !secondCard) {
-    return "lg:growBox";
+    return 'lg:growBox';
   } else if (!firstCard && secondCard) {
-    return "lg:vanish";
+    return 'lg:vanish';
   } else if (!firstCard && !secondCard && count !== 0) {
-    return "lg:shrinkBox";
+    return 'lg:shrinkBox';
   } else {
-    return "lg:appear";
+    return 'lg:appear';
   }
 };

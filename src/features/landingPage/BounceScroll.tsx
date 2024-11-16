@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 interface BounceOnScrollProps {
   children: React.ReactNode;
 }
@@ -34,7 +34,7 @@ const BounceOnScroll: React.FC<BounceOnScrollProps> = ({ children }) => {
     <div
       ref={elementRef}
       className={` grid grid-cols-1 transition-all duration-500 ease-in-out  ${
-        isVisible ? "lg:animate-bounce" : ""
+        isVisible ? 'lg:animate-bounce' : ''
       } `}
     >
       {children}

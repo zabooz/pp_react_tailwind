@@ -1,8 +1,8 @@
 import { Button } from 'flowbite-react';
-import MojoControl from '../MojoControl';
-import MojoExtendetTable from './MojoExtendetTable';
-import MojoExtAllResultsLink from './MojoExtAllResultsLink';
 import { FormattedMessage } from 'react-intl';
+import MojoControl from '../MojoControl';
+import MojoExtAllResultsLink from './MojoExtAllResultsLink';
+import MojoExtendetTable from './MojoExtendetTable';
 import { useBruteForceContext } from '../../../../contexts/bruteForceContext/bruteForceContext';
 import { useSlideContext } from '../../../../contexts/slideProvider/slideContext';
 

@@ -1,6 +1,6 @@
-import { ReactNode, useState } from "react";
-import { DrawerData } from "../../interfaces/interfaces";
-import { BruteForceContext } from "./bruteForceContext";
+import { ReactNode, useState } from 'react';
+import { BruteForceContext } from './bruteForceContext';
+import { DrawerData } from '../../interfaces/interfaces';
 
 export const BruteForceProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [bruteForceThinkerInterval, setBruteThinkerInterval] = useState<number>(0);

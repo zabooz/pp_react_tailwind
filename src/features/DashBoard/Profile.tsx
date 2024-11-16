@@ -1,7 +1,7 @@
-import { List } from "flowbite-react";
+import { List } from 'flowbite-react';
 
 function Profile() {
-  const storedData = JSON.parse(sessionStorage.getItem("userStats")!);
+  const storedData = JSON.parse(sessionStorage.getItem('userStats')!);
   const data = storedData[0];
 
   return (

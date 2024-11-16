@@ -1,9 +1,7 @@
 import { Footer } from 'flowbite-react';
 import { useState, useEffect } from 'react';
-
-import { Link } from 'react-router-dom';
-
 import { useIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
 import { footerMessages } from './lang/footer.message';
 import { useSlideContext } from '../contexts/slideProvider/slideContext';
 function FooterCom() {

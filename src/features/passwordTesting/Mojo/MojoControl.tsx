@@ -1,9 +1,9 @@
 import { Button, Label, Radio, Spinner, TextInput } from 'flowbite-react';
 import { useEffect } from 'react';
-import { thinker } from '../../../utillities/thinker';
-import { startBruteForce, stopBruteForce } from './scripts/mojoScripts';
 import { FormattedMessage, useIntl } from 'react-intl';
+import { startBruteForce, stopBruteForce } from './scripts/mojoScripts';
 import { useBruteForceContext } from '../../../contexts/bruteForceContext/bruteForceContext';
+import { thinker } from '../../../utillities/thinker';
 
 interface Props {
     className?: string;

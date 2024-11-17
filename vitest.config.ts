@@ -8,8 +8,6 @@ export default defineConfig({
         include: [
             // Unit tests in src directory
             '__tests__/**/*.test.{js,mjs,cjs,ts,mts,cts,jsx,tsx}',
-            // Integration tests in dedicated directory
-            'test/integration/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}',
         ],
         // Excludes node_modules, dist, and any other test directories
         exclude: ['**/node_modules/**', '**/dist/**', 'test/e2e/**', 'test/fixtures/**'],

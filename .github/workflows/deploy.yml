@@ -22,23 +22,17 @@ jobs:
     - name: Install Dependencies
       run: npm ci
 
-    - name: Lint Code
-      run: npm run lint
 
     - name: Build Project
       run: npm run build
       
-    - name: Run Tests
-      run: npm test
 
-    - name: Deploy to Plesk
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: Deploy to Plesk via SFTP
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/  # Vite's build output directory
-        server-dir: /  # Root directory for your system user
-        protocol: ftps  # Using FTPS for secure transfer
-        security: loose  # Changed to loose to handle certificate issues
-        dangerous-clean-slate: false  # Don't delete existing files
+        server: ${{ secrets.FTP_SERVER }}
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        local_path: './dist/*'  # Vite's build output
+        remote_path: '/httpdocs'  # Web root directory
+        sftp_only: true

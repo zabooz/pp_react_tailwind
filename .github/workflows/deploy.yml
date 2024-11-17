@@ -3,7 +3,7 @@ name: deploy
 on:
   push:
     branches:
-      - "master"  # or your default branch
+      - "master"  # oder dein Standardbranch
 
 jobs:
   build-and-deploy:
@@ -28,13 +28,12 @@ jobs:
     - name: Build Project
       run: npm run build
 
-    - name: Deploy to Plesk
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: Deploy to Plesk via SFTP
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/  # Vite's build output directory
-        server-dir: /  # Root directory for your system user
-        protocol: ftps  # Using FTPS for secure transfer
-        security: strict  # Enforcing strict security
+        server: ${{ secrets.FTP_SERVER }}
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        local_path: './dist/'  # Vite-Build-Ordner
+        remote_path: '/httpdocs'  # Webroot für Plesk
+        sftp_only: true

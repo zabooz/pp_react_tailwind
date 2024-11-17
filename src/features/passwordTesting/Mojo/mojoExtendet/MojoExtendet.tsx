@@ -11,7 +11,7 @@ function MojoExtendet() {
     const { startAnimation } = useSlideContext();
     return (
         <div
-            className={`relative max-w-lg  w-[512px] w-full min-h-[680px] ${
+            className={`relative max-w-lg  w-[512px]  min-h-[680px] ${
                 startAnimation ? 'animate-fade-out' : 'animate-fade-in '
             } `}
         >

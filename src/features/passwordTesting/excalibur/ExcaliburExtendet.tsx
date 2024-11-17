@@ -11,7 +11,7 @@ function ExcaliburExtendet() {
     const { startAnimation } = useSlideContext();
     return (
         <div
-            className={`relative max-w-lg  w-[512px] w-full min-h-[680px] px-4 rounded-lg ${
+            className={`relative max-w-lg  w-[512px] min-h-[680px] px-4 rounded-lg ${
                 startAnimation ? 'animate-fade-out' : 'animate-fade-in '
             } `}
         >

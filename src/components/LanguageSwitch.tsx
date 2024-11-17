@@ -5,7 +5,7 @@ import { Locale, useLanguageContext } from '../contexts/languageContext/language
 
 
 function LanguageSwitch() {
-    const {setLanguage } = useLanguageContext();
+    const {setLanguage, language } = useLanguageContext();
     
 
 
@@ -16,6 +16,7 @@ function LanguageSwitch() {
                 size={1}
                 className="p-[0rem]"
                 onChange={(e) => setLanguage(e.target.value as Locale)}
+                defaultValue={language}
             >
                 <option value={'en'}  >
                     <FormattedMessage id="english-selected" defaultMessage="Englisch" />

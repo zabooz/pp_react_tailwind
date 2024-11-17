@@ -13,7 +13,7 @@ const locale =
     (['de', 'en'].includes(navigator.language.split('-')[0]) ? navigator.language.split('-')[0] : 'en');
 
 localStorage.setItem('locale', locale);
-
+console.log('Locale:', locale);
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <LanguageProvider initialLanguage={localStorage.getItem('locale') as Locale}>

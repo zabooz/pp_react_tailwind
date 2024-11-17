@@ -2,7 +2,7 @@ import { Table } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { dataKrakenGives } from '../../components/login.register/backend/dataKraken';
 import { LeaderBoardData } from '../../interfaces/interfaces';
-import { randomUUID } from 'crypto';
+import { v4 as uuidv4 } from 'uuid';
 function LeaderBoard() {
   const [stat, setStat] = useState('visits');
   const [data, setData] = useState<LeaderBoardData[]>([]);
@@ -22,6 +22,7 @@ function LeaderBoard() {
       setStat(target.dataset.type!);
     }
   };
+
   const username = JSON.parse(sessionStorage.getItem('userStats')!);
   return (
     <div className="overflow-x-auto">
@@ -82,7 +83,7 @@ function LeaderBoard() {
             return (
               <Table.Row
                 className={`bg-white dark:border-gray-700 dark:bg-gray-800 ${color} ${bgColor} ${fontWeight}`}
-                key={randomUUID()}
+                key={uuidv4()}
               >
                 <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                   {rank}

@@ -53,6 +53,7 @@ export default [
             'src/Components/ui/**/*',
             'legacyDesign/**',
             'tailwind.config.js',
+            '__tests__/**',
         ],
     },
     /* Use ESLint's recommended base configuration

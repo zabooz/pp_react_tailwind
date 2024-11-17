@@ -6,7 +6,8 @@ import './styles/dashboard.css';
 import LeaderBoard from './LeaderBoard';
 import Profile from './Profile';
 import Settings from './Settings';
-import { useSlideContext } from '../../contexts/Contexts';
+import { useSlideContext } from '@/contexts/slideProvider/slideContext';
+
 
 function DashBoard() {
 

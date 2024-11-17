@@ -1,12 +1,12 @@
 import { apiToken } from '../../../api/api';
 import {
-  dataKrakenTakesData,
-  dataKrakenGivesData,
-  dataKrakenTradesData,
-  userDataResponse,
+  DataKrakenTakesData,
+  DataKrakenGivesData,
+  DataKrakenTradesData,
+  UserDataResponse,
 } from '../../../interfaces/interfaces';
 
-export const dataKrakenTakes = async ({ col }: dataKrakenTakesData) => {
+export const dataKrakenTakes = async ({ col }: DataKrakenTakesData) => {
   if (!localStorage.getItem('pp-token')) {return;}
   try {
     const response = await apiToken.post('/dataKrakenTakes', { col });
@@ -19,11 +19,11 @@ export const dataKrakenTakes = async ({ col }: dataKrakenTakesData) => {
   }
 };
 
-export async function dataKrakenGives({ col }: dataKrakenGivesData = {}) {
+export async function dataKrakenGives({ col }: DataKrakenGivesData = {}) {
   if (!localStorage.getItem('pp-token')) {return;}
   let data;
   try {
-    const response = await apiToken.get<userDataResponse>(
+    const response = await apiToken.get<UserDataResponse>(
       `/dataKrakenGives?col=${col}`
     );
 
@@ -37,11 +37,11 @@ export async function dataKrakenGives({ col }: dataKrakenGivesData = {}) {
   return data;
 }
 
-export async function dataKrakenTrades({ key, value }: dataKrakenTradesData) {
+export async function dataKrakenTrades({ key, value }: DataKrakenTradesData) {
   if (!localStorage.getItem('pp-token')) {return;}
 
   try {
-    await apiToken.put<userDataResponse>('/dataKrakenTrades', { key, value });
+    await apiToken.put<UserDataResponse>('/dataKrakenTrades', { key, value });
   } catch (error) {
     console.log(error);
   }

@@ -47,7 +47,7 @@ function App() {
                                 <Routes>
                                     <Route path="/" element={<ContentBox />}>
                                         <Route index element={<LandingPage />} />
-                                        <Route path="password-generating" element={<PasswordGenerating />} />
+                                        <Route path="create-password" element={<PasswordGenerating />} />
                                         <Route
                                             path="password-testing"
                                             element={

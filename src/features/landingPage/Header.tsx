@@ -37,7 +37,7 @@ function Header({ setHoverTimer }: { setHoverTimer: (value: boolean) => void }) 
                         <p>{landingData.brandNameBottom}</p>
                     </div>
                     <div className=" flex flex-col gap-5 mt-5 text-md  md:text-2xl lg:w-3/4 text-center md:text-left">
-                        <p className=" text-center md:text-left">
+                        <p className=" text-center md:text-left" data-testid={'landing-lead-text'}>
                             <FormattedMessage
                                 id={'landing-lead-text'}
                                 defaultMessage={'Mach Schluss mit langweiligen Passwörtern und Namen!'}

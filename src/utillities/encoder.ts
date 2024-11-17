@@ -1,6 +1,6 @@
 import { rndNumInLen } from './helperFunctions';
 
-const characters = [
+export const characters = [
     'A',
     'B',
     'C',
@@ -91,7 +91,7 @@ const characters = [
 ];
 
 // Encodes the user's password.
-export function passwordEncoder(password: string) {
+export function passwordEncoder(password: string): [string, number] {
     let encodedString = '';
     const encodingKey = rndNumInLen(characters);
 
@@ -107,7 +107,7 @@ export function passwordEncoder(password: string) {
     }
     return [encodedString, encodingKey];
 }
-export function passwordDecoder(encodedString: string, encodingKey: number) {
+export function passwordDecoder(encodedString: string , encodingKey: number) {
     let decodedString = '';
 
     for (const char of encodedString) {

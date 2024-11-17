@@ -3,11 +3,11 @@ import { useState } from 'react';
 import { register } from './backend/register.ts';
 import { useLoginContext } from '../../contexts/loginContext/loginContext.ts';
 import { useModalContext } from '../../contexts/modalContext/modalContext.ts';
-import { registryData } from '../../interfaces/interfaces';
+import { RegistryData } from '../../interfaces/interfaces';
 
 
 function Register() {
-  const [userData, setUserData] = useState<registryData>({
+  const [userData, setUserData] = useState<RegistryData>({
     username: '',
     password: '',
     email: '',

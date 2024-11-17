@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { login } from './login';
 import { api } from '../../../api/api';
-import { registryData } from '../../../interfaces/interfaces';
+import { RegistryData } from '../../../interfaces/interfaces';
 
 export const register = async ({
   username,
@@ -12,7 +12,7 @@ export const register = async ({
   tested_passwords,
   generated_usernames,
   avatar,
-}: registryData) => {
+}: RegistryData) => {
   const data = {
     username,
     password,

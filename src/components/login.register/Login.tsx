@@ -4,13 +4,13 @@ import { login } from './backend/login.ts';
 import ForgotPassword from './ForgotPassword.tsx';
 import { useLoginContext } from '../../contexts/loginContext/loginContext.ts';
 import { useModalContext } from '../../contexts/modalContext/modalContext.ts';
-import { loginData } from '../../interfaces/interfaces';
+import { LoginData } from '../../interfaces/interfaces';
 interface Props {
   handleRegisterClick: () => void;
 }
 
 function Login({ handleRegisterClick }: Props) {
-  const [userData, setUserData] = useState<loginData>({
+  const [userData, setUserData] = useState<LoginData>({
     username: '',
     password: '',
   });

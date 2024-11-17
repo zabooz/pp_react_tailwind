@@ -46,11 +46,11 @@ export const NavbarCom = () => {
         <ModalContext.Provider value={values}>
             <Navbar fluid rounded className="	fixed w-full z-20 dark:bg-slate-700 bg-gray-200 !justify-center h-16">
                 <NavbarBrand
+                    data-testid="home-nav-link"
                     onClick={() => {
                         directionFunc(0);
                         setTimeout(() => {
                             navigate('/');
-
                             scrollToTop();
                         }, 800);
                     }}
@@ -108,11 +108,12 @@ export const NavbarCom = () => {
                     {/* eslint-disable-next-line */}
                     <a
                         className="py-2 px-4 font-bold text-lg tracking-wider dark:text-gray-400 dark:hover:text-[#0891b2d9] hover:text-[#ea6954] hover:underline underline-offset-8 cursor-pointer"
+                        data-testid="create-password-nav-link"
                         onClick={() => {
                             directionFunc(1);
                             setTimeout(() => {
                                 scrollToTop();
-                                navigate('/password-generating');
+                                navigate('/create-password');
                             }, 800);
                         }}
                     >
@@ -135,6 +136,7 @@ export const NavbarCom = () => {
                     {/* eslint-disable-next-line */}
                     <a
                         className=" py-2 px-4 text-lg font-bold tracking-wider dark:hover:text-[#0891b2d9] hover:text-[#ea6954] hover:underline underline-offset-8 cursor-pointer"
+                        data-testid="test-password-nav-link"
                         onClick={() => {
                             directionFunc(2);
                             setTimeout(() => {
@@ -162,6 +164,7 @@ export const NavbarCom = () => {
                     {/* eslint-disable-next-line */}
                     <a
                         className="py-2 px-4 text-lg tracking-wider font-bold dark:hover:text-[#0891b2d9] hover:text-[#ea6954] hover:underline underline-offset-8 cursor-pointer"
+                        data-testid="get-username-nav-link"
                         onClick={() => {
                             directionFunc(3);
                             setTimeout(() => {

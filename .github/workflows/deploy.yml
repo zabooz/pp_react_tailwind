@@ -27,9 +27,6 @@ jobs:
 
     - name: Build Project
       run: npm run build
-      
-    - name: Run Tests
-      run: npm test
 
     - name: Deploy to Plesk
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4

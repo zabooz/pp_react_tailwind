@@ -9,7 +9,6 @@ import WizardOutput from './WizardOutput';
 function WizardControl() {
     const [username, setUsername] = useState<HTMLSpanElement | null>(null);
     const intl = useIntl();
-
     const adjectives: string[] = useMemo(() => {
         return Array.from(Object.keys(englishArraysObjAdjectives)).sort((a, b) => a.localeCompare(b));
     }, []);

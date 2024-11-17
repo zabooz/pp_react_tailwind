@@ -47,6 +47,30 @@
       "value": "Eigenschaft:"
     }
   ],
+  "ages_value": [
+    {
+      "type": 0,
+      "value": "Alter"
+    }
+  ],
+  "animals_value": [
+    {
+      "type": 0,
+      "value": "Tiere"
+    }
+  ],
+  "beverages_value": [
+    {
+      "type": 0,
+      "value": "Getränke"
+    }
+  ],
+  "bodyParts_value": [
+    {
+      "type": 0,
+      "value": "Körperteile"
+    }
+  ],
   "clearMojo": [
     {
       "type": 0,
@@ -65,10 +89,46 @@
       "value": "Benutzernamen"
     }
   ],
+  "clothingItems_value": [
+    {
+      "type": 0,
+      "value": "Kleidungsstücke"
+    }
+  ],
+  "colors_value": [
+    {
+      "type": 0,
+      "value": "Farben"
+    }
+  ],
+  "desserts_value": [
+    {
+      "type": 0,
+      "value": "Desserts"
+    }
+  ],
+  "emotions_value": [
+    {
+      "type": 0,
+      "value": "Emotionen"
+    }
+  ],
   "english-selected": [
     {
       "type": 0,
       "value": "Englisch"
+    }
+  ],
+  "fantasyCreatures_value": [
+    {
+      "type": 0,
+      "value": "Fantasiewesen"
+    }
+  ],
+  "fantasyRaces_value": [
+    {
+      "type": 0,
+      "value": "Fantasierassen"
     }
   ],
   "find-username-nav": [
@@ -81,6 +141,18 @@
     {
       "type": 0,
       "value": "deinen Benutzernamen"
+    }
+  ],
+  "flowers_value": [
+    {
+      "type": 0,
+      "value": "Blumen"
+    }
+  ],
+  "food_value": [
+    {
+      "type": 0,
+      "value": "Lebensmittel"
     }
   ],
   "footer.Datenschutz": [
@@ -137,6 +209,12 @@
       "value": "Projekt"
     }
   ],
+  "fruits_value": [
+    {
+      "type": 0,
+      "value": "Früchte"
+    }
+  ],
   "generate-identity-wizard": [
     {
       "type": 0,
@@ -165,6 +243,18 @@
     {
       "type": 0,
       "value": "Erstelle einen einzigartigen Benutzernamen, indem du bis zu zwei Gruppenvon Adjektiven und eine Gruppe von Substantiven auswählst, oder lass den Generator eine zufällige Kombination für dich erstellen."
+    }
+  ],
+  "instruments_value": [
+    {
+      "type": 0,
+      "value": "Instrumente"
+    }
+  ],
+  "intensities_value": [
+    {
+      "type": 0,
+      "value": "Intensitäten"
     }
   ],
   "landing-cta-text": [
@@ -213,6 +303,12 @@
     {
       "type": 0,
       "value": "Begriff:"
+    }
+  ],
+  "occupations_value": [
+    {
+      "type": 0,
+      "value": "Berufe"
     }
   ],
   "password.gen.btn": [
@@ -515,10 +611,16 @@
       "value": "Hallo ich bin Sanchez und beantworte gerne deine Fragen über Internetsicherheit!"
     }
   ],
-  "quiz.endcard": [
+  "qualities_value": [
     {
       "type": 0,
-      "value": "Endcard"
+      "value": "Qualitäten"
+    }
+  ],
+  "rpgClasses_value": [
+    {
+      "type": 0,
+      "value": "RPG-Klassen"
     }
   ],
   "runeText-description": [
@@ -545,10 +647,46 @@
       "value": "Senden"
     }
   ],
+  "shapes_value": [
+    {
+      "type": 0,
+      "value": "Formen"
+    }
+  ],
   "simple": [
     {
       "type": 0,
       "value": "Einfach"
+    }
+  ],
+  "sizes_value": [
+    {
+      "type": 0,
+      "value": "Größen"
+    }
+  ],
+  "sounds_value": [
+    {
+      "type": 0,
+      "value": "Geräusche"
+    }
+  ],
+  "speeds_value": [
+    {
+      "type": 0,
+      "value": "Geschwindigkeiten"
+    }
+  ],
+  "tastes_value": [
+    {
+      "type": 0,
+      "value": "Geschmäcker"
+    }
+  ],
+  "temperatures_value": [
+    {
+      "type": 0,
+      "value": "Temperaturen"
     }
   ],
   "test-password-nav": [
@@ -561,6 +699,18 @@
     {
       "type": 0,
       "value": "dein Passwort"
+    }
+  ],
+  "textures_value": [
+    {
+      "type": 0,
+      "value": "Texturen"
+    }
+  ],
+  "tools_value": [
+    {
+      "type": 0,
+      "value": "Werkzeuge"
     }
   ],
   "username.gen.btn": [
@@ -591,6 +741,24 @@
     {
       "type": 0,
       "value": "Weiter"
+    }
+  ],
+  "vegetables_value": [
+    {
+      "type": 0,
+      "value": "Gemüse"
+    }
+  ],
+  "vehicles_value": [
+    {
+      "type": 0,
+      "value": "Fahrzeuge"
+    }
+  ],
+  "weatherTypes_value": [
+    {
+      "type": 0,
+      "value": "Wettertypen"
     }
   ]
 }

@@ -1,5 +1,7 @@
 import { Label, Select } from 'flowbite-react';
-import { translateKeysToGerman } from '../../../data/translations/englishGenerator.data';
+import { FormattedMessage } from 'react-intl';
+// import { translateKeysToGerman } from '../../../data/translations/englishGenerator.data';
+import { keyNames } from '@/data/translations/keysMessages';
 
 interface Props {
     wordList: string[];
@@ -13,7 +15,7 @@ function WizardInput({ wordList, value }: Props) {
             <Select className="wizard-input">
                 {wordList.map((key, index) => (
                     <option key={key} value={wordList[index]}>
-                        {translateKeysToGerman[key as keyof typeof translateKeysToGerman]}
+                        <FormattedMessage {...keyNames[key as keyof typeof keyNames]}/>
                     </option>
                 ))}
             </Select>

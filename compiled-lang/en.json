@@ -5,6 +5,180 @@
       "value": "English"
     }
   ],
+  "ages_value": [
+    {
+      "type": 0,
+      "value": "Ages"
+    }
+  ],
+  "animals_value": [
+    {
+      "type": 0,
+      "value": "Animals"
+    }
+  ],
+  "beverages_value": [
+    {
+      "type": 0,
+      "value": "Beverages"
+    }
+  ],
+  "bodyParts_value": [
+    {
+      "type": 0,
+      "value": "Body parts"
+    }
+  ],
+  "clothingItems_value": [
+    {
+      "type": 0,
+      "value": "Clothing items"
+    }
+  ],
+  "colors_value": [
+    {
+      "type": 0,
+      "value": "Colors"
+    }
+  ],
+  "desserts_value": [
+    {
+      "type": 0,
+      "value": "Desserts"
+    }
+  ],
+  "emotions_value": [
+    {
+      "type": 0,
+      "value": "Emotions"
+    }
+  ],
+  "fantasyCreatures_value": [
+    {
+      "type": 0,
+      "value": "Fantasy Creatures"
+    }
+  ],
+  "fantasyRaces_value": [
+    {
+      "type": 0,
+      "value": "Fantasyraces"
+    }
+  ],
+  "flowers_value": [
+    {
+      "type": 0,
+      "value": "Flowers"
+    }
+  ],
+  "food_value": [
+    {
+      "type": 0,
+      "value": "Food"
+    }
+  ],
+  "fruits_value": [
+    {
+      "type": 0,
+      "value": "Fruits"
+    }
+  ],
+  "instruments_value": [
+    {
+      "type": 0,
+      "value": "Instruments"
+    }
+  ],
+  "intensities_value": [
+    {
+      "type": 0,
+      "value": "Intensity"
+    }
+  ],
+  "occupations_value": [
+    {
+      "type": 0,
+      "value": "Jobs"
+    }
+  ],
+  "qualities_value": [
+    {
+      "type": 0,
+      "value": "Qualities"
+    }
+  ],
+  "rpgClasses_value": [
+    {
+      "type": 0,
+      "value": "RPG-Classes"
+    }
+  ],
+  "shapes_value": [
+    {
+      "type": 0,
+      "value": "Shapes"
+    }
+  ],
+  "sizes_value": [
+    {
+      "type": 0,
+      "value": "Größen"
+    }
+  ],
+  "sounds_value": [
+    {
+      "type": 0,
+      "value": "Sounds"
+    }
+  ],
+  "speeds_value": [
+    {
+      "type": 0,
+      "value": "Speeds"
+    }
+  ],
+  "tastes_value": [
+    {
+      "type": 0,
+      "value": "Tastes"
+    }
+  ],
+  "temperatures_value": [
+    {
+      "type": 0,
+      "value": "Temperatures"
+    }
+  ],
+  "textures_value": [
+    {
+      "type": 0,
+      "value": "Textures"
+    }
+  ],
+  "tools_value": [
+    {
+      "type": 0,
+      "value": "Tools"
+    }
+  ],
+  "vegetables_value": [
+    {
+      "type": 0,
+      "value": "Vegetables"
+    }
+  ],
+  "vehicles_value": [
+    {
+      "type": 0,
+      "value": "Vehicles"
+    }
+  ],
+  "weatherTypes_value": [
+    {
+      "type": 0,
+      "value": "Weathertypes"
+    }
+  ],
   "adjective": [
     {
       "type": 0,

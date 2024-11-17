@@ -23,6 +23,22 @@
   "adjective2": {
     "defaultMessage": "Eigenschaft:"
   },
+  "ages_value": {
+    "defaultMessage": "Alter",
+    "description": "Ages_value"
+  },
+  "animals_value": {
+    "defaultMessage": "Tiere",
+    "description": "Animals_value"
+  },
+  "beverages_value": {
+    "defaultMessage": "Getränke",
+    "description": "Beverages_value"
+  },
+  "bodyParts_value": {
+    "defaultMessage": "Körperteile",
+    "description": "BodyParts_value"
+  },
   "clearMojo": {
     "defaultMessage": "Löschen"
   },
@@ -32,8 +48,32 @@
   "clippy.usernames": {
     "defaultMessage": "Benutzernamen"
   },
+  "clothingItems_value": {
+    "defaultMessage": "Kleidungsstücke",
+    "description": "ClothingItems_value"
+  },
+  "colors_value": {
+    "defaultMessage": "Farben",
+    "description": "Colors_value"
+  },
+  "desserts_value": {
+    "defaultMessage": "Desserts",
+    "description": "Desserts_value"
+  },
+  "emotions_value": {
+    "defaultMessage": "Emotionen",
+    "description": "Emotions_value"
+  },
   "english-selected": {
     "defaultMessage": "Englisch"
+  },
+  "fantasyCreatures_value": {
+    "defaultMessage": "Fantasiewesen",
+    "description": "FantasyCreatures_value"
+  },
+  "fantasyRaces_value": {
+    "defaultMessage": "Fantasierassen",
+    "description": "FantasyRaces_value"
   },
   "find-username-nav": {
     "defaultMessage": "Erfinde",
@@ -42,6 +82,14 @@
   "find-username-nav-long": {
     "defaultMessage": "deinen Benutzernamen",
     "description": "Find Username button text long"
+  },
+  "flowers_value": {
+    "defaultMessage": "Blumen",
+    "description": "Flowers_value"
+  },
+  "food_value": {
+    "defaultMessage": "Lebensmittel",
+    "description": "Food_value"
   },
   "footer.Datenschutz": {
     "defaultMessage": "Datenschutz"
@@ -70,6 +118,10 @@
   "footer.project": {
     "defaultMessage": "Projekt"
   },
+  "fruits_value": {
+    "defaultMessage": "Früchte",
+    "description": "Fruits_value"
+  },
   "generate-identity-wizard": {
     "defaultMessage": "Los Geht's"
   },
@@ -86,6 +138,14 @@
   },
   "identityWizard.text": {
     "defaultMessage": "Erstelle einen einzigartigen Benutzernamen, indem du bis zu zwei Gruppenvon Adjektiven und eine Gruppe von Substantiven auswählst, oder lass den Generator eine zufällige Kombination für dich erstellen."
+  },
+  "instruments_value": {
+    "defaultMessage": "Instrumente",
+    "description": "Instruments_value"
+  },
+  "intensities_value": {
+    "defaultMessage": "Intensitäten",
+    "description": "Intensities_value"
   },
   "landing-cta-text": {
     "defaultMessage": "Entdecke jetzt, wie einfach es ist, deine Sicherheit zu erhöhen!",
@@ -115,6 +175,10 @@
   },
   "noun": {
     "defaultMessage": "Begriff:"
+  },
+  "occupations_value": {
+    "defaultMessage": "Berufe",
+    "description": "Occupations_value"
   },
   "password.gen.btn": {
     "defaultMessage": "Erstelle Passwort"
@@ -266,8 +330,13 @@
   "pl_sanchez": {
     "defaultMessage": "Hallo ich bin Sanchez und beantworte gerne deine Fragen über Internetsicherheit!"
   },
-  "quiz.endcard": {
-    "defaultMessage": "Endcard"
+  "qualities_value": {
+    "defaultMessage": "Qualitäten",
+    "description": "Qualities_value"
+  },
+  "rpgClasses_value": {
+    "defaultMessage": "RPG-Klassen",
+    "description": "RPGClasses_value"
   },
   "runeText-description": {
     "defaultMessage": "Leetspeak ist eine Art von Textumwandlung, bei der bestimmte Buchstaben und Zeichen durch andere ersetzt werden. Probier es aus, um dein Passwort besser zu schützen.",
@@ -283,8 +352,32 @@
   "send": {
     "defaultMessage": "Senden"
   },
+  "shapes_value": {
+    "defaultMessage": "Formen",
+    "description": "Shapes_value"
+  },
   "simple": {
     "defaultMessage": "Einfach"
+  },
+  "sizes_value": {
+    "defaultMessage": "Größen",
+    "description": "Sizes_value"
+  },
+  "sounds_value": {
+    "defaultMessage": "Geräusche",
+    "description": "Sounds_value"
+  },
+  "speeds_value": {
+    "defaultMessage": "Geschwindigkeiten",
+    "description": "Speeds_value"
+  },
+  "tastes_value": {
+    "defaultMessage": "Geschmäcker",
+    "description": "Tastes_value"
+  },
+  "temperatures_value": {
+    "defaultMessage": "Temperaturen",
+    "description": "Temperatures_value"
   },
   "test-password-nav": {
     "defaultMessage": "Teste",
@@ -293,6 +386,14 @@
   "test-password-nav-long": {
     "defaultMessage": "dein Passwort",
     "description": "Test Password button text long"
+  },
+  "textures_value": {
+    "defaultMessage": "Texturen",
+    "description": "Textures_value"
+  },
+  "tools_value": {
+    "defaultMessage": "Werkzeuge",
+    "description": "Tools_value"
   },
   "username.gen.btn": {
     "defaultMessage": "Erstelle Username"
@@ -308,5 +409,17 @@
   },
   "usernameGenerating.mindMaestro.next": {
     "defaultMessage": "Weiter"
+  },
+  "vegetables_value": {
+    "defaultMessage": "Gemüse",
+    "description": "Vegetables_value"
+  },
+  "vehicles_value": {
+    "defaultMessage": "Fahrzeuge",
+    "description": "Vehicles_value"
+  },
+  "weatherTypes_value": {
+    "defaultMessage": "Wettertypen",
+    "description": "WeatherTypes_value"
   }
 }

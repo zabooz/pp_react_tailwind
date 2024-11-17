@@ -32,5 +32,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: './dist/'  # Vite-Build-Ordner
-        server-dir: '/httpdocs'  # Webroot für Plesk
+        server-dir: '/httpdocs/'  # Webroot für Plesk
         protocol: ftp  # Standard-FTP verwenden

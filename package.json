@@ -13,7 +13,8 @@
     "compile": "formatjs compile",
     "test": "vitest run ",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@zxcvbn-ts/core": "^3.0.4",

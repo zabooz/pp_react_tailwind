@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import { Locale, useLanguageContext } from '../contexts/languageContext/languageContext';
 
 function LanguageSwitch() {
+    
     const { setLanguage, language } = useLanguageContext();
 
     return (

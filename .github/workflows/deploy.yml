@@ -40,4 +40,5 @@ jobs:
         local-dir: ./dist/  # Vite's build output directory
         server-dir: /  # Root directory for your system user
         protocol: ftps  # Using FTPS for secure transfer
-        security: strict  # Enforcing strict security 
+        security: loose  # Changed to loose to handle certificate issues
+        dangerous-clean-slate: false  # Don't delete existing files

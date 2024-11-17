@@ -25,7 +25,11 @@ function Mojo() {
     return (
         <>
             <div className="justify-center  rounded-lg  items-center flex">
-                <div className=" rounded-xl  border-2 border-slate-700 dark:border-slate-700  max-w-lg dark:hover:shadow-2xl transition-shadow duration-1000  ">
+                <div
+                    className={` rounded-xl  border-2 border-slate-700 dark:border-slate-700 ${
+                        startAnimation ? 'animate-fade-out' : 'animate-fade-in'
+                    } max-w-lg dark:hover:shadow-2xl transition-shadow duration-1000`}
+                >
                     {!extendetExcalibur ? (
                         <Card
                             className={`max-w-lg min-h-[682px] border-none ${

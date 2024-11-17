@@ -32,7 +32,11 @@ function Excalibur() {
     return (
         <>
             <div className="justify-center items-center flex ">
-                <div className=" rounded-xl  border-2 border-slate-700 dark:border-slate-700  max-w-lg dark:hover:shadow-2xl transition-shadow duration-1000">
+                <div
+                    className={` rounded-xl  border-2 border-slate-700 dark:border-slate-700 ${
+                        startAnimation ? 'animate-fade-out' : 'animate-fade-in'
+                    } max-w-lg dark:hover:shadow-2xl transition-shadow duration-1000`}
+                >
                     {!extendetMojo ? (
                         <Card
                             className={`max-w-lg border-none min-h-[682px]  ${

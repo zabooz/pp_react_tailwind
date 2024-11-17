@@ -53,7 +53,7 @@ function Excalibur() {
                 imgAlt="Excalibur Picture"
                 imgSrc="/assets/passwordTesting/excalibur.webp"
             >
-                <CardHeader title={{ id: 'excalibur.title', defaultMessage: 'Excalibur' }} top={165} />
+                <CardHeader title="Excalibur" top={165} />
                 <ExcaliburTextContent />
                 <ExcaliburControl className="lg:hidden" />
                 <ModalLink />

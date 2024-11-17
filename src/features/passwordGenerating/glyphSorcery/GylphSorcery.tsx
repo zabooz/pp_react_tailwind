@@ -28,7 +28,7 @@ function GylphSorcery() {
             imgAlt="Glyph Sorcery picture"
             imgSrc="/assets/passwordGenerating/glyphSorcery.webp"
         >
-            <CardHeader title={{ id: 'glyphSorcery.title', defaultMessage: 'Glyph Sorcery' }} top={145} />
+            <CardHeader title="Glyph Sorcery" top={145} />
             <GlpyhText />
             <GlyphControl
                 passwordLength={passwordLength}

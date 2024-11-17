@@ -44,7 +44,7 @@ function Mojo() {
                 imgAlt="Mojo APP picture"
                 imgSrc="/assets/passwordTesting/mojo.webp"
             >
-                <CardHeader title={{id: 'mojo_title',defaultMessage: 'Mojo'}} top={165} />
+                <CardHeader title="Mojo" top={165} />
                 <MojoTextContent />
                 <MojoTable />
                 <MojoAllResultsLink />

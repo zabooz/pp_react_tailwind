@@ -1,8 +1,8 @@
 import { Card } from 'flowbite-react';
 import WizardControl from './WizardControl';
-import WizardHeader from './WizardHeader';
 import WizardText from './WizardText';
 import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
+import CardHeader from '@/components/CardHeader';
 
 const IdentityWizard = () => {
     const { startAnimation } = useSlideContext();
@@ -15,7 +15,7 @@ const IdentityWizard = () => {
             imgAlt="Identity Wizard Picture"
             imgSrc="/assets/usernameGenerating/identityWizard.webp"
         >
-            <WizardHeader />
+            <CardHeader title="Identity Wizard" top={-100} />
             <WizardText />
             <WizardControl />
         </Card>

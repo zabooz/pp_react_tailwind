@@ -4,9 +4,8 @@ import { defineMessages, FormattedMessage } from 'react-intl';
 import IntroPage from './IntroPage';
 import { mindQuestions } from './questions/questions';
 import Quiz from './Quiz';
-import CardHeader from '../../../components/CardHeader';
 import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
-// import { Questions } from '../../../interfaces/interfaces';
+import MaestroHeader from './MaestroHeader';
 
 function MindMaestro() {
     const { startAnimation } = useSlideContext();
@@ -34,7 +33,7 @@ function MindMaestro() {
             imgAlt="MindMaestro Picture"
             imgSrc="/assets/usernameGenerating/mindMaestro.webp"
         >
-            <CardHeader title={startQuiz ? question : title.title} top={165} />
+            <MaestroHeader title={startQuiz ? question : title.title} top={165} />
             <div className="border h-[300px] grid grid-cols-2 gap-2 p-2 grid-rows-2">
                 <IntroPage startQuiz={startQuiz} />
                 <Quiz index={index} setAnswer={setAnswer} startQuiz={startQuiz} />

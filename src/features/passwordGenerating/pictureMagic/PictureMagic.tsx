@@ -9,7 +9,6 @@ import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
 import { StorageData } from '../../../interfaces/interfaces';
 import Switcher from '../../../utillities/Switcher';
 
-
 function PictureMagic() {
     const [pictureFile, setPictureFile] = useState<File>(new File([''], ''));
     const [pictureBase64, setPictureBase64] = useState<string>('');
@@ -30,7 +29,7 @@ function PictureMagic() {
             imgAlt="PictureMAgic picture"
             imgSrc="/assets/passwordGenerating/pictureMagic.webp"
         >
-            <CardHeader title={{ id:'pictureMagic.title', defaultMessage: 'Picture Magic' }} top={145} />
+            <CardHeader title="Picture Magic" top={145} />
             <PictureTextContent />
             <PictureControl setPictureBase64={setPictureBase64} setPictureFile={setPictureFile} />
             <Switcher app="pictureMagic" data={storageData} />

@@ -1,0 +1,43 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      # Checkout the code repository
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20.x"
+        cache: 'npm'
+      # Set up Node.js version 20.x and cache NPM dependencies
+    - name: Install Dependencies
+      run: npm ci
+      # Install NPM dependencies using `npm ci`
+    - name: Lint Code
+      run: npm run lint
+      # Run the linter using `npm run lint`
+    - name: Build Project
+      run: npm run build 
+      # Build the project using `npm run build`
+    - name: Start Development Server
+      run: npm run dev &
+      # Start the development server using `npm run dev &`
+    - name: Install Playwright
+      run: npx playwright install --with-deps
+      # Install Playwright dependencies using `npx playwright install --with-deps`
+    - name: Run Tests
+      run: npm test
+      # Run the tests using `npm test`
+    - name: Generate Playwright Artifacts
+      run: npm run test:e2e
+      # Generate Playwright artifacts using `npm run playwright`

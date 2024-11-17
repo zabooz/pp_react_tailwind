@@ -30,7 +30,7 @@ function PictureMagic() {
             imgAlt="PictureMAgic picture"
             imgSrc="/assets/passwordGenerating/pictureMagic.webp"
         >
-            <CardHeader title="Picture Magic" top={145} />
+            <CardHeader title={{ id:'pictureMagic.title', defaultMessage: 'Picture Magic' }} top={145} />
             <PictureTextContent />
             <PictureControl setPictureBase64={setPictureBase64} setPictureFile={setPictureFile} />
             <Switcher app="pictureMagic" data={storageData} />

@@ -617,6 +617,156 @@
       "value": "Qualitäten"
     }
   ],
+  "question_1": [
+    {
+      "type": 0,
+      "value": "Was ist dir am wichtigsten?"
+    }
+  ],
+  "question_1_answer_1": [
+    {
+      "type": 0,
+      "value": "Eine angenehme Temperatur"
+    }
+  ],
+  "question_1_answer_2": [
+    {
+      "type": 0,
+      "value": "Bequemlichkeit"
+    }
+  ],
+  "question_1_answer_3": [
+    {
+      "type": 0,
+      "value": "Farb-Fernsehen"
+    }
+  ],
+  "question_1_answer_4": [
+    {
+      "type": 0,
+      "value": "Wahre Größe"
+    }
+  ],
+  "question_2": [
+    {
+      "type": 0,
+      "value": "Welche Aktivität magst du am meisten?"
+    }
+  ],
+  "question_2_answer_1": [
+    {
+      "type": 0,
+      "value": "Im Kreis fahren"
+    }
+  ],
+  "question_2_answer_2": [
+    {
+      "type": 0,
+      "value": "Arbeiten mit den Händen"
+    }
+  ],
+  "question_2_answer_3": [
+    {
+      "type": 0,
+      "value": "Löffel verbiegen"
+    }
+  ],
+  "question_2_answer_4": [
+    {
+      "type": 0,
+      "value": "Musik"
+    }
+  ],
+  "question_3": [
+    {
+      "type": 0,
+      "value": "Welche Lebensmittelgruppe spricht dich am meisten an?"
+    }
+  ],
+  "question_3_answer_1": [
+    {
+      "type": 0,
+      "value": "Früchte & Gemüse"
+    }
+  ],
+  "question_3_answer_2": [
+    {
+      "type": 0,
+      "value": "Getränke"
+    }
+  ],
+  "question_3_answer_3": [
+    {
+      "type": 0,
+      "value": "Desserts"
+    }
+  ],
+  "question_3_answer_4": [
+    {
+      "type": 0,
+      "value": "Essen im Allgemeinen"
+    }
+  ],
+  "question_4": [
+    {
+      "type": 0,
+      "value": "Was bevorzugst du?"
+    }
+  ],
+  "question_4_answer_1": [
+    {
+      "type": 0,
+      "value": "Das Leben"
+    }
+  ],
+  "question_4_answer_2": [
+    {
+      "type": 0,
+      "value": "Blumen"
+    }
+  ],
+  "question_4_answer_3": [
+    {
+      "type": 0,
+      "value": "den Klimawandel"
+    }
+  ],
+  "question_4_answer_4": [
+    {
+      "type": 0,
+      "value": "Egal, hauptsache was gespürt"
+    }
+  ],
+  "question_5": [
+    {
+      "type": 0,
+      "value": "Was spricht dich am meisten an?"
+    }
+  ],
+  "question_5_answer_1": [
+    {
+      "type": 0,
+      "value": "Hunde und Katzen"
+    }
+  ],
+  "question_5_answer_2": [
+    {
+      "type": 0,
+      "value": "Drachen und Einhörner"
+    }
+  ],
+  "question_5_answer_3": [
+    {
+      "type": 0,
+      "value": "Elfen und Zwerge"
+    }
+  ],
+  "question_5_answer_4": [
+    {
+      "type": 0,
+      "value": "Nichts davon"
+    }
+  ],
   "rpgClasses_value": [
     {
       "type": 0,

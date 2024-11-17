@@ -17,6 +17,156 @@
       "value": "Animals"
     }
   ],
+  "question_1": [
+    {
+      "type": 0,
+      "value": "What is most important to you?"
+    }
+  ],
+  "question_1_answer_1": [
+    {
+      "type": 0,
+      "value": "A comfortable temperature"
+    }
+  ],
+  "question_1_answer_2": [
+    {
+      "type": 0,
+      "value": "Comfort"
+    }
+  ],
+  "question_1_answer_3": [
+    {
+      "type": 0,
+      "value": "Color TV"
+    }
+  ],
+  "question_1_answer_4": [
+    {
+      "type": 0,
+      "value": "True greatness"
+    }
+  ],
+  "question_2": [
+    {
+      "type": 0,
+      "value": "Which activity do you like the most?"
+    }
+  ],
+  "question_2_answer_1": [
+    {
+      "type": 0,
+      "value": "Driving in circles"
+    }
+  ],
+  "question_2_answer_2": [
+    {
+      "type": 0,
+      "value": "Working with your hands"
+    }
+  ],
+  "question_2_answer_3": [
+    {
+      "type": 0,
+      "value": "Bending spoons"
+    }
+  ],
+  "question_2_answer_4": [
+    {
+      "type": 0,
+      "value": "Music"
+    }
+  ],
+  "question_3": [
+    {
+      "type": 0,
+      "value": "Which food group appeals to you the most?"
+    }
+  ],
+  "question_3_answer_1": [
+    {
+      "type": 0,
+      "value": "Fruits & vegetables"
+    }
+  ],
+  "question_3_answer_2": [
+    {
+      "type": 0,
+      "value": "Beverages"
+    }
+  ],
+  "question_3_answer_3": [
+    {
+      "type": 0,
+      "value": "Desserts"
+    }
+  ],
+  "question_3_answer_4": [
+    {
+      "type": 0,
+      "value": "Food in general"
+    }
+  ],
+  "question_4": [
+    {
+      "type": 0,
+      "value": "What do you prefer?"
+    }
+  ],
+  "question_4_answer_1": [
+    {
+      "type": 0,
+      "value": "Life"
+    }
+  ],
+  "question_4_answer_2": [
+    {
+      "type": 0,
+      "value": "Flowers"
+    }
+  ],
+  "question_4_answer_3": [
+    {
+      "type": 0,
+      "value": "Climate change"
+    }
+  ],
+  "question_4_answer_4": [
+    {
+      "type": 0,
+      "value": "Doesn't matter, just feel something"
+    }
+  ],
+  "question_5": [
+    {
+      "type": 0,
+      "value": "What appeals to you the most?"
+    }
+  ],
+  "question_5_answer_1": [
+    {
+      "type": 0,
+      "value": "Dogs and cats"
+    }
+  ],
+  "question_5_answer_2": [
+    {
+      "type": 0,
+      "value": "Dragons and unicorns"
+    }
+  ],
+  "question_5_answer_3": [
+    {
+      "type": 0,
+      "value": "Elves and dwarves"
+    }
+  ],
+  "question_5_answer_4": [
+    {
+      "type": 0,
+      "value": "None of the above"
+    }
+  ],
   "beverages_value": [
     {
       "type": 0,

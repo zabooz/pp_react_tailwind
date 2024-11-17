@@ -29,7 +29,7 @@ function RuneTranslator({ handleDrawerClick }: Props) {
             imgAlt="Rune Translator Picture"
             imgSrc="/assets/passwordGenerating/runeTranslator.webp"
         >
-            <CardHeader title="Rune Translator" top={145} />
+            <CardHeader title={{ id: 'runeTranslator.title', defaultMessage: 'Rune Translator' }} top={145} />
             <RuneText handleDrawerClick={handleDrawerClick} />
             <RuneControl setInput={setInput} />
             <Switcher app="runeTranslator" data={runes} />

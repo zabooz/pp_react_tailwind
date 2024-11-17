@@ -108,14 +108,14 @@ export interface EnglishArrays {
     desserts: string[];
 }
 
-export interface Questions {
-    question: string;
-    answers: {
-        answer: string;
-        dataArr: string;
-        imagePath: string;
-    }[];
-}
+// export interface Questions {
+//     question: string;
+//     answers: {
+//         answer: string;
+//         dataArr: string;
+//         imagePath: string;
+//     }[];
+// }
 export interface PasswordStrength {
     result: number;
     points: Points;

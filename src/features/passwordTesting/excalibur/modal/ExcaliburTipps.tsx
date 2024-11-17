@@ -23,7 +23,7 @@ function ExcaliburTipps({ passwordStrength }: Props) {
     }, [points]);
 
     return passwordStrength ? (
-        <div className="text-lg text-gray-700 dark:text-gray-400">
+        <div className="text-lg text-gray-700 dark:text-gray-400 ">
             <List>
                 {succesArray.map((item) => (
                     <ListItem icon={FaCheck} key={item}>
@@ -40,7 +40,7 @@ function ExcaliburTipps({ passwordStrength }: Props) {
             </List>
         </div>
     ) : (
-        <p>Hier könnte ihre Werbung stehen</p>
+        <p className="mt-auto h-full">Hier könnte ihre Werbung stehen</p>
     );
 }
 

@@ -4,18 +4,16 @@ import ExcaliburControl from './ExcaliburControl';
 import ExcaliburNerdStats from './modal/ExcaliburNerdStats';
 import ExcaliburTipps from './modal/ExcaliburTipps';
 import { useExcalibur } from '../../../contexts/excaliburContext/excaliburContext';
-import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
+import { useSlideContext } from '@/contexts/slideProvider/slideContext';
 
 function ExcaliburExtendet() {
-    const { startAnimation } = useSlideContext();
-
     const { passwordStrength, nerdStats } = useExcalibur();
-
+    const { startAnimation } = useSlideContext();
     return (
         <div
-            className={`  absolute top-0 min-h-[680px] border-2  left-0 w-[500px] px-4 rounded-lg -z-10 border-slate-700 dark:border-slate-700  lg:flex flex-col ${
-                startAnimation ? 'animate-fade-out' : 'animate-fade-in'
-            }`}
+            className={`relative max-w-lg  w-[512px] w-full min-h-[680px] px-4 rounded-lg ${
+                startAnimation ? 'animate-fade-out' : 'animate-fade-in '
+            } `}
         >
             <Tabs aria-label="Default tabs" variant="default">
                 <Tabs.Item active title="Tipps" icon={FaRegLightbulb}>
@@ -25,7 +23,7 @@ function ExcaliburExtendet() {
                     <ExcaliburNerdStats nerdStats={nerdStats} />
                 </Tabs.Item>
             </Tabs>
-            <ExcaliburControl className="mt-auto" />
+            <ExcaliburControl className="absolute bottom-0 w-full right-0" />
         </div>
     );
 }

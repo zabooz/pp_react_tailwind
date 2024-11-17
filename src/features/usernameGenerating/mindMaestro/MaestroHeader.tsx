@@ -1,4 +1,3 @@
-
 import { FormattedMessage } from 'react-intl';
 
 interface Props {
@@ -11,7 +10,7 @@ interface Props {
 function MaestroHeader({ title, top }: Props) {
     return (
         <div className="relative">
-            <div className="absolute  flex items-center justify-center w-full" style={{ top: `-${top}px` } }>
+            <div className="absolute  flex items-center justify-center w-full" style={{ top: `-${top}px` }}>
                 <h5 className="text-2xl font-bold tracking-tight text-center bg-slate-800  w-full bg-opacity-80   !text-gray-200">
                     <FormattedMessage {...title} />
                 </h5>
@@ -20,4 +19,4 @@ function MaestroHeader({ title, top }: Props) {
     );
 }
 
-export default MaestroHeader
+export default MaestroHeader;

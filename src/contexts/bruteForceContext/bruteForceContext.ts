@@ -17,7 +17,7 @@ interface BruteForceContextProps {
     bruteForceResults: string[][];
     setBruteForceResults: (value: string[][]) => void;
     drawer: boolean;
-    setDrawerShow: (value: boolean) => void;
+    setDrawer: (value: boolean) => void;
     drawerContent: DrawerData;
     setDrawerContent: (value: DrawerData) => void;
 }

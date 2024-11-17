@@ -5,9 +5,9 @@ function MojoExtendetTable() {
     const { bruteForceResults } = useBruteForceContext();
 
     return (
-        <div className="   lg:h-[293px]  overflow-y-hidden  border-b dark:border-slate-600 flex flex-col ">
-            <Table striped>
-                <Table.Head>
+        <div className="lg:h-[293px]  overflow-hidden border-b dark:border-slate-600 ">
+            <Table striped className="border-collapse w-[99.5%]">
+                <Table.Head className="rounded-none">
                     <Table.HeadCell>Passwort</Table.HeadCell>
                     <Table.HeadCell>Versuche</Table.HeadCell>
                     <Table.HeadCell>Modus</Table.HeadCell>

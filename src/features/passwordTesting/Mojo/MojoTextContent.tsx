@@ -5,13 +5,13 @@ import { bruteForceAttackList, bruteForceAttackSimple } from '../../../data/draw
 import { DrawerData } from '../../../interfaces/interfaces';
 
 function MojoTextContent() {
-    const { setDrawerShow, setDrawerContent, drawer } = useBruteForceContext();
+    const { setDrawer, setDrawerContent, drawer } = useBruteForceContext();
     const handleClickDrawer = useCallback(
         (content: DrawerData) => {
-            setDrawerShow(!drawer);
+            setDrawer(!drawer);
             setDrawerContent(content);
         },
-        [drawer, setDrawerShow, setDrawerContent],
+        [drawer, setDrawer, setDrawerContent],
     );
 
     return (

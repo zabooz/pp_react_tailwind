@@ -103,7 +103,6 @@ export const NavbarCom = () => {
                         />
                     )}
                     <NavbarToggle />
-                    /&
                 </div>
                 <NavbarCollapse className=" dark:text-gray-400 text-lg  justify-between">
                     {/* eslint-disable-next-line */}

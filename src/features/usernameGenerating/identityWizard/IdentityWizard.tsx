@@ -15,7 +15,7 @@ const IdentityWizard = () => {
             imgAlt="Identity Wizard Picture"
             imgSrc="/assets/usernameGenerating/identityWizard.webp"
         >
-            <CardHeader title="Identity Wizard" top={-100} />
+            <CardHeader title="Identity Wizard" top={180} />
             <WizardText />
             <WizardControl />
         </Card>

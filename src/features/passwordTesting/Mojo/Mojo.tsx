@@ -1,64 +1,64 @@
-import { lazy, useEffect, useState } from 'react';
+import { lazy } from 'react';
 const TextCanvas = lazy(() => import('../../../components/TextCanvas'));
 const ResultsModal = lazy(() => import('./mojoModal/ResultsModal'));
 import MojoAllResultsLink from './MojoAllResultsLink';
 import MojoControll from './MojoControl';
-import { cardsGrow } from '../cardsGrow';
-import MojoExtendet from './mojoExtendet/MojoExtendet';
-import MojoExtendetButton from './mojoExtendet/MojoExtendetButton';
 import MojoTable from './MojoTable';
 import MojoTextContent from './MojoTextContent';
-import { Card } from 'flowbite-react';
+import { Button, Card } from 'flowbite-react';
 import CardHeader from '../../../components/CardHeader';
 import { useBruteForceContext } from '../../../contexts/bruteForceContext/bruteForceContext';
-import { usePasswordTesting } from '../../../contexts/passwordTestingContext/passwordTestingContext';
 import { useSlideContext } from '../../../contexts/slideProvider/slideContext';
+import ExcaliburExtendet from '../excalibur/ExcaliburExtendet';
+import { usePasswordTesting } from '@/contexts/passwordTestingContext/passwordTestingContext';
 
 function Mojo() {
-    const { setOpenResultModal, bruteForceResults, openResultModal, setDrawerShow, drawer, drawerContent } =
+    const { setOpenResultModal, bruteForceResults, openResultModal, setDrawer, drawer, drawerContent } =
         useBruteForceContext();
-    const { onSite, mojoGrow, excaliburGrow } = usePasswordTesting();
+    const { extendetExcalibur, setExtendetMojo, extendetMojo } = usePasswordTesting();
     const { startAnimation } = useSlideContext();
 
-    const [animation, setAnimation] = useState<string>('');
-    const [count, setCount] = useState<number>(0);
     const handleCloseDrawer = () => {
-        setDrawerShow(!drawer);
+        setDrawer(!drawer);
     };
 
-    useEffect(() => {
-        const animation = cardsGrow(mojoGrow, excaliburGrow, count);
-        setAnimation(animation);
-
-        if (count === 2) {setCount(0);}
-    }, [mojoGrow, excaliburGrow, count]);
-
     return (
-        <div
-            className={`flex  ${
-                !onSite ? '' : animation
-            }  min-h-[670px] transition-all rounded dark:border-slate-700 max-w-[508px] lg:max-w-[1003px] relative dark:hover:shadow-2xl cursor-default duration-1000 `}
-        >
-            <Card
-                className={`max-w-lg ${startAnimation ? 'animate-fade-out' : 'animate-fade-in '}  border-2 border-r-1`}
-                imgAlt="Mojo APP picture"
-                imgSrc="/assets/passwordTesting/mojo.webp"
-            >
-                <CardHeader title="Mojo" top={165} />
-                <MojoTextContent />
-                <MojoTable />
-                <MojoAllResultsLink />
-                <MojoControll className="lg:hidden" />
-                <MojoExtendetButton setCount={setCount} count={count} className="hidden lg:block dark:text-gray-400" />
-            </Card>
-            <MojoExtendet />
+        <>
+            <div className="justify-center  rounded-lg  items-center flex">
+                <div className=" rounded-xl  border-2 border-slate-700 dark:border-slate-700  max-w-lg dark:hover:shadow-2xl transition-shadow duration-1000  ">
+                    {!extendetExcalibur ? (
+                        <Card
+                            className={`max-w-lg min-h-[682px] border-none ${
+                                startAnimation ? 'animate-fade-out' : 'animate-fade-in '
+                            }  `}
+                            imgAlt="Mojo APP picture"
+                            imgSrc="/assets/passwordTesting/mojo.webp"
+                        >
+                            <CardHeader title="Mojo" top={165} />
+                            <MojoTextContent />
+                            <MojoTable />
+                            <MojoAllResultsLink />
+                            <MojoControll className="lg:hidden" />
+                            <Button
+                                onClick={() => {
+                                    setExtendetMojo(!extendetMojo);
+                                }}
+                            >
+                                slkgasglkj
+                            </Button>
+                        </Card>
+                    ) : (
+                        <ExcaliburExtendet />
+                    )}
+                </div>
+            </div>
             <TextCanvas handleClose={handleCloseDrawer} show={drawer} data={drawerContent} />
             <ResultsModal
                 openModal={openResultModal}
                 setOpenModal={setOpenResultModal}
                 bruteForceResults={bruteForceResults}
             />
-        </div>
+        </>
     );
 }
 

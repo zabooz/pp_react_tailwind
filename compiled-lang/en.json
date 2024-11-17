@@ -386,7 +386,7 @@
   "find-username-nav": [
     {
       "type": 0,
-      "value": "Create"
+      "value": "Get"
     }
   ],
   "find-username-nav-long": [
@@ -548,7 +548,7 @@
   "password.gen.title": [
     {
       "type": 0,
-      "value": "Create"
+      "value": "Create "
     }
   ],
   "password.test.btn": [
@@ -860,7 +860,7 @@
   "username.gen.title": [
     {
       "type": 0,
-      "value": "Create"
+      "value": "Get"
     }
   ],
   "usernameGenerating.mindMaestro.next": [

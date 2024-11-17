@@ -1,11 +1,9 @@
-
-
 interface Props {
-    title: string
+    title: string;
     top: number;
 }
 
-function CardHeader(props:Props) {
+function CardHeader(props: Props) {
     return (
         <div className="relative">
             <div className="absolute  flex items-center justify-center w-full" style={{ top: `-${props.top}px` }}>

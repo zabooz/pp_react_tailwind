@@ -21,9 +21,36 @@ function ExcaliburControl({ className }: Props) {
 
     const { isThinking, setIsThinking } = usePasswordTesting();
 
+    const handleClick = () => {
+        excaliburTesting({
+            setNerdStats,
+            password,
+            setShowModalLink,
+            setModalLinkText,
+            setPasswordStrength,
+            setIsThinking,
+        });
+    };
+
+    const spinner = () => {
+        if (isThinking) {
+            return (
+                <>
+                    <Spinner aria-label="Spinner button example" size="sm" />
+                    <span className="pl-3" id="spinner"></span>
+                </>
+            );
+        } else {
+            return (
+                <span className="pl-3">
+                    <FormattedMessage id="passwordTesting.excalibur.button.start" defaultMessage="Start" />
+                </span>
+            );
+        }
+    };
     return (
         <div className={`${className} `}>
-            <div className="my-4">
+            <div className=" rounded-lg p-4">
                 <TextInput type="text" onChange={(e) => setPassword(e.target.value)} className="mb-4" />
                 <Progress
                     progress={passwordStrength ? passwordStrength.result : 0}
@@ -36,29 +63,8 @@ function ExcaliburControl({ className }: Props) {
                     className="my-2"
                 />
             </div>
-            <Button
-                onClick={() =>
-                    excaliburTesting({
-                        setNerdStats,
-                        password,
-                        setShowModalLink,
-                        setModalLinkText,
-                        setPasswordStrength,
-                        setIsThinking,
-                    })
-                }
-                className="w-1/2 mx-auto mt-7 mb-7"
-            >
-                {isThinking ? (
-                    <>
-                        <Spinner aria-label="Spinner button example" size="sm" />
-                        <span className="pl-3" id="spinner"></span>
-                    </>
-                ) : (
-                    <span className="pl-3">
-                        <FormattedMessage id="passwordTesting.excalibur.button.start" defaultMessage="Start" />
-                    </span>
-                )}
+            <Button onClick={handleClick} className="w-1/2 mx-auto mt-7 mb-7">
+                {spinner()}
             </Button>
         </div>
     );

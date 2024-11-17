@@ -18,7 +18,7 @@ function MojoControl({ className }: Props) {
         setBruteForceResults,
         bruteForceResults,
         bruteForceThinkerInterval,
-        setBruteThinkerInterval,
+        setBruteForceThinkerInterval,
         isBruteActive,
         setPassword,
         setBruteType,
@@ -53,7 +53,7 @@ function MojoControl({ className }: Props) {
             const intervalId = setInterval(() => {
                 spinner!.textContent = thinker();
             }, 1500);
-            setBruteThinkerInterval(intervalId as unknown as number);
+            setBruteForceThinkerInterval(intervalId as unknown as number);
         } else {
             clearInterval(bruteForceThinkerInterval);
         }
@@ -62,6 +62,19 @@ function MojoControl({ className }: Props) {
             clearInterval(bruteForceThinkerInterval);
         };
     }, [isBruteActive]); // eslint-disable-line
+
+    const spinner = () => {
+        if (isBruteActive) {
+            return (
+                <>
+                    <Spinner aria-label="Spinner button example" size="sm" />
+                    <span className="pl-3" id="spinner"></span>
+                </>
+            );
+        } else {
+            return <span className="pl-3">Start</span>;
+        }
+    };
 
     return (
         <div
@@ -90,16 +103,9 @@ function MojoControl({ className }: Props) {
                 </div>
             </div>
             <div className="flex">
-                <div className="flex flex-row gap-3 w-full justify-between my-3">
+                <div className="flex flex-row gap-3 w-full justify-between ">
                     <Button onClick={handleBruteForceStart} disabled={isBruteActive} className="w-full">
-                        {isBruteActive ? (
-                            <>
-                                <Spinner aria-label="Spinner button example" size="sm" />
-                                <span className="pl-3" id="spinner"></span>
-                            </>
-                        ) : (
-                            <span className="pl-3">Start</span>
-                        )}
+                        {spinner()}
                     </Button>
                     <Button disabled={false} onClick={handleBruteForceStop} className="w-full">
                         Stop

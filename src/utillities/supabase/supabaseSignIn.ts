@@ -19,7 +19,7 @@ async function signIn(email: string, password: string) {
     } catch (error) {
         return {
             success: false,
-            error: error.message,
+            error: (error as Error).message,
         };
     }
 }

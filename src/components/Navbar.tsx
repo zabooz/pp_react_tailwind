@@ -18,6 +18,7 @@ import LoginRegister from './login.register/LoginRegister';
 import { ModalContext } from '../contexts/modalContext/modalContext';
 import { useSlideContext } from '../contexts/slideProvider/slideContext';
 import { useUserContext } from '@/contexts/userContext/userContext';
+import signOut from '@/utillities/supabase/supabaseSignOut';
 
 export const NavbarCom = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -28,14 +29,14 @@ export const NavbarCom = () => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth', // Sanfte Scrollbewegung
+            behavior: 'smooth', 
         });
     };
 
-    const { user } = useUserContext();
+    const { user,setUser } = useUserContext();
 
     const values = useMemo(() => ({ openModal, setOpenModal }), [openModal]);
-
+    console.log(user)
     return (
         <ModalContext.Provider value={values}>
             <Navbar fluid rounded className="	fixed w-full z-20 dark:bg-slate-700 bg-gray-200 !justify-center h-16">
@@ -63,7 +64,6 @@ export const NavbarCom = () => {
                 <div className="flex md:order-2 ">
                     <DarkThemeToggle />
                     <LanguageSwitch />
-                    {/* eslint-disable-next-line */}
                     {user ? (
                         <Dropdown
                             arrowIcon={false}
@@ -79,6 +79,8 @@ export const NavbarCom = () => {
                             <DropdownItem
                                 onClick={() => {
                                     navigate('/');
+                                    signOut();
+                                    setUser(null);
                                 }}
                             >
                                 <FormattedMessage
@@ -99,7 +101,7 @@ export const NavbarCom = () => {
                     <NavbarToggle />
                 </div>
                 <NavbarCollapse className=" dark:text-gray-400 text-lg  justify-between">
-                    {/* eslint-disable-next-line */}
+                {/* eslint-disable-next-line */}
                     <a
                         className="py-2 px-4 font-bold text-lg tracking-wider dark:text-gray-400 dark:hover:text-[#0891b2d9] hover:text-[#ea6954] hover:underline underline-offset-8 cursor-pointer"
                         data-testid="create-password-nav-link"
@@ -183,7 +185,7 @@ export const NavbarCom = () => {
                             </span>
                         </p>
                     </a>
-                    {/* eslint-disable-next-line  */}
+                
                     {user ? (
                         <div className="md:hidden">
                             <p

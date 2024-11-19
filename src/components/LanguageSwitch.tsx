@@ -9,17 +9,17 @@ function LanguageSwitch() {
     return (
         <div>
             <Select
-                data-testId="language-switch"
+                data-testid="language-switch"
                 id="countries"
                 size={1}
                 className="p-[0rem]"
                 onChange={(e) => setLanguage(e.target.value as Locale)}
                 defaultValue={language}
             >
-                <option value={'en'} data-testId="switch-to-english">
+                <option value={'en'} data-testid="switch-to-english">
                     <FormattedMessage id="english-selected" defaultMessage="Englisch" />
                 </option>
-                <option value={'de'} data-testId="switch-to-german">
+                <option value={'de'} data-testid="switch-to-german">
                     <FormattedMessage id="german-selected" defaultMessage="Deutsch" />
                 </option>
                 {/* <option value={'fr'}>

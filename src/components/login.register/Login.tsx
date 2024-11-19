@@ -4,11 +4,13 @@ import ForgotPassword from './ForgotPassword.tsx';
 import { useModalContext } from '../../contexts/modalContext/modalContext.ts';
 import { LoginData } from '../../interfaces/interfaces';
 import signIn from '@/utillities/supabase/supabaseSignIn.ts';
+import { useUserContext } from '@/contexts/userContext/userContext.ts';
 interface Props {
     handleRegisterClick: () => void;
 }
 
 function Login({ handleRegisterClick }: Props) {
+    const { setUser } = useUserContext();
     const [userData, setUserData] = useState<LoginData>({
         email: '',
         password: '',
@@ -27,6 +29,7 @@ function Login({ handleRegisterClick }: Props) {
             if (user) {
                 console.log('User logged in successfully');
                 setOpenModal(false);
+                setUser(user);
             }
         } catch (error) {
             console.log(error);

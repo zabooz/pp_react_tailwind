@@ -1,4 +1,5 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
+import { supabase } from './utillities/supabase/supabaseClient';
 import { IntlProvider } from 'react-intl';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContentBox from './components/ContentBox';
@@ -21,6 +22,7 @@ const PrivacyPolicy = React.lazy(() => import('./features/legalStuff/PrivacyPoli
 const DashBoard = React.lazy(() => import('./features/DashBoard/DashBoard'));
 import { PasswordTestingProvider } from './contexts/passwordTestingContext/PasswordTestingProvider';
 import { SlideProvider } from './contexts/slideProvider/SlideProvider';
+
 // import esMessages from '../compiled-lang/es.json';
 // import frMessages from '../compiled-lang/fr.json';
 // import laMessages from '../compiled-lang/la.json';
@@ -30,13 +32,32 @@ function App() {
     const messages = {
         en: enMessages,
         de: deMessages,
-        // es: esMessages,
-        // fr: frMessages,
-        // la: laMessages
     };
+
+    useEffect(() => {
+        async function testConnection() {
+            try {
+                const { data, error } = await supabase
+                    .from('passwordplayground') // Replace with an actual table in your database
+                    .select('*')
+                    .limit(1);
+
+                if (error) {
+                    console.error('Supabase connection error:', error);
+                } else {
+                    console.log('Supabase connection successful:', data);
+                }
+            } catch (err) {
+                console.error('Connection test failed:', err);
+            }
+        }
+
+        testConnection();
+    }, []);
 
     return (
         <div className="min-h-screen">
+            
             <IntlProvider messages={messages[language]} locale={language} defaultLocale="en">
                 <Router>
                     <SlideProvider>

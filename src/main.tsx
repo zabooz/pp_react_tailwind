@@ -6,7 +6,7 @@ import App from './App.tsx';
 import './index.css';
 import { Locale } from '@/contexts/languageContext/languageContext.ts';
 import { LanguageProvider } from '@/contexts/languageContext/LanguageProvider.tsx';
-import { LoginProvider } from '@/contexts/loginContext/LoginProvider.tsx';
+import { UserProvider } from './contexts/userContext/UserProvider.tsx';
 
 const locale =
     (localStorage.getItem('locale') as Locale) ||
@@ -19,9 +19,9 @@ createRoot(document.getElementById('root')!).render(
         <LanguageProvider initialLanguage={localStorage.getItem('locale') as Locale}>
             <HeadProvider>
                 <Flowbite>
-                    <LoginProvider>
+                    <UserProvider>
                         <App />
-                    </LoginProvider>
+                    </UserProvider>
                 </Flowbite>
             </HeadProvider>
         </LanguageProvider>

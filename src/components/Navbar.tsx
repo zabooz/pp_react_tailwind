@@ -9,29 +9,21 @@ import {
     NavbarToggle,
     DarkThemeToggle,
 } from 'flowbite-react';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useNavigate } from 'react-router-dom';
 import LanguageSwitch from './LanguageSwitch';
-import { logOut } from './login.register/backend/logout';
 import LoginRegister from './login.register/LoginRegister';
-import { useLoginContext } from '../contexts/loginContext/loginContext';
+
 import { ModalContext } from '../contexts/modalContext/modalContext';
 import { useSlideContext } from '../contexts/slideProvider/slideContext';
+import { useUserContext } from '@/contexts/userContext/userContext';
 
 export const NavbarCom = () => {
     const [openModal, setOpenModal] = useState(false);
-    const { loggedIn, setLoggedIn, change } = useLoginContext();
+
     const { directionFunc } = useSlideContext();
     const navigate = useNavigate();
-    const [data, setData] = useState<string[]>(['/assets/profile/default.png', 'John Doe']);
-
-    useEffect(() => {
-        if (loggedIn) {
-            const storedData = JSON.parse(sessionStorage.getItem('userStats')!);
-            setData([storedData[0].avatar, storedData[0].username]);
-        }
-    }, [change, loggedIn]);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -39,6 +31,8 @@ export const NavbarCom = () => {
             behavior: 'smooth', // Sanfte Scrollbewegung
         });
     };
+
+    const { user } = useUserContext();
 
     const values = useMemo(() => ({ openModal, setOpenModal }), [openModal]);
 
@@ -69,21 +63,21 @@ export const NavbarCom = () => {
                 <div className="flex md:order-2 ">
                     <DarkThemeToggle />
                     <LanguageSwitch />
-                    {loggedIn ? (
+                    {/* eslint-disable-next-line */}
+                    {user ? (
                         <Dropdown
                             arrowIcon={false}
                             inline
-                            label={<Avatar alt="User settings" img={data[0]} className="hidden md:block" />}
+                            label={<Avatar alt="User settings" className="hidden md:block" />}
                             className=""
                         >
                             <DropdownHeader>
-                                <span className="block text-sm">Hallo! {data[1]}</span>
+                                {/* <span className="block text-sm">Hallo! {data[1]}</span> */}
                             </DropdownHeader>
                             <DropdownItem onClick={() => navigate('/dashBoard')}>Dashboard</DropdownItem>
 
                             <DropdownItem
                                 onClick={() => {
-                                    logOut(setLoggedIn);
                                     navigate('/');
                                 }}
                             >
@@ -189,7 +183,8 @@ export const NavbarCom = () => {
                             </span>
                         </p>
                     </a>
-                    {loggedIn ? (
+                    {/* eslint-disable-next-line  */}
+                    {user ? (
                         <div className="md:hidden">
                             <p
                                 onClick={() => {
@@ -203,7 +198,7 @@ export const NavbarCom = () => {
                             >
                                 Dashboard
                                 <img
-                                    src={data[0]}
+                                    // src={data[0]}
                                     className="w-6 cursor-pointer rounded"
                                     alt="login"
                                     onClick={() => setOpenModal(true)}
@@ -211,7 +206,6 @@ export const NavbarCom = () => {
                             </p>
                             <p
                                 onClick={() => {
-                                    logOut(setLoggedIn);
                                     navigate('/');
                                 }}
                                 className="cursor-pointer py-2 px-4 text-lg tracking-wider font-bold dark:hover:text-[#0891b2d9] hover:underline underline-offset-8"

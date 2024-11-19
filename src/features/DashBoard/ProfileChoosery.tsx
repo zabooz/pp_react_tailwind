@@ -8,7 +8,7 @@ import {
 } from '../../components/login.register/backend/dataKraken';
 
 import { DataKrakenTradesData } from '../../interfaces/interfaces';
-import { useLoginContext } from '@/contexts/loginContext/loginContext';
+
 interface ModalProps {
   openDrawer: boolean;
   setOpenDrawer: (openModal: boolean) => void;
@@ -29,7 +29,7 @@ function ProfileChoosery({
   const [avatar, setAvatar] = useState<string>(
     '/assets/profilePics/default.jpeg'
   );
-  const { change, setChange } = useLoginContext();
+
 
   const handelChange = async ({ key, value }: DataKrakenTradesData) => {
     sessionStorage.removeItem('userStats');
@@ -38,7 +38,7 @@ function ProfileChoosery({
     if (response)
       {sessionStorage.setItem('userStats', JSON.stringify(response.data));}
     setOpenDrawer(false);
-    setChange(!change);
+
   };
 
   return (

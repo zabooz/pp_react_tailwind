@@ -1,9 +1,10 @@
+import { useUserContext } from '@/contexts/userContext/userContext';
 import { List } from 'flowbite-react';
 
 function Profile() {
-  const storedData = JSON.parse(sessionStorage.getItem('userStats')!);
-  const data = storedData[0];
 
+  const {user} = useUserContext()
+  console.log(user)
   return (
     <List
       unstyled
@@ -17,7 +18,7 @@ function Profile() {
             </p>
           </div>
           <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-            {data.username}
+         
           </div>
         </div>
       </List.Item>
@@ -29,7 +30,7 @@ function Profile() {
             </p>
           </div>
           <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-            {data.visits}
+        
           </div>
         </div>
       </List.Item>
@@ -41,7 +42,7 @@ function Profile() {
             </p>
           </div>
           <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-            {data.tested_passwords}
+
           </div>
         </div>
       </List.Item>
@@ -53,7 +54,7 @@ function Profile() {
             </p>
           </div>
           <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-            {data.generated_passwords}
+
           </div>
         </div>
       </List.Item>
@@ -65,7 +66,7 @@ function Profile() {
             </p>
           </div>
           <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-            {data.generated_usernames}
+
           </div>
         </div>
       </List.Item>

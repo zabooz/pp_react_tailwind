@@ -6,7 +6,7 @@ async function signUp(email: string, password: string) {
             email,
             password,
             options: {
-                emailRedirectTo: 'http://localhost:5173/confirm',
+                emailRedirectTo: 'http://localhost:5173/',
             },
         });
 
@@ -21,7 +21,7 @@ async function signUp(email: string, password: string) {
     } catch (error) {
         return {
             success: false,
-            error: error.message,
+            error: (error as Error).message,
         };
     }
 }

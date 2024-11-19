@@ -14,14 +14,15 @@ import LandingPage from './features/landingPage/LandingPage';
 import PasswordGenerating from './features/passwordGenerating/PasswordGenerating';
 import PasswordTesting from './features/passwordTesting/passwordTesting';
 import UsernameGenerating from './features/usernameGenerating/UsernameGenerating';
+import { PasswordTestingProvider } from './contexts/passwordTestingContext/PasswordTestingProvider';
+import { SlideProvider } from './contexts/slideProvider/SlideProvider';
+import ErrorPage from './components/ErrorPage';
 
 const AboutUs = React.lazy(() => import('./features/aboutUs/AboutUs'));
 const Project = React.lazy(() => import('./features/aboutUs/Project'));
 const Impressum = React.lazy(() => import('./features/legalStuff/Impressum'));
 const PrivacyPolicy = React.lazy(() => import('./features/legalStuff/PrivacyPolicy'));
 const DashBoard = React.lazy(() => import('./features/DashBoard/DashBoard'));
-import { PasswordTestingProvider } from './contexts/passwordTestingContext/PasswordTestingProvider';
-import { SlideProvider } from './contexts/slideProvider/SlideProvider';
 
 // import esMessages from '../compiled-lang/es.json';
 // import frMessages from '../compiled-lang/fr.json';
@@ -57,7 +58,6 @@ function App() {
 
     return (
         <div className="min-h-screen">
-            
             <IntlProvider messages={messages[language]} locale={language} defaultLocale="en">
                 <Router>
                     <SlideProvider>
@@ -77,6 +77,7 @@ function App() {
                                                 </PasswordTestingProvider>
                                             }
                                         />
+                                        <Route path="*" element={<ErrorPage/>} />
                                         <Route path="username-generating" element={<UsernameGenerating />} />
                                         <Route path="dashBoard" element={<DashBoard />} />
                                         <Route path="about-us" element={<AboutUs />} />

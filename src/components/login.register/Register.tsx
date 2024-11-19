@@ -84,7 +84,7 @@ function Register() {
                     <TextInput id="repeat-password" type="password" required shadow />
                 </div>
                 <div className="flex items-center gap-2">
-                    <Checkbox id="agree" checked />
+                    <Checkbox id="agree"  />
                     <Label htmlFor="agree" className="flex">
                         I agree with the&nbsp;
                         <a
